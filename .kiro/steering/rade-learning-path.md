@@ -38,4 +38,35 @@ The overall tech stack covered across the journey:
 - Learn foundational skills **quickly**, then go deep in specializations
 - Build **production-grade** projects with real data, not toy examples
 
+## Learning Platform
+
+- Platform: https://learn.dataengineeringhub.in (NewZenler-based LMS)
+- Videos hosted on Vimeo with auto-generated English captions
+- Transcripts can be crawled using `learning/scripts/crawl_transcripts.py`
+- Summaries generated via local LLM using `learning/scripts/summarize_to_docx.py`
+
+## Workspace Structure
+
+```
+RADE/
+├── .kiro/steering/        # Kiro AI steering files
+├── Documents/             # Reference materials (learning path PDF)
+└── learning/
+    ├── scripts/           # Crawler & summarizer tools
+    │   ├── crawl_transcripts.py   # Extract Vimeo captions from DEH platform
+    │   ├── export_cookies.py      # Save browser session for auth
+    │   ├── summarize_to_docx.py   # Summarize transcripts to Word docs
+    │   └── config.yaml            # Credentials (gitignored)
+    ├── phase1-starter/            # 6-week foundations
+    │   ├── 01-rade-success-blueprint/
+    │   │   └── transcripts/       # Extracted transcript files
+    │   ├── 02-unix-and-cloud-foundations/
+    │   └── ...
+    ├── phase2-applied-mastery/    # 3-month deep dives
+    │   ├── track-a-spark/
+    │   └── track-b-warehousing-lakehouse/
+    ├── phase3-interviews-accelerator/  # 3-month job readiness
+    └── output/                    # Generated Word doc summaries
+```
+
 #[[file:Documents/path.pdf]]

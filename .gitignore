@@ -1,0 +1,25 @@
+# Credentials - never commit
+learning/scripts/config.yaml
+learning/scripts/session_state.json
+
+# Local browser profiles contain cookies, login databases, and browsing data
+**/.chrome_debug_profile/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Output files (generated summaries)
+learning/output/
+
+# Transcript files inside module folders (generated, not source)
+**/transcripts/*.txt
+**/transcripts/*.vtt
+
+# OS files
+Thumbs.db
+.DS_Store

@@ -44,6 +44,20 @@ project-name/
 └── README.md              # Project overview
 ```
 
+## Learning Module Structure
+
+Each module folder under `learning/` follows this pattern:
+
+```
+module-folder/
+├── transcripts/           # Auto-extracted video transcripts (.txt)
+├── notes/                 # Personal notes and summaries
+├── code/                  # Practice code and exercises
+└── hackathon/             # Project work (where applicable)
+```
+
+Transcripts are extracted using the crawler tool at `learning/scripts/crawl_transcripts.py`.
+
 ## AWS Best Practices
 
 - Never hardcode credentials — use IAM roles and environment variables
@@ -69,3 +83,17 @@ For every project completed, prepare:
 - **Key Metrics**: Volume processed, latency, cost savings
 - **Challenges & Solutions**: What went wrong and how you fixed it
 - **LinkedIn Post**: Summary of the project for your profile
+
+## Tooling
+
+### Transcript Crawler (`learning/scripts/`)
+- Uses Playwright to extract Vimeo auto-generated captions from DEH platform
+- Requires session cookies (exported via `export_cookies.py`)
+- Saves transcripts as `.txt` files inside each module's `transcripts/` folder
+- Run: `python crawl_transcripts.py --config config.yaml --course "Course Name"`
+
+### Summarizer (`learning/scripts/`)
+- Uses Ollama (local LLM) to summarize transcript files into Word documents
+- Generates structured `.docx` with table of contents and per-lesson summaries
+- Run: `python summarize_to_docx.py --config config.yaml`
+- Requires Ollama running locally with a pulled model (e.g., `ollama pull llama3`)

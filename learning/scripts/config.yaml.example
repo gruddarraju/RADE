@@ -1,0 +1,33 @@
+# RADE Transcript Crawler & Summarizer Configuration
+# Copy this file to config.yaml and fill in your credentials.
+# IMPORTANT: Never commit config.yaml to version control (it contains your password).
+
+# Platform credentials
+credentials:
+  email: "your-email@example.com"
+  password: "your-password-here"
+
+# Platform base URL
+base_url: "https://learn.dataengineeringhub.in"
+
+# Directory where transcripts will be saved (relative to learning/ folder)
+output_dir: "../transcripts"
+
+# Directory where Word doc summaries will be saved
+docx_output_dir: "../output"
+
+# Ollama local LLM settings
+ollama:
+  # Model to use for summarization (must be pulled first: ollama pull llama3)
+  # Popular options: llama3, mistral, gemma2, phi3
+  model: "llama3"
+  # Ollama server URL (default: http://localhost:11434)
+  # Uncomment if running Ollama on a different host/port
+  # base_url: "http://localhost:11434"
+
+# Crawler settings
+crawler:
+  # Delay between page loads (seconds) - be respectful to the server
+  delay: 2.0
+  # Run browser in headless mode (no visible window)
+  headless: false
