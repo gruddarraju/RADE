@@ -51,12 +51,21 @@ Each module folder under `learning/` follows this pattern:
 ```
 module-folder/
 ├── transcripts/           # Auto-extracted video transcripts (.txt)
+├── presentation/          # Editable transcript-grounded PowerPoint decks
 ├── notes/                 # Personal notes and summaries
 ├── code/                  # Practice code and exercises
 └── hackathon/             # Project work (where applicable)
 ```
 
 Transcripts are extracted using the crawler tool at `learning/scripts/crawl_transcripts.py`.
+
+### Transcript-Grounded Presentation Standards
+
+- **Source boundary and coverage**: Treat `<module>/transcripts/*.txt` as the module's canonical presentation corpus. VTT siblings are alternate caption files, not additional sources. Label PDFs, artifacts, other transcript directories, and downstream modules as supporting context rather than silently expanding the core corpus. Before finalizing a deck, mechanically verify that every intended TXT basename appears verbatim in a source index or traceable source map and supports the presentation; list deliberate exclusions or supporting sources with their reason.
+- **Evidence labels**: Use `TRANSCRIPT-DERIVED` for faithful source material, `TRANSCRIPT + GUIDANCE` when adding explanation or updated operational advice, `CURRENT SAFETY GUIDANCE` for guardrails not asserted by the transcript, and `SUPPORTING CONTEXT` (or a more specific label) for cross-module material. Distinguish reported demonstrations, illustrative code, learner-measured results, and unverified testimonials or outcome claims.
+- **Safe modernization**: Do not silently present corrected or modernized advice as the original lesson. Preserve the transcript claim where useful, visibly separate corrections and current guardrails, and verify volatile AWS/API/CLI/security guidance against authoritative current documentation when feasible. Never present root use, broad administrator access, long-lived keys, secrets in prompts, destructive commands, inferred paths, broad overwrites, or generated infrastructure as production defaults.
+- **Editable PPTX validation**: Keep instructional text and diagrams as native PowerPoint text/vector objects rather than flattened screenshots. Reopen the saved `.pptx` and verify expected slide count and dimensions, nonempty slides/headings, exact source coverage, approved visible fonts, shape bounds, and absence of unintended pictures, charts, tables, media, or embeddings. Render and visually inspect slides when tooling permits because coordinate checks cannot detect all clipping, overflow, overlap, substitution, or readability problems. Reopen and ZIP-test the OOXML package for corruption.
+- **Cleanup and protected sources**: Remove temporary renders, unpacked OOXML, scratch files, one-off edit/validation scripts, and temporary environments after final validation unless they are intentionally maintained project tooling. Never treat `learning/phase1-starter/07-agentic-data-engineering-with-amazon-q/transcripts-project-labs-misrouted/` as temporary: do not delete, move, rename, merge, or deduplicate that corpus without the user's explicit approval for that specific operation. If used, cite it only as clearly labeled supporting context unless an approved reclassification changes the boundary.
 
 ## AWS Best Practices
 
