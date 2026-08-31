@@ -1,0 +1,68 @@
+Course: Agentic Data Engineering with Amazon Q
+Lesson: 1a. Intro - Set up for Analysis RESUME
+============================================================
+
+Let's get really real, real, real now, okay?
+For example, let's say you have joined a
+company, you're a data engineer.
+Now you're in a data engineering team of Lyft Company.
+Lyft is a ride share company in the us similar to Uber,
+and you're assigned to this brand new
+project by your manager.
+So what's this project all about?
+Lyft Company's business
+team data analysts wanna work on optimizing their revenue
+and driver operations for the New York City rides.
+So that's the high level goal Now.
+So what's gonna happen next is you and your manager
+and the business data analyst team are gonna get together in
+a meeting and discuss the goals of the project.
+So the outcome of meeting is gonna be a few things in the
+meeting the business team says to you
+and a manager that we really need your help.
+The data engineering team's help
+in optimizing the revenue and driver operations.
+And for that we have identified, we have a real data source,
+and that is the New York City's Taxi
+and Limo scene Commission data.
+They tell you that this data gets published on the
+NYC dot government site around this portal.
+If you scroll down below, if you go to download data
+and then go to the raw data
+and then trip record data,
+you'll see there are some data sets here for yellow trips,
+green trips, FHE, and high volume FHE here.
+And if we scroll down, you will see you have
+a ton of data here.
+And what they ask you is that they all
+actually start analyzing this data.
+The high volume fhv data.
+If you click on this, so here you have data for Uber, Lyft,
+via and June, four different companies.
+And Lyft business team is interested in
+actually analyzing this data.
+It has information about the pickup, the drop off, daytime,
+the location IDs, the trip miles, the trip time,
+the base passenger for a lot more, in fact,
+which can help the lift companies business team to
+optimize their revenue and driver operations.
+When you go back and they tell you that we go
+to start analyzing with at least one file first,
+they wanna actually view the data,
+they wanna see the data, okay?
+And the data is actually in Parquet format.
+So the source of the data is identified.
+Now, the next step that they want help is
+with getting them access to this data so
+that they can really do some analysis.
+But this is a Parquet file.
+I mean, if you download, if you click on this,
+you can download the file, but you cannot open that.
+It's a Parquet, it's a format.
+It's not as Excel sheet or CSV.
+So the outcome of the meeting was that
+the source status is identified,
+and the next action item for you is to help them get access
+to that data so that they can analyze
+and define the requirements
+for your data engineering project.

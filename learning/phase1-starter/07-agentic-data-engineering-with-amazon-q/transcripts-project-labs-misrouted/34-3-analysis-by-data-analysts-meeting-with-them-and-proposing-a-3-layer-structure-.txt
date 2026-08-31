@@ -1,0 +1,122 @@
+Course: Agentic Data Engineering with Amazon Q
+Lesson: 3. Analysis by Data Analysts, Meeting with them and Proposing a 3 layer structure RESUME
+============================================================
+
+Hey guys, we come back.
+I hope you're gone through the previous video
+and I hope it was pretty enlightening for you
+because see, to really learn data engineering,
+you must be getting your hands dirty.
+When you create something on your own,
+you don't easily forget that.
+Okay? Anyway, let's continue our discussion.
+Now, as I said, the next few videos are very important.
+We'll talk about the development lifecycle.
+So what exactly happened before the development begins?
+You gotta know about this. So the first step is that,
+you know, you load of data here, right?
+You, you give all the data to the data analysts, right?
+It's right here. The two years they ask for,
+you have it here, the zone data is also here, in fact, okay?
+And you have built the appropriate tables in blue catalog.
+So they're able to query, and I told you
+that the H-V-F-H-V table has a pickup
+and drop off location id,
+and they will really want to see the right actual locations.
+And so they will want to join on the, this table
+with the zone table based on the location id.
+Okay? So here's an example query that, uh, they would've run
+by joining the H-V-F-H-V table
+and the zone table,
+and they can now see the data
+with the right pickup location, the manton, the zone,
+the drop location, all of that is right here, in fact.
+So they have done all sort of analysis on the data
+and uh, they are, they are now ready
+to give you the requirements
+because they exactly know what they need
+for optimizing revenue and driver operations.
+So their researcher notes would look like this.
+You know, data comes monthly
+and for our analysis for building our reports, you know,
+on tools, reporting tools such as QuickSight, AWS,
+QuickSight or Tableau is a reporting tools.
+Should we build the reports monthly basis or daily basis?
+And they would want to look at
+what are they trying to identify?
+What exactly are they trying to
+optimize, right?
+Do we have some, um, use cases mentioned here?
+You can read, read through them later.
+So the point I'm going to say, trying to say is that,
+you know, you have done your work, you provide,
+provide them the data, and now they have analyzed the data
+and they are ready to give you requirements.
+So what's the next step?
+The next step is that they will get into a meeting with you.
+Okay? The data engineer team,
+you are in the data engineer team anyway,
+and as a grade data engineer, you wanna propose
+for tier actually three tier structure.
+In fact, three tier structure in data lake, okay?
+Now what do I mean by this?
+Seeing data lake, you got the data in the raw folder, right?
+These are, these are just raw,
+these is just a raw data, okay?
+That is coming from the source, okay?
+Now obviously data has to be cleaned,
+data could have null data.
+I mean, there could be blank
+Values in the fields,
+and there could be some business rules that you'll have
+to kind of validate the data against.
+Okay? We'll talk about that shortly.
+In fact, what the business rules are,
+what data validation is shortly.
+But you get the point that raw is only for the raw data,
+which is coming from source as is.
+Now, when you wanna validate the data
+and also clean it, you can't keep that data, the clean data,
+the data, which is validated back in raw, okay?
+You gotta move that to another folder called as curated,
+right here, in fact, curated layer, okay?
+So in the curated layer, you will not only claims data,
+welded data, but you will also be
+implementing some business rules.
+Okay? I'll talk to you about
+that shortly, don't worry about that.
+So that is the next layer, raw and then curated.
+And then you propose the aggregate
+for the final aggregated data.
+You wanna aggregate data based on
+the daily operations, right?
+So you say that we are gonna be storing the daily data in
+aggregated layer for you to aggregate.
+And because they have told you
+that they will want data in daily aggregations,
+you will say that, okay?
+In the raw, it comes in a monthly format anyway.
+If you look at the year
+and then you have monthly data in curated
+and in aggregated, we'll store data in the daily format
+in a daily partition format.
+That's how we're gonna be organizing the data.
+And then you ask them
+to provide a mapping specification, right?
+How do you really want us
+to transform the data when you move the data from
+your raw layer to curated, okay,
+what business rules should we implement?
+What validation should we do on the data?
+You ask them, you give me Excel sheet
+where you put down all of these things to us.
+Also let us know how we can move data from curated
+to the aggregated layer.
+So give us a mapping sheet for that as well.
+So they'll take, they'll take some time
+and uh, finally, uh, they'll get back to you
+and they're gonna give you a mapping sheet, okay?
+So we'll discuss all of that in the next video as to
+how the mapping sheet looks like, you know,
+what is mentioned in that
+and what you do with that in the next video.

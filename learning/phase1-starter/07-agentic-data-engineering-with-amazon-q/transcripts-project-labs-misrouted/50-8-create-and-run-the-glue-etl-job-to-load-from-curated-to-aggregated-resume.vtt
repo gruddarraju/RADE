@@ -1,0 +1,173 @@
+WEBVTT
+
+1
+00:00:00.335 --> 00:00:01.945
+Just copy this code as about the next step
+
+2
+00:00:02.205 --> 00:00:05.145
+and go back to our glue console
+
+3
+00:00:06.005 --> 00:00:07.305
+and we click on jobs.
+
+4
+00:00:07.635 --> 00:00:10.905
+We'll now click on the script editor and start fresh.
+
+5
+00:00:10.925 --> 00:00:12.825
+Create script here.
+
+6
+00:00:12.825 --> 00:00:15.305
+We're gonna paste the script we just copied
+
+7
+00:00:16.165 --> 00:00:17.705
+and we wanna name this.
+
+8
+00:00:17.915 --> 00:00:20.265
+We're gonna go back to the VS. Code.
+
+9
+00:00:20.415 --> 00:00:23.265
+Copy the name, copy this right here.
+
+10
+00:00:23.955 --> 00:00:26.705
+Enter Now you gotta provide job details.
+
+11
+00:00:26.755 --> 00:00:28.865
+We'll go here, provide the role.
+
+12
+00:00:29.405 --> 00:00:33.465
+Now if you remember the previous job, it took about one hour
+
+13
+00:00:33.485 --> 00:00:36.105
+to load two years of data from raw to curated.
+
+14
+00:00:36.245 --> 00:00:38.065
+And now we're doing aggregations.
+
+15
+00:00:38.105 --> 00:00:40.985
+And aggregations are costly, they're expensive.
+
+16
+00:00:42.045 --> 00:00:43.985
+So for two years of data,
+
+17
+00:00:44.455 --> 00:00:47.105
+what I'm gonna do is I'm gonna choose more number
+
+18
+00:00:47.105 --> 00:00:48.185
+of workers to start with.
+
+19
+00:00:48.185 --> 00:00:49.585
+Okay, I wanna see how long it takes
+
+20
+00:00:49.925 --> 00:00:52.185
+and then later I can reduce the number of workers
+
+21
+00:00:52.525 --> 00:00:55.065
+as required, as defined by ESLE, right?
+
+22
+00:00:55.145 --> 00:00:57.985
+I mean, if the job takes about four hours
+
+23
+00:00:58.405 --> 00:01:01.105
+and if it is fine for me, if the business can wait
+
+24
+00:01:01.105 --> 00:01:02.825
+for four hours, it's absolutely fine.
+
+25
+00:01:03.405 --> 00:01:05.545
+So for now, we'll just start at five, take a look at
+
+26
+00:01:05.545 --> 00:01:07.385
+how long it takes, and to add some more context,
+
+27
+00:01:07.515 --> 00:01:10.065
+let's say the job is supposed to start at 10:00 PM
+
+28
+00:01:10.765 --> 00:01:13.705
+and even if it takes six hours by 4:00 AM in the morning,
+
+29
+00:01:13.705 --> 00:01:15.425
+it finishes and the report really
+
+30
+00:01:15.465 --> 00:01:16.625
+runs at 6:00 AM in the morning.
+
+31
+00:01:17.205 --> 00:01:20.345
+You, you're still able to meet the SLA right SLA is
+
+32
+00:01:20.345 --> 00:01:22.905
+to finish a job by 6:00 AM Your job is finishing
+
+33
+00:01:22.905 --> 00:01:24.025
+by 4:00 AM in the morning.
+
+34
+00:01:25.125 --> 00:01:27.465
+You get the point. The runtime is always
+
+35
+00:01:27.465 --> 00:01:28.545
+governed by the SLA.
+
+36
+00:01:28.605 --> 00:01:29.945
+You shouldn't unnecessarily tune it
+
+37
+00:01:29.945 --> 00:01:31.865
+because you aren't in it.
+
+38
+00:01:32.485 --> 00:01:36.235
+You have to spend more on by adding more number of workers
+
+39
+00:01:36.415 --> 00:01:37.915
+and doing other stuff.
+
+40
+00:01:37.915 --> 00:01:41.715
+As such. We'll just now come down and then just save it
+
+41
+00:01:41.975 --> 00:01:44.715
+and then simply run it and then go to runs here.
+
+42
+00:01:45.175 --> 00:01:47.355
+It shows running to get this run,
+
+43
+00:01:47.535 --> 00:01:48.915
+and uh, we'll see you in the next video.

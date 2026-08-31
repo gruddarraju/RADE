@@ -1,0 +1,27 @@
+Course: Agentic Data Engineering with Amazon Q
+Lesson: 7 Configure AWS CLI on your system RESUME
+============================================================
+
+On your Windows Open command prompt.
+I'm on Mac. I'll open the terminal.
+If you have installed A-W-S-C-L-S successfully,
+you should see this window.
+Type a W SEN version on Windows.
+It may show different on Mac. It shows this.
+Next, you'll type AWS configure.
+Now open the access key file
+that you have on your downloads folder.
+So I have my own open here.
+I'm gonna copy the access key Id. Select this.
+Right click copy. Right click paste. Here, enter. Next.
+I'm gonna paste the access key.
+I'll grab the access key from the file.
+Again, select this right click.
+Copy right here. Paste it. Enter.
+Very important. Choose US East one.
+No matter where you're in the world, choose US East one.
+This is critical for our hands-on.
+To go smoothly, choose US east one only always
+for our hands-on, and then click on enter again.
+Click enter. We have now configured A-W-S-C-L-I on our
+system.

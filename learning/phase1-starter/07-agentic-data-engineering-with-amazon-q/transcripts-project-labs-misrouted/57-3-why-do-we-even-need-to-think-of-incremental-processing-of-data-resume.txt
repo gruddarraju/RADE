@@ -1,0 +1,99 @@
+Course: Agentic Data Engineering with Amazon Q
+Lesson: 3 Why do we even need to think of incremental processing of Data RESUME
+============================================================
+
+Hey guys, welcome back.
+Now let's talk about why we need
+to really think about incremental processing of the raw
+to curated and curated to aggregate it.
+As I said before, you see whatever you have in raw,
+we get trans on and come to curated, right?
+Of course, when you're doing this, we had some rejections
+as well, if you remember the transformation.
+But the point is that, let's say if you have data for,
+let's say, uh, 2025 from January
+to June, okay, six months, all the data for Jan two,
+June of 2025 will come to curated.
+You agree with that? And all the data from curated Jan
+to June, 2025 will go
+to aggregated when you run the third job.
+I hope that is very, very clear.
+Now, let's say this job number one is
+run again, and by then you had July's data.
+2025 July data, you had enabled the incremental,
+you set the job type to current,
+and it pulled the July data into raw.
+So in raw, what do you have?
+Now you have data from Jan to July.
+Now, okay, before you had Jan to June,
+now you have data from Jan to July.
+I have one additional month. So when you process the data
+from RAW to Curated, you have all the data from Jan
+to July now, but you had already processed
+Jan to June before.
+Why do you need to process the Jan to June?
+Again, it's not required. That is all done.
+So incrementally you should be processing only the July
+data, which is coming into law.
+That is the reason we need to think about
+how we can pull data incrementally.
+Also, what's, what's the point of processing it again?
+I mean, you are unnecessarily, you are spending money
+and time on processing it, right?
+I mean, it'll happen. It'll just read all the data
+and, uh, load to curate it again, it, it'll over the data.
+You can do the historical processing
+every month, but what is the point?
+It'll unnecessarily take longer time every time, right?
+There's no point. You don't wanna waste
+resources, time and money.
+So if we can find a way to just pull the July data from raw
+and loaded to curated again, see, curated also has
+also has your Jan, June, July, right?
+So you want to just
+load the July data again from curated to aggregate.
+I hope this much is very, very clear, right?
+As to what I'm trying to explain here, why we need
+to pull data incrementally.
+Now, with this background, very, very solid.
+Let's see how we can implement that. Okay?
+A very, very simple, uh, solution for this.
+There are multiple ways of doing this, multiple solutions,
+and what I'll now talk about is very,
+very important in the next studio, in fact, okay?
+This is one of the most important concepts in Glue. Okay?
+The next video is gonna be full of concepts
+and practical things.
+There's a lot, okay? It's a short video,
+but there's a lot. It's a
+Dense video.
+See, I could have skipped the next video, you know,
+for incremental processing.
+I could have chosen our easier way also,
+but I wanted to show you the benefits of using Glue.
+What I'm gonna be talking about next
+is something unique to Glue, okay?
+It's called as a job bookmark, and it is unique to Glue.
+And in the interviews,
+you could be asked if the company is using Glue bookmarks,
+they will ask you this question.
+If they're not using it, they will not ask you.
+But if they are using it, they will ask you.
+And my students who have cracked interviews have told
+this is a regular question.
+So for me, I could have just given you simple solution
+and, you know, thinking that, okay,
+my students might feel it difficult
+and so might just skip the course
+or, you know, drop out of the course midway.
+But if I have that thought in mind, I cannot really
+help the other people who are really, really
+focused and serious.
+You know, I and I,
+and I hope you are in that category where you know
+where you are really focused and serious.
+And so my humble request to you is next video.
+Watch it once, twice, twice.
+Make clear notes, practice it.
+Then towards the end, share your own notes, okay?
+Because this is gonna be extremely important again.

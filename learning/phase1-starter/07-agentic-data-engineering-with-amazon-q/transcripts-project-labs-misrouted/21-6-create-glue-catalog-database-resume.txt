@@ -1,0 +1,11 @@
+Course: Agentic Data Engineering with Amazon Q
+Lesson: 6. Create Glue Catalog Database RESUME
+============================================================
+
+Next, you can order search bar type glue,
+go read glue, and then scroll down on the left hand side
+and go to databases.
+Click on add database, name it as mission,
+D-H-H-O-F-N-Y-C-T-L-C,
+and then scroll down.
+Click on Create database. It'll show up right here.

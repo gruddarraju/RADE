@@ -1,0 +1,521 @@
+WEBVTT
+
+1
+00:00:00.230 --> 00:00:02.435
+Alright, go to search bar type glue.
+
+2
+00:00:02.565 --> 00:00:04.355
+Click on AWS glue, go
+
+3
+00:00:04.355 --> 00:00:06.155
+to ETL Jobs right on the left hand side.
+
+4
+00:00:06.325 --> 00:00:08.395
+Click on notebook, start fresh.
+
+5
+00:00:08.415 --> 00:00:11.515
+Choose the role you already have in the real world.
+
+6
+00:00:11.515 --> 00:00:13.195
+This will be going to you by the team members.
+
+7
+00:00:13.775 --> 00:00:16.595
+Create notebook. Next, open your VS code.
+
+8
+00:00:16.935 --> 00:00:18.155
+Go to the notebook app provided.
+
+9
+00:00:18.575 --> 00:00:19.635
+Put that in the folder
+
+10
+00:00:19.985 --> 00:00:21.795
+that we code is referencing currently.
+
+11
+00:00:21.935 --> 00:00:23.875
+So if you look here, I have put the
+
+12
+00:00:24.435 --> 00:00:26.595
+notebook right here in this folder, which is
+
+13
+00:00:26.595 --> 00:00:27.995
+what is open here in yes code.
+
+14
+00:00:28.255 --> 00:00:29.875
+So can I get the file name?
+
+15
+00:00:30.095 --> 00:00:31.395
+You're gonna write, click and copy.
+
+16
+00:00:31.735 --> 00:00:35.795
+Go back to glue, click here. Remove what you have.
+
+17
+00:00:35.795 --> 00:00:39.955
+What do you see there? Right click, paste that and enter.
+
+18
+00:00:40.175 --> 00:00:41.875
+And then you see the red thing going on here.
+
+19
+00:00:42.295 --> 00:00:46.155
+Go there, scroll down. It's already removed by the way.
+
+20
+00:00:46.375 --> 00:00:47.795
+And you can go back to notebook.
+
+21
+00:00:48.175 --> 00:00:50.435
+And then let's go back to the VS code.
+
+22
+00:00:50.615 --> 00:00:53.115
+Scroll down, we're gonna copy this entire cell.
+
+23
+00:00:53.575 --> 00:00:56.995
+I'm gonna copy, click on the cell and right click here.
+
+24
+00:00:57.145 --> 00:00:59.475
+Copy cell, right click on this cell here.
+
+25
+00:00:59.985 --> 00:01:02.875
+Control a delete and right click.
+
+26
+00:01:03.215 --> 00:01:06.875
+And after delete you control V or there.
+
+27
+00:01:07.055 --> 00:01:11.075
+So you were able to copy the code from your
+
+28
+00:01:11.895 --> 00:01:14.755
+via code and then you will run this cell.
+
+29
+00:01:14.895 --> 00:01:18.315
+So we'll go here on top, click here, run this.
+
+30
+00:01:18.655 --> 00:01:21.115
+It is now gonna create the session spark session.
+
+31
+00:01:21.265 --> 00:01:24.555
+Meanwhile, we'll delete the next cells that we don't need.
+
+32
+00:01:25.405 --> 00:01:27.795
+We'll just go here, click on this knife symbol,
+
+33
+00:01:27.965 --> 00:01:30.315
+we'll click on deleting all of them one by one.
+
+34
+00:01:30.625 --> 00:01:31.875
+It's gone. We are waiting for the session
+
+35
+00:01:31.875 --> 00:01:33.635
+to get created right now.
+
+36
+00:01:33.825 --> 00:01:36.875
+Meanwhile, we'll go back to the V code, go
+
+37
+00:01:36.875 --> 00:01:38.875
+to the next cell, click here.
+
+38
+00:01:39.495 --> 00:01:41.155
+And again, three dots here.
+
+39
+00:01:42.115 --> 00:01:45.085
+Copy cell, go back to notebook.
+
+40
+00:01:45.465 --> 00:01:46.725
+So what did the first cell do?
+
+41
+00:01:46.865 --> 00:01:49.285
+We are trying to get this park code run with the help
+
+42
+00:01:49.285 --> 00:01:50.805
+of G one X worker type.
+
+43
+00:01:50.805 --> 00:01:51.845
+And we need three workers
+
+44
+00:01:52.625 --> 00:01:55.045
+and we are initializing this spark session.
+
+45
+00:01:55.515 --> 00:01:56.685
+It's all done. Now we see the
+
+46
+00:01:56.685 --> 00:01:57.845
+spark session has been created.
+
+47
+00:01:58.385 --> 00:01:59.965
+So we are gonna go to this plus symbol
+
+48
+00:01:59.995 --> 00:02:01.085
+here on this notebook.
+
+49
+00:02:01.665 --> 00:02:04.245
+We have a new cell and now we're gonna
+
+50
+00:02:04.245 --> 00:02:05.485
+just uh, do control V.
+
+51
+00:02:06.185 --> 00:02:07.205
+So what does this code do?
+
+52
+00:02:07.835 --> 00:02:09.365
+Okay, this code
+
+53
+00:02:09.995 --> 00:02:13.205
+initially just assign the variables, their values.
+
+54
+00:02:13.915 --> 00:02:16.285
+Okay, the bucket, the curated path
+
+55
+00:02:16.285 --> 00:02:19.805
+where the curated data is, where the zone path is, right?
+
+56
+00:02:20.375 --> 00:02:22.605
+Where the zone data look up, look up file is
+
+57
+00:02:23.025 --> 00:02:25.395
+and then the aggregated path
+
+58
+00:02:25.765 --> 00:02:27.475
+where we wanna store the aggregated data.
+
+59
+00:02:28.295 --> 00:02:31.835
+And then we wanna just test this code only for
+
+60
+00:02:32.455 --> 00:02:34.075
+the February, 2024.
+
+61
+00:02:34.105 --> 00:02:36.515
+Only for now. So this essentially is
+
+62
+00:02:36.515 --> 00:02:37.635
+to just set the variables.
+
+63
+00:02:37.635 --> 00:02:40.465
+So we'll just run it now to run this we,
+
+64
+00:02:40.525 --> 00:02:41.625
+we have anyway chosen this.
+
+65
+00:02:41.735 --> 00:02:43.505
+It's shows blue here, we'll just run this
+
+66
+00:02:43.505 --> 00:02:44.905
+cell and this shows busy.
+
+67
+00:02:45.095 --> 00:02:47.665
+Yeah, it's all good. Now we have the output here as well.
+
+68
+00:02:47.835 --> 00:02:51.225
+We'll go back to the via code. Scroll down.
+
+69
+00:02:52.165 --> 00:02:53.505
+Now what is the first step?
+
+70
+00:02:53.535 --> 00:02:56.585
+Step is to load the January, 2024 data,
+
+71
+00:02:56.835 --> 00:02:58.825
+which is curated and through
+
+72
+00:02:58.825 --> 00:02:59.825
+The zone lookup file.
+
+73
+00:02:59.825 --> 00:03:01.645
+So we'll just click on this particular cell
+
+74
+00:03:01.905 --> 00:03:03.245
+and then copy the cell here.
+
+75
+00:03:03.665 --> 00:03:06.525
+Go back to notebook here we're gonna paste it.
+
+76
+00:03:06.995 --> 00:03:08.725
+Okay, if you look at the code,
+
+77
+00:03:09.025 --> 00:03:13.725
+we are simply loading the curated data for Jan 2024.
+
+78
+00:03:14.385 --> 00:03:17.965
+We are also reading the zone lookup file. Okay?
+
+79
+00:03:18.145 --> 00:03:19.805
+And then we're taking a look at the schemas
+
+80
+00:03:20.385 --> 00:03:21.485
+and the sample data as well.
+
+81
+00:03:21.695 --> 00:03:23.925
+We'll run this. Alright, so this is all loaded.
+
+82
+00:03:24.105 --> 00:03:28.085
+We see we have 90 million records for Jan 2025.
+
+83
+00:03:28.105 --> 00:03:30.085
+We also have loaded the zone lookup table.
+
+84
+00:03:30.505 --> 00:03:32.645
+So the information is right here, the sample data.
+
+85
+00:03:32.945 --> 00:03:34.565
+Now we loaded the zone lookup table
+
+86
+00:03:34.565 --> 00:03:37.645
+because as mentioned here, the zone names the pickup,
+
+87
+00:03:37.645 --> 00:03:39.565
+borrow, pick up zone, drop of borrow, drop
+
+88
+00:03:39.565 --> 00:03:41.725
+of zone are de normalized in aggregated layer
+
+89
+00:03:41.725 --> 00:03:44.125
+by joining the zone table during EDL.
+
+90
+00:03:44.125 --> 00:03:47.445
+So we need zone table now.
+
+91
+00:03:47.445 --> 00:03:51.045
+So the next step will actually enrich the data we have
+
+92
+00:03:51.045 --> 00:03:54.085
+with the appropriate the pickup and drop locations.
+
+93
+00:03:54.455 --> 00:03:58.205
+We'll go back to the VS code and go to step two.
+
+94
+00:03:58.205 --> 00:04:01.245
+Now create enrich dataset with Azure information.
+
+95
+00:04:01.905 --> 00:04:06.165
+So we'll just copy this and go back to our notebook,
+
+96
+00:04:06.625 --> 00:04:08.525
+create one more cell here.
+
+97
+00:04:08.545 --> 00:04:10.765
+We already have a cell. We'll just paste that
+
+98
+00:04:10.945 --> 00:04:12.885
+and we'll run it.
+
+99
+00:04:13.225 --> 00:04:15.645
+And if we take a look at the code here,
+
+100
+00:04:16.265 --> 00:04:21.165
+we are now joining the curated data set with the zone table.
+
+101
+00:04:21.435 --> 00:04:22.965
+Okay, we have a zone table here.
+
+102
+00:04:22.965 --> 00:04:25.285
+We have Allst data pickup zone and drop of zone.
+
+103
+00:04:25.285 --> 00:04:27.765
+And we are joining to the same table
+
+104
+00:04:27.995 --> 00:04:29.965
+through two data frames.
+
+105
+00:04:30.115 --> 00:04:31.565
+Okay? We essentially,
+
+106
+00:04:31.565 --> 00:04:34.285
+we have only asked it when we join them, we'll be able
+
+107
+00:04:34.285 --> 00:04:36.925
+to get the exact locations
+
+108
+00:04:37.305 --> 00:04:39.565
+and we join them based on the location id.
+
+109
+00:04:39.835 --> 00:04:42.045
+Okay, now this pickup location ID
+
+110
+00:04:42.045 --> 00:04:46.165
+and drop off location id, these two r and d curated ones
+
+111
+00:04:46.705 --> 00:04:49.885
+and we join them with the location ID fields
+
+112
+00:04:50.105 --> 00:04:51.205
+in the pickup zone table.
+
+113
+00:04:51.475 --> 00:04:55.365
+Okay? Again, join is a pretty popular function, uh,
+
+114
+00:04:55.365 --> 00:04:57.565
+in data engineering and I hope, uh, you have gone
+
+115
+00:04:57.565 --> 00:04:59.365
+through my SQL skill booster
+
+116
+00:04:59.365 --> 00:05:00.605
+and PI box skill booster
+
+117
+00:05:01.015 --> 00:05:02.445
+where these things are already covered.
+
+118
+00:05:02.745 --> 00:05:04.125
+So if you see after joining them,
+
+119
+00:05:04.145 --> 00:05:07.925
+you are selecting the columns from the curated field,
+
+120
+00:05:08.305 --> 00:05:12.125
+the data frame, and then you also enrich by
+
+121
+00:05:12.675 --> 00:05:16.245
+selecting the fields from the zone lookup table.
+
+122
+00:05:16.475 --> 00:05:18.445
+This way. So we have the data ready now,
+
+123
+00:05:18.625 --> 00:05:21.445
+so it does show the sample and this data, right?
+
+124
+00:05:21.825 --> 00:05:23.165
+You get the exact location manager
+
+125
+00:05:23.185 --> 00:05:25.725
+and Bronx, all of that instead of just the
+
+126
+00:05:27.325 --> 00:05:28.445
+location IDs, in fact.
+
+127
+00:05:28.745 --> 00:05:31.885
+So the next step will be to create the aggregation tables
+
+128
+00:05:32.025 --> 00:05:35.405
+as we already saw and discussed before.
+
+129
+00:05:35.665 --> 00:05:37.325
+So we'll create this table one, two,
+
+130
+00:05:37.325 --> 00:05:39.405
+and three in the next step.

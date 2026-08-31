@@ -1,0 +1,19 @@
+Course: Agentic Data Engineering with Amazon Q
+Lesson: 8.5 Set Default Region to us-east-1 RESUME
+============================================================
+
+Next, you'll go to AWS console and go to settings here.
+Click on that. Click on see all user settings.
+Edit the button here, change the default region
+to US East One.
+Very, very important for all our hands-on,
+for all the projects we'll be doing.
+You gotta choose US east one for the hands-on
+to go smoothly, and then save this.
+Also, whenever you log into AWS, make sure that you see
+Northern Virginia selected right here.
+No matter where you're in the world, you could be in India,
+you could be in us,
+you could be in Europe, you could be in Australia.
+You gotta choose Northern Virginia for the hands on
+to go smoothly.

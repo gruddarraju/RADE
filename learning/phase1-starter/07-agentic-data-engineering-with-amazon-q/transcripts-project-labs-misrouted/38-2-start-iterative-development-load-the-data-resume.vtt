@@ -1,0 +1,669 @@
+WEBVTT
+
+1
+00:00:00.340 --> 00:00:01.060
+Next step, go to
+
+2
+00:00:02.080 --> 00:00:02.600
+the search bar.
+
+3
+00:00:03.980 --> 00:00:04.660
+Search Glue.
+
+4
+00:00:05.620 --> 00:00:06.490
+Open AWS Glue.
+
+5
+00:00:08.380 --> 00:00:11.820
+Go to the left-hand side. Click on ETL Jobs.
+
+6
+00:00:12.220 --> 00:00:14.840
+Next, click on Notebook, then choose an IAM role.
+
+7
+00:00:15.240 --> 00:00:17.440
+Choose Mission DEH HOF Glue Service Role.
+
+8
+00:00:18.400 --> 00:00:19.420
+This is already in your
+
+9
+00:00:20.840 --> 00:00:24.260
+account, got created when you ran the script,
+
+10
+00:00:24.740 --> 00:00:26.320
+which created the S3 bucket as well.
+
+11
+00:00:27.480 --> 00:00:30.680
+So in the real world, this would have been given you by your-- And then click on
+
+12
+00:00:30.800 --> 00:00:33.380
+Create Notebook. This will take about a minute or two.
+
+13
+00:00:33.800 --> 00:00:35.580
+Meanwhile, go back to your VS Code.
+
+14
+00:00:36.480 --> 00:00:38.480
+Right-click on this. Click on Rename.
+
+15
+00:00:39.660 --> 00:00:42.940
+Copy the file name. Right-click on that, Copy.
+
+16
+00:00:43.360 --> 00:00:46.449
+Go back to the AWS console. Right here, click on that.
+
+17
+00:00:47.080 --> 00:00:50.900
+Delete all of that, and then paste the file
+
+18
+00:00:50.949 --> 00:00:54.160
+name. This is your Glue notebook name. Now click on Enter.
+
+19
+00:00:54.540 --> 00:00:58.380
+You see this red thing here. Now click on this Job details. Scroll down a bit.
+
+20
+00:00:58.900 --> 00:01:01.980
+Everything looks good. The two and the red thing is gone now.
+
+21
+00:01:02.750 --> 00:01:05.121
+We'll go back to Notebook. Let me zoom out a bit.
+
+22
+00:01:05.640 --> 00:01:09.500
+Now what you see here is a notebook. Okay? What you see here is a notebook.
+
+23
+00:01:09.520 --> 00:01:12.640
+A notebook helps us to iteratively develop things.
+
+24
+00:01:13.840 --> 00:01:17.700
+Okay? Now, what's our goal now? Our goal is to read the data which is in the
+
+25
+00:01:17.740 --> 00:01:21.640
+raw folder, transform that per the mapping given to us by the analyst,
+
+26
+00:01:22.300 --> 00:01:24.200
+also do some validation data quality checks,
+
+27
+00:01:25.960 --> 00:01:29.920
+and then finally load that to curated layer, the folder. That's our ask.
+
+28
+00:01:31.160 --> 00:01:32.320
+So there are multiple steps involved.
+
+29
+00:01:33.780 --> 00:01:34.180
+First step
+
+30
+00:01:35.760 --> 00:01:38.880
+is to read the data from raw. Second step, transform it.
+
+31
+00:01:39.140 --> 00:01:39.600
+Third step,
+
+32
+00:01:40.590 --> 00:01:44.500
+do data quality validation. Fourth step is to write the
+
+33
+00:01:44.560 --> 00:01:46.110
+validated data back into
+
+34
+00:01:47.200 --> 00:01:49.240
+curated layer. So there are four steps involved here.
+
+35
+00:01:49.580 --> 00:01:52.800
+So notebook is used to develop things iteratively.
+
+36
+00:01:53.060 --> 00:01:56.980
+When I say iteratively, we can run a part of the code and see
+
+37
+00:01:57.000 --> 00:01:57.580
+how it behaves.
+
+38
+00:01:58.920 --> 00:02:00.960
+We don't have to run the entire code from top to bottom.
+
+39
+00:02:01.280 --> 00:02:01.570
+So we can
+
+40
+00:02:03.100 --> 00:02:04.540
+do things step by step.
+
+41
+00:02:05.870 --> 00:02:09.340
+This is what a notebook enables us, and this is how we start in the development
+
+42
+00:02:09.350 --> 00:02:10.861
+phase. When we have a new project,
+
+43
+00:02:12.100 --> 00:02:15.860
+when you're working on Apache Spark-based
+
+44
+00:02:15.880 --> 00:02:19.720
+project, we go with notebook. If you're working on a Python-based project,
+
+45
+00:02:20.140 --> 00:02:23.640
+we don't use notebook. It is only for PySpark-based jobs.
+
+46
+00:02:24.140 --> 00:02:27.940
+So now, in a notebook, we have different cells here. Okay?
+
+47
+00:02:28.420 --> 00:02:31.060
+So here we already have some pre-populated information.
+
+48
+00:02:31.410 --> 00:02:33.160
+Now, what you see here, the percentage
+
+49
+00:02:35.860 --> 00:02:38.160
+indicates that these are magic commands. Okay?
+
+50
+00:02:39.160 --> 00:02:41.820
+You're setting the properties of this notebook
+
+51
+00:02:43.080 --> 00:02:46.120
+through these magic commands. You're going with worker type G1X.
+
+52
+00:02:46.580 --> 00:02:48.820
+All of this is discussed in deep dive. Okay?
+
+53
+00:02:49.140 --> 00:02:50.800
+Worker type, the number of workers.
+
+54
+00:02:50.920 --> 00:02:51.910
+For now, we'll not talk about
+
+55
+00:02:52.800 --> 00:02:55.120
+the theory part now. We'll just stick to the hands-on part.
+
+56
+00:02:55.420 --> 00:02:57.350
+So for our use case, we just need
+
+57
+00:02:59.200 --> 00:03:01.700
+the minimum number of workers. So we'll just stick to two.
+
+58
+00:03:02.240 --> 00:03:03.720
+I'll remove the five and make it two.
+
+59
+00:03:04.520 --> 00:03:08.420
+Okay? Next, I'm going to run this. So to run this, I can just go
+
+60
+00:03:09.380 --> 00:03:13.370
+click on this cell and go here and run this with the help
+
+61
+00:03:13.400 --> 00:03:14.060
+of the button here.
+
+62
+00:03:15.180 --> 00:03:18.730
+So now you see here, the star mark, it is running currently. Okay?
+
+63
+00:03:19.250 --> 00:03:22.660
+Right here as well, you see it shows kernel status busy.
+
+64
+00:03:23.640 --> 00:03:25.950
+Okay? Right here, in fact. If I scroll down,
+
+65
+00:03:27.180 --> 00:03:30.760
+you see the output here. Whatever is running here, this part of the code is
+
+66
+00:03:30.800 --> 00:03:34.580
+running, in fact, with just this much, and it's already printing some output here.
+
+67
+00:03:34.620 --> 00:03:36.620
+So this is how we do iterative development.
+
+68
+00:03:37.600 --> 00:03:39.060
+We're waiting for a session to be created.
+
+69
+00:03:39.920 --> 00:03:43.670
+Okay? Now, what a session is, all of that, what
+
+70
+00:03:43.700 --> 00:03:46.240
+this means, all that is covered in the deep dive course.
+
+71
+00:03:46.820 --> 00:03:50.360
+While we wait for this to run, we don't have to have
+
+72
+00:03:50.420 --> 00:03:51.880
+these cells here.
+
+73
+00:03:52.880 --> 00:03:55.320
+They are all sample cells that got created.
+
+74
+00:03:56.480 --> 00:03:57.609
+We'll delete them. We'll click on them.
+
+75
+00:03:58.160 --> 00:03:58.760
+We'll go to this
+
+76
+00:03:59.780 --> 00:04:01.340
+knife button here. We'll click on that.
+
+77
+00:04:01.800 --> 00:04:04.020
+We'll keep on removing them one by one.
+
+78
+00:04:04.680 --> 00:04:08.080
+We don't need them at all. Now the session has been created.
+
+79
+00:04:08.090 --> 00:04:11.940
+The next step, if you've gone through my PySpark Skill Booster, the
+
+80
+00:04:12.020 --> 00:04:15.350
+spark session is the entry point. So we need to have this ready before we do
+
+81
+00:04:15.420 --> 00:04:18.649
+anything at all. So the next step is to go back to my Visual
+
+82
+00:04:18.700 --> 00:04:22.540
+Studio, and I have the
+
+83
+00:04:22.580 --> 00:04:24.200
+code that I've already provided to you.
+
+84
+00:04:24.240 --> 00:04:25.599
+You're going to copy this whole code, in fact.
+
+85
+00:04:26.020 --> 00:04:28.700
+Now, just copy this one cell alone, okay?
+
+86
+00:04:29.000 --> 00:04:30.340
+Not the cell
+
+87
+00:04:31.440 --> 00:04:34.100
+below. Okay? Just copy the cell
+
+88
+00:04:35.560 --> 00:04:37.460
+that I'm showing you right now. Just copy this.
+
+89
+00:04:37.700 --> 00:04:40.380
+Just click here, do a Control + A, select the whole cell,
+
+90
+00:04:42.060 --> 00:04:42.920
+and then go here,
+
+91
+00:04:43.760 --> 00:04:44.940
+click on the three
+
+92
+00:04:46.200 --> 00:04:47.340
+dots, More actions,
+
+93
+00:04:48.620 --> 00:04:50.500
+Copy cell. Go back to your notebook.
+
+94
+00:04:51.800 --> 00:04:54.900
+And now we don't really have any cell here, right? We got to create a cell now.
+
+95
+00:04:55.260 --> 00:04:58.060
+So we're going to go here and click on this plus button.
+
+96
+00:04:59.000 --> 00:05:02.120
+That will create a code cell for us. This is a code cell.
+
+97
+00:05:02.680 --> 00:05:06.510
+You see there are different types of cells here, raw, markdown, and
+
+98
+00:05:06.600 --> 00:05:10.580
+code. We will choose code. So we'll click here, and from the
+
+99
+00:05:10.620 --> 00:05:12.840
+keyboard, we'll just do Control + V.
+
+100
+00:05:14.200 --> 00:05:17.980
+That pasted the code that we copied from the VS Code. Okay?
+
+101
+00:05:18.360 --> 00:05:22.280
+Now how this code was created, all of that is discussed in the Build Data
+
+102
+00:05:22.320 --> 00:05:25.219
+Engineering Code with Agentic AI course. Now, what are we doing here?
+
+103
+00:05:25.800 --> 00:05:29.770
+We are going to be creating some variables for
+
+104
+00:05:29.800 --> 00:05:32.360
+the bucket name and then where the raw
+
+105
+00:05:33.220 --> 00:05:37.100
+data is going to be, which folder, the raw path, and where we want
+
+106
+00:05:37.140 --> 00:05:40.600
+to store the curated data, the path here, in fact. Okay?
+
+107
+00:05:41.000 --> 00:05:44.500
+Now, initially, what we're going to do is when we are developing,
+
+108
+00:05:44.920 --> 00:05:48.760
+we will just develop for one partition alone, for one file
+
+109
+00:05:48.820 --> 00:05:52.520
+alone. Now, we know that we have data for 2024 and
+
+110
+00:05:52.580 --> 00:05:56.120
+2025, but we will not use entire data for development.
+
+111
+00:05:56.220 --> 00:05:58.800
+We'll start with just one month of data, one file alone.
+
+112
+00:06:00.520 --> 00:06:03.740
+So I mentioned the target year and target month here and
+
+113
+00:06:04.220 --> 00:06:06.380
+specific path where we will find
+
+114
+00:06:07.396 --> 00:06:09.576
+That particular month's data. Okay.
+
+115
+00:06:10.576 --> 00:06:12.536
+Now, we're going to read the file, right?
+
+116
+00:06:12.776 --> 00:06:13.416
+The
+
+117
+00:06:14.376 --> 00:06:17.196
+January 2024 data into a raw data frame.
+
+118
+00:06:17.566 --> 00:06:21.056
+We'll do some basic data exploration. We'll look at how the schema looks like.
+
+119
+00:06:21.516 --> 00:06:22.896
+We'll see some sample data as well,
+
+120
+00:06:23.896 --> 00:06:27.646
+and some column analysis you see here, and some more
+
+121
+00:06:27.656 --> 00:06:29.076
+analysis on the license numbers.
+
+122
+00:06:30.456 --> 00:06:34.196
+Okay, so essentially we are just loading the data and doing some analysis on that.
+
+123
+00:06:34.256 --> 00:06:35.346
+Now, again, if this code is
+
+124
+00:06:36.996 --> 00:06:40.936
+overwhelming for you, then it means you may not really have gone through the
+
+125
+00:06:42.836 --> 00:06:45.436
+Python and PySpark Skill Booster. You should have gone through that.
+
+126
+00:06:45.716 --> 00:06:49.416
+And also if you go through the Agentic Data Engineering with Amazon
+
+127
+00:06:49.756 --> 00:06:50.816
+Q course of mine,
+
+128
+00:06:52.596 --> 00:06:56.565
+there I've shown you how to understand the code with the help
+
+129
+00:06:56.576 --> 00:07:00.546
+of agent. You just copy the whole thing and put that in Amazon Q, it will tell
+
+130
+00:07:00.556 --> 00:07:03.316
+you exactly what the code is doing.
+
+131
+00:07:03.356 --> 00:07:05.056
+You can chat with that and get information.
+
+132
+00:07:06.356 --> 00:07:09.456
+Okay. Right. So now we have the code ready. We're going to run this now.
+
+133
+00:07:09.716 --> 00:07:13.456
+To run this, we'll just select the cell here and run the
+
+134
+00:07:13.496 --> 00:07:15.416
+cell by clicking this button right here.
+
+135
+00:07:16.276 --> 00:07:19.816
+Now, again, this shows gray, shows kernel status as busy.
+
+136
+00:07:21.016 --> 00:07:22.876
+So we need to wait for this to finish.
+
+137
+00:07:23.316 --> 00:07:27.236
+And if you scroll up and see this is showing up as star here, it means it
+
+138
+00:07:27.276 --> 00:07:27.816
+is also running.
+
+139
+00:07:28.686 --> 00:07:32.076
+I'll just scroll down and wait for it to finish. There you go. It's all done.
+
+140
+00:07:33.976 --> 00:07:36.116
+It says, "Loading data from this path.
+
+141
+00:07:36.716 --> 00:07:37.966
+Data loaded successfully."
+
+142
+00:07:38.796 --> 00:07:42.096
+Total records, we have 19 million records and 24 columns.
+
+143
+00:07:43.616 --> 00:07:44.416
+Here is the schema,
+
+144
+00:07:46.076 --> 00:07:47.186
+sample data as well.
+
+145
+00:07:48.276 --> 00:07:51.176
+And if you scroll down, the column analysis as well. Okay.
+
+146
+00:07:51.216 --> 00:07:52.146
+How many nulls you have,
+
+147
+00:07:53.916 --> 00:07:57.456
+all of that is analyzed here, in fact. The license distribution as well.
+
+148
+00:07:57.816 --> 00:08:01.366
+Now, if you go back to the NYC TLC portal and look at the data dictionary,
+
+149
+00:08:01.856 --> 00:08:05.776
+you see this license number corresponds to Uber and this
+
+150
+00:08:05.856 --> 00:08:09.676
+one corresponds to Lyft. So it looks like we only have data for
+
+151
+00:08:09.736 --> 00:08:13.456
+Uber and Lyft in our file.
+
+152
+00:08:13.776 --> 00:08:16.516
+That's pretty much it. We have loaded the data, now we are ready for
+
+153
+00:08:16.556 --> 00:08:20.536
+transformations per the mapping sheet that
+
+154
+00:08:20.576 --> 00:08:24.546
+is given to us by analyst, which we'll do in the next video.
+
+155
+00:08:24.716 --> 00:08:25.716
+So make sure you get this done
+
+156
+00:08:26.576 --> 00:08:29.576
+and talk to-- And remember, if you will take a break,
+
+157
+00:08:30.416 --> 00:08:33.557
+if you'll not go to the next video, make sure you stop the notebook.
+
+158
+00:08:34.297 --> 00:08:35.756
+Otherwise, you will incur
+
+159
+00:08:37.016 --> 00:08:40.996
+expense. And if you do stop the notebook, when you come back again,
+
+160
+00:08:41.536 --> 00:08:43.557
+you will have to start from the top.
+
+161
+00:08:43.716 --> 00:08:45.916
+You'll have to start running the cell
+
+162
+00:08:47.096 --> 00:08:50.936
+again, this cell again, and you'll have to run the next cell again before you
+
+163
+00:08:50.976 --> 00:08:54.876
+run the third cell, in which we'll transform the
+
+164
+00:08:54.896 --> 00:08:57.556
+data. Only if you want to take a break, then stop it.
+
+165
+00:08:57.656 --> 00:08:59.276
+If you stop it, you'll have to
+
+166
+00:09:00.136 --> 00:09:01.156
+rerun all the cells again.
+
+167
+00:09:02.956 --> 00:09:03.616
+See you in the next video.

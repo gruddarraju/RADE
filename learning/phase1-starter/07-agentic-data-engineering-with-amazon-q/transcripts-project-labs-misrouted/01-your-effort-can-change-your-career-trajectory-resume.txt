@@ -1,0 +1,162 @@
+Course: Agentic Data Engineering with Amazon Q
+Lesson: *Your effort can change your career trajectory!* RESUME
+============================================================
+
+Hey guys, welcome back.
+Now, I graduated back in 2008 as a
+computer science engineer and back in 2007 itself,
+you know, I had an offer from TCS,
+you know, it had come to my campus
+as a first company for hiring the freshers
+and I was lucky I was able to
+crack the interview and so I had not
+really faced any struggle getting my first job,
+okay.
+You know, life went on, I joined TCS,
+I had my ups and downs, okay, but
+after two years, I thought let me just
+go out and try attending interviews outside and
+I started giving interviews, one interviews, two interviews,
+third interview, fourth interview, six, seven, probably around
+eight, I think.
+So, within span of a year after hitting
+two years of experience till I hit my
+three years of experience, I attended about seven
+to eight interviews and I was not able
+to crack an interview, that is when I
+saw the real struggle, okay.
+I was dejected, literally, I didn't know what
+to do, you know, a good friend of
+mine said, why don't you kind of get
+trained from somebody else?
+So, and then, you know, we got in
+touch with our college senior, he said, hey,
+go to this guy called Prabhakar, he teaches,
+you know, Informatica ETL development and I, you
+know, my friend and I went over there,
+you know, talked to him and I enrolled
+in his classes and, you know, within a
+period of three months, I was able to
+crack interviews, okay.
+So, you know, why am I sharing this
+with you?
+You know, I had that hunger, you know,
+the hunger was there to crack interviews and
+because I was getting rejected time and again,
+time and again, multiple times I got rejected,
+okay, and that hunger made me really work
+hard, okay, very hard and I'm really grateful
+for my mentor, you know, from whom I
+learned Informatica ETL development data engineering and back
+then, I did not know that Informatica field
+would change my life, you know, learning Informatica
+would really have such a profound, in fact,
+profound impact in my life, I didn't know
+that because I didn't know back then that
+data is an evergreen field, okay.
+See, even now in the days of AI,
+data engineers are always required, okay, it is
+a field that needs interacting with business stakeholders,
+interacting with a lot different teams.
+So, it is a discipline in which there
+is a lot to learn, a lot to
+learn and I'll tell you back then I
+learned Informatica, I did not really have any
+real-world project to actually work on, you
+know, I was taught Informatica very, very well
+and, you know, I learned really well and
+I remember after I learned, I finished training,
+I took, I think, a week off from
+my office just to do the hands-on,
+I did the hands-on, I took the
+screenshots of the different mappings I built in
+Informatica, put them in a word doc, okay,
+and I think I probably took color printouts
+and I made my own notes, okay, I
+still have that 27-page notes I made
+myself, okay, I had typed in my laptop
+27-page notes, why am I telling this
+to you, okay, again back then I did
+not really have a real world but that
+hands-on really helped me and my notes
+really helped me but what you are about
+to embark upon now in this course is
+truly game-changing, I believe, because you will
+actually get to work on a real project
+with real data, you will see how to
+pull from the source, how to load data
+into the data lake, how to transform it,
+how to unit test it, how to orchestrate
+the jobs, in the sense how to run
+the job sequentially as such, okay, one by
+one and how to schedule the job and
+in doing so you'll also learn about how
+to leverage AI for all data engineering tasks,
+okay, now this whole course is highly fast
+-paced, it's highly hands-on, this labs course
+actually simulates working in a real world project
+environment with real data, you will feel you're
+working in the real world, we will use
+real data that gets published every month, okay,
+every month in fact, real data, I strongly
+hope by the end of this course you
+will feel that you finally found a course
+that shows how data engineering is done end
+-to-end in the real world, I don't
+know of any Udemy course, any YouTube course
+or any other instructor who is doing this,
+if you do know, let me know, okay,
+I would love to collaborate with him or
+her because in that case the vibe would
+match, now I'll tell you how to learn,
+how to approach this particular course, okay, you
+got to be replicating what I'm doing, whatever
+I do, you should be doing at the
+same time in your account and that's the
+only way you'll grasp the depth that is
+there in this project and this course is
+truly hands-on and there is one more
+course which has to be also consumed parallelly
+which is a deep dive course, so these
+two course should go parallelly, okay, you may
+do some hands-on, you may also watch
+the video from deep dive or you may
+watch video from deep dive then come here
+and do hands-on, so back and forth
+you'll have to go through, even if you
+have to go through this content once or
+twice or even thrice, so be it, my
+teaching style is straightforward, I don't like to
+beat around the bush, so some videos are
+really very short and crisp and even if
+you have to really pause the video, then
+do hands-on, then resume, so be it,
+do that, okay, and if you truly get
+this entire project story and if you can
+replicate that in the interview, nothing like it,
+so if you're really excited about this project,
+this hands-on real world project with real
+data, let me know in the comment below
+by typing, I am excited and I will
+do whatever it takes to complete the course,
+I will do my hands-on, I really
+want to see your commitment, so go ahead
+and type it down below, I really look
+forward to reading that and what should be
+your goal always, your goal should always be
+to crack multiple interviews and induct into the
+DEH Hall of Fame by getting this award,
+crack interviews, apply for the HUF award, get
+interviewed by me and get this award delivered
+to you, and don't just stop at this
+award itself, you got to be thinking long
+term, you got to be always looking at
+how you can actually grow beyond your current
+role to reach the architect level roles in
+data engineering, okay, I'll talk to you in
+the next video and before that, as I
+said, type in the comment below, I am
+really excited and I will do whatever it
+takes to complete the hands-on in this
+course, okay, I'll see you in the next
+video.

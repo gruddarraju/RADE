@@ -1,0 +1,44 @@
+Course: Agentic Data Engineering with Amazon Q
+Lesson: 6. *Below - Next Step is Very Important* RESUME
+============================================================
+
+Hey guys, I hope you are loving this so far
+and the story is getting built step by step
+and I hope you are taking down the notes.
+You've got to be able
+to have the story in your system right here.
+When you have it here, you'll be able
+to reproduce in your interviews without any hiccups at all.
+If they cross question you, you can really talk about
+what exactly you have done in your project,
+and this is why I recommend that you note down all of that
+and in the comments below,
+in your own words, write your story.
+This will reinforce things in your system.
+Alright, the next step, okay, is gonna be very,
+very important because now you have given the
+data to the data analyst.
+They're gonna analyze the data
+and they are going to come up with the requirements
+for the data engineering projects.
+They're gonna tell exactly how they want the data
+to be transformed from the raw to the curated,
+where you'll transform the data
+and curated, you'll move it to aggregated when you wanna,
+when you wanna see the aggregated data, which they can use
+to make business decisions, the revenue optimization
+and the driver operations optimization.
+So it requirements part is gonna be very, very critical.
+Okay? Because when the interviewer asks you,
+or even when the recruiter calls you
+and asks you, do me a, tell me your roles
+and responsibilities in the project, you will have
+to talk about this, that I would be given the requirements
+from the analyst team
+and I would build my data engineering pipeline
+based on the requirements.
+Right? Before we go to the next video,
+make sure you type down your story in your own words
+below the video, and also read
+others' comments as well, right?
+See how they are interpreting it Dr. Soon.

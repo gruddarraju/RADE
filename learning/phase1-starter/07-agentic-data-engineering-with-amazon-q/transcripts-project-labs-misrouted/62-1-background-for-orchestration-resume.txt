@@ -1,0 +1,142 @@
+Course: Agentic Data Engineering with Amazon Q
+Lesson: 1. Background for Orchestration RESUME
+============================================================
+
+Welcome, come back.
+We've seen a lot of code you're seeing on
+the screen right now, right?
+A lot of stuff you've seen, a lot of strategies you've seen,
+as I said before, you gotta have the clarity
+of thought about what you wanna achieve.
+And that clarity comes by going through the course,
+doing the hands-on, asking the
+right questions, getting more clarity.
+We are in, in an era where attention
+and focus is your biggest asset, okay?
+With so much of distraction around so much of
+new shiny things coming around every now and then,
+and so much of information overload that is happening
+with help of social media like LinkedIn or YouTube.
+You, you go into LinkedIn, you get sucked over there, right?
+You have people saying, okay, I, I cracked an interview.
+I cracked, uh, four interviews, join another company.
+And you go to YouTube, you get sucked to.
+The point I'm trying to make here is that your attention,
+if you really redirect towards your goals,
+you'll make progress a lot, lot faster.
+And I can tell you from my own personal experience,
+f you know, I was at a stage
+where I would just constantly consume
+and then work, create, consume, create, consume, create.
+There was a nonstop context switch happening in my brain.
+And, uh, I wasn't really making any
+meaningful progress as such, okay?
+When I was driving, I would have the YouTube podcast on
+when I was waiting in a grocery store.
+When, when I was waiting for anything for that matter,
+I would just take out my phone, look at LinkedIn,
+look at WhatsApp, look at Gmail.
+Essentially, I had lost the habit of thinking, you know,
+which is extremely important.
+You gotta be spending time with yourself.
+That is when you actually get clarity about your goals,
+your next steps as such.
+And I got so fed up with my own habit
+of getting distracted every now
+and then that I got a few books for me
+to really overcome this issue.
+And I'll, I highly recommend three books.
+And they are here, in fact,
+in just get them to you for you right now.
+If you look at, uh, this book here, one
+of the best books ever, okay?
+Atomic Habits. And this one is also extremely good, uh,
+indestructible, uh, practical tips on how can actually, um,
+you know, a wide, a lot of noise that we have in our head
+and, uh, because of social media
+and other applications in fact.
+And, uh, lastly, this, this book was a game changer for me.
+Game changer, amazing book.
+The first 40% of the book is very, very difficult to read.
+The next 60% is mind blowing, mind blowing.
+So you got to have patience with this book.
+First 40% is difficult to understand.
+The words are not easy, but this next 60% is
+simply mind boggling.
+And trust me, those three books have really helped me a lot.
+So I would highly recommend you spend at least 30 minutes a
+day, uh, over the bit of next, uh, you know, two,
+three months, and you will see your life transforming.
+Okay? Now, back to the topic.
+Uh, what you need to really know, apart from the clarity
+of thought is that
+You should be able to at least write
+this pseudo code, okay?
+And says pseudo code, it's about,
+what you see here is a code, right?
+Pseudo code is in plain English words.
+Essentially, you know, what do you wanna do?
+Or read a file next, uh, filter this file next,
+transform this file, do some aggregations.
+Next, uh, join this file, uh, with another file. Okay?
+And then finally, load this file back into university.
+There is a pseudo code.
+So you gotta have this much clarity for you to be able
+to achieve building of a data pipeline that is,
+that is going be far, far better than
+what a human can write.
+Okay? Now, as far as clarity is concerned,
+I will be letting you about a lot of different things.
+Uh, as the course progresses, you will get clarity.
+So make sure you not only finish this course,
+but there are some courses coming up ahead as well i,
+in the path that I've laid out.
+So make sure you go through them.
+Extremely important where you will get a lot more clarity
+about the different concepts in data engineering.
+Okay? Now, back to a project. So what have you done so far?
+We have, um, you know, built three jobs, right?
+Job one, job two, and job three.
+One gets data from, uh, NYC
+loads into, uh, raw.
+And, uh, the second job actually reads some raw
+and loads into, uh, curated.
+And third one, um, reads from curated
+and loads into the aggregated layer.
+And we saw how we can incrementally load it as well, right?
+So that, that is all something which is done right now.
+Now we need to automate this. Now one has to run,
+then the second one has to run,
+then the third one has to run.
+Okay, if at all, the first one fails.
+Uh, second and third should not run if at all.
+Second one fails, third should not run.
+And if at all, any one of them fails, somebody has
+to get notified, right?
+So that they can look into it.
+And typically we have support teams who looks into the jobs
+that fail in production environment.
+We are now in development. We are, we'll ultimately go
+to production, right when the jobs run every single day.
+And in production environment, we have a support team
+who looks into the failures.
+And for them to look ference, they have to be notified.
+So we need to achieve that part as well.
+So we'll look at two services in this particular section,
+uh, a section dedicated to SNS
+and step function.
+Okay? SNS is called, uh,
+or used to send emails to the support teams.
+And step functions are used for orchestrating.
+The word is orchestrating, you know, you
+or on the jobs sequentially in our use case.
+And, uh, other use case would be that,
+let's say the jobs really finish, all of them really finish
+and data is available in aggregated layer.
+You'd also want to inform the data analyst
+team data has been loaded.
+Go take a look, maybe run a report.
+That also can be done with the OSNS.
+Essentially, you can send an email to anybody you want to.
+Okay? So let's, uh, take a look at SNS, uh,
+in the next video.

@@ -1,0 +1,15 @@
+Course: Agentic Data Engineering with Amazon Q
+Lesson: 4 Create Admin User with Console and Programmatic Access RESUME
+============================================================
+
+On the Im go to users, create a user type,
+capital A-D-M-I-N.
+Choose this option here.
+Scroll down, choose custom password. Uncheck this box.
+Scroll down, do next. Choose attach policies directly.
+Option, scroll down, search admin,
+select administrator access, and then scroll down.
+Click on next, and then review and create.
+Scroll down, click on Create User.
+In the next page, scroll down. Click on Download 60. File.
+This file is very important. Make sure you save it safely.

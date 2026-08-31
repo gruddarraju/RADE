@@ -1,0 +1,25 @@
+Course: Agentic Data Engineering with Amazon Q
+Lesson: 5 *Why did the script run longer?* RESUME
+============================================================
+
+So our job has got finished Monday.
+It took actually almost an hour, you see,
+and if you go to the S3 data lake, we see the data
+for even year 2095 and for the different months.
+And within the months, we have data
+for different days as well.
+So we gotta be tuning this, okay?
+The question is whether 59 minutes
+is acceptable to us or not.
+We'll discuss about that later.
+The tuning part, we'll talk about that later.
+But we'll now proceed to creating the next job,
+which loads the data into the aggregated layer
+by reading from curated layer. But
+Before we go to the next part, can you think about why
+this job ran longer When we ran a script, when we ran it
+as a notebook, it hardly took a few minutes.
+Think about that. And
+before you look at what others have said below, I want you
+to think about that and comment in the comment section about
+why you think about why you think the script ran longer.

@@ -1,0 +1,73 @@
+Course: Agentic Data Engineering with Amazon Q
+Lesson: 1b. Datalake Setup RESUME
+============================================================
+
+Alright, the project starts then.
+Okay? Obviously the first thing
+you'll do is download the data.
+You'll go to the location
+that the business name has given you,
+and you'll download the data on your laptop.
+Next, you'll have to upload this Parquet file
+to a data lake.
+Now, what's a data lake? Data lake is something
+where you can store any amount of data, any kind of data
+for a very, very cheap price.
+You wanna store Excel sheet, you wanna store parquet,
+you wanna store log files, you wanna store media files,
+you wanna store video files.
+You can serve all of that in a data lake
+at a very, very cheap price.
+And on AWS data lake is built on
+a service called as s threes.
+I can search S3 here and click on S3.
+I have many, many buckets here.
+These are the buckets I'll tell you about them shortly.
+These are many buckets that you have here.
+A combination of this, all of this becomes your data lake.
+Now what are these different things you see here?
+These are called as buckets, okay? General purpose buckets.
+These are, and you will create something called as mission,
+D-H-H-O-F-N-Y-C-T-L-C, bucket in your account.
+So when I click on this, I have a folder
+here called A raw, okay?
+I can create folders here
+and I can organize the data by folders.
+And within this, as called as hv, FHV, why HV FHV?
+Because I am downloading the high volume FHV data.
+And here I have uploaded the Parque file,
+which you'll do shortly.
+So the first step for you would be to get a bucket created.
+Okay? Now, who's gonna get the bucket?
+You will not do that in every company.
+We have cloud engineers, you may call them cloud engineers,
+we call them cloud infrastructure engineers.
+There's a cloud engineering team, which is responsible
+for creating these buckets.
+So you'll email them, Hey,
+I want a bucket for my new project.
+They will create it for you in the hands-on video
+that you'll now watch in a few minutes.
+I've given you a script.
+Now you'll run the script
+and it'll automatically create the bucket for you.
+You imagine that that script is being run
+by the cloud engineering team to create the bucket for you,
+but here you are running it yourself.
+So once you have the bucket ready,
+you wanna create the folders and upload the file here.
+All of this is shown to you in the next few videos.
+So that is the first step, right?
+You, you have downloaded the data.
+Now you have uploaded that into the data lake.
+Now this is still a park data.
+It is, this is this folder,
+and this bucket is like a container, right?
+It is like your hard desk.
+You are able to store whatever you wanna store,
+except on Windows or Mac.
+You can open a a video file and view it.
+But here, you can't open the que file for that matter.
+Even you, even on your laptop, you can't open a que file.
+So how can you give access to the analyst to this data?
+So that's the next step, right? Talk to you soon.

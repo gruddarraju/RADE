@@ -1,0 +1,241 @@
+WEBVTT
+
+1
+00:00:00.225 --> 00:00:01.965
+We have three jobs to run sequentially.
+
+2
+00:00:02.025 --> 00:00:03.085
+The first one is right here
+
+3
+00:00:03.085 --> 00:00:05.205
+and then followed by the rod curated
+
+4
+00:00:05.205 --> 00:00:08.245
+and then the curated to aggregated script.
+
+5
+00:00:08.635 --> 00:00:13.045
+Okay, so we'll ask Amazon Q to get us something called
+
+6
+00:00:13.045 --> 00:00:14.445
+as a SL code is.
+
+7
+00:00:14.445 --> 00:00:16.285
+It still stands for Amazon States Language Code.
+
+8
+00:00:16.285 --> 00:00:20.245
+That is the code using which we build step functions.
+
+9
+00:00:20.705 --> 00:00:21.925
+You'll see it shortly. In fact,
+
+10
+00:00:22.165 --> 00:00:23.565
+I say give gimme an A SL code
+
+11
+00:00:23.665 --> 00:00:25.565
+for a step function named this.
+
+12
+00:00:25.985 --> 00:00:29.125
+The first one will be data on router followed by the raw
+
+13
+00:00:29.125 --> 00:00:32.005
+to curated and then they curated to the raw jobs.
+
+14
+00:00:32.155 --> 00:00:33.965
+Okay? Make sure to also send an alert
+
+15
+00:00:33.965 --> 00:00:37.805
+to SNS topic called mission, D-E-H-H-O-F,
+
+16
+00:00:38.225 --> 00:00:41.685
+if there's any failure at all in any of the glue jobs.
+
+17
+00:00:41.835 --> 00:00:44.605
+Okay? Now the second job should not run
+
+18
+00:00:44.615 --> 00:00:45.885
+until the first one is finished.
+
+19
+00:00:45.905 --> 00:00:49.205
+It is important, okay? And the third one should not run
+
+20
+00:00:49.575 --> 00:00:50.765
+until the second one is finished.
+
+21
+00:00:50.995 --> 00:00:54.165
+Okay? Now this is what I mean by sudo code before, okay?
+
+22
+00:00:54.165 --> 00:00:57.965
+You're able to communicate your thoughts with Amazon Q.
+
+23
+00:00:58.385 --> 00:01:02.445
+Now you're asking Amazon Q to give me a step function,
+
+24
+00:01:02.545 --> 00:01:06.925
+SL code, yes, but the step function is something
+
+25
+00:01:06.925 --> 00:01:09.165
+that can really call the glue job.
+
+26
+00:01:09.265 --> 00:01:13.445
+But here all we have are the scripts Step function,
+
+27
+00:01:13.445 --> 00:01:15.925
+doesn't know the glue job names, okay?
+
+28
+00:01:15.925 --> 00:01:17.045
+These are the simple scripts.
+
+29
+00:01:17.425 --> 00:01:20.125
+So we could, could also provide amazing q
+
+30
+00:01:20.385 --> 00:01:21.525
+the glue job names.
+
+31
+00:01:21.785 --> 00:01:24.245
+So I go to glue, get my job names
+
+32
+00:01:24.745 --> 00:01:27.085
+and I have put them right here in the brackets.
+
+33
+00:01:27.305 --> 00:01:30.965
+You should also ask, do you need anything else from
+
+34
+00:01:31.585 --> 00:01:32.885
+me at this point
+
+35
+00:01:33.705 --> 00:01:37.485
+before you can get me the a SL code?
+
+36
+00:01:37.575 --> 00:01:40.045
+There you go. It has, it has everything.
+
+37
+00:01:40.425 --> 00:01:42.565
+It needs to create step function, a SL code.
+
+38
+00:01:42.945 --> 00:01:45.925
+And we have the entire uh, JSON file ready here.
+
+39
+00:01:45.925 --> 00:01:47.445
+In fact, this is the a SL code.
+
+40
+00:01:47.445 --> 00:01:49.125
+In fact, this you'll see shortly, in fact again,
+
+41
+00:01:49.125 --> 00:01:52.685
+when we'll use this to create the step function.
+
+42
+00:01:52.955 --> 00:01:56.405
+Okay? So it has done a better job in fact, okay?
+
+43
+00:01:56.905 --> 00:02:00.285
+It is saying different failure messages for each job stage.
+
+44
+00:02:00.525 --> 00:02:01.765
+I hadn't even thought about this.
+
+45
+00:02:02.065 --> 00:02:03.885
+And it's saying to deploy the step function unit, need
+
+46
+00:02:03.885 --> 00:02:05.525
+to create the mission dhh.
+
+47
+00:02:05.525 --> 00:02:06.485
+We already done that. We have
+
+48
+00:02:06.485 --> 00:02:07.405
+already have the SNS topic here.
+
+49
+00:02:07.465 --> 00:02:09.725
+It needs the permission. Yes, we have got the permissions
+
+50
+00:02:09.785 --> 00:02:11.405
+by asking to our cloud engineer team
+
+51
+00:02:11.425 --> 00:02:13.685
+and they've already, uh, added the permissions to us,
+
+52
+00:02:13.735 --> 00:02:15.045
+which we'll use in the next step.
+
+53
+00:02:15.305 --> 00:02:18.645
+And we gotta replace the region and the account.
+
+54
+00:02:18.905 --> 00:02:21.245
+So we know that we should be using US East one in the
+
+55
+00:02:21.245 --> 00:02:22.325
+bo in the program, in fact.
+
+56
+00:02:22.665 --> 00:02:27.605
+So let's just tell amazing Q that the region needs to be
+
+57
+00:02:28.305 --> 00:02:29.925
+US East one.
+
+58
+00:02:30.145 --> 00:02:32.885
+And as you see here, it has updated the region as well.
+
+59
+00:02:32.995 --> 00:02:35.365
+Okay? We just have to update our account id.
+
+60
+00:02:35.945 --> 00:02:37.525
+So let's do that next video.

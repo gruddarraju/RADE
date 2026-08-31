@@ -1,0 +1,32 @@
+Course: Agentic Data Engineering with Amazon Q
+Lesson: 7 Get the script vetted by AI RESUME
+============================================================
+
+Next step is to create the file and just click here
+and click plus symbol here.
+Type the same name, mission,
+D-E-H-H-O-F test.
+I say script Python. It's a Python file, right? Do py.
+I'll enter and I'll paste
+where at copied in the previous step right here.
+And then very important, you see the one here.
+It shows it is not saved.
+So make sure you actually save it, save this.
+Next I'll use AI to enhance the script.
+So I put the prompt here and I'll just run this.
+Let's see what happens. Okay,
+so we have, uh, the code ready.
+We'll check the code. Take a glance at it.
+It still reads 2024. Yeah, we gotta change this, right?
+We gotta be changing this to read two years data.
+So we'll ask it to update.
+Can you update the code to make sure
+it reads 24?
+It's full data in the curated folder
+and not just 24 and one.
+It's all good. Now, I'll provide this code to you.
+You can use it and run the uh, next step, which is
+to create the glue video job.
+So use the code from the video that you're seeing now.
+The code is above, below the video,
+so let's create the glue etal job in the next step.

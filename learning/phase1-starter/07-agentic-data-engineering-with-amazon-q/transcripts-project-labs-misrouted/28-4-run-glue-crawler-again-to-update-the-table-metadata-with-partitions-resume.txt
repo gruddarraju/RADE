@@ -1,0 +1,121 @@
+Course: Agentic Data Engineering with Amazon Q
+Lesson: 4. Run Glue Crawler again to update the Table Metadata with partitions RESUME
+============================================================
+
+Alright, why did we choose a Python shell job?
+If you look at this, it shows Python shell. Why Python?
+Shell and why not Glue's Park job?
+Because it's a Python script.
+All we're doing is just pulling the data, okay?
+So you look at the script and I highly encourage you to kind
+of use amazing queue to understand what is going on here.
+Of course, I've provided the script to you,
+but that doesn't mean you simply blindly use it.
+Use as in Q and and chat with it. Understand the script.
+What is being done here? So this is a Python script
+and we can simply download the data from the cloud
+front URL.
+Again, the cloud front URL is all discussed in the
+Agent D AI course.
+I hope you've done that already. Alright, the next step,
+now H-V-F-H-V.
+Uh, this now has a lot of data. Right?
+Before we had just had one file here.
+Remember we deleted that file.
+So now that we have more data, so this blue catalog table
+has to know about the data that we have here.
+Now, before we had just one Parquet file,
+which I'll erase it now, but now we have a lot of data.
+So this table needs to know that there is a lot of data now.
+So we have to use a crawler
+and crawl over this location again.
+So we'll go back to the glue, we'll click on this bug bar,
+we'll scroll down, right click open a new tab.
+The crawler console is now open
+and our crawler is right here.
+We'll click on this and we'll simply run that.
+But before we run that, let me show you the table itself.
+Okay? Lemme just go back to databases, right?
+Click open in a new tab
+and then go to our database, which is uh,
+mission D-H-H-O-F-N-Y-C-T-L-C.
+And that we have one table here.
+If you look at the table, lemme click on the table here.
+We scroll down. Do you see any partition here? No.
+It says you have run any partition,
+but we now have data which is in, which is partition, right?
+We now have data just partition here.
+So obviously the table metadata
+doesn't have the information.
+Okay? And this is why, this is why we need to crawl
+this location again so that this table gets
+information about the partition.
+So the metadata gets updated.
+I hope this clear on metadata is data about the data, right?
+The structure about the data.
+So now we'll run this, we'll go back
+to the crawler and we'll run it.
+But remember, this organization,
+this partitioning is something which you had decided, okay?
+'cause it is the best practice.
+So when you wrote the script using Agent TKI, you made sure
+that data will get loaded into data lake
+in a partition format like this.
+Let me go back to crawler. It is all finished.
+Now we'll go back to the table.
+And if I just now refresh this right here,
+you should see the partitions.
+This might take about a minute or two to show up here.
+Don't fret. If you don't see it immediately,
+it'll take about a minute or so.
+And if you click on the view files,
+it'll exactly take you to the exact
+Partition it took me to month zero one partition.
+In fact. So this added a lot of partitions,
+22 partitions here.
+Okay? Because we had how many, we had 12 here.
+And if you go to 2025, we had 10 here.
+So 22 partitions we have.
+And so we see 22 partitions right here in fact.
+And you can also look at the crawler log as well.
+If you go to the crawler run here
+and click on view CloudWatch logs, you can see that right?
+Right here when I expand this,
+the crawler created the partition with values.
+All of this for this table in database mission,
+DHF, university LC.
+So now when you go back to the table and click on actions
+and view data, it'll take you to Athena.
+And now on the Athena console here,
+it shows you partitioned right here.
+Expand this. It'll show you that you have the table
+as partitioned by year and month here.
+Now if you get this error like this, make sure
+that you have output location defined.
+So if you go to query settings here
+and uh, manage, make sure you add the bucket.
+The bucket's gonna be named as mission dh. Okay?
+We gotta have the previous year as well, S3
+S3 colon slash slash and the bucket name.
+And this bucket is the one that got created, especially
+for the saving the Athena query results.
+Okay? So this was created with the help
+of the script you ran before as well.
+So make sure that you use this bucket itself.
+Athena query results one and then save it.
+Okay, I got an error here.
+Uh, I think I have to use a small less. There you go.
+Now I can just save it. It's all done. Go back to editor.
+So now if you wanna just query this,
+all you can do is simply just add a filter where
+your equal to, let's say in single codes
+20, 25
+and month equal to let's say in single codes zero two.
+And then, so this is how the analysts can run queries
+on the lake with the appropriate filters.
+This will also help the queries run a lot faster
+because you are simply gonna be scanning just the data in
+these two partitions alone.
+Now in the next video, we have to now create one more table
+for the zone table and then we can hand over the tables
+to the data analyst for further analysis.

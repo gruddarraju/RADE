@@ -1,0 +1,10 @@
+Course: Agentic Data Engineering with Amazon Q
+Lesson: 3. Move the downloaded file to your project folder RESUME
+============================================================
+
+On a system, create a folder called
+Admission, D-E-H-H-O-F.
+Inside that create a folder called As Data Within That Move
+the file that you have downloaded from the
+N-Y-C-T-L-C portal.
+Make sure the file name is F-H-V-H-V three beta code 95 0 1.

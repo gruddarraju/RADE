@@ -1,0 +1,56 @@
+Course: Agentic Data Engineering with Amazon Q
+Lesson: :- 1. Intro - Understanding and Gathering Requirements RESUME
+============================================================
+
+We'll come back.
+As I said before, the next few videos are
+gonna be very, very important.
+They talk about understanding
+and gathering the requirements.
+And this is super important
+because if the interviewer gets
+a doubt whether you are really worked
+or not, he'll ask you about the
+different roles and responsibilities.
+Not just the interviewer, but also the recruiter will ask
+you what the roles and responsibilities,
+because they wanna screen you out whether you have really
+worked or not, whether you're a genuine candidate or not.
+So make sure you go through the next few videos
+and really assimilate them.
+Take down your notes and don't just skim through them, okay?
+Write down notes in your own words.
+And when ask you to write the share the
+notes, do share them.
+Okay? But the next immediate video
+after this one is from a diamond membership course.
+Okay? Now, in that video, I've talked about how
+to even build a project from scratch.
+'cause this project we're building now was built with help
+of ai and I have explained how you can really
+go about building your own project.
+Okay? And I talked about different concepts over there, such
+as Apache Park and Lake House,
+and uh, CICD, which you may not know right now,
+which is absolutely fine.
+Nevertheless, the next video will definitely be I opener
+for you about how, I mean in terms of how you can really
+work on building a project from scratch for your portfolio.
+And it'll also kind of help you in not just getting a
+portfolio, but also in getting you the confidence,
+of course, if you take the steps, if you take the steps in
+getting you the confidence on not only cracking interview,
+but also working in industry.
+So the next video is very important.
+Don't skip that,
+but be mindful of the fact that
+that video is on a diamond membership course.
+And it talks about some concepts, which you don't know about
+that yet, which is absolutely fine.
+And as I said before, diamond membership is
+currently closed right now.
+And if you do wanna upgrade, you can join the wait list.
+The link is in the video below.
+So fill the form to join the wait list.
+And again, this entire section is extremely important.
+Do not skip any video. Go through every minute of it.

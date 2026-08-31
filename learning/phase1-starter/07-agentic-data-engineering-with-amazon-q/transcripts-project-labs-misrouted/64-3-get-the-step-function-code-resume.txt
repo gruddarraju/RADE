@@ -1,0 +1,64 @@
+Course: Agentic Data Engineering with Amazon Q
+Lesson: 3. Get the Step Function Code RESUME
+============================================================
+
+We have three jobs to run sequentially.
+The first one is right here
+and then followed by the rod curated
+and then the curated to aggregated script.
+Okay, so we'll ask Amazon Q to get us something called
+as a SL code is.
+It still stands for Amazon States Language Code.
+That is the code using which we build step functions.
+You'll see it shortly. In fact,
+I say give gimme an A SL code
+for a step function named this.
+The first one will be data on router followed by the raw
+to curated and then they curated to the raw jobs.
+Okay? Make sure to also send an alert
+to SNS topic called mission, D-E-H-H-O-F,
+if there's any failure at all in any of the glue jobs.
+Okay? Now the second job should not run
+until the first one is finished.
+It is important, okay? And the third one should not run
+until the second one is finished.
+Okay? Now this is what I mean by sudo code before, okay?
+You're able to communicate your thoughts with Amazon Q.
+Now you're asking Amazon Q to give me a step function,
+SL code, yes, but the step function is something
+that can really call the glue job.
+But here all we have are the scripts Step function,
+doesn't know the glue job names, okay?
+These are the simple scripts.
+So we could, could also provide amazing q
+the glue job names.
+So I go to glue, get my job names
+and I have put them right here in the brackets.
+You should also ask, do you need anything else from
+me at this point
+before you can get me the a SL code?
+There you go. It has, it has everything.
+It needs to create step function, a SL code.
+And we have the entire uh, JSON file ready here.
+In fact, this is the a SL code.
+In fact, this you'll see shortly, in fact again,
+when we'll use this to create the step function.
+Okay? So it has done a better job in fact, okay?
+It is saying different failure messages for each job stage.
+I hadn't even thought about this.
+And it's saying to deploy the step function unit, need
+to create the mission dhh.
+We already done that. We have
+already have the SNS topic here.
+It needs the permission. Yes, we have got the permissions
+by asking to our cloud engineer team
+and they've already, uh, added the permissions to us,
+which we'll use in the next step.
+And we gotta replace the region and the account.
+So we know that we should be using US East one in the
+bo in the program, in fact.
+So let's just tell amazing Q that the region needs to be
+US East one.
+And as you see here, it has updated the region as well.
+Okay? We just have to update our account id.
+So let's do that next video.

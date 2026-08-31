@@ -1,0 +1,56 @@
+Course: Agentic Data Engineering with Amazon Q
+Lesson: 8. View the Parquet Data in Athena RESUME
+============================================================
+
+After the caller is finished crawling, you should see
+the status has completed and table change.
+The one table change, click on that.
+You'll see the tables added as H-V-F-H-V-H-V-F-H-V.
+Next, go to the database here under the data catalog.
+Go to your database mission, D-H-H-O-F-N-Y-C-T-L-C.
+Click on that and then refresh it.
+Refresh this display thing here.
+You should see the table right here.
+In fact, this show the table name.
+Click on the table name right here.
+You can see that the crawler properly classified the
+file as Parquet.
+And the table is in our database. Data is in this location.
+The table points to two, this location.
+And if you scroll down, you can see the schema
+that the crawler created, has the column names here
+and the data types as well,
+which has been accurately captured by the crawler.
+There's about 20 fields in the file.
+We can then scroll up, scroll up,
+and then go to actions right here.
+And then click on view data. You'll get a popup like this.
+You'll be taken to Athena.
+So click on Proceed
+and you'll come to this particular Athena console here.
+And you're gonna go to query settings
+and click on manage right here.
+You'll get this particular popup window.
+Click on browse three.
+You'll see a bucket called as Mission, D-E-H-H-O-F,
+Athena Query Results.
+Choose your bucket with this name, mission, D-H-H-O-F,
+Athena Query Results.
+Choose that and then scroll down and save.
+This will show up like this right here.
+And then scroll up, go back to the editor.
+You already have the query here that is auto-populated.
+You are gonna come down and click on a run.
+So this will show you the data
+from the file in the S3 bucket on your query editors
+results view.
+As such, all the 20 columns
+that is saw in the table in blue catalog log, you're able
+to view the data in them right here.
+So this is how you actually look at the data,
+understand the data for your analysis,
+and right here it choose data database
+that you have called Mission, D-E-H-H-O-F-N-O-C-T-L-C.
+And you shoot the table here as well,
+and you expand on this.
+You should see the columns and the data types here as well.

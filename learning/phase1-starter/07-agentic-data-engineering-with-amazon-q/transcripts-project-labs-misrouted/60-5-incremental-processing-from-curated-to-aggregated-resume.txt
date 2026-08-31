@@ -1,0 +1,62 @@
+Course: Agentic Data Engineering with Amazon Q
+Lesson: 5 *Incremental Processing from Curated to Aggregated* RESUME
+============================================================
+
+Hey guys, welcome back.
+What I've learned in the last 10 minutes
+has taken me more than three hours to really create,
+okay, three, three and a half hours.
+It has taken me to conceptualize, try, create and,
+and present it to you in short 10 minutes.
+So information is really condensed.
+I'm giving you literally chocolates here, okay?
+Just to consume, just do
+what I've been doing in the last video.
+If you have not done it yet, take down the steps
+and notes, just repetitive the interview, okay?
+As you will, you will be able
+to really fly through the interview.
+What I just covered is code enough,
+but there are some additional concepts which are,
+which have, have covered in the deep dive course as well.
+Those are even advanced concepts.
+Uh, at that level, I don't really expect them to ask you,
+but for the sake of completion, I've included, okay?
+But this video so far, the last one, super important, okay?
+Now, I have shared the code
+below the previous video or about the previous video.
+You can take a look there and practice it.
+Now, this incremental processing was set for the job,
+which process data from raw to curated.
+We gotta do the same thing from curated to the
+aggregated related job as well, right?
+That code is, I will be attaching it below
+or about this video.
+Now you get it done, okay? It's the same thing.
+Whatever we did for the previous one, it's the same thing.
+You'll just give a try and get it done.
+And I know some of you are not doing the hands-on yet,
+so there's a prob in English.
+You can lead a horse to the water,
+but you can't make it drink.
+Think about it. You can lead a horse, horse to the water,
+but you cannot make it drink.
+All I can do is gently nudge you, motivate you.
+That's all I can do. I cannot really force you.
+So my so motivation for creating this program is that
+no matter where you are in your life, what stage of
+life you are in, what at what point of life you are in,
+what journey you are growing through,
+you are here in this program,
+and I want you to get full benefit out of it
+and really crack those high paying jobs, right?
+And, and make your life prosperous.
+That said, a few of you, I'm sure have done this hands on.
+And for you guys, if you really wanna reinforce the concepts
+that you have learned so far,
+whatever notes you have taken down,
+write them down in the video below
+before seeing others comments, and then see
+and compare with what others have written
+and see how you have failed.
+Do that and then go to the next video. Talk to you soon.

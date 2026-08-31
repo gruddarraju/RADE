@@ -1,0 +1,109 @@
+WEBVTT
+
+1
+00:00:00.180 --> 00:00:02.505
+Alright, we'll the SNS uh, topic now, uh,
+
+2
+00:00:02.935 --> 00:00:05.145
+what an s is, what a topic is.
+
+3
+00:00:05.165 --> 00:00:06.585
+All that is covered in the deep dive course.
+
+4
+00:00:06.605 --> 00:00:07.985
+You can take a look at that course over there.
+
+5
+00:00:08.645 --> 00:00:13.225
+So we'll first go to SNS and click on SNS.
+
+6
+00:00:13.445 --> 00:00:15.145
+You will then go to topics on the left hand side
+
+7
+00:00:15.245 --> 00:00:17.105
+and then click here, create topic,
+
+8
+00:00:17.565 --> 00:00:22.505
+and then choose standard, then topic, mission, D-E-H-H-O-F,
+
+9
+00:00:23.045 --> 00:00:26.745
+and then scroll down and simply create the topic.
+
+10
+00:00:27.295 --> 00:00:28.425
+Next, scroll down.
+
+11
+00:00:28.425 --> 00:00:31.025
+If you subscription here, click on the orange button,
+
+12
+00:00:31.165 --> 00:00:34.585
+create subscription, and then choose the protocol as email.
+
+13
+00:00:34.605 --> 00:00:36.265
+You wanna get an email, right email
+
+14
+00:00:36.445 --> 00:00:38.585
+and then provide your email address.
+
+15
+00:00:39.925 --> 00:00:42.905
+So I'll provide mine and then click on the orange button,
+
+16
+00:00:43.165 --> 00:00:45.265
+create subscription, and then scroll down.
+
+17
+00:00:45.565 --> 00:00:48.105
+You don't see anything here. Go to subscriptions.
+
+18
+00:00:48.105 --> 00:00:49.585
+On the left hand side, you scroll down,
+
+19
+00:00:49.715 --> 00:00:51.905
+yours will show pending confirmation.
+
+20
+00:00:52.085 --> 00:00:54.465
+So go to your email. So you gotta order an email like this.
+
+21
+00:00:54.845 --> 00:00:57.865
+In that email you'll have a link to confirm subscription.
+
+22
+00:00:57.865 --> 00:01:01.985
+So click on that and it'll say subscription confirmed when
+
+23
+00:01:01.985 --> 00:01:03.425
+you go back to your subscriptions.
+
+24
+00:01:03.425 --> 00:01:06.945
+And do a refresh of the page right here and scroll down.
+
+25
+00:01:07.325 --> 00:01:10.985
+You should see your email subscription being confirmed.
+
+26
+00:01:11.085 --> 00:01:12.305
+That's it. Get this done
+
+27
+00:01:12.365 --> 00:01:13.825
+and uh, we'll see you in the next video.

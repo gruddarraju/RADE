@@ -1,0 +1,78 @@
+Course: Agentic Data Engineering with Amazon Q
+Lesson: 11 Unit test the aggregated data, provide access to Data analysts and let them to know RESUME
+============================================================
+
+Well, the crawler has finished doing its job.
+We see three table changes here.
+We go back to databases and go to our mission DH database,
+and we see our three aggregated tables
+right here, in fact, okay?
+So what we can do is we can go do, um,
+from here in Roth know, and uh, right click on that, the tab
+and scroll down.
+The database is already chosen here as Mission, mission dh.
+Okay, now we see, we have, we see the three tables
+that we wanted to see that aggregated tables.
+So what's the next step? Next step is to kind
+of do our unit testing
+before we hand this over to the data analyst, right?
+And we go back to our mapping sheet
+and we see that this is the logic here.
+We are gonna fire our queries,
+fire our queries on these different tables
+and do our checks.
+So for example, first we to do a preview table
+and look at the data and uh, query has been fired
+and we see some data sets here, in fact, okay,
+results set is right here, in fact.
+So unit testing is a part of the development.
+It is something that, you know, you just tell
+to the recruiters
+or to the hiring manager that okay, yes, at the bar,
+my roles and responsibilities were to, you know,
+develop my data engineering pipelines per the mapping sheet
+given to me and also
+to unit test the data loaded by my pipelines.
+That's pretty much it. Okay.
+That is what you need to remember from the
+interview perspective.
+The whole intent is to make sure that
+whatever code you have built, you know, does its job
+per the mapping speed mapping specification.
+And remember, data analysts would also be testing
+the data that you have loaded.
+I mean, it's not just that you'll be testing,
+you are doing your urine testing,
+but they will be doing a lot more thorough testing
+because they'll be building the reports based on this data.
+So their testing would be a lot, lot more detailed.
+And when they do their testing, they might find issues
+and they'll come back to you
+or they might update, uh, this mapping sheet
+and they may add some more table tables here, whatever.
+So this is how the typical development last cycle happens.
+And if they change the requirements, yeah,
+you'll go back and change your code.
+If they find an issue in the data you have loaded,
+they'll let you know and you'll then look at the
+code and you'll fix it.
+And then finally you'll let them know,
+okay, we have fixed the code.
+Take a look at the data again, they'll do the testing again.
+Finally, when it's all good, you go to the next steps.
+That, that's the typical data engineering, uh,
+development life cycle.
+And the next steps would be to also think about how
+to really automate this entire pipeline.
+So far we've been just doing this manually, right?
+It's in development. How do you then kind of move it
+to the test environment
+and then to the production environment?
+These are different things that are typically part
+of your development lifecycle.
+And again, just so that I
+Don't forget, so these tables access may not be
+provided initially to the data analyst.
+And so you'll send an email to cloud engineer team, say,
+Hey, I have cleared this new tables, provide access to data
+to the data analyst team.

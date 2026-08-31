@@ -1,0 +1,73 @@
+Course: Agentic Data Engineering with Amazon Q
+Lesson: 4.1 Glue Dynamic Frame vs Spark Dataframe RESUME
+============================================================
+
+All right, I think I'll just talk about the
+dynamic frame now, instead of in
+the deep dive, because we are already on this particular code here.
+As I said before, dynamic frame is a Glue concept. Okay?
+Now, you learned about Spark data frames in the PySpark Skill
+Booster course. I mean, if you have not seen that, you, you will learn the Spark
+data frames in the PySpark Skill Booster course.
+And you need to know something, that Glue
+is based on the
+open source Spark. And also note that Glue is n- that Glue dynamic
+frame is not same as that of the PySpark data frame,
+okay? The only use case I have come across so far of a
+dynamic frame is this: to be able to read the
+data object, okay, which has been cataloged already, which has
+been crawled upon, and a table has been created in
+the Glue catalog. There are other advantages to Glue
+dynamic frames as per the documentation, but I have not come
+across other use cases so far. So this one use case should
+be sufficient if you are asked about the difference
+between a dynamic frame and a Spark data frame.
+One more thing you have to understand is that to be able to continue with our
+Spark coding, PySpark-based coding, we need to
+convert the dynamic frame to a regular Spark data
+frame using the to_df
+method. So this piece of code here, it creates a dynamic
+frame by looking at the catalog, database, and table name.
+And of course, as I said, you have to provide the transformation context here for
+the Glue bookmark to work. And after you have created the
+dynamic frame, the immi- immediate step should be to convert the
+dynamic frame to a Spark data frame so that
+you can continue using your PySpark-based
+code. This is the method we typically follow
+for us to leverage our PySpark knowledge.
+If we do not convert the Glue dynamic frame to a
+Spark data frame, we will be restricted to use the
+Glue-based Spark coding. As I said, Glue
+is based on Spark, so you can also
+work using Glue Spark, which is slightly different than the
+open source Apache Spark-based APIs.
+Okay, I'll repeat the whole thing so that it's not confusing.
+Glue is based on the open source Apache Spark.
+You have learned PySpark in the Skill Booster course.
+If not, you will learn that over there.
+It'll hardly take a couple hours. When you read
+a catalog object, the table that has been
+crawled and cataloged in the Glue catalog, using this
+construct you see here,
+GlueContext.create_dynamic_frame_from_catalog, you will create a
+dynamic frame, which is a Glue-specific thing.
+And in Spark, we have something called a Spark data
+frame. That is different than the dynamic frame, and the use
+case of using a dynamic frame is for enabling
+the Glue bookmarks. And the requirements
+for enabling the bookmarks are a few things which I have discussed in
+the previous video. And lastly, you can continue working on the
+dynamic frame using the Glue Spark, which is an extension
+of Apache Spark. But if you are somebody who's
+learning PySpark, or somebody who already knows PySpark, you can
+leverage your PySpark knowledge by converting
+the Glue dynamic frame to a Spark data frame
+using the to_data_frame method. So on the dynamic frame, you apply the
+to_data_frame.
+This will return a Spark data frame, and you can then continue
+using the PySpark APIs instead of
+the Glue Spark APIs. I hope this is clear.
+This is a very important thing. Let me know in a comment below what you have
+understood, so that I know that you have internalized
+this concept. I'll talk to you soon in the next
+video.

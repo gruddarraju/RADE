@@ -1,0 +1,233 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:00.780
+Hey guys, welcome back.
+
+2
+00:00:00.780 --> 00:00:02.645
+What I've learned in the last 10 minutes
+
+3
+00:00:03.185 --> 00:00:07.445
+has taken me more than three hours to really create,
+
+4
+00:00:07.635 --> 00:00:08.805
+okay, three, three and a half hours.
+
+5
+00:00:08.805 --> 00:00:11.965
+It has taken me to conceptualize, try, create and,
+
+6
+00:00:11.985 --> 00:00:14.045
+and present it to you in short 10 minutes.
+
+7
+00:00:14.385 --> 00:00:16.325
+So information is really condensed.
+
+8
+00:00:16.745 --> 00:00:19.165
+I'm giving you literally chocolates here, okay?
+
+9
+00:00:19.285 --> 00:00:21.765
+Just to consume, just do
+
+10
+00:00:21.765 --> 00:00:23.445
+what I've been doing in the last video.
+
+11
+00:00:23.945 --> 00:00:26.845
+If you have not done it yet, take down the steps
+
+12
+00:00:26.905 --> 00:00:29.725
+and notes, just repetitive the interview, okay?
+
+13
+00:00:30.105 --> 00:00:31.805
+As you will, you will be able
+
+14
+00:00:31.805 --> 00:00:33.645
+to really fly through the interview.
+
+15
+00:00:33.915 --> 00:00:35.765
+What I just covered is code enough,
+
+16
+00:00:36.145 --> 00:00:38.525
+but there are some additional concepts which are,
+
+17
+00:00:38.615 --> 00:00:41.485
+which have, have covered in the deep dive course as well.
+
+18
+00:00:41.735 --> 00:00:43.245
+Those are even advanced concepts.
+
+19
+00:00:43.385 --> 00:00:46.525
+Uh, at that level, I don't really expect them to ask you,
+
+20
+00:00:47.065 --> 00:00:49.445
+but for the sake of completion, I've included, okay?
+
+21
+00:00:49.745 --> 00:00:53.005
+But this video so far, the last one, super important, okay?
+
+22
+00:00:53.465 --> 00:00:56.845
+Now, I have shared the code
+
+23
+00:00:57.335 --> 00:00:59.365
+below the previous video or about the previous video.
+
+24
+00:00:59.365 --> 00:01:01.045
+You can take a look there and practice it.
+
+25
+00:01:01.665 --> 00:01:05.605
+Now, this incremental processing was set for the job,
+
+26
+00:01:05.695 --> 00:01:08.165
+which process data from raw to curated.
+
+27
+00:01:08.585 --> 00:01:11.325
+We gotta do the same thing from curated to the
+
+28
+00:01:12.705 --> 00:01:15.225
+aggregated related job as well, right?
+
+29
+00:01:15.735 --> 00:01:17.945
+That code is, I will be attaching it below
+
+30
+00:01:18.725 --> 00:01:19.825
+or about this video.
+
+31
+00:01:20.525 --> 00:01:22.865
+Now you get it done, okay? It's the same thing.
+
+32
+00:01:23.225 --> 00:01:25.025
+Whatever we did for the previous one, it's the same thing.
+
+33
+00:01:25.025 --> 00:01:26.785
+You'll just give a try and get it done.
+
+34
+00:01:27.085 --> 00:01:30.305
+And I know some of you are not doing the hands-on yet,
+
+35
+00:01:30.485 --> 00:01:31.825
+so there's a prob in English.
+
+36
+00:01:31.845 --> 00:01:34.065
+You can lead a horse to the water,
+
+37
+00:01:34.725 --> 00:01:35.905
+but you can't make it drink.
+
+38
+00:01:36.155 --> 00:01:39.305
+Think about it. You can lead a horse, horse to the water,
+
+39
+00:01:40.165 --> 00:01:41.345
+but you cannot make it drink.
+
+40
+00:01:41.765 --> 00:01:44.465
+All I can do is gently nudge you, motivate you.
+
+41
+00:01:44.605 --> 00:01:46.505
+That's all I can do. I cannot really force you.
+
+42
+00:01:46.685 --> 00:01:50.385
+So my so motivation for creating this program is that
+
+43
+00:01:51.525 --> 00:01:55.305
+no matter where you are in your life, what stage of
+
+44
+00:01:55.895 --> 00:01:59.185
+life you are in, what at what point of life you are in,
+
+45
+00:01:59.185 --> 00:02:00.585
+what journey you are growing through,
+
+46
+00:02:01.085 --> 00:02:02.145
+you are here in this program,
+
+47
+00:02:02.245 --> 00:02:06.225
+and I want you to get full benefit out of it
+
+48
+00:02:06.485 --> 00:02:09.305
+and really crack those high paying jobs, right?
+
+49
+00:02:09.405 --> 00:02:11.225
+And, and make your life prosperous.
+
+50
+00:02:11.655 --> 00:02:14.985
+That said, a few of you, I'm sure have done this hands on.
+
+51
+00:02:14.985 --> 00:02:19.465
+And for you guys, if you really wanna reinforce the concepts
+
+52
+00:02:19.465 --> 00:02:20.465
+that you have learned so far,
+
+53
+00:02:21.225 --> 00:02:22.305
+whatever notes you have taken down,
+
+54
+00:02:22.595 --> 00:02:24.705
+write them down in the video below
+
+55
+00:02:25.005 --> 00:02:27.305
+before seeing others comments, and then see
+
+56
+00:02:27.605 --> 00:02:29.825
+and compare with what others have written
+
+57
+00:02:29.925 --> 00:02:31.705
+and see how you have failed.
+
+58
+00:02:32.205 --> 00:02:34.865
+Do that and then go to the next video. Talk to you soon.

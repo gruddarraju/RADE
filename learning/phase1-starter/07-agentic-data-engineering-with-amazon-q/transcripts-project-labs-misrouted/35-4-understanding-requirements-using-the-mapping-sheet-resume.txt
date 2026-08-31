@@ -1,0 +1,183 @@
+Course: Agentic Data Engineering with Amazon Q
+Lesson: 4. Understanding Requirements using the Mapping Sheet RESUME
+============================================================
+
+Hey guys, welcome back.
+Let's talk about the next steps now,
+okay, step number three.
+So they took some time,
+the business data analyst took some time
+and uh, gave you a mapping sheet.
+I'll show that to you shortly in fact,
+and you will analyze the mapping sheet.
+Okay? So here's the mapping sheet that they give to you
+and it has multiple worksheets here.
+The first one is about raw two curated, okay?
+What they wanna see in the curated layer, okay?
+You have source field section here.
+This has all the fields in the
+H-V-F-H-V table, okay?
+So if you go to the glue catalog, log AWS glue,
+and then go to databases here, go to our database
+and look at our table.
+So you will have all the different fields
+right here, in fact, right?
+We have actually 20
+and uh, we have more fields here you go
+to, yep, there you go.
+27 fields.
+It shows here because the last two are actually partition
+columns, but the data is actually in 25 columns.
+So going back to my mapping sheet, so you have
+all the source fields from the source, right?
+And their data types is mentioned here
+and how they really wanna see in the curated layer,
+the target field names.
+And if you scroll down a bit, there are more fields
+that they wanna see right?
+From here, these are all N-A-N-A-N-A,
+but here you have the new fields
+that they wanna see in target fields.
+Essentially, this is what I meant by business rules, okay?
+Essentially they're asking us to create new fields, okay?
+Based on this, these fields, right?
+For example, pick power,
+pickup power is not in the source file,
+but you do have pickup date time, right?
+You do have pickup date time from the pickup date time,
+which is a timestamp field.
+Let me show you how it looks like.
+If I go to back to Athena
+and uh, click on this, uh, review table,
+it's gonna fire query automatically.
+And there you go. So you have pick up daytime.
+So the how is also here, in fact.
+So they wanna derive the how from this data.
+That's a transformation, right?
+That is what is transformation.
+That is what we do as data engineers.
+We transform the data and move data from
+one location to another location.
+So they want us
+to create the pickup power from pickup daytime.
+Likewise, they wanna create a date field
+from pickup daytime, okay?
+From the timestamp field. They wanna get the date itself.
+They wanna divide
+that one field into multiple trip date pickup power,
+and also day off week, whether it's weekend or not.
+So essentially you have
+The logic mentioned here.
+So they have given you the logic
+based on which you'll create these new columns in the
+curated layer from your code.
+When you write, when, when you write the code to
+read the data in the raw folder
+and create the data in the curated folder, you will want
+to create additional fields based on
+these transformation logic mentioned here.
+Okay? Like, let's take a look at these also, right?
+So here, I mean you have some transformation mentioned
+for the existing fields as well, okay?
+For example, you see here for the first three, uh,
+they have, uh, not mentioned any transformation.
+Direct pass through whatever is in source, just load
+as is in curated.
+When I say source, whatever is there in raw
+load as is in curated.
+Now, if you scroll down a bit here,
+see here you have some business logic here, in fact,
+for this flag, shared request flag, shared match flag, all
+of these different flags.
+If the data has y why y then you change
+that to a Boolean value.
+Okay? I hope you know what a bullion is.
+I have discussed this in the SQL skill booster code.
+So I mean, you have to be able to, uh, understand this.
+I'm assuming you have gone through the
+SQL skill booster course.
+So if at all the value of these is,
+let's say why, why, why, why in the raw data,
+then change it to true else.
+If it is not why, then they need to false.
+So our job now is as data engineers to understand this
+and ask the analyst team you have, if you have any questions
+and get clarifications on,
+and then use this mapping sheet,
+this transformation logic mentioned here to build our code,
+which we'll see later, in fact, okay,
+I hope this much is clear so far.
+So this, for the raw two curated mapping only,
+and remember we talked about data quality
+rules as well in the past, right?
+So they have given us some data quality rules to check.
+After we do the curation, we also want to
+validate the data against some rules, okay?
+For example, whether the pick up data time drop
+of the time is, uh, null.
+If it is null, reject the record
+as mentioned here, reject the record.
+Let me just, uh, zoom out a bit.
+So the null checks are being done here.
+And then the rain check trip miles, right?
+Trip miles must be between zero and 500.
+This for New York City only.
+New York City is pretty small, in fact, okay?
+It's just, it's the Manan is an island, in fact.
+So obviously the New York City
+trips cannot really be more than 500 miles.
+That's a business rain check, okay?
+The base fare must be positive
+and under $10,000, I mean obviously if at all
+the base fare goes beyond that, it could be,
+uh, invalid record.
+So they're saying reject the record as such.
+And you have some logical checks as well.
+I mean, obviously the drop off must be after pickup, right?
+I mean, it's obvious
+that the drop off will happen only after pickup.
+See if at all the data doesn't look like that, it means
+that the record is invalid.
+So reject the record, right?
+There are some more here, in fact.
+So take a look at them, you'll come to,
+it's a pretty straightforward, in fact, okay?
+So these data quality rules will have
+to implement in our code also, and not just raw to curate.
+They've also given us curated to aggregated mapping
+as well, which is right here.
+In fact, similar to, you know, what we just discussed.
+You know, they are now letting us know
+how they wanna see the data in the aggregated layer, daily
+aggregations, they wanna see.
+And here are the source fields.
+Here, there are the metrics
+based on what they wanna aggregate.
+In a sense. The source field is trip files
+and they wanna do some aggregations, right?
+And I say aggregations again, the S QL thing comes
+to picture here, okay?
+Um, the total trip piles, trip miles, average trip miles,
+minimum trip miles, max trip miles.
+So these are aggregations they wanna see, okay?
+And the total fair amount, total revenue.
+Likewise, we have a lot
+of different metrics you wanna see, okay?
+And they've also listed down how to get the exact pickup,
+borrow pickup zone I
+talked about in the previous video, right?
+By joining to the zone table here, in fact, okay?
+And they've given us a join logic called impact, okay?
+How to join them based on
+what everything is mentioned, in fact.
+And in this column, they have also given us
+the aggregation function.
+How, how do you wanna aggregate them? Okay?
+So everything is mentioned here, in fact.
+So this is the kind of mapping sheet that is given to us,
+and we go through this and we understand this,
+and then we implement our code, this in our code, in fact.
+So this is what we do, and
+after we analyze the mapping sheet,
+we decide on the technical requirements
+that will lock in the next video.

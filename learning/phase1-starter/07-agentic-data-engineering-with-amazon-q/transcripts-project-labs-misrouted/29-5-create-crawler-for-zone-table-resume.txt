@@ -1,0 +1,82 @@
+Course: Agentic Data Engineering with Amazon Q
+Lesson: 5. Create Crawler for Zone Table RESUME
+============================================================
+
+Uh, the previous query finished
+and uh, it just took about three minutes.
+Look at the data scan.
+Four 40 point 14 mb
+and if you go back to the S3 data lake for the month of
+February and year 2095,
+the file contains exactly four 40.2 mb, which means
+that when we fired this query with the filter, just
+that particular folder alone was scanned.
+Okay? So our next step is to have a table for uh,
+the zone lookup file, right?
+It'll go back to the glue catalog lock, we'll go
+to crawler in fact and create to
+and name it as mission.
+D-E-H-H-O-F-N-Y-C-T-L-C
+Zone.
+And then next, and then add the data source,
+provide the location, the path where the zone file exists.
+So we're gonna go here, click on this and copy that. S3 URI.
+Go back to the crawler, provide the path right here.
+Click on this error itself
+and then click on add data source.
+Scroll down and then next, use the role
+that your team load has team lead has provided to you.
+Okay? And then do one next.
+Choose the same database, which also hosts our other table,
+which is mission, D-H-H-O-F-N-Y, CT LC.
+This time, leave it blank, blank the table,
+Tix and then go to next.
+And then scroll down, review the whole thing.
+Click, click on, create color. It's all done.
+Now we can simply run the crawler. It is now running.
+We can refresh it here. It took a minute.
+If we're all done now we scroll to the right,
+it shows one table change.
+Now this might take about a few seconds to
+show up here to have patience.
+It says table added zone.
+If you go to the database again, click on that,
+click on database here.
+You'll now see the second table, the zone right here.
+And if I click on the table data right here,
+it'll take me to Athena.
+Click on proceed. And there you go.
+The query is ready for us and it is already filed
+and data is getting scanned
+and you should see soon see the data here.
+And now on the left hand side,
+you see the zone table shows up right here within the
+database and you expand this.
+This has the pickup location ID and drop location id.
+And if I scroll down the zone has the location id,
+so the data analyst can really join this table, the
+H-V-F-H-V-H-V-F-H-V with the zone table.
+Based on the location ID
+to get information about the borough zone.
+And again, talking about the joins and stuff.
+I hope you now have watched the sequel skill booster
+course and then come back here.
+You should now see the data right here from the file we saw.
+And if you don't see this and if,
+if it shows it's spinning up here,
+just go and refresh the page.
+It'll show up right here. So we've got two tables now the
+analyst can now join both the tables
+and then you then talk to the cloud engineer team and
+Check with them. If
+the analyst can AC query the zone table, you say yes,
+then you go and inform your analyst team that yes,
+I have created the zone table.
+You can now go ahead and query that.
+I also have added a lot of data that you asked me
+to add from 2024 till 25.
+All data is in S3, it's in partition format.
+You can now use the filters year and month.
+That will speed up your query, do your analysis
+and let me know the next steps.
+That is what you'll say.

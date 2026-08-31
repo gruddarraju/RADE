@@ -1,0 +1,39 @@
+Course: Agentic Data Engineering with Amazon Q
+Lesson: 4. Create S3 bucket in Datalake & upload data to the datalake S3 bucket RESUME
+============================================================
+
+On a Ws console, go to the search bar
+and type Cloud Shell.
+Cloud Shell and take click on the cloud shell.
+I can Here now click on close Next code to actions here.
+Click on upload file. Now click on this particular script.
+Now this script I would've given you already right
+below or about this video.
+Download that and it'll upload that
+sh file the shell script.
+It's uploading right now. It's all done. Or type Ls.
+Next type s sh space.
+Copy this one. Right click.
+Copy right here, paste and enter.
+Next, click on actions and go to delete and type, delete.
+Next, go to search bar type S3
+and click on the S3 link here.
+And then scroll down. You'll see the bucket right here.
+Click on the bucket name. Next. Click on the create folder.
+Type the folder name as raw and scroll down.
+Click on create folder. Click on refresh button.
+You should see the raw folder here.
+Now go inside the folder Raw. Again, create the folder.
+Name it as F-E-F-H-E. Why?
+Because we're actually uploading the H high volume
+for higher vehicle data inside the folder.
+So scroll down and create the folder. Again, refresh.
+Click on the folder. Just click on Upload Next,
+click on add files.
+Go to the folder where you have the power
+download and click on open.
+It'll show up like this. Scroll down, click on upload.
+This will take a few minutes after it's uploaded,
+you should see like this shows a hundred percent here,
+and you click on this link here.
+You should see the file right here.

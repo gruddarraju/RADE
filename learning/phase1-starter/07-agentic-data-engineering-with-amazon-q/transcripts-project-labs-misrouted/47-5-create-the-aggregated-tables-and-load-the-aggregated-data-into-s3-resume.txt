@@ -1,0 +1,10 @@
+Course: Agentic Data Engineering with Amazon Q
+Lesson: 5 Create the aggregated tables and load the aggregated data into S3 RESUME
+============================================================
+
+At about of the next step,
+just run these next cells one by one.
+I'll do that myself. So you already have the code.
+Just run them one by one
+and then towards the end, when you're done, go
+to the next video and we'll discuss the code.

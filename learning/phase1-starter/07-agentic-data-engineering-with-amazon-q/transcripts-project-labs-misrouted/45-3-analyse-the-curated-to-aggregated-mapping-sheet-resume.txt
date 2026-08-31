@@ -1,0 +1,95 @@
+Course: Agentic Data Engineering with Amazon Q
+Lesson: 3 Analyse the Curated to Aggregated Mapping Sheet RESUME
+============================================================
+
+Now a unit test government could look like this.
+Uh, you know, where you have listed down different, uh,
+unit test cases like the, the count of records.
+Is it valid or not?
+Whether, uh, this field right here is
+per this logic or not.
+So for all the different fields you see here,
+you have unit test cases along with, as I said, the count
+of, uh, the records as well.
+And you'll also be doing unit testing for, uh,
+data quality tools as well by checking whether, okay,
+do we have any data, uh, which
+actually matches this condition?
+Okay? Our intent was to rigid the records.
+So do we have any records which actually
+satisfies these conditions
+and have somehow nicked into our curated data set or not?
+If they have, it means the unit test cases has failed
+that particular, okay?
+So essentially, for example, you'll,
+you'll probably do a threat staff on the table
+where trip miles ease greater than 500.
+You get the point. And if it is, if you find any records
+that test case fails
+and your code is incorrect,
+you're gonna go back and fix the code.
+That is what is mean by unit testing. Okay?
+So now what I wanna do next, you wanna hand, as I said,
+you'll be handling over the code to the data analyst, right?
+So they may not have access to the tables.
+So you ask the cloud engineer team to provide access
+to the curated HF H-V-F-H-V table for the data analyst
+for them to do their analysis.
+Okay? Now that part is done.
+Now you have lower the data for two years integrated a lake
+in curated layer.
+You have the table built already. So what's the next step?
+Next step is to now think about
+loading the data from curated
+to the aggregated layer, right?
+And for that, you already have the mapping. Okay?
+Now you start analyzing this.
+You, you wanna understand this right?
+As to what is happening here.
+I mean, this, this looks pretty overwhelming for anybody.
+In fact, so many columns, so many, so many rows here.
+Simple thing. Put this in the VS code.
+Ask in Q to analyze it for you.
+It'll tell you exactly what is happening here,
+but that, that is kind of your resistant to help you
+with what is happening here, right?
+So now you understand, okay, that the analysts are asking us
+to group by based on all of these fields you see here.
+And there are some aggregations that they're asking us.
+And if we scroll down, uh, you have more
+fields on which you wanna group by.
+So that's a lot of fields on which they want,
+they're asking us to group by.
+So you are trying to kind
+of make sense of what is happening here.
+And then meanwhile, the analysts are also analyzing the data
+that you have already curated.
+And when you're about to really, uh, start developing this,
+they got back to you and they said, no.
+Hey, hold on. We have an updated mapping sheet.
+So they gave you this mapping sheet
+that they say we have analyzed the data and q it
+and you know, for our business need,
+I think this is these, uh, three
+Different aggregations make more sense than having just
+one aggregated, uh, layer.
+Okay? So this would've given us just one table,
+one aggregated table.
+Now we could actually come up with, you know, three tables,
+which will help our business use cases, what they say.
+And now, okay, finally, okay?
+And then, then you kind of take a look at this.
+Uh, you try to make sense of this here.
+Yes, we have table one. Okay?
+You wanna make a big by based on these dimensions.
+And then you have the aggregations, uh, defined here.
+And then they've also mentioned them use
+case for you to understand them.
+And similarly, for table two as well,
+and, uh, table three as well, you have, uh,
+the mappings defined here.
+Okay? So based on this, you can now go ahead
+and build your next, uh, jobs
+towards the next step to kind
+of create the code in a glue notebook, right?
+So that is what we'll do in the next step.

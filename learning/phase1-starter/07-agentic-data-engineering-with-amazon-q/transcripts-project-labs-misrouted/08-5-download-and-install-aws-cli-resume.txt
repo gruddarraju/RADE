@@ -1,0 +1,8 @@
+Course: Agentic Data Engineering with Amazon Q
+Lesson: 5 Download and Install AWS CLI RESUME
+============================================================
+
+Download a tool.
+Click on this link, scroll down,
+choose the right option depending on your system,
+and install a CI.

@@ -1,0 +1,51 @@
+Course: Agentic Data Engineering with Amazon Q
+Lesson: 2. Set up the Monthly Cadence! RESUME
+============================================================
+
+Welcome back.
+Now, what's the next step to schedule this monthly, right?
+So I'm on even schedules right now.
+If you're not there on the
+left, right hand, you have schedules here.
+Click on that and then, uh, click on the create schedule.
+This time choose recurring schedule. Okay?
+And, uh, name it as mission.
+D-E-H-H-O-F-N-Y-C-T-L-C,
+monthly cadence.
+It'll come down. Now here you gotta
+write a crown expression.
+And to find a crown expression, we'll ask amazing q
+and it has given us the information here.
+It says there should be the crown expression.
+Zero means zero minutes, 22 hours, which is 10:00 PM
+Day of the month is fast.
+Star means every month.
+And caution mark for day of the week
+because you want to this to be ignored
+because day of month is specified already.
+And then year, every year, we'll just copy this
+and we'll go back to the Ian bridge
+and paste that Corona expression right here.
+It does show the next trend, 10 trigger dates as well. Okay?
+Every month at 10:00 PM and scroll down, choose off.
+And then finally do a next.
+And then again, choose start execution for step function,
+choose your step function, scroll down and do a next.
+Then finally, use an existing rule,
+the one you already have, even bridge
+role, even bridge role.
+And then do a next, finally review.
+And that's pretty much it. So your schedule is now set.
+If you're doing this, make sure to just let it run only once
+and keep an alarm in your phone.
+Actually keep multiple alarms,
+otherwise it'll run every month.
+Okay? And then you'll get some charges. That's it.
+And then finally, when you're done,
+you can just delete your schedule from here.
+In fact, okay, delete that.
+Don't forget this part because
+otherwise it'll run every month.
+And then, uh, you will get your bill
+with some charges on it.
+So this is how we actually schedule our jobs in AWS.

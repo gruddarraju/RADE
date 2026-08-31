@@ -1,0 +1,517 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:00.600
+Awesome, awesome.
+
+2
+00:00:00.600 --> 00:00:02.700
+Welcome back. Now what have you done so far? So far?
+
+3
+00:00:02.985 --> 00:00:05.605
+You went to the portal of N-Y-C-T-L-C
+
+4
+00:00:05.745 --> 00:00:10.165
+and then you downloaded one Parquet file from 1 95, right?
+
+5
+00:00:10.705 --> 00:00:14.005
+And then you upload that file to the data
+
+6
+00:00:15.215 --> 00:00:16.425
+lake bucket you created.
+
+7
+00:00:16.525 --> 00:00:18.105
+Let me just show that to you. What you have done so far.
+
+8
+00:00:18.335 --> 00:00:20.985
+Initially when you ran the script, right,
+
+9
+00:00:21.245 --> 00:00:23.705
+you asked the cloud engineer team to create a bucket
+
+10
+00:00:23.765 --> 00:00:27.105
+for you in it lake and that they did that for you, alright?
+
+11
+00:00:27.325 --> 00:00:29.465
+And then you download the Parquet file
+
+12
+00:00:29.685 --> 00:00:32.305
+and uploaded that here from your laptop.
+
+13
+00:00:32.325 --> 00:00:34.785
+So this has three bucket, and then you made use
+
+14
+00:00:34.785 --> 00:00:36.945
+of a service called as glue.
+
+15
+00:00:37.325 --> 00:00:42.185
+And specifically you used glue catalog, create a database.
+
+16
+00:00:42.655 --> 00:00:46.885
+Okay? So assume that upper one is your glue catalog
+
+17
+00:00:47.305 --> 00:00:48.365
+and is your database.
+
+18
+00:00:48.905 --> 00:00:51.205
+And within that you're able to create a crawl.
+
+19
+00:00:51.225 --> 00:00:55.325
+Um, the table, basically you used a glue crawler.
+
+20
+00:00:55.555 --> 00:00:57.125
+Okay, lemme just write it down here.
+
+21
+00:00:57.425 --> 00:01:01.045
+And this glue crawler, you pointed that
+
+22
+00:01:01.105 --> 00:01:04.485
+to the file here in S3 bucket Data lake.
+
+23
+00:01:04.825 --> 00:01:07.125
+And it crawled over this file.
+
+24
+00:01:07.585 --> 00:01:10.165
+And, and you asked it to actually create
+
+25
+00:01:10.785 --> 00:01:11.965
+the table in this database.
+
+26
+00:01:12.865 --> 00:01:14.605
+And it created a table here.
+
+27
+00:01:14.865 --> 00:01:17.965
+And as I said, this table and database don't hold data.
+
+28
+00:01:17.965 --> 00:01:18.965
+Data is in S3 bucket.
+
+29
+00:01:19.105 --> 00:01:24.045
+So this is an external table which is pointing to this file.
+
+30
+00:01:24.345 --> 00:01:26.725
+And to view this data in the S3 bucket,
+
+31
+00:01:27.385 --> 00:01:29.565
+you used a service called Athena.
+
+32
+00:01:29.665 --> 00:01:33.245
+And in the Athena service you filed a query called us
+
+33
+00:01:33.785 --> 00:01:37.525
+Select stuff from this, this table from, so Athena went
+
+34
+00:01:37.525 --> 00:01:39.885
+to the glue catalog, to the glue catalog database
+
+35
+00:01:39.885 --> 00:01:44.125
+and the table, and then went to the Parquet first data
+
+36
+00:01:44.145 --> 00:01:45.765
+and showed it in the UI for,
+
+37
+00:01:46.065 --> 00:01:47.685
+and then you asked the cloud union team
+
+38
+00:01:47.685 --> 00:01:49.765
+to give access on this database
+
+39
+00:01:49.765 --> 00:01:53.165
+and this table here to the data analysts as well.
+
+40
+00:01:53.385 --> 00:01:54.965
+Now, before we proceed, I wanna just, uh,
+
+41
+00:01:55.515 --> 00:01:56.885
+talk about one thing here.
+
+42
+00:01:57.345 --> 00:02:00.205
+Now, you may not know about sql, which is absolutely fine.
+
+43
+00:02:00.395 --> 00:02:03.685
+Okay? We actually, uh, fired, this is Athena console.
+
+44
+00:02:03.685 --> 00:02:06.005
+We fired Athena Query here, the SQL query.
+
+45
+00:02:06.665 --> 00:02:08.565
+And we are able to first data here, okay?
+
+46
+00:02:09.305 --> 00:02:11.725
+Now, if we don't know sql, go
+
+47
+00:02:11.725 --> 00:02:13.885
+to my SQL skill booster course.
+
+48
+00:02:13.915 --> 00:02:15.925
+It's a quick course that will actually bring you up
+
+49
+00:02:15.925 --> 00:02:17.725
+to speed on what SQL is.
+
+50
+00:02:17.985 --> 00:02:19.645
+So I would highly recommend that.
+
+51
+00:02:19.705 --> 00:02:23.405
+And also we saw some commands in the cloud shell, right?
+
+52
+00:02:23.405 --> 00:02:24.645
+We saw ls, we saw,
+
+53
+00:02:25.065 --> 00:02:28.245
+and we saw sh So these, this terminal is like,
+
+54
+00:02:28.265 --> 00:02:30.165
+is actually Unix terminal, okay?
+
+55
+00:02:30.985 --> 00:02:33.245
+Now, you, you may not know about Unix is absolutely fine.
+
+56
+00:02:33.925 --> 00:02:35.425
+If you don't know about that, go
+
+57
+00:02:35.485 --> 00:02:37.665
+to the Unix skill booster course.
+
+58
+00:02:37.955 --> 00:02:41.395
+We'll quickly cover what, uh, UNIX is, what the,
+
+59
+00:02:41.465 --> 00:02:43.835
+what UNIX commands are typically used by data engineers.
+
+60
+00:02:44.055 --> 00:02:45.315
+Now let's get back to the discussion.
+
+61
+00:02:45.335 --> 00:02:47.875
+Now, cloud engineer team has given access
+
+62
+00:02:48.055 --> 00:02:49.675
+to the analyst, okay?
+
+63
+00:02:50.215 --> 00:02:52.275
+So you have a data analyst here, business team,
+
+64
+00:02:52.275 --> 00:02:53.315
+data analyst, and they're able
+
+65
+00:02:53.315 --> 00:02:55.835
+to acquire a query on Athena, okay?
+
+66
+00:02:56.135 --> 00:02:58.515
+Now they file a query and they do their
+
+67
+00:02:58.835 --> 00:03:00.485
+Analysis, they run all sort of queries,
+
+68
+00:03:00.545 --> 00:03:04.365
+and, um, they feel, yes, there is value in this data,
+
+69
+00:03:04.465 --> 00:03:06.765
+we need to look at more data.
+
+70
+00:03:06.875 --> 00:03:08.525
+What they have given us is just one file.
+
+71
+00:03:09.105 --> 00:03:12.525
+Uh, but on this portal we have data for so many years,
+
+72
+00:03:12.865 --> 00:03:16.125
+we would at least need data for 2024
+
+73
+00:03:16.305 --> 00:03:18.325
+and 2025, all the years.
+
+74
+00:03:18.355 --> 00:03:20.365
+Okay? All these two years we want data.
+
+75
+00:03:20.585 --> 00:03:23.405
+So that's the next ask from the data analyst into you.
+
+76
+00:03:23.595 --> 00:03:25.245
+What they also say is that, okay,
+
+77
+00:03:25.245 --> 00:03:28.285
+in the data we have something called a pickup location id
+
+78
+00:03:28.555 --> 00:03:30.405
+drop of location id, there are all some IDs.
+
+79
+00:03:30.405 --> 00:03:32.765
+I wanna know exactly what is a pickup
+
+80
+00:03:33.045 --> 00:03:34.125
+location, what is the drop location.
+
+81
+00:03:34.345 --> 00:03:38.885
+And for that, they will ask you to also create a table for
+
+82
+00:03:39.485 --> 00:03:41.395
+a lookup file.
+
+83
+00:03:42.055 --> 00:03:43.955
+If you click on this, it'll create a,
+
+84
+00:03:44.765 --> 00:03:46.955
+it'll download a file on your laptop.
+
+85
+00:03:47.135 --> 00:03:49.115
+And the contains are right here, location ID
+
+86
+00:03:49.115 --> 00:03:50.435
+and the borrowers and everything.
+
+87
+00:03:50.435 --> 00:03:55.115
+So they will want to actually join, join
+
+88
+00:03:55.155 --> 00:03:56.475
+that data with this data.
+
+89
+00:03:56.525 --> 00:03:58.155
+Again, I'm talking about join now. Okay?
+
+90
+00:03:58.615 --> 00:03:59.835
+So this is why you need know sql.
+
+91
+00:03:59.835 --> 00:04:03.555
+If you wanna sql, so go back to skill booster course on SQL
+
+92
+00:04:03.615 --> 00:04:05.315
+and come back and then continue.
+
+93
+00:04:05.455 --> 00:04:08.355
+So using this, when they join to this table,
+
+94
+00:04:08.385 --> 00:04:10.795
+they can find out the zone, the borrow, all of
+
+95
+00:04:10.795 --> 00:04:13.475
+that exact pickup, location, pickup drop, all of that.
+
+96
+00:04:13.655 --> 00:04:18.035
+So the ask is now to also get this file in the data lake
+
+97
+00:04:18.295 --> 00:04:21.475
+and have a table for that so that they can join this table
+
+98
+00:04:21.785 --> 00:04:23.755
+with the zone lookup table.
+
+99
+00:04:24.135 --> 00:04:25.875
+And the second ask here that they want data
+
+100
+00:04:26.015 --> 00:04:28.075
+for 2025, whatever is available.
+
+101
+00:04:28.495 --> 00:04:31.315
+If you look at this, we have Datatel November only,
+
+102
+00:04:31.655 --> 00:04:33.195
+but whatever is available for that year
+
+103
+00:04:33.495 --> 00:04:35.555
+and for 2024 as well.
+
+104
+00:04:35.775 --> 00:04:37.475
+So that's your next step. Okay?
+
+105
+00:04:37.695 --> 00:04:39.155
+And, and before we actually continue,
+
+106
+00:04:39.155 --> 00:04:43.685
+before you continue the next to the next video, you have
+
+107
+00:04:43.685 --> 00:04:46.805
+to finish the, the Raid agent Data engineering
+
+108
+00:04:46.805 --> 00:04:48.005
+with Amazing Q course.
+
+109
+00:04:48.115 --> 00:04:51.285
+Okay? That course is a prerequisite before we continue.
+
+110
+00:04:51.285 --> 00:04:53.525
+Okay? That course will teach you how
+
+111
+00:04:53.525 --> 00:04:56.325
+to actually use agent ai, which we need, in fact,
+
+112
+00:04:56.425 --> 00:04:57.645
+for our development now.
+
+113
+00:04:57.825 --> 00:04:59.685
+And I'm sure you have a lot of questions about, you know,
+
+114
+00:04:59.685 --> 00:05:02.085
+what is agent AI and whether companies allow this.
+
+115
+00:05:02.385 --> 00:05:04.485
+All of that is covered in that course, the short course.
+
+116
+00:05:05.425 --> 00:05:08.325
+So make sure you, before you start watching the next video,
+
+117
+00:05:08.905 --> 00:05:11.565
+you go to that course and only finish that course
+
+118
+00:05:11.565 --> 00:05:13.165
+and only then come here and continue
+
+119
+00:05:13.165 --> 00:05:15.485
+because that course already talks about how
+
+120
+00:05:15.485 --> 00:05:18.765
+to fetch data from this portal to a data lake.
+
+121
+00:05:18.915 --> 00:05:21.605
+Okay? That course already covers that.
+
+122
+00:05:21.625 --> 00:05:22.965
+So watch it and then come here.
+
+123
+00:05:23.225 --> 00:05:24.245
+Now before you go to the next video,
+
+124
+00:05:24.295 --> 00:05:26.965
+write down in the comment below what is it you have learned.
+
+125
+00:05:27.025 --> 00:05:28.805
+You know, what story you have learned
+
+126
+00:05:28.805 --> 00:05:31.645
+because then you write on your own words, the story.
+
+127
+00:05:31.775 --> 00:05:34.525
+It'll get reinforced in your system, in your system,
+
+128
+00:05:35.065 --> 00:05:37.885
+and you'll be able to produce that during the interview.
+
+129
+00:05:38.035 --> 00:05:38.685
+Talk to you soon.

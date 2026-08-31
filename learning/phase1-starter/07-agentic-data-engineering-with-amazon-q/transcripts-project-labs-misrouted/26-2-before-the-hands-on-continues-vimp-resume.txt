@@ -1,0 +1,29 @@
+Course: Agentic Data Engineering with Amazon Q
+Lesson: 2. Before the Hands on Continues - VIMP! RESUME
+============================================================
+
+Hey guys, welcome back.
+I hope you have actually gone
+through the Agent AI course I asked you
+to do before coming here.
+That is very, very important
+because that course already talks about how
+to pull data, this exact data.
+Okay? So I'll be sharing this code that is written
+with the help of the ai, with the help
+of Amazon Q, in fact, okay?
+I'll share this quote to you, and this is a Python script
+and this you will use in the glue python shell.
+To know more about glue, python glue, go to the deep dive
+and understand what glue is all about.
+This right here, you'll do just the hands-on part.
+See, my intention for you is that you don't feel
+that coding is your Achilles heel anymore, okay?
+And if you have truly gone through my agent, take AI course
+and and truly done the hands-on, not just watched it, okay?
+If you have really done the hands-on, I'm pretty sure
+by now you would've felt that I
+don't have to worry about coding at all.
+So the next few videos are all gonna be out, hands-on.
+Make sure you follow along and get the hands-on done. Okay?
+Talk to you soon.

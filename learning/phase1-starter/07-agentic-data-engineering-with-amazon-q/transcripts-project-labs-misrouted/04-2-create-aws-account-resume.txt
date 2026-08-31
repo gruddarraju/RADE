@@ -1,0 +1,7 @@
+Course: Agentic Data Engineering with Amazon Q
+Lesson: 2 Create AWS Account RESUME
+============================================================
+
+Click on this link to create a free a Ws account.
+Scroll down, click on this link here,
+and then sign up for AWS.

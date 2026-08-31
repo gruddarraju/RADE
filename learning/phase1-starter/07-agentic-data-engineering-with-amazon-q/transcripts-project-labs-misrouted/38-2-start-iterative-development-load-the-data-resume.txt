@@ -1,0 +1,171 @@
+Course: Agentic Data Engineering with Amazon Q
+Lesson: 2 Start Iterative Development - Load the data RESUME
+============================================================
+
+Next step, go to
+the search bar.
+Search Glue.
+Open AWS Glue.
+Go to the left-hand side. Click on ETL Jobs.
+Next, click on Notebook, then choose an IAM role.
+Choose Mission DEH HOF Glue Service Role.
+This is already in your
+account, got created when you ran the script,
+which created the S3 bucket as well.
+So in the real world, this would have been given you by your-- And then click on
+Create Notebook. This will take about a minute or two.
+Meanwhile, go back to your VS Code.
+Right-click on this. Click on Rename.
+Copy the file name. Right-click on that, Copy.
+Go back to the AWS console. Right here, click on that.
+Delete all of that, and then paste the file
+name. This is your Glue notebook name. Now click on Enter.
+You see this red thing here. Now click on this Job details. Scroll down a bit.
+Everything looks good. The two and the red thing is gone now.
+We'll go back to Notebook. Let me zoom out a bit.
+Now what you see here is a notebook. Okay? What you see here is a notebook.
+A notebook helps us to iteratively develop things.
+Okay? Now, what's our goal now? Our goal is to read the data which is in the
+raw folder, transform that per the mapping given to us by the analyst,
+also do some validation data quality checks,
+and then finally load that to curated layer, the folder. That's our ask.
+So there are multiple steps involved.
+First step
+is to read the data from raw. Second step, transform it.
+Third step,
+do data quality validation. Fourth step is to write the
+validated data back into
+curated layer. So there are four steps involved here.
+So notebook is used to develop things iteratively.
+When I say iteratively, we can run a part of the code and see
+how it behaves.
+We don't have to run the entire code from top to bottom.
+So we can
+do things step by step.
+This is what a notebook enables us, and this is how we start in the development
+phase. When we have a new project,
+when you're working on Apache Spark-based
+project, we go with notebook. If you're working on a Python-based project,
+we don't use notebook. It is only for PySpark-based jobs.
+So now, in a notebook, we have different cells here. Okay?
+So here we already have some pre-populated information.
+Now, what you see here, the percentage
+indicates that these are magic commands. Okay?
+You're setting the properties of this notebook
+through these magic commands. You're going with worker type G1X.
+All of this is discussed in deep dive. Okay?
+Worker type, the number of workers.
+For now, we'll not talk about
+the theory part now. We'll just stick to the hands-on part.
+So for our use case, we just need
+the minimum number of workers. So we'll just stick to two.
+I'll remove the five and make it two.
+Okay? Next, I'm going to run this. So to run this, I can just go
+click on this cell and go here and run this with the help
+of the button here.
+So now you see here, the star mark, it is running currently. Okay?
+Right here as well, you see it shows kernel status busy.
+Okay? Right here, in fact. If I scroll down,
+you see the output here. Whatever is running here, this part of the code is
+running, in fact, with just this much, and it's already printing some output here.
+So this is how we do iterative development.
+We're waiting for a session to be created.
+Okay? Now, what a session is, all of that, what
+this means, all that is covered in the deep dive course.
+While we wait for this to run, we don't have to have
+these cells here.
+They are all sample cells that got created.
+We'll delete them. We'll click on them.
+We'll go to this
+knife button here. We'll click on that.
+We'll keep on removing them one by one.
+We don't need them at all. Now the session has been created.
+The next step, if you've gone through my PySpark Skill Booster, the
+spark session is the entry point. So we need to have this ready before we do
+anything at all. So the next step is to go back to my Visual
+Studio, and I have the
+code that I've already provided to you.
+You're going to copy this whole code, in fact.
+Now, just copy this one cell alone, okay?
+Not the cell
+below. Okay? Just copy the cell
+that I'm showing you right now. Just copy this.
+Just click here, do a Control + A, select the whole cell,
+and then go here,
+click on the three
+dots, More actions,
+Copy cell. Go back to your notebook.
+And now we don't really have any cell here, right? We got to create a cell now.
+So we're going to go here and click on this plus button.
+That will create a code cell for us. This is a code cell.
+You see there are different types of cells here, raw, markdown, and
+code. We will choose code. So we'll click here, and from the
+keyboard, we'll just do Control + V.
+That pasted the code that we copied from the VS Code. Okay?
+Now how this code was created, all of that is discussed in the Build Data
+Engineering Code with Agentic AI course. Now, what are we doing here?
+We are going to be creating some variables for
+the bucket name and then where the raw
+data is going to be, which folder, the raw path, and where we want
+to store the curated data, the path here, in fact. Okay?
+Now, initially, what we're going to do is when we are developing,
+we will just develop for one partition alone, for one file
+alone. Now, we know that we have data for 2024 and
+2025, but we will not use entire data for development.
+We'll start with just one month of data, one file alone.
+So I mentioned the target year and target month here and
+specific path where we will find
+That particular month's data. Okay.
+Now, we're going to read the file, right?
+The
+January 2024 data into a raw data frame.
+We'll do some basic data exploration. We'll look at how the schema looks like.
+We'll see some sample data as well,
+and some column analysis you see here, and some more
+analysis on the license numbers.
+Okay, so essentially we are just loading the data and doing some analysis on that.
+Now, again, if this code is
+overwhelming for you, then it means you may not really have gone through the
+Python and PySpark Skill Booster. You should have gone through that.
+And also if you go through the Agentic Data Engineering with Amazon
+Q course of mine,
+there I've shown you how to understand the code with the help
+of agent. You just copy the whole thing and put that in Amazon Q, it will tell
+you exactly what the code is doing.
+You can chat with that and get information.
+Okay. Right. So now we have the code ready. We're going to run this now.
+To run this, we'll just select the cell here and run the
+cell by clicking this button right here.
+Now, again, this shows gray, shows kernel status as busy.
+So we need to wait for this to finish.
+And if you scroll up and see this is showing up as star here, it means it
+is also running.
+I'll just scroll down and wait for it to finish. There you go. It's all done.
+It says, "Loading data from this path.
+Data loaded successfully."
+Total records, we have 19 million records and 24 columns.
+Here is the schema,
+sample data as well.
+And if you scroll down, the column analysis as well. Okay.
+How many nulls you have,
+all of that is analyzed here, in fact. The license distribution as well.
+Now, if you go back to the NYC TLC portal and look at the data dictionary,
+you see this license number corresponds to Uber and this
+one corresponds to Lyft. So it looks like we only have data for
+Uber and Lyft in our file.
+That's pretty much it. We have loaded the data, now we are ready for
+transformations per the mapping sheet that
+is given to us by analyst, which we'll do in the next video.
+So make sure you get this done
+and talk to-- And remember, if you will take a break,
+if you'll not go to the next video, make sure you stop the notebook.
+Otherwise, you will incur
+expense. And if you do stop the notebook, when you come back again,
+you will have to start from the top.
+You'll have to start running the cell
+again, this cell again, and you'll have to run the next cell again before you
+run the third cell, in which we'll transform the
+data. Only if you want to take a break, then stop it.
+If you stop it, you'll have to
+rerun all the cells again.
+See you in the next video.

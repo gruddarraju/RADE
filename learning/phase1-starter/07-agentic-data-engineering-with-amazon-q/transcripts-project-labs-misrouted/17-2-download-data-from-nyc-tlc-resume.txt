@@ -1,0 +1,10 @@
+Course: Agentic Data Engineering with Amazon Q
+Lesson: 2. Download Data from NYC TLC RESUME
+============================================================
+
+Search N-Y-C-T-L-C
+and go to the TLC trip Record data link and click on that.
+Scroll down, expand 2025.
+Look at January section
+and click on high volume for higher vehicle trip data.
+This will run on the par file.

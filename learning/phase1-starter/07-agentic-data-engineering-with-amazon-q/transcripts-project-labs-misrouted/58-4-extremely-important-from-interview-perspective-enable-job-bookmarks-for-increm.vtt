@@ -1,0 +1,725 @@
+WEBVTT
+
+1
+00:00:00.090 --> 00:00:04.031
+All right, let's implement the incremental processing in job number two now,
+
+2
+00:00:04.280 --> 00:00:06.680
+first, and then look at job number three.
+
+3
+00:00:06.700 --> 00:00:10.020
+Job number two simply pulls the data from raw to curated.
+
+4
+00:00:10.040 --> 00:00:13.860
+So let's go to our Glue console and look at the raw to
+
+5
+00:00:13.920 --> 00:00:16.520
+curated. I feel it's right here. In fact, I'll click on this.
+
+6
+00:00:16.560 --> 00:00:20.340
+The simple solution is to actually go to Job details and scroll
+
+7
+00:00:20.460 --> 00:00:24.230
+down, and you see the Job bookmark here?
+
+8
+00:00:24.260 --> 00:00:27.860
+You go to enable this, okay? It says it can remember previously
+
+9
+00:00:27.880 --> 00:00:31.590
+processed data. Enable it, okay? And if you
+
+10
+00:00:31.900 --> 00:00:34.640
+keep it disabled, it'll ignore said information, okay?
+
+11
+00:00:34.660 --> 00:00:38.640
+So enable it now, and, uh, save it. And one more thing is if you just
+
+12
+00:00:38.680 --> 00:00:41.740
+enable it, it will not work. There is one more
+
+13
+00:00:41.780 --> 00:00:45.580
+critical thing, okay, which you have to
+
+14
+00:00:46.420 --> 00:00:50.180
+really take care of, and that is you go to Script. Okay?
+
+15
+00:00:50.250 --> 00:00:52.150
+I'll provide the script to you. It's an updated script.
+
+16
+00:00:52.180 --> 00:00:54.180
+It's not the one that you used before, okay?
+
+17
+00:00:54.200 --> 00:00:57.380
+Below this video or above this video, you will see the script.
+
+18
+00:00:57.440 --> 00:01:00.760
+Go to your VS Code, get the
+
+19
+00:01:00.780 --> 00:01:04.681
+script, go back to Script here, delete, and
+
+20
+00:01:04.720 --> 00:01:08.380
+right-click and paste again, and then save it.
+
+21
+00:01:08.420 --> 00:01:12.200
+Okay? I'll tell you what the difference is. The difference here is this, okay?
+
+22
+00:01:12.240 --> 00:01:14.130
+In the previous script, if you have it, take...
+
+23
+00:01:14.200 --> 00:01:18.170
+open it and take a look, okay? Now, we discussed about this in deep dive also, that
+
+24
+00:01:18.200 --> 00:01:22.100
+when you're reading a file, you can re-read it as a Spark data frame, but
+
+25
+00:01:22.180 --> 00:01:22.410
+here
+
+26
+00:01:23.420 --> 00:01:26.720
+we are reading as a dynamic frame. The dynamic frame is a
+
+27
+00:01:26.760 --> 00:01:30.340
+concept of AWS Glue, okay? It is
+
+28
+00:01:30.460 --> 00:01:32.800
+specific to AWS Glue alone. Now, what is dynamic frame?
+
+29
+00:01:32.820 --> 00:01:36.040
+It is discussed in deep dive. For the Glu- the Glue
+
+30
+00:01:37.000 --> 00:01:40.580
+bookmark, job bookmark to work, you have to be reading the
+
+31
+00:01:41.320 --> 00:01:45.020
+data through the dynamic frame. And
+
+32
+00:01:45.060 --> 00:01:49.000
+dynamic frame is created from the catalog, and you mention the
+
+33
+00:01:49.040 --> 00:01:52.940
+database name, which is our mission database, and table name is, which
+
+34
+00:01:52.980 --> 00:01:56.160
+holds the raw data, is hvfhv, hvfhv.
+
+35
+00:01:56.180 --> 00:01:58.680
+If I go to the databases and con-- I want to confirm that.
+
+36
+00:01:58.720 --> 00:02:02.640
+So here we have the raw data in this table, curated
+
+37
+00:02:02.680 --> 00:02:05.460
+in this table, and we have three tables for aggregated.
+
+38
+00:02:05.480 --> 00:02:09.410
+I want to reiterate, for the job bookmark to work,
+
+39
+00:02:09.440 --> 00:02:13.360
+first thing is you got to enable it, enable it, and then second thing
+
+40
+00:02:13.420 --> 00:02:17.310
+is you got to be reading the data not
+
+41
+00:02:17.320 --> 00:02:20.880
+directly as Spark data frame, but as a dynamic
+
+42
+00:02:21.000 --> 00:02:24.900
+frame from the catalog. And the critical thing here is
+
+43
+00:02:24.920 --> 00:02:27.210
+that you have to have this transformation context.
+
+44
+00:02:27.240 --> 00:02:30.940
+You can name this whatever you want, but this is, it doesn't matter, but this thing
+
+45
+00:02:31.020 --> 00:02:34.400
+has to be there. And just to add some more theoretical concept here,
+
+46
+00:02:34.520 --> 00:02:38.120
+um, this also works because the code is within job init
+
+47
+00:02:39.100 --> 00:02:42.829
+and job commit, okay? These are the critical things you got to know,
+
+48
+00:02:42.860 --> 00:02:46.540
+understand from theoretical perspective as well as from interview perspective
+
+49
+00:02:46.600 --> 00:02:50.200
+also. So three things. One is you got to enable it, enable job
+
+50
+00:02:50.210 --> 00:02:53.989
+bookmarks in the script. By default, the job init is added anyway.
+
+51
+00:02:54.020 --> 00:02:57.920
+Job init and, uh, job commit is added anyway, so all your code, transmission code,
+
+52
+00:02:57.980 --> 00:03:01.580
+all the code you write is within the job init and job commit
+
+53
+00:03:01.700 --> 00:03:05.560
+anyway. So that is taken care of by default, but that is a
+
+54
+00:03:05.600 --> 00:03:07.520
+theoretical thing. You got to understand that.
+
+55
+00:03:07.540 --> 00:03:11.060
+The critical thing is when you read the data, you got to read from the
+
+56
+00:03:11.100 --> 00:03:14.840
+catalog to create the dynamic frame using Glue
+
+57
+00:03:14.880 --> 00:03:18.790
+context. And you got to provide the database name and table name and
+
+58
+00:03:18.880 --> 00:03:21.700
+provide a transformation context, any name here, in fact.
+
+59
+00:03:21.740 --> 00:03:25.500
+And then you convert the dynamic frame to a Spark data
+
+60
+00:03:25.560 --> 00:03:29.060
+frame and do your regular Spark coding as such.
+
+61
+00:03:29.100 --> 00:03:32.940
+So when you do this, when you do this, what will happen is the Glue job will be
+
+62
+00:03:32.980 --> 00:03:36.960
+able to understand what partitions of the data it
+
+63
+00:03:37.120 --> 00:03:40.840
+has really read from the S3 bucket, and then
+
+64
+00:03:40.880 --> 00:03:44.360
+process the new partitions alone,
+
+65
+00:03:44.400 --> 00:03:47.910
+okay? So to save the code and close this...
+
+66
+00:03:47.960 --> 00:03:51.740
+And lastly, before we run the code, you have to, um, make sure that the Glue
+
+67
+00:03:51.940 --> 00:03:55.720
+catalog table actually has information about the par- new partition,
+
+68
+00:03:55.760 --> 00:03:59.320
+right? Now, you are actually going to be reading from the Glue catalog
+
+69
+00:03:59.400 --> 00:04:02.240
+table, and we have got the new
+
+70
+00:04:02.260 --> 00:04:06.090
+partition, which is the November twenty
+
+71
+00:04:06.180 --> 00:04:08.940
+twenty-six in our case, okay? Which was not there
+
+72
+00:04:08.980 --> 00:04:12.960
+before. We got to update that thing in the Glue catalog
+
+73
+00:04:13.120 --> 00:04:16.300
+table right here. So if you go to the database here and deliver table, go to our
+
+74
+00:04:16.339 --> 00:04:20.060
+database and look at the table. If you
+
+75
+00:04:20.200 --> 00:04:22.810
+scroll down, look at the partitions we have here.
+
+76
+00:04:22.860 --> 00:04:25.990
+What do we have in the partitions? We have twenty twenty-four and twenty
+
+77
+00:04:26.000 --> 00:04:29.780
+twenty-five, but we have deleted all the
+
+78
+00:04:29.820 --> 00:04:33.490
+data, right? And we have just loaded twenty
+
+79
+00:04:33.560 --> 00:04:37.240
+twenty-five November alone, which we do not have here.
+
+80
+00:04:37.300 --> 00:04:40.300
+November is not here. So we need to get this
+
+81
+00:04:40.360 --> 00:04:44.340
+updated. So one way is to simply just go to the crawler and, uh, you
+
+82
+00:04:44.380 --> 00:04:47.700
+know, run the crawler again. It'll go to the S3 bucket and scan it.
+
+83
+00:04:47.740 --> 00:04:51.340
+But why run the crawler? We have an alternate method here, okay?
+
+84
+00:04:51.400 --> 00:04:54.820
+In the script itself, we can add a command called as
+
+85
+00:04:54.900 --> 00:04:58.820
+MSCK repair table. This will actually
+
+86
+00:04:59.220 --> 00:05:02.480
+update the partitions in the Glue catalog table, okay?
+
+87
+00:05:02.560 --> 00:05:04.580
+Again, a very, very important interview question.
+
+88
+00:05:04.640 --> 00:05:08.560
+If at all the partitions get updated in the S3
+
+89
+00:05:08.660 --> 00:05:12.420
+and your catalog table is not updated with
+
+90
+00:05:12.440 --> 00:05:16.140
+the, with the latest partitions, you should be running
+
+91
+00:05:16.220 --> 00:05:20.180
+MSCK repair so that new partitions are discovered
+
+92
+00:05:20.220 --> 00:05:23.770
+and updated in the catalog table. And finally, and
+
+93
+00:05:24.540 --> 00:05:28.460
+run it. It's running right now, and it should create the curated folder
+
+94
+00:05:28.520 --> 00:05:31.969
+for us with just November twenty twenty-five's
+
+95
+00:05:31.980 --> 00:05:34.010
+data. It's all done. Took about six minutes.
+
+96
+00:05:34.040 --> 00:05:36.270
+Let's go and take a look at our S3 bucket.
+
+97
+00:05:36.280 --> 00:05:39.540
+We curate it here, and we go back inside.
+
+98
+00:05:39.560 --> 00:05:43.520
+We see the November twenty twenty-five right here for all the days, in
+
+99
+00:05:43.580 --> 00:05:46.500
+fact. If you go to Output logs and click
+
+100
+00:05:46.560 --> 00:05:50.550
+here, it'll take you to CloudWatch, and if you look at the log,
+
+101
+00:05:50.600 --> 00:05:54.030
+you'll find that the MSCK repair has finished.
+
+102
+00:05:54.080 --> 00:05:57.980
+Initially, it loaded all the data, running MSCK repair to discover new
+
+103
+00:05:58.000 --> 00:06:01.820
+partitions. It has finished, and if you go to the Glue catalog
+
+104
+00:06:01.880 --> 00:06:05.580
+table, you will now see twenty twenty-five eleven
+
+105
+00:06:05.840 --> 00:06:09.712
+as well in the next page right here.... right.
+
+106
+00:06:09.751 --> 00:06:13.611
+So with this, it will be able to load the data because it now knows
+
+107
+00:06:13.712 --> 00:06:16.392
+that we have a new partition in the S3 bucket.
+
+108
+00:06:16.431 --> 00:06:17.982
+Now, because we have enabled
+
+109
+00:06:18.912 --> 00:06:22.811
+the bookmark, okay, it should not really pull the
+
+110
+00:06:22.832 --> 00:06:24.572
+process data. So let's run it again.
+
+111
+00:06:24.611 --> 00:06:28.111
+Job details already has the bookmark enabled, which is right here, in
+
+112
+00:06:28.132 --> 00:06:31.762
+fact. Right here, we'll just run it now. And it finished.
+
+113
+00:06:31.792 --> 00:06:35.132
+If I go to the output logs, it, uh, is going to show
+
+114
+00:06:35.171 --> 00:06:38.991
+me that it has run the MSK repair and, uh,
+
+115
+00:06:39.111 --> 00:06:42.952
+it's trying to load the data with job bookmarks, and it
+
+116
+00:06:42.991 --> 00:06:46.402
+shows here initial record count is zero. No new data processed.
+
+117
+00:06:46.431 --> 00:06:50.352
+Job bookmarks filtered all the data. Get the point?
+
+118
+00:06:50.412 --> 00:06:53.472
+If you go back to S3, S3 has the data.
+
+119
+00:06:53.572 --> 00:06:57.412
+It, it has the November twenty twenty-five data,
+
+120
+00:06:57.472 --> 00:07:01.332
+okay? The data is there, but the job bookmark
+
+121
+00:07:01.352 --> 00:07:04.912
+was enabled, and the code was within the job.init
+
+122
+00:07:05.051 --> 00:07:07.452
+and within the job.commit,
+
+123
+00:07:08.072 --> 00:07:11.171
+and the data was being read through
+
+124
+00:07:11.181 --> 00:07:14.952
+the dynamic frame from the catalog, and
+
+125
+00:07:15.012 --> 00:07:18.991
+this catalog table was also updated
+
+126
+00:07:19.032 --> 00:07:21.192
+with the latest partition through MSK repair.
+
+127
+00:07:21.232 --> 00:07:24.852
+So when all these conditions are met, it is able to skip
+
+128
+00:07:25.611 --> 00:07:27.892
+the r- the data, which has already been processed.
+
+129
+00:07:27.931 --> 00:07:31.712
+Very, very important from the interview
+
+130
+00:07:31.792 --> 00:07:34.652
+perspective. Now, other interview question could be: How do you really
+
+131
+00:07:35.272 --> 00:07:38.871
+process that data again, now that the joo- b-bookmark is
+
+132
+00:07:38.912 --> 00:07:42.871
+enabled? What if you want to really process that data again, this
+
+133
+00:07:42.931 --> 00:07:46.482
+data again, for whatever reason, okay? Whatever reason, it could...
+
+134
+00:07:46.491 --> 00:07:50.431
+There could be that, uh, ah, there was some need for which you wanted to
+
+135
+00:07:50.472 --> 00:07:54.452
+process it. Whatever may be the reason, how could you process this
+
+136
+00:07:54.532 --> 00:07:57.392
+file? Job bookmark is enabled. Now, if you run it again, it will not
+
+137
+00:07:58.272 --> 00:08:01.392
+read this file because it will say, "Yes, I've read the file again, uh, in the
+
+138
+00:08:01.431 --> 00:08:04.012
+past," okay? "I will not read it again," it will say.
+
+139
+00:08:04.072 --> 00:08:07.881
+So the solution for that is you got to go here, choose this, and
+
+140
+00:08:07.952 --> 00:08:08.671
+then action,
+
+141
+00:08:09.852 --> 00:08:13.671
+reset bookmark. When you do a reset bookmark, it says, "You are about to
+
+142
+00:08:13.732 --> 00:08:16.611
+reset the bookmark. Save information about the job.
+
+143
+00:08:16.631 --> 00:08:19.972
+Tracking of the previously processed data is lost
+
+144
+00:08:20.232 --> 00:08:23.732
+on reset. Do you want to reset?" And when you run it
+
+145
+00:08:23.792 --> 00:08:27.592
+again, it will read the data. So give a
+
+146
+00:08:27.631 --> 00:08:30.572
+try yourself. It will do that, all right?
+
+147
+00:08:30.631 --> 00:08:34.472
+Even if you just know this much, you should be in a very, very
+
+148
+00:08:34.511 --> 00:08:37.212
+good position from the interview perspective.
+
+149
+00:08:37.222 --> 00:08:40.491
+And lastly, how does the job bookmark even track
+
+150
+00:08:40.501 --> 00:08:44.172
+the already processed files? How does it even know that,
+
+151
+00:08:44.212 --> 00:08:48.012
+okay, I had processed this file before, I should not be processing it again?
+
+152
+00:08:48.072 --> 00:08:51.052
+It is based on the last modified timestamp of the file.
+
+153
+00:08:51.092 --> 00:08:54.961
+This file, particular file, has a timestamp of, uh, Jan five,
+
+154
+00:08:55.052 --> 00:08:58.852
+uh, nineteen twenty-five, right? This came in at that particular time. Okay?
+
+155
+00:08:58.912 --> 00:09:02.812
+So I've put the information here, that this is the file and this is the timestamp.
+
+156
+00:09:02.891 --> 00:09:06.252
+So let's say the job actually, uh, runs at,
+
+157
+00:09:06.352 --> 00:09:10.182
+um... Let's say twenty thirty-five, twenty-five, okay,
+
+158
+00:09:10.271 --> 00:09:14.172
+one hour later. So it is going to be running one
+
+159
+00:09:14.212 --> 00:09:14.882
+hour later.
+
+160
+00:09:16.052 --> 00:09:20.012
+So this file had come before the job run,
+
+161
+00:09:20.021 --> 00:09:23.972
+when the job ran, and so it will be able to process it. And imagine the next month.
+
+162
+00:09:24.012 --> 00:09:26.462
+What will happen the next month is you'll get new file here, right?
+
+163
+00:09:26.492 --> 00:09:30.332
+You'll get, uh, let's say, December data, and this one will be in, let's
+
+164
+00:09:30.352 --> 00:09:34.072
+say, February, and, uh, maybe, let's
+
+165
+00:09:34.092 --> 00:09:37.332
+say, six-- eighteen twenty-five, okay, in the evening or so.
+
+166
+00:09:37.391 --> 00:09:41.232
+So the-- Let's say the job now runs on Feb
+
+167
+00:09:41.432 --> 00:09:45.072
+five, at, let's say, again, twenty
+
+168
+00:09:46.271 --> 00:09:48.322
+twenty-five, okay? This is a scheduled job.
+
+169
+00:09:48.352 --> 00:09:52.232
+It, it is a scheduled job, and probably, um, it runs every one
+
+170
+00:09:52.271 --> 00:09:55.562
+the same time, so it starts running at twenty
+
+171
+00:09:55.652 --> 00:09:58.512
+twenty-five. And now, when the job runs at this particular
+
+172
+00:09:58.531 --> 00:10:02.492
+time, it finds that, okay, we have,
+
+173
+00:10:02.512 --> 00:10:04.992
+uh, an, a fi- a file here
+
+174
+00:10:05.812 --> 00:10:09.771
+with this timestamp, but the previous runtime was this,
+
+175
+00:10:09.812 --> 00:10:13.472
+okay? It was Jan five. So any file before
+
+176
+00:10:13.482 --> 00:10:15.632
+that, it's not, not going to read that.
+
+177
+00:10:15.672 --> 00:10:18.812
+So any data after this, it's going to read and process it.
+
+178
+00:10:18.832 --> 00:10:22.692
+So basically, it uses the, the file's timestamp to
+
+179
+00:10:22.732 --> 00:10:25.392
+understand what needs to be processed.
+
+180
+00:10:25.612 --> 00:10:26.962
+This you need to understand, at least.
+
+181
+00:10:26.991 --> 00:10:29.992
+This, this theoretical understanding you need to have. Okay?

@@ -1,0 +1,473 @@
+WEBVTT
+
+1
+00:00:00.030 --> 00:00:00.770
+Hey guys, we come back.
+
+2
+00:00:00.770 --> 00:00:02.395
+I hope you're gone through the previous video
+
+3
+00:00:02.495 --> 00:00:04.035
+and I hope it was pretty enlightening for you
+
+4
+00:00:04.035 --> 00:00:06.795
+because see, to really learn data engineering,
+
+5
+00:00:07.095 --> 00:00:09.195
+you must be getting your hands dirty.
+
+6
+00:00:09.465 --> 00:00:11.315
+When you create something on your own,
+
+7
+00:00:12.295 --> 00:00:13.835
+you don't easily forget that.
+
+8
+00:00:13.905 --> 00:00:16.195
+Okay? Anyway, let's continue our discussion.
+
+9
+00:00:16.195 --> 00:00:20.035
+Now, as I said, the next few videos are very important.
+
+10
+00:00:20.285 --> 00:00:22.235
+We'll talk about the development lifecycle.
+
+11
+00:00:22.495 --> 00:00:25.195
+So what exactly happened before the development begins?
+
+12
+00:00:26.165 --> 00:00:28.905
+You gotta know about this. So the first step is that,
+
+13
+00:00:29.205 --> 00:00:30.465
+you know, you load of data here, right?
+
+14
+00:00:30.485 --> 00:00:34.665
+You, you give all the data to the data analysts, right?
+
+15
+00:00:34.895 --> 00:00:36.905
+It's right here. The two years they ask for,
+
+16
+00:00:36.905 --> 00:00:40.705
+you have it here, the zone data is also here, in fact, okay?
+
+17
+00:00:41.165 --> 00:00:44.665
+And you have built the appropriate tables in blue catalog.
+
+18
+00:00:44.805 --> 00:00:46.905
+So they're able to query, and I told you
+
+19
+00:00:46.905 --> 00:00:49.745
+that the H-V-F-H-V table has a pickup
+
+20
+00:00:50.085 --> 00:00:51.305
+and drop off location id,
+
+21
+00:00:51.305 --> 00:00:54.585
+and they will really want to see the right actual locations.
+
+22
+00:00:54.585 --> 00:00:57.545
+And so they will want to join on the, this table
+
+23
+00:00:58.215 --> 00:01:00.465
+with the zone table based on the location id.
+
+24
+00:01:00.695 --> 00:01:04.185
+Okay? So here's an example query that, uh, they would've run
+
+25
+00:01:04.565 --> 00:01:08.425
+by joining the H-V-F-H-V table
+
+26
+00:01:08.645 --> 00:01:10.305
+and the zone table,
+
+27
+00:01:11.905 --> 00:01:14.565
+and they can now see the data
+
+28
+00:01:14.995 --> 00:01:18.365
+with the right pickup location, the manton, the zone,
+
+29
+00:01:19.185 --> 00:01:21.165
+the drop location, all of that is right here, in fact.
+
+30
+00:01:21.265 --> 00:01:23.925
+So they have done all sort of analysis on the data
+
+31
+00:01:24.305 --> 00:01:27.765
+and uh, they are, they are now ready
+
+32
+00:01:27.985 --> 00:01:29.165
+to give you the requirements
+
+33
+00:01:29.165 --> 00:01:32.855
+because they exactly know what they need
+
+34
+00:01:32.995 --> 00:01:35.575
+for optimizing revenue and driver operations.
+
+35
+00:01:35.875 --> 00:01:37.815
+So their researcher notes would look like this.
+
+36
+00:01:37.815 --> 00:01:39.215
+You know, data comes monthly
+
+37
+00:01:39.915 --> 00:01:43.855
+and for our analysis for building our reports, you know,
+
+38
+00:01:43.855 --> 00:01:47.395
+on tools, reporting tools such as QuickSight, AWS,
+
+39
+00:01:47.395 --> 00:01:49.875
+QuickSight or Tableau is a reporting tools.
+
+40
+00:01:50.215 --> 00:01:53.195
+Should we build the reports monthly basis or daily basis?
+
+41
+00:01:53.615 --> 00:01:54.915
+And they would want to look at
+
+42
+00:01:54.985 --> 00:01:56.235
+what are they trying to identify?
+
+43
+00:01:56.345 --> 00:01:58.595
+What exactly are they trying to
+
+44
+00:02:01.145 --> 00:02:02.265
+optimize, right?
+
+45
+00:02:02.645 --> 00:02:06.765
+Do we have some, um, use cases mentioned here?
+
+46
+00:02:06.765 --> 00:02:08.285
+You can read, read through them later.
+
+47
+00:02:08.505 --> 00:02:10.205
+So the point I'm going to say, trying to say is that,
+
+48
+00:02:10.205 --> 00:02:12.125
+you know, you have done your work, you provide,
+
+49
+00:02:12.275 --> 00:02:17.005
+provide them the data, and now they have analyzed the data
+
+50
+00:02:17.105 --> 00:02:18.965
+and they are ready to give you requirements.
+
+51
+00:02:19.385 --> 00:02:20.885
+So what's the next step?
+
+52
+00:02:21.265 --> 00:02:24.885
+The next step is that they will get into a meeting with you.
+
+53
+00:02:25.075 --> 00:02:26.885
+Okay? The data engineer team,
+
+54
+00:02:26.885 --> 00:02:28.565
+you are in the data engineer team anyway,
+
+55
+00:02:28.945 --> 00:02:31.805
+and as a grade data engineer, you wanna propose
+
+56
+00:02:32.385 --> 00:02:35.305
+for tier actually three tier structure.
+
+57
+00:02:35.325 --> 00:02:37.945
+In fact, three tier structure in data lake, okay?
+
+58
+00:02:38.365 --> 00:02:40.995
+Now what do I mean by this?
+
+59
+00:02:41.135 --> 00:02:44.675
+Seeing data lake, you got the data in the raw folder, right?
+
+60
+00:02:44.675 --> 00:02:46.075
+These are, these are just raw,
+
+61
+00:02:46.565 --> 00:02:48.435
+these is just a raw data, okay?
+
+62
+00:02:48.465 --> 00:02:50.275
+That is coming from the source, okay?
+
+63
+00:02:50.815 --> 00:02:54.235
+Now obviously data has to be cleaned,
+
+64
+00:02:54.545 --> 00:02:56.475
+data could have null data.
+
+65
+00:02:56.715 --> 00:02:58.645
+I mean, there could be blank
+
+66
+00:02:59.465 --> 00:03:00.845
+Values in the fields,
+
+67
+00:03:01.345 --> 00:03:05.445
+and there could be some business rules that you'll have
+
+68
+00:03:05.445 --> 00:03:07.005
+to kind of validate the data against.
+
+69
+00:03:07.155 --> 00:03:08.485
+Okay? We'll talk about that shortly.
+
+70
+00:03:08.505 --> 00:03:10.205
+In fact, what the business rules are,
+
+71
+00:03:10.205 --> 00:03:11.285
+what data validation is shortly.
+
+72
+00:03:11.345 --> 00:03:15.085
+But you get the point that raw is only for the raw data,
+
+73
+00:03:15.255 --> 00:03:17.085
+which is coming from source as is.
+
+74
+00:03:17.745 --> 00:03:21.645
+Now, when you wanna validate the data
+
+75
+00:03:22.305 --> 00:03:26.705
+and also clean it, you can't keep that data, the clean data,
+
+76
+00:03:27.005 --> 00:03:30.185
+the data, which is validated back in raw, okay?
+
+77
+00:03:30.365 --> 00:03:34.065
+You gotta move that to another folder called as curated,
+
+78
+00:03:34.065 --> 00:03:36.825
+right here, in fact, curated layer, okay?
+
+79
+00:03:37.165 --> 00:03:39.985
+So in the curated layer, you will not only claims data,
+
+80
+00:03:40.485 --> 00:03:42.625
+welded data, but you will also be
+
+81
+00:03:42.745 --> 00:03:44.265
+implementing some business rules.
+
+82
+00:03:44.375 --> 00:03:45.265
+Okay? I'll talk to you about
+
+83
+00:03:45.265 --> 00:03:46.305
+that shortly, don't worry about that.
+
+84
+00:03:46.445 --> 00:03:49.105
+So that is the next layer, raw and then curated.
+
+85
+00:03:49.325 --> 00:03:50.745
+And then you propose the aggregate
+
+86
+00:03:50.745 --> 00:03:52.065
+for the final aggregated data.
+
+87
+00:03:52.285 --> 00:03:54.025
+You wanna aggregate data based on
+
+88
+00:03:54.685 --> 00:03:57.745
+the daily operations, right?
+
+89
+00:03:58.045 --> 00:04:01.865
+So you say that we are gonna be storing the daily data in
+
+90
+00:04:02.185 --> 00:04:03.505
+aggregated layer for you to aggregate.
+
+91
+00:04:03.685 --> 00:04:05.065
+And because they have told you
+
+92
+00:04:05.065 --> 00:04:08.345
+that they will want data in daily aggregations,
+
+93
+00:04:08.525 --> 00:04:10.425
+you will say that, okay?
+
+94
+00:04:11.445 --> 00:04:13.545
+In the raw, it comes in a monthly format anyway.
+
+95
+00:04:13.545 --> 00:04:15.465
+If you look at the year
+
+96
+00:04:15.485 --> 00:04:18.025
+and then you have monthly data in curated
+
+97
+00:04:18.205 --> 00:04:22.285
+and in aggregated, we'll store data in the daily format
+
+98
+00:04:23.385 --> 00:04:24.725
+in a daily partition format.
+
+99
+00:04:25.065 --> 00:04:26.765
+That's how we're gonna be organizing the data.
+
+100
+00:04:27.025 --> 00:04:28.205
+And then you ask them
+
+101
+00:04:28.425 --> 00:04:31.285
+to provide a mapping specification, right?
+
+102
+00:04:32.345 --> 00:04:33.525
+How do you really want us
+
+103
+00:04:33.525 --> 00:04:36.085
+to transform the data when you move the data from
+
+104
+00:04:37.035 --> 00:04:39.325
+your raw layer to curated, okay,
+
+105
+00:04:39.595 --> 00:04:41.725
+what business rules should we implement?
+
+106
+00:04:42.155 --> 00:04:44.365
+What validation should we do on the data?
+
+107
+00:04:45.025 --> 00:04:46.885
+You ask them, you give me Excel sheet
+
+108
+00:04:47.885 --> 00:04:49.715
+where you put down all of these things to us.
+
+109
+00:04:49.985 --> 00:04:53.725
+Also let us know how we can move data from curated
+
+110
+00:04:54.105 --> 00:04:55.125
+to the aggregated layer.
+
+111
+00:04:55.145 --> 00:04:57.325
+So give us a mapping sheet for that as well.
+
+112
+00:04:57.545 --> 00:04:59.045
+So they'll take, they'll take some time
+
+113
+00:04:59.225 --> 00:05:02.605
+and uh, finally, uh, they'll get back to you
+
+114
+00:05:02.945 --> 00:05:07.045
+and they're gonna give you a mapping sheet, okay?
+
+115
+00:05:07.305 --> 00:05:09.125
+So we'll discuss all of that in the next video as to
+
+116
+00:05:09.125 --> 00:05:10.765
+how the mapping sheet looks like, you know,
+
+117
+00:05:10.765 --> 00:05:12.285
+what is mentioned in that
+
+118
+00:05:12.705 --> 00:05:14.685
+and what you do with that in the next video.

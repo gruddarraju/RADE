@@ -1,0 +1,40 @@
+Course: Agentic Data Engineering with Amazon Q
+Lesson: 12 *What have you learnt so far* RESUME
+============================================================
+
+You guys, welcome back.
+Welcome back. I hope you have done the hands-on.
+You have followed all the steps.
+You, you are understanding of the development lifecycle,
+the development process, the testing, the communication,
+communication with data analysts, communication
+with cloud engineers, and all of
+that is getting into your system here,
+and you're able to make sense of how a typical project
+goes through different steps.
+Okay? Now, when we ran the job from curated
+to the aggregated, you know, we,
+we used five workers over there.
+It took about 11 minutes only, right?
+Do we need so many workers?
+Do we need to finish in 11 minutes?
+That's the question you gotta ask,
+because whatever you, you use in the cloud,
+you'll be charged for that.
+Even in the real world. You gotta be thinking from the
+company's financial health perspective as well, in the sense
+you don't wanna necessarily spend money.
+It just really no real need.
+If it is OnPrem, you don't,
+you wouldn't really worry about all of these things,
+but when it comes to cloud,
+you gotta think about the cost as well.
+So we will talk about
+the cost optimization part about this job later.
+Okay, we'll get to that part later.
+But before we go to the next video, I want to write down
+in your own words,
+before you see others comments in your own words,
+what you've learned so far.
+Okay? Lemme just read that.
+Alright, do that now before we go to the next video.

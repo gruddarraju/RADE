@@ -1,0 +1,493 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:02.325
+Alright, we'll go to the search bar type glue here.
+
+2
+00:00:02.975 --> 00:00:05.645
+Click on AWS glue, then go to the left, left hand side
+
+3
+00:00:05.665 --> 00:00:06.765
+and click on a L Jobs.
+
+4
+00:00:07.115 --> 00:00:08.765
+Then go to script data.
+
+5
+00:00:09.215 --> 00:00:11.565
+Click on this particular button here.
+
+6
+00:00:11.665 --> 00:00:13.685
+Now choose Python shell.
+
+7
+00:00:13.945 --> 00:00:16.805
+Now to know more about the glue jobs, the Python shell
+
+8
+00:00:16.805 --> 00:00:19.885
+that you are seeing here, watch my deep dive course
+
+9
+00:00:20.865 --> 00:00:24.565
+now click on click Create script name this job as mission.
+
+10
+00:00:24.805 --> 00:00:26.645
+D-H-H-F-N-Y-C-T-L-C.
+
+11
+00:00:26.885 --> 00:00:30.525
+Ingestion job, which ingesting the N-Y-C-T-L-C data.
+
+12
+00:00:30.755 --> 00:00:32.005
+Next you go to get the script.
+
+13
+00:00:32.215 --> 00:00:33.965
+Write below this video or upload this video.
+
+14
+00:00:33.965 --> 00:00:35.685
+You'll have my script. Download that
+
+15
+00:00:36.305 --> 00:00:37.725
+and open that in your editor.
+
+16
+00:00:38.035 --> 00:00:41.445
+Copy the whole script and right here, paste it,
+
+17
+00:00:41.595 --> 00:00:43.285
+then save this.
+
+18
+00:00:43.545 --> 00:00:45.445
+Go to job details, scroll down.
+
+19
+00:00:45.785 --> 00:00:48.765
+Now this Im role was created by the script you ran before
+
+20
+00:00:49.145 --> 00:00:51.125
+and in the real world, this will be given to you
+
+21
+00:00:51.125 --> 00:00:53.045
+by your team lead or your team members.
+
+22
+00:00:53.425 --> 00:00:56.085
+So we'll choose Mission dh, HOF, blue Service role.
+
+23
+00:00:56.345 --> 00:00:59.525
+You will then simply save it and then click on run.
+
+24
+00:00:59.705 --> 00:01:02.045
+So it says successfully start the
+
+25
+00:01:02.045 --> 00:01:04.085
+job, navigate to run details.
+
+26
+00:01:04.085 --> 00:01:06.365
+So click on this and it's currently running right now.
+
+27
+00:01:06.475 --> 00:01:08.805
+This will take about six minutes While this is
+
+28
+00:01:08.805 --> 00:01:10.445
+running, go to the S3 bucket.
+
+29
+00:01:10.785 --> 00:01:12.125
+You had the data here already, right?
+
+30
+00:01:12.145 --> 00:01:15.685
+The one file which you had uploaded manually delete this.
+
+31
+00:01:15.905 --> 00:01:17.805
+We just copy this permanently, delete right here
+
+32
+00:01:17.805 --> 00:01:19.885
+and paste it here and delete.
+
+33
+00:01:20.225 --> 00:01:23.045
+So that file is gone. Now, we'll again, click on the source.
+
+34
+00:01:23.385 --> 00:01:25.205
+You see what's happening here. We had not
+
+35
+00:01:25.435 --> 00:01:26.805
+created this folder here.
+
+36
+00:01:27.155 --> 00:01:30.125
+Okay, I told you in Data Lake we can organize the
+
+37
+00:01:30.915 --> 00:01:33.205
+folders depending on how we want, right?
+
+38
+00:01:33.425 --> 00:01:34.605
+And now what are we doing here?
+
+39
+00:01:35.095 --> 00:01:38.605
+We're trying to get data from 2025
+
+40
+00:01:38.785 --> 00:01:41.245
+and 2024 for the different months.
+
+41
+00:01:41.585 --> 00:01:45.045
+So we wanna organize the data by the year and by month.
+
+42
+00:01:45.465 --> 00:01:48.885
+So we are now gonna be organizing in this format and,
+
+43
+00:01:48.885 --> 00:01:50.045
+and the code is doing that.
+
+44
+00:01:50.105 --> 00:01:53.725
+The code that is running in the glue job that
+
+45
+00:01:54.025 --> 00:01:56.805
+before it uploads the data, it's gonna be making sure
+
+46
+00:01:56.835 --> 00:01:58.805
+that the folders like these are created.
+
+47
+00:01:59.105 --> 00:02:02.605
+So within that you'll see you also have month folders.
+
+48
+00:02:02.945 --> 00:02:06.215
+And within that you're gonna have the data file.
+
+49
+00:02:06.215 --> 00:02:07.935
+If I just do a refresh, you'll see even 11
+
+50
+00:02:07.935 --> 00:02:09.175
+here in a few seconds.
+
+51
+00:02:09.625 --> 00:02:11.055
+There you go. The 11 has come here.
+
+52
+00:02:11.055 --> 00:02:14.255
+Now let's go back to the job. Click on the runs.
+
+53
+00:02:14.255 --> 00:02:16.495
+Here it is still running by the way,
+
+54
+00:02:16.685 --> 00:02:17.775
+this will take about six minutes.
+
+55
+00:02:17.805 --> 00:02:19.175
+Okay, scroll down a bit.
+
+56
+00:02:19.385 --> 00:02:21.855
+Click on the output logs here, right here and here.
+
+57
+00:02:21.855 --> 00:02:24.775
+If you scroll down, click on this log stream, okay?
+
+58
+00:02:24.995 --> 00:02:27.415
+You'll see the log getting streamed
+
+59
+00:02:27.415 --> 00:02:28.855
+to this cloud Watch right here.
+
+60
+00:02:29.165 --> 00:02:33.655
+Okay. Now the, our Python job is actually printing the log
+
+61
+00:02:33.655 --> 00:02:36.135
+and the log is getting captured in this service
+
+62
+00:02:36.235 --> 00:02:37.375
+called US CloudWatch.
+
+63
+00:02:37.465 --> 00:02:40.455
+CloudWatch is the center hub for all the logs in AWS.
+
+64
+00:02:40.515 --> 00:02:43.095
+So they're still running. By the way, if I go back to S3,
+
+65
+00:02:43.405 --> 00:02:44.615
+I'll go back to one level up
+
+66
+00:02:44.995 --> 00:02:49.535
+and you will see that year 2025 folder has also got created.
+
+67
+00:02:50.325 --> 00:02:52.665
+We go inside and we see three folders here.
+
+68
+00:02:52.925 --> 00:02:56.385
+Now remember the use case was to not just get this data,
+
+69
+00:02:56.645 --> 00:02:58.665
+we also wanted to get the taxi
+
+70
+00:02:58.735 --> 00:03:00.125
+Zone lookup file, right?
+
+71
+00:03:00.995 --> 00:03:04.685
+That will also get downloaded and populated in history or
+
+72
+00:03:05.135 --> 00:03:06.965
+after this is populated.
+
+73
+00:03:07.265 --> 00:03:09.085
+Now organizing the data in this format
+
+74
+00:03:09.665 --> 00:03:11.045
+is actually called as partitioning.
+
+75
+00:03:11.115 --> 00:03:15.275
+Okay? We are partitioning the data in our data lake.
+
+76
+00:03:15.385 --> 00:03:20.225
+This is one of the main techniques to improve performance
+
+77
+00:03:20.735 --> 00:03:24.545
+when the data is queried on the data lake, right?
+
+78
+00:03:24.775 --> 00:03:26.105
+Data is getting stored here.
+
+79
+00:03:26.205 --> 00:03:30.105
+Now obviously the data analysts will query from Athena
+
+80
+00:03:30.105 --> 00:03:32.545
+and data will get read from these, this data lake.
+
+81
+00:03:32.935 --> 00:03:35.305
+When you have a partitions like this
+
+82
+00:03:35.485 --> 00:03:39.945
+and when they use filters such as year equal to 95
+
+83
+00:03:39.945 --> 00:03:41.225
+and monthly equal to zero one,
+
+84
+00:03:42.175 --> 00:03:46.865
+only this particular file data will get scanned, okay?
+
+85
+00:03:47.045 --> 00:03:48.385
+And the results will be, uh,
+
+86
+00:03:48.385 --> 00:03:50.665
+displayed on the Athena UI from this file alone
+
+87
+00:03:50.665 --> 00:03:55.105
+because the filter had it that year equal to 2 95
+
+88
+00:03:55.105 --> 00:03:56.545
+and month equal to zero one.
+
+89
+00:03:56.695 --> 00:03:58.625
+Okay? Now I'm talking about filter and stuff.
+
+90
+00:03:58.635 --> 00:04:01.145
+Again, this is a common uh, SQL thing.
+
+91
+00:04:01.365 --> 00:04:04.505
+If you don't know about sql, I highly recommend going
+
+92
+00:04:04.505 --> 00:04:06.665
+to the SQL Skill Boost Booster course
+
+93
+00:04:06.665 --> 00:04:07.665
+and then, then come here.
+
+94
+00:04:08.145 --> 00:04:09.625
+'cause SQL is the heart of IT.
+
+95
+00:04:09.825 --> 00:04:11.865
+Engineering, you have to know sql. But remember that C,
+
+96
+00:04:12.165 --> 00:04:15.225
+the SQL Skill Booster is not a full fledged SQL course.
+
+97
+00:04:16.325 --> 00:04:18.945
+SQL course itself can be over 25, 30 hours.
+
+98
+00:04:19.125 --> 00:04:21.625
+So that will be a part of DI Diamond membership.
+
+99
+00:04:21.765 --> 00:04:24.945
+But the SQL Skill Booster will immediately help you
+
+100
+00:04:24.955 --> 00:04:28.185
+understand what is being done right now
+
+101
+00:04:28.185 --> 00:04:29.265
+in this course, right?
+
+102
+00:04:29.265 --> 00:04:33.155
+We have all the data for the Edge, we FHV
+
+103
+00:04:33.255 --> 00:04:34.475
+and we go back to raw.
+
+104
+00:04:35.375 --> 00:04:37.915
+You will see that we also have a folder called A zone.
+
+105
+00:04:37.975 --> 00:04:39.875
+And within the zone we have the lookup file here
+
+106
+00:04:40.065 --> 00:04:43.275
+that our glue job, the Python script pulled, okay?
+
+107
+00:04:43.495 --> 00:04:45.685
+And if you go back to raw,
+
+108
+00:04:46.465 --> 00:04:48.485
+you'll see a file called as inges not Done.
+
+109
+00:04:48.715 --> 00:04:50.565
+I'll talk to you about this later as to
+
+110
+00:04:50.565 --> 00:04:52.605
+what is a significant risk later in fact.
+
+111
+00:04:52.705 --> 00:04:54.205
+And if you go back to the Glue job,
+
+112
+00:04:54.345 --> 00:04:56.205
+it shows succeeded here, right here.
+
+113
+00:04:56.265 --> 00:04:58.805
+And if you go to the CloudWatch, we scroll down,
+
+114
+00:04:59.155 --> 00:05:01.045
+they shows the progress is a hundred percent here.
+
+115
+00:05:01.185 --> 00:05:03.525
+All that. That's it. Our task is done.
+
+116
+00:05:03.525 --> 00:05:06.525
+We wanted to pull data from the N-Y-C-T-L-C portal
+
+117
+00:05:06.625 --> 00:05:09.325
+and dump it into the data lake.
+
+118
+00:05:09.665 --> 00:05:12.205
+So what's the next step? Next step is gonna be helping the
+
+119
+00:05:12.205 --> 00:05:13.965
+data analyst access this data.
+
+120
+00:05:14.665 --> 00:05:16.125
+And remember they also said they need
+
+121
+00:05:16.125 --> 00:05:17.485
+the zone table as well.
+
+122
+00:05:17.485 --> 00:05:20.965
+So you gotta create a zone table as well in the database.
+
+123
+00:05:21.345 --> 00:05:22.605
+So let's do that in the next step.

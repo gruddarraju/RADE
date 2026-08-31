@@ -1,0 +1,31 @@
+Course: Agentic Data Engineering with Amazon Q
+Lesson: 2. Create SNS Topic and Subscribe your email RESUME
+============================================================
+
+Alright, we'll the SNS uh, topic now, uh,
+what an s is, what a topic is.
+All that is covered in the deep dive course.
+You can take a look at that course over there.
+So we'll first go to SNS and click on SNS.
+You will then go to topics on the left hand side
+and then click here, create topic,
+and then choose standard, then topic, mission, D-E-H-H-O-F,
+and then scroll down and simply create the topic.
+Next, scroll down.
+If you subscription here, click on the orange button,
+create subscription, and then choose the protocol as email.
+You wanna get an email, right email
+and then provide your email address.
+So I'll provide mine and then click on the orange button,
+create subscription, and then scroll down.
+You don't see anything here. Go to subscriptions.
+On the left hand side, you scroll down,
+yours will show pending confirmation.
+So go to your email. So you gotta order an email like this.
+In that email you'll have a link to confirm subscription.
+So click on that and it'll say subscription confirmed when
+you go back to your subscriptions.
+And do a refresh of the page right here and scroll down.
+You should see your email subscription being confirmed.
+That's it. Get this done
+and uh, we'll see you in the next video.

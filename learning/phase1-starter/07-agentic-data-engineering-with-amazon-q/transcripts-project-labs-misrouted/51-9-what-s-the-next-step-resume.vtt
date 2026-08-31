@@ -1,0 +1,97 @@
+WEBVTT
+
+1
+00:00:00.010 --> 00:00:00.975
+Alright, the job finished.
+
+2
+00:00:00.995 --> 00:00:02.575
+It took about 11 minutes only this time
+
+3
+00:00:02.575 --> 00:00:05.015
+because we used five workers.
+
+4
+00:00:05.555 --> 00:00:06.855
+So what's the next step? Now, next step,
+
+5
+00:00:06.855 --> 00:00:09.015
+if you remember from the previous steps we did
+
+6
+00:00:09.195 --> 00:00:12.295
+for the curated layer, even for the aggregated layer,
+
+7
+00:00:12.295 --> 00:00:14.415
+we gotta do a unit testing before we hand over the
+
+8
+00:00:14.415 --> 00:00:15.575
+data to data analyst, right?
+
+9
+00:00:15.635 --> 00:00:17.535
+So we are gonna go to the log
+
+10
+00:00:18.115 --> 00:00:19.735
+and click on third put logs
+
+11
+00:00:20.445 --> 00:00:22.065
+that's gonna open the CloudWatch log.
+
+12
+00:00:22.115 --> 00:00:24.305
+We'll scroll down finally and then take a look at this.
+
+13
+00:00:24.335 --> 00:00:28.865
+Okay. Uh, it shows that, uh, the original curated record for
+
+14
+00:00:28.865 --> 00:00:30.465
+so many, which is the right number
+
+15
+00:00:30.615 --> 00:00:32.185
+that we saw in Curated as well.
+
+16
+00:00:33.165 --> 00:00:35.025
+It has created three tables
+
+17
+00:00:35.025 --> 00:00:37.745
+and we have the number of records in these tables as well.
+
+18
+00:00:37.965 --> 00:00:39.105
+But again, we've gotta go
+
+19
+00:00:40.035 --> 00:00:43.175
+and really query in Athena to really validate this.
+
+20
+00:00:43.915 --> 00:00:47.135
+And we've gotta also be unit testing whether the aggregation
+
+21
+00:00:47.155 --> 00:00:48.895
+has been done properly or not,
+
+22
+00:00:48.915 --> 00:00:51.935
+before we hand over the data to the data.
+
+23
+00:00:52.315 --> 00:00:54.535
+So let's do that in this video. So what's the first step?
+
+24
+00:00:54.535 --> 00:00:57.375
+First step is to create the crawler.

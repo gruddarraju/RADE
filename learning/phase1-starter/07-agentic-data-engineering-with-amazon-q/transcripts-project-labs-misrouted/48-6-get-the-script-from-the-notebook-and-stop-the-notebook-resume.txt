@@ -1,0 +1,59 @@
+Course: Agentic Data Engineering with Amazon Q
+Lesson: 6 Get the script from the notebook and stop the notebook RESUME
+============================================================
+
+Alright, I run my code
+and, uh, this one creates a table one as we have
+defined the mapping sheet.
+Table one is getting created here.
+We group by, by these dimensions, these fields,
+and we want to calculate these fields, in fact.
+And the aggregation functions are defined here.
+So all of this is coded right here.
+In fact, you are grouping by the dimensions, the fields,
+and you are aggregating as per the mapping sheet.
+And then, uh, that's table one. We also have table two.
+Likewise, what you see here is table two.
+We are grouping by, uh, the different fields we see here.
+And then, uh, getting the
+aggregated values using these functions.
+And that is what you see here in this particular code.
+And if you scroll down, we also have
+the table three getting created, um,
+based on the mapping sheet again.
+Okay? And finally, when we are all done,
+we will be loading the data back into Data Lake.
+That is what is done here, in fact.
+So for Jan 2024,
+the data is loaded back into data lake, okay?
+The information, uh, as to where it is loaded is right here.
+And these different S3 parts, okay?
+Within aggregated and within daily borrow daily zone,
+and daily service, we go back
+and take a look at the S3 bucket.
+We'll have, if you're gonna go back to S3,
+you'll see the aggregated folder here.
+Go into that. You'll have the data within the
+corresponding folders.
+So can you tell me what the next step is?
+What do you think should be the next step?
+So we have load data for Jan 2094.
+Obviously we have to load data for the two years,
+2094 and 1 95.
+But before that, what's the next step?
+We gotta convert this notebook code to a script, right?
+As you did in the previous, uh, part of the pipeline
+where you load data from raw to curate it.
+Right before that, you gotta stop the notebook,
+otherwise you'll incur the cost.
+You gotta just, um, first of all,
+save this because it's all good.
+Save the notebook and then
+what you gonna do is you're gonna go to script.
+Okay? Go to script and get the entire copy.
+Go back to notebook and then finally stop.
+So you copied the script, okay?
+That script you'll use to create the glue, spark a TL job.
+Just stop this for now. It is stop. Make sure you stop it.
+And then the next step we'll create the glue,
+spark et TL job.

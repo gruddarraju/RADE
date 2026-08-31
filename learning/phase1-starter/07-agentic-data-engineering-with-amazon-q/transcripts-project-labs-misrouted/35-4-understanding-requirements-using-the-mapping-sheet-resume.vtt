@@ -1,0 +1,717 @@
+WEBVTT
+
+1
+00:00:00.110 --> 00:00:00.810
+Hey guys, welcome back.
+
+2
+00:00:00.810 --> 00:00:02.155
+Let's talk about the next steps now,
+
+3
+00:00:02.155 --> 00:00:03.555
+okay, step number three.
+
+4
+00:00:04.495 --> 00:00:07.675
+So they took some time,
+
+5
+00:00:07.695 --> 00:00:09.155
+the business data analyst took some time
+
+6
+00:00:09.255 --> 00:00:12.115
+and uh, gave you a mapping sheet.
+
+7
+00:00:12.745 --> 00:00:14.075
+I'll show that to you shortly in fact,
+
+8
+00:00:15.665 --> 00:00:19.385
+and you will analyze the mapping sheet.
+
+9
+00:00:19.615 --> 00:00:24.055
+Okay? So here's the mapping sheet that they give to you
+
+10
+00:00:24.555 --> 00:00:26.295
+and it has multiple worksheets here.
+
+11
+00:00:26.395 --> 00:00:29.015
+The first one is about raw two curated, okay?
+
+12
+00:00:29.525 --> 00:00:33.015
+What they wanna see in the curated layer, okay?
+
+13
+00:00:33.235 --> 00:00:34.735
+You have source field section here.
+
+14
+00:00:36.165 --> 00:00:39.085
+This has all the fields in the
+
+15
+00:00:40.595 --> 00:00:42.035
+H-V-F-H-V table, okay?
+
+16
+00:00:42.095 --> 00:00:45.755
+So if you go to the glue catalog, log AWS glue,
+
+17
+00:00:47.485 --> 00:00:50.905
+and then go to databases here, go to our database
+
+18
+00:00:51.285 --> 00:00:52.425
+and look at our table.
+
+19
+00:00:53.565 --> 00:00:55.145
+So you will have all the different fields
+
+20
+00:00:55.145 --> 00:00:56.185
+right here, in fact, right?
+
+21
+00:00:56.765 --> 00:00:57.825
+We have actually 20
+
+22
+00:00:58.125 --> 00:01:00.585
+and uh, we have more fields here you go
+
+23
+00:01:00.585 --> 00:01:01.905
+to, yep, there you go.
+
+24
+00:01:02.165 --> 00:01:04.625
+27 fields.
+
+25
+00:01:04.685 --> 00:01:09.445
+It shows here because the last two are actually partition
+
+26
+00:01:09.445 --> 00:01:13.365
+columns, but the data is actually in 25 columns.
+
+27
+00:01:13.505 --> 00:01:16.325
+So going back to my mapping sheet, so you have
+
+28
+00:01:18.325 --> 00:01:20.545
+all the source fields from the source, right?
+
+29
+00:01:21.285 --> 00:01:23.705
+And their data types is mentioned here
+
+30
+00:01:24.205 --> 00:01:28.595
+and how they really wanna see in the curated layer,
+
+31
+00:01:28.855 --> 00:01:29.875
+the target field names.
+
+32
+00:01:30.135 --> 00:01:34.195
+And if you scroll down a bit, there are more fields
+
+33
+00:01:34.195 --> 00:01:35.235
+that they wanna see right?
+
+34
+00:01:35.585 --> 00:01:38.155
+From here, these are all N-A-N-A-N-A,
+
+35
+00:01:38.455 --> 00:01:40.675
+but here you have the new fields
+
+36
+00:01:40.675 --> 00:01:42.755
+that they wanna see in target fields.
+
+37
+00:01:42.755 --> 00:01:47.195
+Essentially, this is what I meant by business rules, okay?
+
+38
+00:01:47.345 --> 00:01:51.515
+Essentially they're asking us to create new fields, okay?
+
+39
+00:01:52.365 --> 00:01:54.315
+Based on this, these fields, right?
+
+40
+00:01:54.315 --> 00:01:57.435
+For example, pick power,
+
+41
+00:01:57.775 --> 00:02:00.835
+pickup power is not in the source file,
+
+42
+00:02:01.175 --> 00:02:02.835
+but you do have pickup date time, right?
+
+43
+00:02:03.495 --> 00:02:06.915
+You do have pickup date time from the pickup date time,
+
+44
+00:02:06.915 --> 00:02:08.275
+which is a timestamp field.
+
+45
+00:02:08.735 --> 00:02:09.835
+Let me show you how it looks like.
+
+46
+00:02:09.855 --> 00:02:11.195
+If I go to back to Athena
+
+47
+00:02:11.195 --> 00:02:14.655
+and uh, click on this, uh, review table,
+
+48
+00:02:16.155 --> 00:02:17.605
+it's gonna fire query automatically.
+
+49
+00:02:17.785 --> 00:02:19.805
+And there you go. So you have pick up daytime.
+
+50
+00:02:19.825 --> 00:02:21.605
+So the how is also here, in fact.
+
+51
+00:02:21.665 --> 00:02:25.445
+So they wanna derive the how from this data.
+
+52
+00:02:25.445 --> 00:02:26.605
+That's a transformation, right?
+
+53
+00:02:27.115 --> 00:02:28.405
+That is what is transformation.
+
+54
+00:02:28.555 --> 00:02:30.725
+That is what we do as data engineers.
+
+55
+00:02:30.725 --> 00:02:33.045
+We transform the data and move data from
+
+56
+00:02:33.045 --> 00:02:34.245
+one location to another location.
+
+57
+00:02:35.865 --> 00:02:37.005
+So they want us
+
+58
+00:02:37.005 --> 00:02:38.965
+to create the pickup power from pickup daytime.
+
+59
+00:02:39.485 --> 00:02:42.245
+Likewise, they wanna create a date field
+
+60
+00:02:43.035 --> 00:02:44.765
+from pickup daytime, okay?
+
+61
+00:02:45.155 --> 00:02:47.485
+From the timestamp field. They wanna get the date itself.
+
+62
+00:02:47.875 --> 00:02:49.245
+They wanna divide
+
+63
+00:02:49.435 --> 00:02:52.325
+that one field into multiple trip date pickup power,
+
+64
+00:02:53.835 --> 00:02:56.335
+and also day off week, whether it's weekend or not.
+
+65
+00:02:57.395 --> 00:02:58.775
+So essentially you have
+
+66
+00:02:59.025 --> 00:03:00.365
+The logic mentioned here.
+
+67
+00:03:00.365 --> 00:03:01.645
+So they have given you the logic
+
+68
+00:03:02.295 --> 00:03:06.285
+based on which you'll create these new columns in the
+
+69
+00:03:06.395 --> 00:03:09.005
+curated layer from your code.
+
+70
+00:03:09.005 --> 00:03:11.445
+When you write, when, when you write the code to
+
+71
+00:03:12.035 --> 00:03:13.565
+read the data in the raw folder
+
+72
+00:03:13.905 --> 00:03:18.765
+and create the data in the curated folder, you will want
+
+73
+00:03:18.765 --> 00:03:22.445
+to create additional fields based on
+
+74
+00:03:24.165 --> 00:03:26.315
+these transformation logic mentioned here.
+
+75
+00:03:27.245 --> 00:03:29.495
+Okay? Like, let's take a look at these also, right?
+
+76
+00:03:29.515 --> 00:03:32.015
+So here, I mean you have some transformation mentioned
+
+77
+00:03:32.015 --> 00:03:35.495
+for the existing fields as well, okay?
+
+78
+00:03:35.755 --> 00:03:37.935
+For example, you see here for the first three, uh,
+
+79
+00:03:37.935 --> 00:03:39.935
+they have, uh, not mentioned any transformation.
+
+80
+00:03:40.075 --> 00:03:43.175
+Direct pass through whatever is in source, just load
+
+81
+00:03:43.195 --> 00:03:44.255
+as is in curated.
+
+82
+00:03:45.565 --> 00:03:47.415
+When I say source, whatever is there in raw
+
+83
+00:03:47.445 --> 00:03:48.615
+load as is in curated.
+
+84
+00:03:48.955 --> 00:03:50.175
+Now, if you scroll down a bit here,
+
+85
+00:03:50.195 --> 00:03:52.495
+see here you have some business logic here, in fact,
+
+86
+00:03:52.995 --> 00:03:56.695
+for this flag, shared request flag, shared match flag, all
+
+87
+00:03:56.695 --> 00:03:57.735
+of these different flags.
+
+88
+00:03:58.995 --> 00:04:03.695
+If the data has y why y then you change
+
+89
+00:04:04.365 --> 00:04:05.935
+that to a Boolean value.
+
+90
+00:04:06.085 --> 00:04:07.735
+Okay? I hope you know what a bullion is.
+
+91
+00:04:07.855 --> 00:04:10.735
+I have discussed this in the SQL skill booster code.
+
+92
+00:04:10.735 --> 00:04:14.375
+So I mean, you have to be able to, uh, understand this.
+
+93
+00:04:14.755 --> 00:04:16.055
+I'm assuming you have gone through the
+
+94
+00:04:16.215 --> 00:04:17.415
+SQL skill booster course.
+
+95
+00:04:17.835 --> 00:04:22.475
+So if at all the value of these is,
+
+96
+00:04:22.845 --> 00:04:26.235
+let's say why, why, why, why in the raw data,
+
+97
+00:04:26.345 --> 00:04:27.995
+then change it to true else.
+
+98
+00:04:28.855 --> 00:04:30.315
+If it is not why, then they need to false.
+
+99
+00:04:30.695 --> 00:04:34.235
+So our job now is as data engineers to understand this
+
+100
+00:04:34.975 --> 00:04:37.395
+and ask the analyst team you have, if you have any questions
+
+101
+00:04:37.655 --> 00:04:39.035
+and get clarifications on,
+
+102
+00:04:39.295 --> 00:04:40.915
+and then use this mapping sheet,
+
+103
+00:04:41.105 --> 00:04:44.755
+this transformation logic mentioned here to build our code,
+
+104
+00:04:44.755 --> 00:04:46.395
+which we'll see later, in fact, okay,
+
+105
+00:04:46.795 --> 00:04:47.875
+I hope this much is clear so far.
+
+106
+00:04:48.015 --> 00:04:50.515
+So this, for the raw two curated mapping only,
+
+107
+00:04:51.055 --> 00:04:54.465
+and remember we talked about data quality
+
+108
+00:04:54.465 --> 00:04:55.625
+rules as well in the past, right?
+
+109
+00:04:55.645 --> 00:04:58.345
+So they have given us some data quality rules to check.
+
+110
+00:04:58.995 --> 00:05:01.705
+After we do the curation, we also want to
+
+111
+00:05:02.825 --> 00:05:05.465
+validate the data against some rules, okay?
+
+112
+00:05:05.765 --> 00:05:09.165
+For example, whether the pick up data time drop
+
+113
+00:05:09.165 --> 00:05:10.765
+of the time is, uh, null.
+
+114
+00:05:10.765 --> 00:05:12.285
+If it is null, reject the record
+
+115
+00:05:12.285 --> 00:05:13.805
+as mentioned here, reject the record.
+
+116
+00:05:14.345 --> 00:05:16.245
+Let me just, uh, zoom out a bit.
+
+117
+00:05:16.465 --> 00:05:18.045
+So the null checks are being done here.
+
+118
+00:05:18.065 --> 00:05:19.805
+And then the rain check trip miles, right?
+
+119
+00:05:19.805 --> 00:05:21.965
+Trip miles must be between zero and 500.
+
+120
+00:05:21.965 --> 00:05:23.485
+This for New York City only.
+
+121
+00:05:24.715 --> 00:05:26.175
+New York City is pretty small, in fact, okay?
+
+122
+00:05:26.175 --> 00:05:28.815
+It's just, it's the Manan is an island, in fact.
+
+123
+00:05:28.955 --> 00:05:30.455
+So obviously the New York City
+
+124
+00:05:30.985 --> 00:05:34.175
+trips cannot really be more than 500 miles.
+
+125
+00:05:34.175 --> 00:05:36.655
+That's a business rain check, okay?
+
+126
+00:05:36.995 --> 00:05:38.575
+The base fare must be positive
+
+127
+00:05:38.575 --> 00:05:41.415
+and under $10,000, I mean obviously if at all
+
+128
+00:05:42.075 --> 00:05:44.495
+the base fare goes beyond that, it could be,
+
+129
+00:05:44.635 --> 00:05:46.255
+uh, invalid record.
+
+130
+00:05:46.315 --> 00:05:48.095
+So they're saying reject the record as such.
+
+131
+00:05:48.435 --> 00:05:49.895
+And you have some logical checks as well.
+
+132
+00:05:49.975 --> 00:05:53.375
+I mean, obviously the drop off must be after pickup, right?
+
+133
+00:05:53.495 --> 00:05:54.495
+I mean, it's obvious
+
+134
+00:05:54.525 --> 00:05:56.255
+that the drop off will happen only after pickup.
+
+135
+00:05:56.985 --> 00:05:59.725
+See if at all the data doesn't look like that, it means
+
+136
+00:05:59.725 --> 00:06:00.885
+that the record is invalid.
+
+137
+00:06:00.885 --> 00:06:02.045
+So reject the record, right?
+
+138
+00:06:03.095 --> 00:06:04.325
+There are some more here, in fact.
+
+139
+00:06:04.325 --> 00:06:05.565
+So take a look at them, you'll come to,
+
+140
+00:06:05.565 --> 00:06:07.165
+it's a pretty straightforward, in fact, okay?
+
+141
+00:06:07.545 --> 00:06:09.965
+So these data quality rules will have
+
+142
+00:06:09.965 --> 00:06:14.725
+to implement in our code also, and not just raw to curate.
+
+143
+00:06:14.725 --> 00:06:17.365
+They've also given us curated to aggregated mapping
+
+144
+00:06:17.465 --> 00:06:18.925
+as well, which is right here.
+
+145
+00:06:18.925 --> 00:06:21.485
+In fact, similar to, you know, what we just discussed.
+
+146
+00:06:21.485 --> 00:06:23.125
+You know, they are now letting us know
+
+147
+00:06:25.225 --> 00:06:27.605
+how they wanna see the data in the aggregated layer, daily
+
+148
+00:06:28.165 --> 00:06:29.205
+aggregations, they wanna see.
+
+149
+00:06:30.265 --> 00:06:32.285
+And here are the source fields.
+
+150
+00:06:32.795 --> 00:06:33.885
+Here, there are the metrics
+
+151
+00:06:34.055 --> 00:06:35.325
+based on what they wanna aggregate.
+
+152
+00:06:35.785 --> 00:06:37.885
+In a sense. The source field is trip files
+
+153
+00:06:37.885 --> 00:06:39.485
+and they wanna do some aggregations, right?
+
+154
+00:06:39.865 --> 00:06:41.685
+And I say aggregations again, the S QL thing comes
+
+155
+00:06:41.685 --> 00:06:42.965
+to picture here, okay?
+
+156
+00:06:44.145 --> 00:06:47.445
+Um, the total trip piles, trip miles, average trip miles,
+
+157
+00:06:47.445 --> 00:06:50.005
+minimum trip miles, max trip miles.
+
+158
+00:06:50.145 --> 00:06:52.565
+So these are aggregations they wanna see, okay?
+
+159
+00:06:52.825 --> 00:06:54.605
+And the total fair amount, total revenue.
+
+160
+00:06:56.005 --> 00:06:57.325
+Likewise, we have a lot
+
+161
+00:06:57.585 --> 00:06:59.325
+of different metrics you wanna see, okay?
+
+162
+00:06:59.945 --> 00:07:03.685
+And they've also listed down how to get the exact pickup,
+
+163
+00:07:03.685 --> 00:07:05.445
+borrow pickup zone I
+
+164
+00:07:05.445 --> 00:07:06.605
+talked about in the previous video, right?
+
+165
+00:07:07.225 --> 00:07:09.805
+By joining to the zone table here, in fact, okay?
+
+166
+00:07:09.805 --> 00:07:12.005
+And they've given us a join logic called impact, okay?
+
+167
+00:07:12.145 --> 00:07:13.525
+How to join them based on
+
+168
+00:07:13.525 --> 00:07:15.365
+what everything is mentioned, in fact.
+
+169
+00:07:15.625 --> 00:07:17.605
+And in this column, they have also given us
+
+170
+00:07:17.705 --> 00:07:18.845
+the aggregation function.
+
+171
+00:07:18.845 --> 00:07:20.925
+How, how do you wanna aggregate them? Okay?
+
+172
+00:07:21.545 --> 00:07:23.205
+So everything is mentioned here, in fact.
+
+173
+00:07:23.225 --> 00:07:25.565
+So this is the kind of mapping sheet that is given to us,
+
+174
+00:07:26.145 --> 00:07:30.705
+and we go through this and we understand this,
+
+175
+00:07:30.965 --> 00:07:35.425
+and then we implement our code, this in our code, in fact.
+
+176
+00:07:35.525 --> 00:07:36.825
+So this is what we do, and
+
+177
+00:07:36.835 --> 00:07:38.345
+after we analyze the mapping sheet,
+
+178
+00:07:38.405 --> 00:07:40.065
+we decide on the technical requirements
+
+179
+00:07:40.065 --> 00:07:41.265
+that will lock in the next video.

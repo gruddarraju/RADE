@@ -1,0 +1,96 @@
+Course: Agentic Data Engineering with Amazon Q
+Lesson: 5. *Needed - Hands On Starts* RESUME
+============================================================
+
+So how do you even view the data for that?
+You're gonna make use of two services, GL service
+and Athena within the glue service.
+We'll make use of Glue catalog
+and we'll make use of Glue crawler
+and we'll view it in Athena.
+So what's a glue catalog?
+Think of glue catalog as a repository that just
+holds the metadata.
+What is the metadata? It is not actual data,
+it just holds the structure of the tables.
+You'll come to know shortly what I mean by that. Okay.
+What's a glue crawler?
+Glue crawler will help you create the table. Okay?
+And when you have a table, you can view the data in Athena.
+Okay, now you'll see all of that shortly in fact.
+So we'll go to AWS and search for glue.
+We'll click on AWS glue here.
+On the left hand side you have data catalog.
+If you click on the databases, you'll see a few.
+Here you'll create one database called As Mission,
+D-E-H-H-O-F-N-Y-C-T-L-C.
+And in this we'll have our table called us.
+H-V-F-H-V-H-V-F-H-V. Now. Now what's the database?
+Database here? Doesn't hold the data.
+It is just a, a thing used
+for logical organization of tables.
+Okay, now what's a table? Table is something
+which you can use.
+Look at the data again, you'll come to that shortly.
+Just gimme a few minutes. But I have this clear database is
+it doesn't hold the data here,
+it just holds the different tables.
+Now here I have one table
+and that table's location is shown as the
+S3 bucket path where we have the data.
+So this clearly indicates database doesn't hold the data.
+Data is in S3 table also doesn't hold.
+The data table is pointing to the S3 location.
+And because this table is pointing to the S3 location,
+if you drop this table, so choose this and click on delete
+and see what happens to it.
+In the S3 bucket, it still remains over there.
+And because this behavior, this table is called
+as an external table, it is, it's an external table.
+It points to the data in S3 bucket.
+This is an important concept.
+External table interview caution.
+So in the next few videos we'll actually create the database
+and create the table.
+The how is the table created.
+As I said, the glue crawler will help us create the table.
+If we scroll down here, call a crawler here, click on that
+and you'll create one called as mission dh,
+H-O-F-N-Y-C-T-L-C-H-V-F-H-V.
+And I've shown how to create the crawler also.
+And point this crawler
+to the rest three location in the next few videos.
+You can do that and run the crawler.
+When you run the crawler, it's gonna create a table
+for you automatically.
+And that table is what you saw in the mission database.
+Alright, another table is created. How do you view the data?
+Now for that we will make Athena service.
+We are back on the glue console.
+When you click on the table data here,
+It'll, and the query is already pre-written
+for you here, just run it.
+It'll show the data here. So now
+we are able to view the data.
+So this is what the requirement was.
+The business analyst wanted to look at the data for them
+to understand and define the requirements
+for data engineer project.
+But you are able to actually queries,
+doesn't mean the data analysts can query it.
+So what's the next step? The next step is gonna be for you
+to contact the cloud engineering team.
+You'll email them, you'll tell them, Hey, provide access
+to this data set, to this database
+and this table to the business data analysts.
+And they'll take care of that is your initial work
+or the next few videos.
+We'll let you build and do all of this.
+Alright, if you wanna learn more about S3, make sure
+to watch the deep dive course for sure.
+And I hope you are now excited
+to actually work on this project.
+And if you're really excited, type excited
+in the comment below the video.
+I'll read that. I wanna see how, if you're really excited,
+talk to you soon.

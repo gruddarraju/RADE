@@ -1,0 +1,236 @@
+Course: Agentic Data Engineering with Amazon Q
+Lesson: 3 *Transform, Validate and Load to Curated* RESUME
+============================================================
+
+Alright, I'm, I'm assuming
+that you have all run all the cells
+and you're ready to run the second step, which is
+to transform data for that, go to the VS code
+and scroll down and get the data, the code, not it
+as the code from the next cell here.
+So control a copy the whole thing.
+Code three buttons here, copy cell, go back to your notebook
+right here, control V.
+Okay. Now if you look at this particular piece of code here,
+this is a meat of the data engineering, right?
+We transform data, the raw data,
+which we get according to the requirements.
+And here we have function to do that. Okay?
+Now if you look at this particular transformations, these
+all of them correspond to the transformations
+in the transformation logic mentioned in the mapping sheet.
+Let me go back. So using PI Spark,
+the transformations is all completed, okay?
+And while I was developing this, in fact,
+AI gave me the wrong code and we had to debug that
+and all of that is covered and build data engineering
+course with identity.
+So next you wanna run this code.
+So before we run this code, what, what does this code do?
+The previous cell had lowered the raw data
+into our raw data frame, right?
+The raw df.
+So this whole, the raw data frame holds the raw data.
+And that raw data frame
+is now being passed to this function.
+And the raw data frame is now transformed.
+And the transformed data frame is told in
+curated data frame.
+So this curated data frame holds the transformed data.
+Now if we scroll down, you will see
+that the curated data frame is
+being returned from the function.
+So this function now returns this one
+and it is again stored back into curated data frame.
+And then we have some print statements here
+to look at the total columns
+and this print the schema as well.
+So we'll just run this by clicking on
+this button right here.
+So you see it is again, showing busy, it's all run.
+Now the transformations are all completed.
+Now we have additional columns, 38 columns, right?
+Because you go back
+to the mapping sheet in the target field,
+in the curated layer, we are gonna have bound
+to have additional fields.
+We're gonna have at least 38 fields.
+They show 39 here
+because the first one is of course
+the had a in the Excel sheet.
+So we have 38 fields shortly.
+And that is what we see here as well.
+And this is our schema of the curated layer.
+Now data is transformed, okay?
+It is in the curated data frame.
+It is not in the data lake yet, okay?
+If you're gone through the PI park booster course, you know
+that data is still
+in the memory, okay?
+It is not written onto the S3 yet on a data lake yet.
+But before we write this data,
+we will do some additional check, right?
+As per the the mapping sheet, we also have
+to implement data quality rules.
+I mean, if the,
+the curated data doesn't really meet these
+rules, we'll be rejecting them.
+Reject record is right here.
+In fact, that is action on failure. So we wanna reject them.
+So we to now run the data quality code as well.
+For that it'll go to the VS code, scroll down
+and then again click on the cell to control a go here.
+Actions copy cell, go back to our notebook,
+scroll down, down, down, down, down, down.
+Click on the next cell control V.
+Now this is the code that does the validation of data
+based on, on our data quality rules.
+So here we have the rules,
+and again, on the curated data frame, not on the raw,
+on the cur data frame,
+we are gonna be applying all the filters based on our rules,
+data quality rules, and store
+the validated data into validated data frame.
+And then we are gonna be running some statistics here
+to find out how many records are now in the validated data
+frame and how many got rejected.
+Okay? So let's run this code.
+We'll just click on this button here.
+Let's see what it shows now. There you go.
+So it, we rejected
+approximately one 80,000 records, okay?
+To be accurate, 188,000 records
+for hundred 88,000 4 41 records.
+So more than 99% of the, the data was valid, okay?
+But there was, there were some records which are not valid.
+We have to reject them per the data quality rules that
+business team asked us to do as implement.
+So the third step is also finished.
+Now, the first step was to load the data.
+Second step was to transform the data.
+Third step was to apply the quality rules.
+And now the fourth step is to load this data
+from the valid data, data frame into data lake.
+Okay? This is still in the memory right of the PI park
+of this park in the sense of this park memory as such.
+Okay? It's still in the memory. So we'll take a look at the
+data lake as three bucket.
+We only have raw here, we don't have the curated folder yet
+because we haven't written the data yet.
+We're gonna go back to notebook and scroll down
+and click on the cell, get the code from our VS code.
+We'll go here, scroll down, down, down, down,
+and copy this cell control a
+and click here, copy cell, go back to notebook control we,
+and finally we'll turn it before that.
+Let's take a look at the code here. What are we doing here?
+Okay, we're getting the account id, our account id,
+which is, in my case, this is account id.
+And because my bucket has the account name, right?
+So I want, don't wanna hard code it here.
+So I'm getting it through the BO two three
+code again, what's BO three?
+BO three is the Python library using which you can connect
+to any service of AWS, right?
+We'll scroll down. And we are now seeing that we,
+with the help of validate validated data frame, we are now
+gonna be writing the data into the output path
+as a parquet format.
+Again, partition by year, month, and date.
+This is what we want as per our mapping sheet
+partitioning strategy here.
+We wanna store data in the curated layer by partition
+by year, month, and day.
+And that is why we have mentioned the partition
+as your month and day here.
+And in the technical requirements,
+we also wanna store the data in par K format.
+So we have chosen par K as our format here.
+And also we talked about add potency, right?
+We want to make sure that if we run the job again
+and again, we overwrite the data.
+And so we are choosing overwrite here.
+We'll run this and we'll see what happens next.
+It is getting run now.
+So while that is getting run, we'll go to S3
+and refresh this.
+We'll see shortly
+that we'll have a new folder here called as curated.
+This might take about a minute or two I think.
+So there we go. We have a folder now curated.
+We'll go into the folder. We E-H-V-F-H-V.
+We have data now for 2024, only for one month.
+Exactly that. What we were looking for.
+We have data for all the days.
+In fact, if you go inside, you see the parquet file,
+which is snappy compression.
+That is what we were looking for, right? Snappy compression.
+How did Snappy come here?
+We didn't choose snappy at all, right? We choose parque.
+So snappy is the default compression method with parque.
+We don't have to explicitly mention that here.
+It shows writing the validated data
+to the S3 bucket in the curated folder.
+Data successfully written and final count is just much.
+So we're done with the development. Now it's time to now
+convert this notebook to a script.
+See, what we've done now is a form of iterative,
+Right? We are,
+we ran the code one by one
+and checked the output,
+made sure it's running fine, it's, it's all good.
+And then finally we got convinced, okay,
+by looking at the data in S3, the next step is
+to convert this to a script.
+This is not a script, this is a notebook, okay?
+Where you're running the part by part code.
+So to convert this toward script,
+you can just simply go to script here.
+You see the script Here, go here. There you go.
+The entire script you have got it now, in fact,
+okay, this becomes a script.
+We gotta take this script, okay?
+We gotta copy this whole thing.
+Skipped and at can copy, then go to VS code,
+right click right here, click on this, type the name
+as version dh, HOF NYC script
+dot PY.
+It's a Python file. Now py and enter, it's empty.
+You can just simply paste it right here.
+Right click on that and paste it.
+So you got the entire code here.
+Now remember, this code is gonna be transforming data only
+for one month alone, right?
+We are doing our initial testing
+of the code only in one month.
+We gotta modify this now.
+Now right below this code I, the video in fact,
+or about the video I've, I've given recent transcript,
+which has already done that.
+So use that code
+and build the glue
+ETL code in the next video, okay?
+Don't use the code that you'll be copying and pasting here,
+but use the code that I will give you about this video
+that already has the code modified to pull
+that 20, 24 and 25 data.
+And this was modified in the Build data engineering
+code course.
+In fact, can you take a look at that course? Okay?
+Talk to the next video. And
+before you go to the next video, make sure
+you actually stop this notebook.
+Otherwise you'll get an incorrect expense.
+If you go to, let's say, um, the retail jobs here,
+it'll show you that your notebook is running.
+So you can also terminate the notebook,
+uh, from here as well.
+So click on, terminate and terminate the notebook.
+Very, very important else you'll incur expense.
+I hope you're enjoying the hands-on very much.
+If you are, type in the command box below
+what you have learned so far in your own words.
+That is very important. Before you read others comments
+in your own words, write what you have learned
+and then read others comments as well.
+See you in the next video.

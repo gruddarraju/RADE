@@ -1,0 +1,127 @@
+Course: Agentic Data Engineering with Amazon Q
+Lesson: 3. Create the Glue Ingestion Job RESUME
+============================================================
+
+Alright, we'll go to the search bar type glue here.
+Click on AWS glue, then go to the left, left hand side
+and click on a L Jobs.
+Then go to script data.
+Click on this particular button here.
+Now choose Python shell.
+Now to know more about the glue jobs, the Python shell
+that you are seeing here, watch my deep dive course
+now click on click Create script name this job as mission.
+D-H-H-F-N-Y-C-T-L-C.
+Ingestion job, which ingesting the N-Y-C-T-L-C data.
+Next you go to get the script.
+Write below this video or upload this video.
+You'll have my script. Download that
+and open that in your editor.
+Copy the whole script and right here, paste it,
+then save this.
+Go to job details, scroll down.
+Now this Im role was created by the script you ran before
+and in the real world, this will be given to you
+by your team lead or your team members.
+So we'll choose Mission dh, HOF, blue Service role.
+You will then simply save it and then click on run.
+So it says successfully start the
+job, navigate to run details.
+So click on this and it's currently running right now.
+This will take about six minutes While this is
+running, go to the S3 bucket.
+You had the data here already, right?
+The one file which you had uploaded manually delete this.
+We just copy this permanently, delete right here
+and paste it here and delete.
+So that file is gone. Now, we'll again, click on the source.
+You see what's happening here. We had not
+created this folder here.
+Okay, I told you in Data Lake we can organize the
+folders depending on how we want, right?
+And now what are we doing here?
+We're trying to get data from 2025
+and 2024 for the different months.
+So we wanna organize the data by the year and by month.
+So we are now gonna be organizing in this format and,
+and the code is doing that.
+The code that is running in the glue job that
+before it uploads the data, it's gonna be making sure
+that the folders like these are created.
+So within that you'll see you also have month folders.
+And within that you're gonna have the data file.
+If I just do a refresh, you'll see even 11
+here in a few seconds.
+There you go. The 11 has come here.
+Now let's go back to the job. Click on the runs.
+Here it is still running by the way,
+this will take about six minutes.
+Okay, scroll down a bit.
+Click on the output logs here, right here and here.
+If you scroll down, click on this log stream, okay?
+You'll see the log getting streamed
+to this cloud Watch right here.
+Okay. Now the, our Python job is actually printing the log
+and the log is getting captured in this service
+called US CloudWatch.
+CloudWatch is the center hub for all the logs in AWS.
+So they're still running. By the way, if I go back to S3,
+I'll go back to one level up
+and you will see that year 2025 folder has also got created.
+We go inside and we see three folders here.
+Now remember the use case was to not just get this data,
+we also wanted to get the taxi
+Zone lookup file, right?
+That will also get downloaded and populated in history or
+after this is populated.
+Now organizing the data in this format
+is actually called as partitioning.
+Okay? We are partitioning the data in our data lake.
+This is one of the main techniques to improve performance
+when the data is queried on the data lake, right?
+Data is getting stored here.
+Now obviously the data analysts will query from Athena
+and data will get read from these, this data lake.
+When you have a partitions like this
+and when they use filters such as year equal to 95
+and monthly equal to zero one,
+only this particular file data will get scanned, okay?
+And the results will be, uh,
+displayed on the Athena UI from this file alone
+because the filter had it that year equal to 2 95
+and month equal to zero one.
+Okay? Now I'm talking about filter and stuff.
+Again, this is a common uh, SQL thing.
+If you don't know about sql, I highly recommend going
+to the SQL Skill Boost Booster course
+and then, then come here.
+'cause SQL is the heart of IT.
+Engineering, you have to know sql. But remember that C,
+the SQL Skill Booster is not a full fledged SQL course.
+SQL course itself can be over 25, 30 hours.
+So that will be a part of DI Diamond membership.
+But the SQL Skill Booster will immediately help you
+understand what is being done right now
+in this course, right?
+We have all the data for the Edge, we FHV
+and we go back to raw.
+You will see that we also have a folder called A zone.
+And within the zone we have the lookup file here
+that our glue job, the Python script pulled, okay?
+And if you go back to raw,
+you'll see a file called as inges not Done.
+I'll talk to you about this later as to
+what is a significant risk later in fact.
+And if you go back to the Glue job,
+it shows succeeded here, right here.
+And if you go to the CloudWatch, we scroll down,
+they shows the progress is a hundred percent here.
+All that. That's it. Our task is done.
+We wanted to pull data from the N-Y-C-T-L-C portal
+and dump it into the data lake.
+So what's the next step? Next step is gonna be helping the
+data analyst access this data.
+And remember they also said they need
+the zone table as well.
+So you gotta create a zone table as well in the database.
+So let's do that in the next step.

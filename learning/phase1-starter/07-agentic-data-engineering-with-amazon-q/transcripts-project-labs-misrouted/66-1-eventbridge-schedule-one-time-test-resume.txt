@@ -1,0 +1,69 @@
+Course: Agentic Data Engineering with Amazon Q
+Lesson: 1. Eventbridge Schedule - One Time Test RESUME
+============================================================
+
+Hey guys, we'll come back.
+Now. You have seen the job running end
+to end from data ingestion
+to loading into the different layers in the data lake.
+Now remember, this job is to be run monthly, right?
+We get data EV every month, in fact from the
+N-Y-C-T-L-C portal, which is our source for data.
+And what we did in the previous step is we went to the step
+function service and uh, ran the state machine
+manually, right?
+So this is good for development.
+Yes, we're test developing a testing.
+That's all fine, but when it comes to production, this has
+to run automatically every month, okay?
+For that, how do we do it?
+We've gotta schedule it to run every month, okay?
+So we have jobs in data engineer that are scheduled
+and we have other types of jobs as well called
+as even driven jobs.
+We'll talk about them later. But
+for this section is all about schedule jobs.
+And we know for our use case we gotta be scheduling this.
+So to schedule, go to Event Bridge,
+there's a service which we'll use Event Bridge.
+Click on that on the left, you have schedules here.
+Click on the schedules, scroll down,
+create a schedule for now.
+We'll do a one time test and then we'll schedule it later.
+For every month we'll just name, uh, it as one time test.
+And then, uh, we just choose the date and time.
+In 24 hour format, we'll choose 14 0 0. Alright?
+And then, uh, we'll do, we'll study as off for now
+and then we'll do next.
+Now we have many templates here.
+Our job is in step function.
+We've gotta choose the step function, let's choose that
+and then, uh, choose a state machine,
+which is Mission DH Pipeline.
+Let's scroll down and then click next.
+Enable the schedule, keep it as it is, scroll down
+and choose an existing role.
+You already had this role that is given to you
+by a team member and you already have it in your account.
+So just search for mission, DEH, even bridge roll,
+and then do a next, finally review it.
+You're gonna be running it at your schedule time.
+Target is our pipeline role is the right one.
+In fact, even bridge roll will then create schedule.
+So it is already enabled right now
+and it shows here that it is set for so
+and so date and time.
+Okay? And the target is our state machine.
+So let's quickly go to our state machine and take a look.
+Okay? I'm gonna go, uh,
+to back to the state machine right here.
+I'll click on this and we'll just refresh it.
+We'll wait, wait for the time and we'll refresh it.
+There you go. It's already running now.
+So essentially your event bridge
+triggered this step function state machine automatically.
+You don't do it manually. Okay?
+We are gonna go back to even bridge
+and we will delete that in the next video.
+Let's see how we can schedule this on a monthly cadence.
+Okay? Do this and then, uh, go to the next video.

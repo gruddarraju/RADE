@@ -1,0 +1,65 @@
+Course: Agentic Data Engineering with Amazon Q
+Lesson: 4 Create and Run Glue Script Job RESUME
+============================================================
+
+Right.
+So this code is already, I will be providing this
+to you in about the video.
+Download that and uh, put that in the folder.
+Mission D-H-H-O-F.
+Now we'll go back to a WS console
+and this time, see the notebook was
+for iterative code development.
+Okay? When it comes to really running the code
+as a data pipeline job, you need to use this script data.
+So we'll click on that and it's a Pi Spark job.
+So we'll leave the engine as Spark itself
+and click on Create Script.
+We have a boilerplate code here.
+We'll delete this code and we'll go
+to our visual studio code.
+Control a copy, right click copy, go back to glue,
+right click paste.
+It's all pasted here.
+Now the next thing, give the job a name.
+So we'll go down to our VS code,
+right click on the file name rename.
+We can now copy do control C,
+or you can also come here and do copy here.
+Go back to the glue, click here,
+remove the untitled Job characters.
+Right Click and paste. There you go.
+The, and then finally enter on your keyboard.
+This will show the job details here.
+Now you're gonna go and click on this.
+Now, now we need to provide the role name, okay?
+There's a role name that your team would've
+provided, which is Mission, D-H-H-O-F, inclusive role.
+And then we'll scroll down.
+Now we don't need 10 workers, right?
+We just need minimum of two workers. That's enough for us.
+We'll change this to two.
+Scroll down, everything else looks good.
+So we'll go to this button called a save,
+and then click on save.
+That will create the job. So it's all done.
+We can now run the job by clicking on the run button.
+That's pretty much, so it has successfully started the job.
+And it says to navigate run details.
+We can click on the run details now,
+and it takes us to this particular menu here.
+Let we zoom out a bit.
+It is running right now, and we can refresh it right here.
+We just refresh it still running. We scroll down a bit.
+We can click on the output log site here,
+and, uh, it'll take us to the CloudWatch service
+and we can just scroll down and click on this log stream.
+This will show us that the job is running here, in fact,
+but this'll take a few minutes and, uh, then you should see
+the run status has finished, and you can go back to your S3
+and then you can take a look there.
+You should see the data for 2094
+and 2025 for all the months and all the days.
+So that's it for this job.
+And, uh, we'll see what we need to do
+to load the data from the curated to aggregated layer asset.

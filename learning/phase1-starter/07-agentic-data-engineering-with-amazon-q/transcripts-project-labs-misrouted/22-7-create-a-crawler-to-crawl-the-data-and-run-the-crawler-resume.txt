@@ -1,0 +1,49 @@
+Course: Agentic Data Engineering with Amazon Q
+Lesson: 7. Create a crawler to crawl the data and run the crawler RESUME
+============================================================
+
+Next on the glue console,
+scroll down on the left hand side, click on crawlers,
+click on create crawler name the crawler S mission
+D-E-H-H-O-F-N-Y-C-D-L-C-H-V-F-H-V.
+And then scroll down. Click on next.
+So now we are creating crawler to crawl the file
+to crawl this F-H-V-H-V Trip
+data file.
+We wanna crawl the file so that the crawler can create
+a metadata table, a structure on the the Parquet file.
+The file is in the history bucket.
+So we're gonna go to glue again.
+And here you're gonna scroll down, add the data source.
+And right here we're gonna scroll down
+and put the S3 path right here.
+And to get the full path, we're gonna go to S3 again.
+And the file is here in this folder, H-V-F-H-V.
+So I'm gonna scroll up and click on the copy. S3 URI button.
+Click on that. It's copied. I'm gonna go back to blue.
+Paste it right here. It might show you in red here.
+Now click on the red itself and then come down.
+And then click on add data.
+Add an S3 data source,
+and you'll see the S3 data source right here.
+And then scroll down, click on Next.
+You'd already have an IM role called as Mission.
+DHH of Glue Service role. Choose that mission. D-H-H-O-F.
+Glue Service role. This was created when you ran the script
+before in the cloud Shell in the real world.
+You would be given to this
+by your teammate or your team lead.
+And then you scroll down, click on next here.
+Choose the database that you created in the previous step,
+which was Mission, D-H-H-O-F-N-Y-C-T-L-C.
+Write the table name, prefix as H-E-F-H-V.
+And then scroll down. Click on next.
+On the next page, review and create.
+Scroll down, click on Create Crawler.
+And then finally, when you see this,
+click on the run crawler here.
+This will show you it is successfully starting. Starting.
+And then scroll down and refresh this here.
+You'll see it is already running right here.
+In fact, wait for it to finish.
+It'll take about a minute or two.

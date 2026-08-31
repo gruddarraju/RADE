@@ -1,0 +1,15 @@
+Course: Agentic Data Engineering with Amazon Q
+Lesson: 1 Open the notebook file in your VS Code RESUME
+============================================================
+
+Time for HandsOn.
+Now, first step is
+to download this IP YNB file from the LMS.
+So the video you're watching now, right now about that,
+you'll find this file, download this
+and place it in your folder.
+Then go to your V code, click on open folder.
+Go to the folder where you have the file.
+Click on open on the folder. You see the file here?
+Click on that. Now, this is a notebook file.
+I'll tell you what this shortly.

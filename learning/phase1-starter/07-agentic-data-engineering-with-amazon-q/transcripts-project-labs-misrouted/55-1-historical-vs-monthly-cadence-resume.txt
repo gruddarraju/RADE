@@ -1,0 +1,111 @@
+Course: Agentic Data Engineering with Amazon Q
+Lesson: 1 Historical Vs Monthly Cadence RESUME
+============================================================
+
+Hey guys, welcome back.
+Now what we have done so far is essentially we lower data,
+let the data analysts know that it is available.
+They are doing their analysis.
+You know, we are building a job.
+So bottom line is, you know, we just loaded
+one time data for the two year.
+It's called historical data, 2024,
+and 1 95 will pull data from the NYC portal
+and lower data, okay?
+But when it comes to productionizing, this, when it comes
+to running this data pipeline on a monthly basis
+via monthly, because dataset comes monthly, right?
+If you go to the TLC portal here,
+it comes monthly, okay?
+And, uh, with the lag of one or two months, okay?
+Like for example, if you are now in January,
+you may not see January's data.
+You may not even see December's data.
+You might, you might see number data here,
+giving you an example right now.
+Okay? So, but the point is the data is monthly here.
+So when it comes to really productionizing this, when
+we wanna release every month,
+we wanna pull just one month data alone, right?
+So the job that you have built now, okay,
+you have built three jobs so far, right?
+Job number one, which pulled the data from the NYC portal,
+uh, to, uh, the raw, right?
+This did for about two years of data almost, right?
+And second job, uh, was to move from raw
+to your, uh, curated.
+Again, whatever data was present in the raw folder,
+everything, it just took and, uh, transformed that.
+So again, two years of data was transformed.
+Job number three was to move from curated to aggregated.
+Again, whatever was present in, uh, curated
+was again aggregated, right?
+So right from the job number one to uh, two, the three,
+you've been pulling data for the last two years.
+I mean, for 2094 and 95 assets, you get the point.
+So this is good for a historical onetime rate is fine.
+When we go to production, we are in development, then we go
+to test environment, then go to production.
+So when we go to production environment,
+we'll lower the historical data once, okay?
+In when you go to production, okay?
+So we need to run the historical load once in production,
+but for the ongoing load, ongoing monthly load, okay?
+We wanna pull just the latest monthly data
+that is available, okay?
+The question is why, okay? This is very, very important.
+The reason why we wanna load only the latest month
+information is because the late latest month file
+will have the latest month's data only.
+There is no chance
+that the previous month's information is in this month file.
+Okay? How that clear, right?
+Let's say, let's say we are now in, uh, January, I assume,
+okay, we will,
+let's say be gonna getting them number file now, okay?
+Because we have a lag, really, we have a lag.
+The data gets published, uh,
+With, with a lag of one or two months.
+So in the November file, there is no chance
+that the previous month's data will be there in November.
+So that's why we can just load the latest month alone.
+Essentially, each month's file contains the data for
+that month alone.
+That is the reason why we can just pick up that monthly file
+and load as a monthly a, uh, aggregation along
+with the daily, uh, partitioning as well.
+So we gotta now, let's say change our code, right?
+Our code just pulls everything.
+So we need to have it do two things.
+One, history code, two, also pull the latest one.
+So we gotta modify the code that does
+two things based on the two parameters.
+We'll see them shortly. In fact, that is one change.
+And the next thing we gotta work on is, see,
+you have three jobs here, right?
+Three jobs, one, two, and three.
+I mean, you cannot really run them out of order.
+They have to run in sequence.
+One should run before two and two should run before three.
+So how do you ensure that when one fails, two doesn't run,
+when two fails, three doesn't run,
+or when one one fails, two and three doesn't run,
+and only when one is successful,
+two runs only when two successful three runs,
+there's a dependency here.
+We gotta set that dependency,
+how we'll use a service called a step function.
+We'll work on that later.
+The third thing is, now we know that this job runs
+or rather, is to be run monthly right now.
+How do we make sure this job is run monthly?
+We gotta schedule this right to run,
+let's say on the first of every month.
+Now, how do we schedule that using a service called As
+Event Bridge?
+There are multiple things you gotta
+be working on going forward.
+It's gonna be very, very interesting.
+So make sure you have your seat belts on
+and uh, do the hands-on along with me.
+See you in the next video.

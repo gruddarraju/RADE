@@ -1,0 +1,149 @@
+WEBVTT
+
+1
+00:00:00.315 --> 00:00:02.725
+Okay, for those who need some more additional handholding,
+
+2
+00:00:03.235 --> 00:00:05.005
+this is how you'll actually update the
+
+3
+00:00:05.955 --> 00:00:07.405
+curated two aggregated jobs.
+
+4
+00:00:07.425 --> 00:00:08.445
+You already have it here, right?
+
+5
+00:00:08.505 --> 00:00:10.925
+The script one, the curated aggregated script.
+
+6
+00:00:10.925 --> 00:00:15.525
+Click on this and uh, get the code from, uh, the video below
+
+7
+00:00:15.785 --> 00:00:20.365
+or the previous video and, uh, open it in your VS code.
+
+8
+00:00:21.075 --> 00:00:24.965
+Copy the whole code, go back and paste it,
+
+9
+00:00:25.225 --> 00:00:26.605
+and then finally save it.
+
+10
+00:00:27.105 --> 00:00:28.925
+And let's go to job details
+
+11
+00:00:29.505 --> 00:00:32.845
+and make sure you do enable the job bookmark.
+
+12
+00:00:33.075 --> 00:00:34.605
+Then save it. And then
+
+13
+00:00:35.025 --> 00:00:36.845
+before you run, just take a look at the script.
+
+14
+00:00:37.665 --> 00:00:40.045
+The script has all the checks
+
+15
+00:00:40.265 --> 00:00:43.005
+for making sure the bookmark runs fine.
+
+16
+00:00:43.745 --> 00:00:45.005
+So we have job in it here
+
+17
+00:00:45.465 --> 00:00:47.845
+and we have all the code under that
+
+18
+00:00:48.225 --> 00:00:51.725
+and between essentially job dot commit as well.
+
+19
+00:00:52.035 --> 00:00:54.005
+Okay, before that as well, in fact.
+
+20
+00:00:54.305 --> 00:00:57.925
+And then we are creating the dynamic frame from the catalog.
+
+21
+00:00:58.585 --> 00:01:01.805
+And this time the table name is curated H-V-F-H-V.
+
+22
+00:01:02.285 --> 00:01:03.565
+Remember, we got this created
+
+23
+00:01:03.705 --> 00:01:05.085
+for the data analyst to look at.
+
+24
+00:01:05.425 --> 00:01:07.805
+And of course we also have the transformation.
+
+25
+00:01:08.205 --> 00:01:11.845
+This is required for the job book part to work fine.
+
+26
+00:01:12.105 --> 00:01:16.045
+And then finally, you simply just run the job.
+
+27
+00:01:16.225 --> 00:01:19.125
+That's pretty much it. And, um, this will run fine
+
+28
+00:01:19.145 --> 00:01:21.725
+and it'll load the data to aggregate layer
+
+29
+00:01:22.625 --> 00:01:25.245
+and then give a try by running yourself again.
+
+30
+00:01:25.245 --> 00:01:26.445
+That part I will not show.
+
+31
+00:01:26.545 --> 00:01:30.525
+So let this run once and go to your S3 bucket.
+
+32
+00:01:31.025 --> 00:01:33.765
+And you should see an aggregate folder here when,
+
+33
+00:01:33.885 --> 00:01:36.565
+when it's all done, and this would've already succeeded.
+
+34
+00:01:36.905 --> 00:01:39.765
+Run it again and look at the CloudWatch
+
+35
+00:01:39.905 --> 00:01:41.045
+log by clicking on this.
+
+36
+00:01:41.265 --> 00:01:44.645
+And you should see that there was no new data to load.
+
+37
+00:01:44.795 --> 00:01:46.565
+Okay, get that done. Talk to you soon.

@@ -1,0 +1,14 @@
+Course: Agentic Data Engineering with Amazon Q
+Lesson: 6 Create Access Key for AWS CLI Access RESUME
+============================================================
+
+On the Im go to users.
+Click on the admin user.
+Click on Create Access Key
+to use Keys as Commander Interface.
+Scroll down, check this box. Click on next.
+On the next page, scroll down.
+Create the key on the next page, scroll down.
+Download the file. This is the only time you'll get
+to download this file to save this.
+Very, very important.

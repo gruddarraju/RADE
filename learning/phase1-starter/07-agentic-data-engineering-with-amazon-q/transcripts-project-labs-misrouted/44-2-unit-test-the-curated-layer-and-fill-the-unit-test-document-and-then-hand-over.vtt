@@ -1,0 +1,241 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:01.280
+Alright, our crawler is run
+
+2
+00:00:01.280 --> 00:00:03.925
+and Phase C, we shows one table change here we go back
+
+3
+00:00:03.925 --> 00:00:06.565
+to databases here, and then go to our mission dh,
+
+4
+00:00:07.205 --> 00:00:08.485
+H-F-C-D-L-C.
+
+5
+00:00:08.745 --> 00:00:11.445
+We should see our curated, uh, table right here
+
+6
+00:00:11.665 --> 00:00:15.005
+and go to actions here and click on view data.
+
+7
+00:00:15.055 --> 00:00:16.285
+It'll take us to Athena,
+
+8
+00:00:16.575 --> 00:00:18.405
+which will fire the query automatically for us.
+
+9
+00:00:18.425 --> 00:00:21.245
+And that query is in fact now getting run here.
+
+10
+00:00:21.945 --> 00:00:23.565
+And it is run here, by the way.
+
+11
+00:00:23.945 --> 00:00:27.645
+And our job is now to do some spot checks.
+
+12
+00:00:27.645 --> 00:00:31.645
+Whether this data you see here in the curated table is
+
+13
+00:00:31.785 --> 00:00:35.805
+as per the expectation mentioned in the mapping sheet,
+
+14
+00:00:35.805 --> 00:00:37.845
+or no, here we have the logic info, right?
+
+15
+00:00:38.105 --> 00:00:40.365
+So we gotta be looking at the different, uh,
+
+16
+00:00:40.365 --> 00:00:42.725
+transformation logic, which each and every file, each
+
+17
+00:00:42.725 --> 00:00:45.925
+and every column here, right?
+
+18
+00:00:46.655 --> 00:00:49.005
+These columns and validating whether
+
+19
+00:00:49.695 --> 00:00:52.245
+these transformations have been properly as, uh,
+
+20
+00:00:52.315 --> 00:00:53.445
+applied or not.
+
+21
+00:00:53.915 --> 00:00:55.805
+Okay? For example, look at these ones here.
+
+22
+00:00:55.805 --> 00:00:57.125
+You have shared request flags.
+
+23
+00:00:57.305 --> 00:00:59.325
+You have case and y equal to this.
+
+24
+00:00:59.945 --> 00:01:01.445
+You should be seeing true or false.
+
+25
+00:01:01.465 --> 00:01:04.045
+If you go back to our query editor
+
+26
+00:01:04.045 --> 00:01:07.885
+and take a look at those fields here, in fact, these, uh,
+
+27
+00:01:07.985 --> 00:01:10.485
+you should see true and false.
+
+28
+00:01:10.575 --> 00:01:12.645
+False, false, false. So it does mean that yes,
+
+29
+00:01:12.645 --> 00:01:13.645
+transformation is finished.
+
+30
+00:01:14.305 --> 00:01:15.485
+And so we could,
+
+31
+00:01:15.505 --> 00:01:18.285
+we typically do a spot check of the different records.
+
+32
+00:01:18.985 --> 00:01:20.485
+And here as well, day of the week,
+
+33
+00:01:20.495 --> 00:01:21.525
+let's take a look at them.
+
+34
+00:01:22.305 --> 00:01:25.885
+And, um, it shows Sunday, Sunday, Sunday, right?
+
+35
+00:01:25.905 --> 00:01:29.925
+So we gotta be doing our unit testing as data engineers.
+
+36
+00:01:30.025 --> 00:01:33.725
+Our job as a part of development is also to unit test.
+
+37
+00:01:34.745 --> 00:01:37.765
+Uh, all the logic that we have applied,
+
+38
+00:01:37.765 --> 00:01:42.725
+whether it has successfully implemented by in our code
+
+39
+00:01:42.905 --> 00:01:44.605
+and the output is as per the expectation
+
+40
+00:01:44.605 --> 00:01:46.125
+or not, is what we need to be checking.
+
+41
+00:01:46.505 --> 00:01:49.285
+And we then fill a unit testing template, which is sort
+
+42
+00:01:49.285 --> 00:01:52.845
+of approved for us to, uh, conclude
+
+43
+00:01:52.845 --> 00:01:55.285
+that unit testing has been successful.
+
+44
+00:01:55.285 --> 00:01:57.685
+And if we, if we find any issues, uh, by
+
+45
+00:01:57.685 --> 00:02:00.085
+during unit testing, we go back and look at the code
+
+46
+00:02:00.085 --> 00:02:03.125
+and fix the code and, you know, uh, run the job again
+
+47
+00:02:03.125 --> 00:02:06.125
+and then do unit testing till we are satisfied.
+
+48
+00:02:06.125 --> 00:02:10.285
+That data is per the mapping sheet.
+
+49
+00:02:10.715 --> 00:02:12.805
+Only when our unit testing is finished,
+
+50
+00:02:13.475 --> 00:02:15.805
+that is when we actually hand over the data
+
+51
+00:02:16.025 --> 00:02:17.765
+to the data analysts.
+
+52
+00:02:17.765 --> 00:02:20.045
+Okay? So now let's say assume that data, uh,
+
+53
+00:02:20.045 --> 00:02:21.125
+the unit testing is all good.
+
+54
+00:02:21.425 --> 00:02:25.045
+We have validated by firing a lot of different queries here,
+
+55
+00:02:25.705 --> 00:02:29.605
+uh, looking at different fields in this, uh, data set.
+
+56
+00:02:29.865 --> 00:02:34.005
+And, uh, it is absolutely per the transformation logic.
+
+57
+00:02:34.235 --> 00:02:37.565
+Then we inform the data analysts, Hey,
+
+58
+00:02:37.565 --> 00:02:40.805
+we have lowered the two years of data in the curated layer.
+
+59
+00:02:41.025 --> 00:02:43.125
+Now you go and you can take a look at the data
+
+60
+00:02:43.125 --> 00:02:44.645
+and do your analysis.

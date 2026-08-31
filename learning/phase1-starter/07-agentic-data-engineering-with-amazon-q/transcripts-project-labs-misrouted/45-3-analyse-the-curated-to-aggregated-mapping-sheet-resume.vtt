@@ -1,0 +1,365 @@
+WEBVTT
+
+1
+00:00:00.325 --> 00:00:02.505
+Now a unit test government could look like this.
+
+2
+00:00:02.845 --> 00:00:06.145
+Uh, you know, where you have listed down different, uh,
+
+3
+00:00:06.145 --> 00:00:08.465
+unit test cases like the, the count of records.
+
+4
+00:00:08.485 --> 00:00:09.505
+Is it valid or not?
+
+5
+00:00:10.015 --> 00:00:13.825
+Whether, uh, this field right here is
+
+6
+00:00:14.565 --> 00:00:15.905
+per this logic or not.
+
+7
+00:00:15.925 --> 00:00:17.665
+So for all the different fields you see here,
+
+8
+00:00:18.205 --> 00:00:21.945
+you have unit test cases along with, as I said, the count
+
+9
+00:00:21.965 --> 00:00:23.385
+of, uh, the records as well.
+
+10
+00:00:23.805 --> 00:00:26.025
+And you'll also be doing unit testing for, uh,
+
+11
+00:00:26.025 --> 00:00:28.905
+data quality tools as well by checking whether, okay,
+
+12
+00:00:29.205 --> 00:00:31.625
+do we have any data, uh, which
+
+13
+00:00:32.585 --> 00:00:33.625
+actually matches this condition?
+
+14
+00:00:33.625 --> 00:00:36.145
+Okay? Our intent was to rigid the records.
+
+15
+00:00:36.205 --> 00:00:38.425
+So do we have any records which actually
+
+16
+00:00:39.255 --> 00:00:40.505
+satisfies these conditions
+
+17
+00:00:40.605 --> 00:00:44.505
+and have somehow nicked into our curated data set or not?
+
+18
+00:00:44.845 --> 00:00:48.185
+If they have, it means the unit test cases has failed
+
+19
+00:00:48.375 --> 00:00:50.025
+that particular, okay?
+
+20
+00:00:50.605 --> 00:00:52.425
+So essentially, for example, you'll,
+
+21
+00:00:52.425 --> 00:00:54.185
+you'll probably do a threat staff on the table
+
+22
+00:00:54.195 --> 00:00:57.705
+where trip miles ease greater than 500.
+
+23
+00:00:58.285 --> 00:01:00.545
+You get the point. And if it is, if you find any records
+
+24
+00:01:01.415 --> 00:01:03.225
+that test case fails
+
+25
+00:01:03.405 --> 00:01:05.465
+and your code is incorrect,
+
+26
+00:01:05.465 --> 00:01:07.425
+you're gonna go back and fix the code.
+
+27
+00:01:07.495 --> 00:01:09.625
+That is what is mean by unit testing. Okay?
+
+28
+00:01:10.365 --> 00:01:14.185
+So now what I wanna do next, you wanna hand, as I said,
+
+29
+00:01:14.185 --> 00:01:16.705
+you'll be handling over the code to the data analyst, right?
+
+30
+00:01:16.725 --> 00:01:18.945
+So they may not have access to the tables.
+
+31
+00:01:19.445 --> 00:01:23.065
+So you ask the cloud engineer team to provide access
+
+32
+00:01:24.045 --> 00:01:28.865
+to the curated HF H-V-F-H-V table for the data analyst
+
+33
+00:01:28.865 --> 00:01:30.105
+for them to do their analysis.
+
+34
+00:01:30.105 --> 00:01:32.105
+Okay? Now that part is done.
+
+35
+00:01:32.105 --> 00:01:35.065
+Now you have lower the data for two years integrated a lake
+
+36
+00:01:35.525 --> 00:01:36.945
+in curated layer.
+
+37
+00:01:37.205 --> 00:01:39.865
+You have the table built already. So what's the next step?
+
+38
+00:01:40.095 --> 00:01:41.505
+Next step is to now think about
+
+39
+00:01:42.055 --> 00:01:43.665
+loading the data from curated
+
+40
+00:01:44.125 --> 00:01:45.945
+to the aggregated layer, right?
+
+41
+00:01:45.945 --> 00:01:49.265
+And for that, you already have the mapping. Okay?
+
+42
+00:01:49.605 --> 00:01:51.025
+Now you start analyzing this.
+
+43
+00:01:51.085 --> 00:01:52.745
+You, you wanna understand this right?
+
+44
+00:01:52.745 --> 00:01:53.865
+As to what is happening here.
+
+45
+00:01:53.945 --> 00:01:56.505
+I mean, this, this looks pretty overwhelming for anybody.
+
+46
+00:01:56.505 --> 00:01:59.585
+In fact, so many columns, so many, so many rows here.
+
+47
+00:02:00.085 --> 00:02:02.945
+Simple thing. Put this in the VS code.
+
+48
+00:02:03.045 --> 00:02:04.625
+Ask in Q to analyze it for you.
+
+49
+00:02:04.625 --> 00:02:06.105
+It'll tell you exactly what is happening here,
+
+50
+00:02:06.125 --> 00:02:08.465
+but that, that is kind of your resistant to help you
+
+51
+00:02:08.465 --> 00:02:09.665
+with what is happening here, right?
+
+52
+00:02:10.085 --> 00:02:14.905
+So now you understand, okay, that the analysts are asking us
+
+53
+00:02:14.905 --> 00:02:18.505
+to group by based on all of these fields you see here.
+
+54
+00:02:19.005 --> 00:02:21.345
+And there are some aggregations that they're asking us.
+
+55
+00:02:21.765 --> 00:02:25.425
+And if we scroll down, uh, you have more
+
+56
+00:02:26.085 --> 00:02:27.785
+fields on which you wanna group by.
+
+57
+00:02:28.445 --> 00:02:31.345
+So that's a lot of fields on which they want,
+
+58
+00:02:31.345 --> 00:02:32.505
+they're asking us to group by.
+
+59
+00:02:32.805 --> 00:02:33.905
+So you are trying to kind
+
+60
+00:02:33.905 --> 00:02:35.585
+of make sense of what is happening here.
+
+61
+00:02:35.645 --> 00:02:38.705
+And then meanwhile, the analysts are also analyzing the data
+
+62
+00:02:38.735 --> 00:02:40.745
+that you have already curated.
+
+63
+00:02:41.565 --> 00:02:44.945
+And when you're about to really, uh, start developing this,
+
+64
+00:02:45.255 --> 00:02:47.025
+they got back to you and they said, no.
+
+65
+00:02:47.025 --> 00:02:49.225
+Hey, hold on. We have an updated mapping sheet.
+
+66
+00:02:49.325 --> 00:02:51.625
+So they gave you this mapping sheet
+
+67
+00:02:51.625 --> 00:02:54.225
+that they say we have analyzed the data and q it
+
+68
+00:02:54.225 --> 00:02:55.745
+and you know, for our business need,
+
+69
+00:02:55.825 --> 00:02:58.785
+I think this is these, uh, three
+
+70
+00:02:58.845 --> 00:03:01.645
+Different aggregations make more sense than having just
+
+71
+00:03:01.785 --> 00:03:03.765
+one aggregated, uh, layer.
+
+72
+00:03:04.035 --> 00:03:06.685
+Okay? So this would've given us just one table,
+
+73
+00:03:06.865 --> 00:03:08.005
+one aggregated table.
+
+74
+00:03:08.785 --> 00:03:12.325
+Now we could actually come up with, you know, three tables,
+
+75
+00:03:12.325 --> 00:03:14.605
+which will help our business use cases, what they say.
+
+76
+00:03:15.305 --> 00:03:17.445
+And now, okay, finally, okay?
+
+77
+00:03:17.445 --> 00:03:19.565
+And then, then you kind of take a look at this.
+
+78
+00:03:20.145 --> 00:03:23.125
+Uh, you try to make sense of this here.
+
+79
+00:03:23.225 --> 00:03:25.565
+Yes, we have table one. Okay?
+
+80
+00:03:25.825 --> 00:03:27.925
+You wanna make a big by based on these dimensions.
+
+81
+00:03:28.305 --> 00:03:31.725
+And then you have the aggregations, uh, defined here.
+
+82
+00:03:32.225 --> 00:03:33.965
+And then they've also mentioned them use
+
+83
+00:03:33.965 --> 00:03:35.045
+case for you to understand them.
+
+84
+00:03:36.025 --> 00:03:38.325
+And similarly, for table two as well,
+
+85
+00:03:38.905 --> 00:03:42.725
+and, uh, table three as well, you have, uh,
+
+86
+00:03:43.785 --> 00:03:45.445
+the mappings defined here.
+
+87
+00:03:45.595 --> 00:03:48.445
+Okay? So based on this, you can now go ahead
+
+88
+00:03:48.465 --> 00:03:52.045
+and build your next, uh, jobs
+
+89
+00:03:52.555 --> 00:03:53.925
+towards the next step to kind
+
+90
+00:03:53.925 --> 00:03:57.685
+of create the code in a glue notebook, right?
+
+91
+00:03:57.685 --> 00:04:00.085
+So that is what we'll do in the next step.

@@ -1,0 +1,929 @@
+WEBVTT
+
+1
+00:00:00.220 --> 00:00:01.225
+Alright, I'm, I'm assuming
+
+2
+00:00:01.225 --> 00:00:02.625
+that you have all run all the cells
+
+3
+00:00:03.605 --> 00:00:08.405
+and you're ready to run the second step, which is
+
+4
+00:00:08.405 --> 00:00:12.285
+to transform data for that, go to the VS code
+
+5
+00:00:13.105 --> 00:00:18.045
+and scroll down and get the data, the code, not it
+
+6
+00:00:18.045 --> 00:00:21.685
+as the code from the next cell here.
+
+7
+00:00:21.785 --> 00:00:23.765
+So control a copy the whole thing.
+
+8
+00:00:24.355 --> 00:00:29.295
+Code three buttons here, copy cell, go back to your notebook
+
+9
+00:00:30.375 --> 00:00:33.995
+right here, control V.
+
+10
+00:00:34.995 --> 00:00:37.285
+Okay. Now if you look at this particular piece of code here,
+
+11
+00:00:37.475 --> 00:00:40.205
+this is a meat of the data engineering, right?
+
+12
+00:00:41.425 --> 00:00:44.515
+We transform data, the raw data,
+
+13
+00:00:44.515 --> 00:00:46.595
+which we get according to the requirements.
+
+14
+00:00:47.135 --> 00:00:49.195
+And here we have function to do that. Okay?
+
+15
+00:00:49.735 --> 00:00:54.265
+Now if you look at this particular transformations, these
+
+16
+00:00:55.275 --> 00:00:58.615
+all of them correspond to the transformations
+
+17
+00:00:59.435 --> 00:01:04.105
+in the transformation logic mentioned in the mapping sheet.
+
+18
+00:01:05.215 --> 00:01:09.745
+Let me go back. So using PI Spark,
+
+19
+00:01:10.965 --> 00:01:13.265
+the transformations is all completed, okay?
+
+20
+00:01:13.445 --> 00:01:15.345
+And while I was developing this, in fact,
+
+21
+00:01:15.765 --> 00:01:18.505
+AI gave me the wrong code and we had to debug that
+
+22
+00:01:19.165 --> 00:01:23.195
+and all of that is covered and build data engineering
+
+23
+00:01:23.195 --> 00:01:25.795
+course with identity.
+
+24
+00:01:26.295 --> 00:01:28.115
+So next you wanna run this code.
+
+25
+00:01:28.115 --> 00:01:30.555
+So before we run this code, what, what does this code do?
+
+26
+00:01:30.815 --> 00:01:35.095
+The previous cell had lowered the raw data
+
+27
+00:01:35.805 --> 00:01:37.815
+into our raw data frame, right?
+
+28
+00:01:37.875 --> 00:01:39.095
+The raw df.
+
+29
+00:01:39.595 --> 00:01:41.895
+So this whole, the raw data frame holds the raw data.
+
+30
+00:01:43.035 --> 00:01:45.255
+And that raw data frame
+
+31
+00:01:45.915 --> 00:01:47.935
+is now being passed to this function.
+
+32
+00:01:48.195 --> 00:01:51.295
+And the raw data frame is now transformed.
+
+33
+00:01:51.475 --> 00:01:54.135
+And the transformed data frame is told in
+
+34
+00:01:54.245 --> 00:01:55.415
+curated data frame.
+
+35
+00:01:55.955 --> 00:02:00.855
+So this curated data frame holds the transformed data.
+
+36
+00:02:01.035 --> 00:02:05.285
+Now if we scroll down, you will see
+
+37
+00:02:05.635 --> 00:02:07.405
+that the curated data frame is
+
+38
+00:02:07.405 --> 00:02:08.725
+being returned from the function.
+
+39
+00:02:10.255 --> 00:02:13.395
+So this function now returns this one
+
+40
+00:02:13.575 --> 00:02:17.735
+and it is again stored back into curated data frame.
+
+41
+00:02:17.995 --> 00:02:21.175
+And then we have some print statements here
+
+42
+00:02:21.175 --> 00:02:22.255
+to look at the total columns
+
+43
+00:02:23.155 --> 00:02:25.015
+and this print the schema as well.
+
+44
+00:02:25.515 --> 00:02:27.255
+So we'll just run this by clicking on
+
+45
+00:02:27.445 --> 00:02:28.495
+this button right here.
+
+46
+00:02:28.715 --> 00:02:31.885
+So you see it is again, showing busy, it's all run.
+
+47
+00:02:31.945 --> 00:02:34.375
+Now the transformations are all completed.
+
+48
+00:02:35.185 --> 00:02:37.925
+Now we have additional columns, 38 columns, right?
+
+49
+00:02:38.275 --> 00:02:39.485
+Because you go back
+
+50
+00:02:39.945 --> 00:02:42.405
+to the mapping sheet in the target field,
+
+51
+00:02:42.405 --> 00:02:44.845
+in the curated layer, we are gonna have bound
+
+52
+00:02:44.845 --> 00:02:46.005
+to have additional fields.
+
+53
+00:02:46.895 --> 00:02:48.365
+We're gonna have at least 38 fields.
+
+54
+00:02:48.365 --> 00:02:49.365
+They show 39 here
+
+55
+00:02:49.365 --> 00:02:50.685
+because the first one is of course
+
+56
+00:02:51.545 --> 00:02:52.925
+the had a in the Excel sheet.
+
+57
+00:02:52.925 --> 00:02:54.485
+So we have 38 fields shortly.
+
+58
+00:02:54.905 --> 00:02:58.525
+And that is what we see here as well.
+
+59
+00:02:59.225 --> 00:03:01.765
+And this is our schema of the curated layer.
+
+60
+00:03:02.185 --> 00:03:04.785
+Now data is transformed, okay?
+
+61
+00:03:05.565 --> 00:03:09.485
+It is in the curated data frame.
+
+62
+00:03:09.585 --> 00:03:12.485
+It is not in the data lake yet, okay?
+
+63
+00:03:13.225 --> 00:03:15.685
+If you're gone through the PI park booster course, you know
+
+64
+00:03:15.685 --> 00:03:18.125
+that data is still
+
+65
+00:03:19.585 --> 00:03:21.245
+in the memory, okay?
+
+66
+00:03:21.245 --> 00:03:24.445
+It is not written onto the S3 yet on a data lake yet.
+
+67
+00:03:24.585 --> 00:03:26.245
+But before we write this data,
+
+68
+00:03:26.305 --> 00:03:28.565
+we will do some additional check, right?
+
+69
+00:03:28.625 --> 00:03:32.525
+As per the the mapping sheet, we also have
+
+70
+00:03:32.525 --> 00:03:33.925
+to implement data quality rules.
+
+71
+00:03:34.085 --> 00:03:35.125
+I mean, if the,
+
+72
+00:03:35.145 --> 00:03:37.965
+the curated data doesn't really meet these
+
+73
+00:03:38.015 --> 00:03:40.125
+rules, we'll be rejecting them.
+
+74
+00:03:40.585 --> 00:03:41.685
+Reject record is right here.
+
+75
+00:03:41.685 --> 00:03:45.325
+In fact, that is action on failure. So we wanna reject them.
+
+76
+00:03:45.945 --> 00:03:50.775
+So we to now run the data quality code as well.
+
+77
+00:03:51.035 --> 00:03:54.735
+For that it'll go to the VS code, scroll down
+
+78
+00:03:55.195 --> 00:03:59.855
+and then again click on the cell to control a go here.
+
+79
+00:04:00.205 --> 00:04:04.135
+Actions copy cell, go back to our notebook,
+
+80
+00:04:05.185 --> 00:04:07.965
+scroll down, down, down, down, down, down.
+
+81
+00:04:08.935 --> 00:04:11.685
+Click on the next cell control V.
+
+82
+00:04:12.585 --> 00:04:15.765
+Now this is the code that does the validation of data
+
+83
+00:04:17.245 --> 00:04:18.875
+based on, on our data quality rules.
+
+84
+00:04:19.655 --> 00:04:21.155
+So here we have the rules,
+
+85
+00:04:22.105 --> 00:04:25.085
+and again, on the curated data frame, not on the raw,
+
+86
+00:04:26.105 --> 00:04:27.285
+on the cur data frame,
+
+87
+00:04:27.345 --> 00:04:30.565
+we are gonna be applying all the filters based on our rules,
+
+88
+00:04:31.515 --> 00:04:33.485
+data quality rules, and store
+
+89
+00:04:34.145 --> 00:04:37.325
+the validated data into validated data frame.
+
+90
+00:04:37.625 --> 00:04:39.685
+And then we are gonna be running some statistics here
+
+91
+00:04:39.945 --> 00:04:43.845
+to find out how many records are now in the validated data
+
+92
+00:04:43.845 --> 00:04:45.645
+frame and how many got rejected.
+
+93
+00:04:46.855 --> 00:04:48.825
+Okay? So let's run this code.
+
+94
+00:04:50.095 --> 00:04:52.955
+We'll just click on this button here.
+
+95
+00:04:54.775 --> 00:04:56.965
+Let's see what it shows now. There you go.
+
+96
+00:04:57.265 --> 00:04:58.725
+So it, we rejected
+
+97
+00:04:59.275 --> 00:05:02.485
+approximately one 80,000 records, okay?
+
+98
+00:05:03.395 --> 00:05:06.455
+To be accurate, 188,000 records
+
+99
+00:05:06.675 --> 00:05:10.315
+for hundred 88,000 4 41 records.
+
+100
+00:05:10.615 --> 00:05:14.075
+So more than 99% of the, the data was valid, okay?
+
+101
+00:05:14.415 --> 00:05:16.875
+But there was, there were some records which are not valid.
+
+102
+00:05:16.875 --> 00:05:20.115
+We have to reject them per the data quality rules that
+
+103
+00:05:20.635 --> 00:05:23.555
+business team asked us to do as implement.
+
+104
+00:05:23.695 --> 00:05:24.995
+So the third step is also finished.
+
+105
+00:05:25.015 --> 00:05:26.395
+Now, the first step was to load the data.
+
+106
+00:05:26.395 --> 00:05:28.715
+Second step was to transform the data.
+
+107
+00:05:28.715 --> 00:05:31.155
+Third step was to apply the quality rules.
+
+108
+00:05:32.055 --> 00:05:35.115
+And now the fourth step is to load this data
+
+109
+00:05:36.815 --> 00:05:40.265
+from the valid data, data frame into data lake.
+
+110
+00:05:40.495 --> 00:05:43.665
+Okay? This is still in the memory right of the PI park
+
+111
+00:05:45.345 --> 00:05:48.285
+of this park in the sense of this park memory as such.
+
+112
+00:05:48.285 --> 00:05:50.445
+Okay? It's still in the memory. So we'll take a look at the
+
+113
+00:05:50.445 --> 00:05:52.005
+data lake as three bucket.
+
+114
+00:05:53.215 --> 00:05:56.075
+We only have raw here, we don't have the curated folder yet
+
+115
+00:05:56.375 --> 00:05:58.365
+because we haven't written the data yet.
+
+116
+00:05:58.895 --> 00:06:02.085
+We're gonna go back to notebook and scroll down
+
+117
+00:06:02.885 --> 00:06:06.615
+and click on the cell, get the code from our VS code.
+
+118
+00:06:07.105 --> 00:06:09.415
+We'll go here, scroll down, down, down, down,
+
+119
+00:06:11.215 --> 00:06:13.995
+and copy this cell control a
+
+120
+00:06:14.135 --> 00:06:18.955
+and click here, copy cell, go back to notebook control we,
+
+121
+00:06:19.415 --> 00:06:21.715
+and finally we'll turn it before that.
+
+122
+00:06:21.715 --> 00:06:24.635
+Let's take a look at the code here. What are we doing here?
+
+123
+00:06:24.745 --> 00:06:28.315
+Okay, we're getting the account id, our account id,
+
+124
+00:06:28.315 --> 00:06:29.995
+which is, in my case, this is account id.
+
+125
+00:06:30.455 --> 00:06:33.875
+And because my bucket has the account name, right?
+
+126
+00:06:33.975 --> 00:06:35.755
+So I want, don't wanna hard code it here.
+
+127
+00:06:35.755 --> 00:06:37.435
+So I'm getting it through the BO two three
+
+128
+00:06:37.435 --> 00:06:38.915
+code again, what's BO three?
+
+129
+00:06:38.915 --> 00:06:42.475
+BO three is the Python library using which you can connect
+
+130
+00:06:42.475 --> 00:06:44.075
+to any service of AWS, right?
+
+131
+00:06:44.765 --> 00:06:48.675
+We'll scroll down. And we are now seeing that we,
+
+132
+00:06:48.675 --> 00:06:53.035
+with the help of validate validated data frame, we are now
+
+133
+00:06:53.845 --> 00:06:58.035
+gonna be writing the data into the output path
+
+134
+00:06:58.375 --> 00:07:00.435
+as a parquet format.
+
+135
+00:07:01.325 --> 00:07:04.115
+Again, partition by year, month, and date.
+
+136
+00:07:04.115 --> 00:07:07.035
+This is what we want as per our mapping sheet
+
+137
+00:07:07.965 --> 00:07:09.485
+partitioning strategy here.
+
+138
+00:07:09.705 --> 00:07:12.325
+We wanna store data in the curated layer by partition
+
+139
+00:07:12.505 --> 00:07:13.885
+by year, month, and day.
+
+140
+00:07:14.385 --> 00:07:18.025
+And that is why we have mentioned the partition
+
+141
+00:07:18.045 --> 00:07:19.505
+as your month and day here.
+
+142
+00:07:19.805 --> 00:07:21.305
+And in the technical requirements,
+
+143
+00:07:21.325 --> 00:07:23.985
+we also wanna store the data in par K format.
+
+144
+00:07:24.445 --> 00:07:27.225
+So we have chosen par K as our format here.
+
+145
+00:07:27.405 --> 00:07:30.545
+And also we talked about add potency, right?
+
+146
+00:07:30.545 --> 00:07:33.305
+We want to make sure that if we run the job again
+
+147
+00:07:33.305 --> 00:07:35.625
+and again, we overwrite the data.
+
+148
+00:07:35.645 --> 00:07:38.935
+And so we are choosing overwrite here.
+
+149
+00:07:38.985 --> 00:07:41.775
+We'll run this and we'll see what happens next.
+
+150
+00:07:43.265 --> 00:07:44.285
+It is getting run now.
+
+151
+00:07:44.385 --> 00:07:46.165
+So while that is getting run, we'll go to S3
+
+152
+00:07:46.185 --> 00:07:47.605
+and refresh this.
+
+153
+00:07:49.705 --> 00:07:52.195
+We'll see shortly
+
+154
+00:07:52.195 --> 00:07:54.395
+that we'll have a new folder here called as curated.
+
+155
+00:07:54.665 --> 00:07:56.675
+This might take about a minute or two I think.
+
+156
+00:07:56.815 --> 00:07:58.715
+So there we go. We have a folder now curated.
+
+157
+00:07:58.725 --> 00:08:01.115
+We'll go into the folder. We E-H-V-F-H-V.
+
+158
+00:08:02.855 --> 00:08:06.995
+We have data now for 2024, only for one month.
+
+159
+00:08:07.225 --> 00:08:10.355
+Exactly that. What we were looking for.
+
+160
+00:08:11.335 --> 00:08:13.435
+We have data for all the days.
+
+161
+00:08:13.575 --> 00:08:16.155
+In fact, if you go inside, you see the parquet file,
+
+162
+00:08:16.155 --> 00:08:17.515
+which is snappy compression.
+
+163
+00:08:18.425 --> 00:08:23.115
+That is what we were looking for, right? Snappy compression.
+
+164
+00:08:23.335 --> 00:08:24.355
+How did Snappy come here?
+
+165
+00:08:24.815 --> 00:08:27.995
+We didn't choose snappy at all, right? We choose parque.
+
+166
+00:08:28.535 --> 00:08:32.155
+So snappy is the default compression method with parque.
+
+167
+00:08:33.375 --> 00:08:35.395
+We don't have to explicitly mention that here.
+
+168
+00:08:35.395 --> 00:08:38.875
+It shows writing the validated data
+
+169
+00:08:39.095 --> 00:08:41.115
+to the S3 bucket in the curated folder.
+
+170
+00:08:41.825 --> 00:08:44.515
+Data successfully written and final count is just much.
+
+171
+00:08:44.515 --> 00:08:48.555
+So we're done with the development. Now it's time to now
+
+172
+00:08:49.105 --> 00:08:51.795
+convert this notebook to a script.
+
+173
+00:08:51.855 --> 00:08:54.835
+See, what we've done now is a form of iterative,
+
+174
+00:08:55.405 --> 00:08:56.405
+Right? We are,
+
+175
+00:08:56.405 --> 00:08:59.125
+we ran the code one by one
+
+176
+00:08:59.385 --> 00:09:01.445
+and checked the output,
+
+177
+00:09:01.475 --> 00:09:03.805
+made sure it's running fine, it's, it's all good.
+
+178
+00:09:04.465 --> 00:09:07.125
+And then finally we got convinced, okay,
+
+179
+00:09:07.225 --> 00:09:10.245
+by looking at the data in S3, the next step is
+
+180
+00:09:10.245 --> 00:09:12.405
+to convert this to a script.
+
+181
+00:09:12.515 --> 00:09:14.445
+This is not a script, this is a notebook, okay?
+
+182
+00:09:14.445 --> 00:09:17.655
+Where you're running the part by part code.
+
+183
+00:09:18.815 --> 00:09:20.795
+So to convert this toward script,
+
+184
+00:09:20.895 --> 00:09:22.595
+you can just simply go to script here.
+
+185
+00:09:22.595 --> 00:09:25.075
+You see the script Here, go here. There you go.
+
+186
+00:09:25.415 --> 00:09:27.355
+The entire script you have got it now, in fact,
+
+187
+00:09:27.385 --> 00:09:29.445
+okay, this becomes a script.
+
+188
+00:09:30.025 --> 00:09:31.765
+We gotta take this script, okay?
+
+189
+00:09:31.765 --> 00:09:33.005
+We gotta copy this whole thing.
+
+190
+00:09:33.005 --> 00:09:36.725
+Skipped and at can copy, then go to VS code,
+
+191
+00:09:38.135 --> 00:09:42.445
+right click right here, click on this, type the name
+
+192
+00:09:42.545 --> 00:09:47.525
+as version dh, HOF NYC script
+
+193
+00:09:49.185 --> 00:09:50.245
+dot PY.
+
+194
+00:09:50.245 --> 00:09:55.085
+It's a Python file. Now py and enter, it's empty.
+
+195
+00:09:55.545 --> 00:09:57.925
+You can just simply paste it right here.
+
+196
+00:09:57.975 --> 00:09:59.885
+Right click on that and paste it.
+
+197
+00:10:00.385 --> 00:10:01.685
+So you got the entire code here.
+
+198
+00:10:01.905 --> 00:10:06.715
+Now remember, this code is gonna be transforming data only
+
+199
+00:10:06.715 --> 00:10:08.715
+for one month alone, right?
+
+200
+00:10:08.815 --> 00:10:10.635
+We are doing our initial testing
+
+201
+00:10:10.815 --> 00:10:12.395
+of the code only in one month.
+
+202
+00:10:12.395 --> 00:10:13.955
+We gotta modify this now.
+
+203
+00:10:14.055 --> 00:10:18.955
+Now right below this code I, the video in fact,
+
+204
+00:10:18.955 --> 00:10:21.635
+or about the video I've, I've given recent transcript,
+
+205
+00:10:21.725 --> 00:10:23.435
+which has already done that.
+
+206
+00:10:24.015 --> 00:10:25.075
+So use that code
+
+207
+00:10:25.255 --> 00:10:27.515
+and build the glue
+
+208
+00:10:29.195 --> 00:10:31.395
+ETL code in the next video, okay?
+
+209
+00:10:31.395 --> 00:10:35.045
+Don't use the code that you'll be copying and pasting here,
+
+210
+00:10:35.065 --> 00:10:39.265
+but use the code that I will give you about this video
+
+211
+00:10:40.235 --> 00:10:43.525
+that already has the code modified to pull
+
+212
+00:10:43.525 --> 00:10:45.845
+that 20, 24 and 25 data.
+
+213
+00:10:46.105 --> 00:10:48.845
+And this was modified in the Build data engineering
+
+214
+00:10:48.845 --> 00:10:49.965
+code course.
+
+215
+00:10:50.065 --> 00:10:51.885
+In fact, can you take a look at that course? Okay?
+
+216
+00:10:51.885 --> 00:10:54.305
+Talk to the next video. And
+
+217
+00:10:54.305 --> 00:10:55.545
+before you go to the next video, make sure
+
+218
+00:10:55.545 --> 00:10:56.905
+you actually stop this notebook.
+
+219
+00:10:56.905 --> 00:10:58.225
+Otherwise you'll get an incorrect expense.
+
+220
+00:10:58.225 --> 00:11:01.545
+If you go to, let's say, um, the retail jobs here,
+
+221
+00:11:01.635 --> 00:11:03.345
+it'll show you that your notebook is running.
+
+222
+00:11:03.725 --> 00:11:05.025
+So you can also terminate the notebook,
+
+223
+00:11:05.125 --> 00:11:06.185
+uh, from here as well.
+
+224
+00:11:06.605 --> 00:11:10.065
+So click on, terminate and terminate the notebook.
+
+225
+00:11:10.135 --> 00:11:12.545
+Very, very important else you'll incur expense.
+
+226
+00:11:12.985 --> 00:11:15.785
+I hope you're enjoying the hands-on very much.
+
+227
+00:11:16.125 --> 00:11:18.225
+If you are, type in the command box below
+
+228
+00:11:18.615 --> 00:11:21.025
+what you have learned so far in your own words.
+
+229
+00:11:21.495 --> 00:11:24.265
+That is very important. Before you read others comments
+
+230
+00:11:25.105 --> 00:11:27.285
+in your own words, write what you have learned
+
+231
+00:11:27.345 --> 00:11:28.805
+and then read others comments as well.
+
+232
+00:11:28.945 --> 00:11:29.765
+See you in the next video.

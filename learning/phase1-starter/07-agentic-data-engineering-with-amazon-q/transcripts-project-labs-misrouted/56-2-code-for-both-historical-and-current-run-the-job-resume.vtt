@@ -1,0 +1,621 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:00.650
+Guys, we'll come back.
+
+2
+00:00:00.650 --> 00:00:04.645
+Now we need to think about how to pull data incrementally
+
+3
+00:00:05.945 --> 00:00:09.965
+as well as, uh, to pull the data historically for all
+
+4
+00:00:09.965 --> 00:00:11.125
+of these three jobs, right?
+
+5
+00:00:11.125 --> 00:00:14.325
+It's not just one job alone. Now we look at them one by one.
+
+6
+00:00:14.625 --> 00:00:15.845
+So first we look at the first job,
+
+7
+00:00:15.845 --> 00:00:18.725
+which actually downloads the data from the New York, uh,
+
+8
+00:00:18.875 --> 00:00:23.085
+city TLC portal to our raw layer in S3 bucket.
+
+9
+00:00:23.345 --> 00:00:25.165
+So I have the code open here, in fact, okay?
+
+10
+00:00:25.465 --> 00:00:29.485
+The entire code that download the data from N-Y-T-L-C
+
+11
+00:00:29.485 --> 00:00:30.525
+to the raw folder.
+
+12
+00:00:31.185 --> 00:00:32.725
+And if we look at the main function here,
+
+13
+00:00:32.945 --> 00:00:34.845
+so I talked about in the previous video about
+
+14
+00:00:34.985 --> 00:00:36.125
+two parameters, right?
+
+15
+00:00:36.125 --> 00:00:39.365
+So what I meant is that be using two parameter values.
+
+16
+00:00:39.505 --> 00:00:43.005
+So look at this core piece of code here, okay?
+
+17
+00:00:43.545 --> 00:00:46.805
+The two parameter values are historical and current.
+
+18
+00:00:47.665 --> 00:00:51.245
+So what the code does is that it's gonna look
+
+19
+00:00:51.265 --> 00:00:54.245
+for the parameter that is passed to the job, okay?
+
+20
+00:00:54.385 --> 00:00:57.725
+The parameter value has historical, it's gonna download
+
+21
+00:00:58.305 --> 00:01:00.165
+the historical data for the last two years.
+
+22
+00:01:00.585 --> 00:01:03.325
+If it doesn't have any value at all, it'll still
+
+23
+00:01:03.985 --> 00:01:05.485
+set the job type of historical
+
+24
+00:01:05.905 --> 00:01:07.845
+and download the last two data.
+
+25
+00:01:08.025 --> 00:01:12.205
+But if we do send the job type as current, it's going
+
+26
+00:01:12.205 --> 00:01:14.365
+to download only the latest available month
+
+27
+00:01:14.465 --> 00:01:15.805
+of the current year only.
+
+28
+00:01:16.225 --> 00:01:18.765
+So again, don't worry about the code here, okay?
+
+29
+00:01:18.765 --> 00:01:20.645
+The, the important thing is not code coding.
+
+30
+00:01:20.645 --> 00:01:21.725
+Anybody can do okay?
+
+31
+00:01:21.725 --> 00:01:23.565
+With the help of, you know, Amazon queue,
+
+32
+00:01:23.585 --> 00:01:24.845
+you can, anybody can code.
+
+33
+00:01:24.845 --> 00:01:25.965
+That is one important thing. You
+
+34
+00:01:26.255 --> 00:01:27.645
+understand the concept here?
+
+35
+00:01:27.645 --> 00:01:29.725
+Concept is more important because when the interview,
+
+36
+00:01:29.725 --> 00:01:31.045
+they look for the concepts, okay?
+
+37
+00:01:31.395 --> 00:01:34.725
+Because now everybody knows that anybody can code.
+
+38
+00:01:35.025 --> 00:01:36.245
+So if you wanna just again,
+
+39
+00:01:36.385 --> 00:01:38.325
+get a more detailed analysis about this
+
+40
+00:01:38.325 --> 00:01:41.885
+and take a look at the, uh, amazing Q'S response here.
+
+41
+00:01:41.885 --> 00:01:44.165
+It says, yes, I have, uh, the script here.
+
+42
+00:01:44.225 --> 00:01:46.085
+It has two operating modes, historical mode,
+
+43
+00:01:46.085 --> 00:01:47.365
+current mode, right?
+
+44
+00:01:47.365 --> 00:01:49.525
+It has everything. You can go through this, okay?
+
+45
+00:01:50.695 --> 00:01:51.805
+Don't worry about the code at all.
+
+46
+00:01:52.075 --> 00:01:54.805
+What is more important is your thought process about how
+
+47
+00:01:55.745 --> 00:01:58.565
+you wanna be implementing historical versus incremental
+
+48
+00:01:58.995 --> 00:02:00.085
+pull of the data.
+
+49
+00:02:00.305 --> 00:02:03.805
+So I said that if you don't provide any job type,
+
+50
+00:02:03.975 --> 00:02:05.125
+it'll default to historical.
+
+51
+00:02:05.175 --> 00:02:07.765
+It'll pull two years later. That's why when you have the job
+
+52
+00:02:07.765 --> 00:02:10.405
+before without the job parameter, which you can see here,
+
+53
+00:02:10.405 --> 00:02:13.405
+in fact, okay, I'm in the glue job right now, console,
+
+54
+00:02:14.545 --> 00:02:17.405
+and if we scroll down on in the job details part,
+
+55
+00:02:17.905 --> 00:02:20.805
+scroll down, there's a section for job parameters.
+
+56
+00:02:20.865 --> 00:02:23.005
+We had not provided any parameter here.
+
+57
+00:02:23.005 --> 00:02:24.565
+So we had simply run it and
+
+58
+00:02:24.565 --> 00:02:26.765
+because we didn't put any parameters, it defaulted
+
+59
+00:02:26.765 --> 00:02:29.965
+to historical and pulled the historical data.
+
+60
+00:02:30.275 --> 00:02:32.645
+Okay? So that takes care of pulling the historical data.
+
+61
+00:02:32.745 --> 00:02:36.175
+Now, if you wanna pull the current month's data alone,
+
+62
+00:02:36.515 --> 00:02:38.575
+and I say current month, the latest available month
+
+63
+00:02:38.575 --> 00:02:41.415
+of the latest year, why not current?
+
+64
+00:02:41.415 --> 00:02:44.985
+Because as I said before, that N-Y-C-L-C publishes data,
+
+65
+00:02:44.985 --> 00:02:46.705
+which one or two month lag as such?
+
+66
+00:02:46.845 --> 00:02:49.585
+So the code is designed such that it'll
+
+67
+00:02:50.245 --> 00:02:51.785
+get the latest available month only.
+
+68
+00:02:51.975 --> 00:02:54.225
+Okay? These are all important concepts.
+
+69
+00:02:54.895 --> 00:02:56.185
+This is our design system.
+
+70
+00:02:56.185 --> 00:02:58.825
+In fact, now before I actually add the job, but I wanna
+
+71
+00:02:58.825 --> 00:03:00.805
+Just, uh, delete the data here, okay?
+
+72
+00:03:00.905 --> 00:03:04.115
+I'm gonna delete all of this data that we have here
+
+73
+00:03:04.655 --> 00:03:06.755
+and even draw, I'm gonna delete the data
+
+74
+00:03:07.175 --> 00:03:09.155
+and then run the step one again.
+
+75
+00:03:09.295 --> 00:03:12.155
+So we just go and get this turned right here
+
+76
+00:03:12.735 --> 00:03:14.715
+and the data charts a few seconds.
+
+77
+00:03:14.975 --> 00:03:16.275
+So there we golet the data.
+
+78
+00:03:16.575 --> 00:03:19.395
+See, look at the amount of data we had. 23.8 gb.
+
+79
+00:03:19.435 --> 00:03:21.315
+I mean, if you talk about this much value,
+
+80
+00:03:21.315 --> 00:03:25.075
+you're gonna interview people would easily believe that yes,
+
+81
+00:03:25.075 --> 00:03:26.515
+you really have worked in industry, okay?
+
+82
+00:03:26.845 --> 00:03:29.075
+We're not playing with toy data sets here, okay?
+
+83
+00:03:29.075 --> 00:03:30.235
+We're playing with real data set
+
+84
+00:03:30.235 --> 00:03:31.835
+that gets published every month, in fact,
+
+85
+00:03:32.065 --> 00:03:33.915
+okay, data's all gone now.
+
+86
+00:03:34.385 --> 00:03:37.515
+Okay? We'll, uh, go back to our blue console
+
+87
+00:03:37.815 --> 00:03:39.475
+and we will add the parameter,
+
+88
+00:03:39.525 --> 00:03:41.755
+which is how do you add the parameter?
+
+89
+00:03:41.755 --> 00:03:43.795
+Well, you need to add the parameter with hyen hyen
+
+90
+00:03:44.055 --> 00:03:45.155
+and what's the parameter name?
+
+91
+00:03:45.265 --> 00:03:47.835
+Look at this here. The parameter name is job type. Okay?
+
+92
+00:03:48.815 --> 00:03:52.355
+Job type is what is sent. Okay? So job type.
+
+93
+00:03:52.845 --> 00:03:55.795
+Again, if you don't know why I'm using job type, ask Chad,
+
+94
+00:03:55.915 --> 00:03:57.035
+GBT No, no.
+
+95
+00:03:57.155 --> 00:04:00.035
+I mean ask amazing q as to
+
+96
+00:04:00.605 --> 00:04:02.675
+which is the right argument, okay?
+
+97
+00:04:03.585 --> 00:04:06.995
+Code even or a debug a code
+
+98
+00:04:07.025 --> 00:04:09.035
+that somebody else has editor, you get the point, right?
+
+99
+00:04:09.255 --> 00:04:11.515
+It, it, things are so simple.
+
+100
+00:04:11.615 --> 00:04:15.635
+Now just copy this job, type right here, job type,
+
+101
+00:04:16.055 --> 00:04:18.475
+and then enter the value as current, okay?
+
+102
+00:04:18.815 --> 00:04:22.275
+And then we'll just save it. We'll just run it now, okay?
+
+103
+00:04:22.705 --> 00:04:25.595
+There's now being run, it's running right now.
+
+104
+00:04:25.945 --> 00:04:27.155
+Well, the job got over
+
+105
+00:04:27.155 --> 00:04:30.195
+and it just took 29 seconds only compared to five minutes
+
+106
+00:04:30.255 --> 00:04:32.915
+and 59 seconds before Iran.
+
+107
+00:04:33.295 --> 00:04:36.515
+And at that time it had pulled two years worth of data,
+
+108
+00:04:36.615 --> 00:04:40.235
+but now in 29 seconds it just pulled one month of data.
+
+109
+00:04:40.235 --> 00:04:43.615
+That's why we have so much of less runtime
+
+110
+00:04:43.675 --> 00:04:45.735
+for this particular run here, in fact.
+
+111
+00:04:45.875 --> 00:04:47.895
+So we'll go back to our three data lake and take a look.
+
+112
+00:04:47.945 --> 00:04:50.975
+We'll refresh it, and we should see the raw folder here.
+
+113
+00:04:50.975 --> 00:04:52.775
+Within that we'll see H-V-F-H-V folder,
+
+114
+00:04:53.315 --> 00:04:56.455
+and you'll see the data only for 2095
+
+115
+00:04:56.635 --> 00:04:59.135
+and November month alone,
+
+116
+00:04:59.205 --> 00:05:02.895
+because we just have data till
+
+117
+00:05:03.615 --> 00:05:05.455
+November month alone of 2095.
+
+118
+00:05:05.475 --> 00:05:08.615
+As of now, as this recording, in fact, if you go down here,
+
+119
+00:05:09.195 --> 00:05:12.095
+it just shows that you have it for now, Amber alone,
+
+120
+00:05:12.095 --> 00:05:13.495
+there is no data for December here.
+
+121
+00:05:13.495 --> 00:05:14.775
+That, so it was able to pull
+
+122
+00:05:15.595 --> 00:05:18.735
+the latest available months data, it was able
+
+123
+00:05:18.735 --> 00:05:20.255
+to pull data incrementally,
+
+124
+00:05:20.765 --> 00:05:22.255
+that is the right word, incrementally.
+
+125
+00:05:22.475 --> 00:05:26.135
+So we just saw how we were able to convert our, uh,
+
+126
+00:05:26.135 --> 00:05:28.855
+implement the incremental versus historical for
+
+127
+00:05:29.645 --> 00:05:30.735
+this job alone.
+
+128
+00:05:31.115 --> 00:05:34.015
+Now, let's see how the incremental versus historical applies
+
+129
+00:05:34.155 --> 00:05:36.375
+to these two jobs as well.
+
+130
+00:05:36.605 --> 00:05:39.735
+Okay? Now you see that
+
+131
+00:05:40.555 --> 00:05:43.255
+job number two will process whatever data you have in raw
+
+132
+00:05:43.255 --> 00:05:45.095
+correct and load to curate.
+
+133
+00:05:46.355 --> 00:05:49.575
+And job number three will process whatever it has included
+
+134
+00:05:50.515 --> 00:05:51.855
+and load to aggregate it.
+
+135
+00:05:52.075 --> 00:05:53.735
+So keep this in mind. And, uh,
+
+136
+00:05:53.735 --> 00:05:56.735
+in the next video we'll talk about the reason why we
+
+137
+00:05:56.735 --> 00:06:00.565
+Need to, to actually think about historical versus
+
+138
+00:06:01.035 --> 00:06:03.445
+incremental for these two jobs also.
+
+139
+00:06:03.625 --> 00:06:05.325
+Now, these are very, very important things.
+
+140
+00:06:05.475 --> 00:06:07.725
+What I'm teaching now is practical things.
+
+141
+00:06:07.725 --> 00:06:11.165
+You know, you go to any Udemy, go to any YouTube, you, you,
+
+142
+00:06:11.215 --> 00:06:14.605
+these things you will not be able to find easily anywhere.
+
+143
+00:06:14.695 --> 00:06:16.845
+These, this come with some practical experience
+
+144
+00:06:16.845 --> 00:06:18.605
+of being in the field for so many years, okay?
+
+145
+00:06:18.785 --> 00:06:22.845
+And I'm gonna share all my knowledge by putting a lot
+
+146
+00:06:22.845 --> 00:06:25.845
+of thought behind how I should be creating a course so that
+
+147
+00:06:26.395 --> 00:06:29.725
+anybody with no experience to even 20 years of experience
+
+148
+00:06:29.725 --> 00:06:31.045
+or even more in fact, is able to
+
+149
+00:06:31.775 --> 00:06:33.485
+appreciate this and understand it.
+
+150
+00:06:33.595 --> 00:06:37.405
+Okay? So I hope you're loving it and, uh, making rough notes
+
+151
+00:06:37.425 --> 00:06:40.445
+and if you are making notes, I, I, which I wanted to do,
+
+152
+00:06:40.445 --> 00:06:42.205
+in fact, okay, if you have made a notes
+
+153
+00:06:42.305 --> 00:06:46.125
+so far on this particular video, jot down in your own words
+
+154
+00:06:46.515 --> 00:06:47.965
+what I've learned so far, okay?
+
+155
+00:06:48.185 --> 00:06:50.365
+In the video below, let me read that.

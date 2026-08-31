@@ -1,0 +1,357 @@
+Course: Agentic Data Engineering with Amazon Q
+Lesson: 2. *Capstone Requirements and Guidance on completing it - 3 options* RESUME
+============================================================
+
+Hey guys, uh, I wanna talk about
+how can you really build a project
+for yourself in this course.
+Okay? I'll demonstrate to you how I have built my course so
+that you can also follow the same
+and build yours to add to your portfolio
+or to get the experience
+to talk in the interview confidently.
+The first thing you need is data set, right?
+You can go to kaggle.com
+and there are many, many data sets here.
+Uh, just search the relevant dataset that you would like
+to work on and download and start working.
+Or you can also go to data dot go v, you have a lot
+of dataset here as well, okay?
+Or what you can do, you can go to publicity AI here.
+You can ask a question. I am working on
+a data engineering project.
+I need really good data sets.
+Suggest some portals
+where I can download the data sets freely, okay?
+And it'll show you some results.
+And this is how I was able to find the, uh,
+T-L-C-N-Y-C dataset as well.
+And what I did is I went through this entire portal,
+I understood what this dataset is all about,
+and I looked at the data dictionaries,
+which talk about the data, which is there in the file,
+in the sense what are the different columns,
+what do the stand for, what are the business attributes?
+All of that is described in the data dictionary.
+So if I click on this, it has information about the high
+volume FHV trip data,
+and it says each row represents a single trip, alright?
+And what are the different fields you have in the dataset
+and what each field represents?
+We have all the information right here, in fact, okay?
+So what I did next is I took this PDF
+and I went to cloud ai, okay?
+To cloud ai. And I uploaded the PDF over there.
+I said, I downloaded this from the N-Y-C-T-L-C portal.
+The dictionary is attached right here.
+Imagine me as a data analyst at Lyft Company,
+and I'm trying to optimize revenue and driver operations
+because this data set could be used for optimizing revenue
+and driver operations, right?
+If you are to work at Lyft as a business team,
+you would want to optimize revenue, right?
+And driver operations as well.
+So from the data set
+and understood, it is a monthly data set, right?
+If you go down here, it shows that
+you get data for every month here.
+So I told cloud AI that this is a monthly data set.
+If the data source looks like this, okay?
+Like what you have in the dictionary,
+how should be my target data set looking like?
+And I provide some more context to it.
+Now, this context is something which I know
+because I've learned a lot of stuff,
+which I'm already teaching you in the diamond
+membership course already.
+Okay? So I said, data engineers will show data in par.
+Key format about par key is already discussing their
+purchase anyway, okay?
+And I said they'll store it in a month partition format.
+In aggregate layer, okay?
+And I said, does it even make sense
+to have monthly aggregations to help optimize revenue
+and our operations?
+I ask because the S3 data lake won't have asset properties.
+Now acid properties, and I say, I will not be using iceberg.
+Okay? So acid properties, iceberg, all
+of this is discussed in the lakehouse course.
+Anyway. So the point I made to make is here is
+that I was able to add some more context here
+because of me knowing about the Apache Park,
+the big data related development,
+and I also know about the Lakehouse functionalities.
+I said the tables in target data lake will have hive like
+tables, which analysts will access using Athena.
+Okay? So I was able to kind of give it the context
+and how would I, I come up with this whole thing
+because I know about the different services in AWS
+and the different concepts in data engineering, right?
+So this is why you need to have the end-to-end overview
+of not only services you have in AWS,
+but also the different concepts in data engineering.
+So once you have that, you can now go ahead
+and build your own project, okay?
+And then it gives some answers saying that, no,
+you should go for daily aggregations.
+You know, I went through that.
+I, I had a, you know, a chat with that.
+It suggested, you know, the aggregations, all of that, okay?
+It even talked about hourly aggregations also.
+And I said, I wanna keep it simple
+because the, so somebody who's new
+to build this itself might take about a week or two
+or slightly more, okay?
+So, and, and moreover for interview perspective, if you,
+even if you go with just daily aggregations
+at that point, it is good enough.
+So I said I wanna keep it simple.
+What will daily aggregations help me do? Okay?
+So I was trying to, you know, understand from the analyst
+perspective what they would be looking for.
+So it, it kind of gave me some information here that, okay,
+uh, we can go with, um,
+identifying certain high value patterns,
+like which zones generate most revenue.
+You know, are Mondays more profitable than
+Fridays in, you know, New York City?
+So this helped me understand
+how would the analyst think, like, okay,
+and if you're asking the interview, uh,
+if you have at information at this level, right?
+Won't you feel confident before going to the interview?
+You won't feel to have mugged up.
+You will be ready to get cross questioned on any aspect
+of your project and then it gimme a lot of information.
+So I said, okay, fine. Now gimme a sample word doc
+on this use case.
+And then finally they able to generate it use case also I,
+the document is right here, in fact, okay?
+It was able to generate this
+Entire business context, the source data,
+the data cadence, all of that, the challenge, you know,
+the key questions analysts, think solution, all of
+that was given to me by the cloud ai.
+So I went through that and I said,
+the layer two silver will be cleansed data
+and layer three will be gold.
+Okay? So I able to see the AI is not always right, okay?
+You have to be able to provide directions to it. Okay?
+Now about the silver and gold, all
+that is covered again, the lakehouse course.
+Anyway, the diamond membership, okay?
+Then it said, you're absolutely right, let me fix it. Okay?
+Then it again updated the data in the document.
+So I got the new one here.
+Then what I said to AI is
+that now imagine you are the data analyst
+and you need to provide requirements
+to data engineering team, okay?
+To transform the road raw data into silver, then gold,
+how would you provide the requirement
+in a mapping Excel sheet?
+Yes, mapping excel sheet is a standard way
+to provide transformation, okay?
+And let me create a comprehensive document for you.
+So it took us some, it took some time.
+And then, uh, look at this.
+Now, this particular Excel sheet was given to me by
+the cloud ai.
+So this talks about the transformation from raw layer,
+which is the silver to the gold, no, uh, the bronze, sorry,
+the bronze layer to the silver.
+So raw to curated and from curated to aggregated as well.
+Okay? So all of that is, this was entirely given to me
+by the clo, the entire,
+all the mappings here, it has a function.
+Now these are the fields that you have in source,
+and you have target fields here.
+So when you transform the D term raw two curated layer,
+you gotta not just have the same number of fields,
+but also create some more fields.
+Right? Here, you see NA is shown here
+because these fields are not in source,
+but you are creating new,
+when you are transforming from raw to curated.
+And how do you do all of this?
+Transformation is right here in the logic.
+In fact, entire logic is given a direct pass
+through your casting timestamp.
+And you also have data quality rules here as well. Okay?
+Likewise for curated to aggregated, that is also shown here,
+in fact, okay?
+And this talks about the aggregation fund function also.
+In fact, you know, how do you aggregate all of that? Okay?
+And then it says you go to join this data set
+that you have here, you see this, this entire file
+that you see with this fields.
+Now this particular thing has, uh, two fields called
+as pickup location ID and, uh, drop off location id.
+So these are IDs, okay?
+And you, if you wanna get the right information
+that we already discussed in the s
+membership courses, right?
+You gotta join this zone lookup table,
+the zone lookup table has the right information about
+the actual drop off city, the boroughs, all of that.
+Okay? So here it says you go to get the pickup,
+borrow pickup zone, drop of borrow drop of zone by joining
+with the file, the data file
+and join Logic is also mentioned here, in fact how to join.
+All that is mentioned here. This was
+given entirely by ai, okay?
+And you have the data quality rules also here.
+In fact, not just that, it also
+provided partitioning strategy.
+How do you partition the data in a data lake
+and the technical requirements as well, right?
+The file format, how do you process,
+where do you process a part spark on AWS
+glue is a monthly job.
+What is the query engine?
+Everything is, you know, in mentioned here,
+data retention, right?
+For, for people with more experience,
+you are think about governance as well.
+So data, attention, the security, all of
+that is mentioned here, in fact, okay?
+And trust me, this didn't take a lot of time for me, okay?
+To generate this, it hardly took about 30 minutes or so.
+I just had to chat with the AI and updated document.
+Of course not everything was perfect.
+It was 95 to 98% perfect, I would say.
+And because, you know, I had the information about the, uh,
+big data part and then the, the lakehouse part, I was able
+to guide it, to update it, okay?
+So this is how you'll be doing it for your capstone project,
+which will help you get the professional certificate in
+applied data engineering.
+And if you're really able to build this project end to end,
+which might take for you about two, three weeks, okay?
+Or maybe slightly more depending on
+where you are in the journey, right?
+How much you are finished, if you're finished Apache Park,
+if you're finished lake house.
+If you're not, you're gonna go
+and, you know, learn those stuffs, okay?
+And then come here and do this.
+So building the capstone project will be your last thing,
+but building this will give you the confidence
+to not only crack interviews that will happen anyway,
+but to also work in the industry.
+I'm as assuming that you are
+transitioning from a different background.
+You see, we are used to mugging up
+things from our childhood days.
+You know, our Indian education system
+is actually broken, right?
+You know, when I grew up, I grew up in a Mara State syllabus
+board, and I did not do a single project in my school.
+I did not do a single project.
+Even in, uh, my 11th and 12th.
+I did that from, you know, Tica
+and then even in my engineering, right?
+There was only one project towards the end in the last
+semester, eight semester, one project.
+Of course now things may have changed,
+but back in those days we, I, I had
+to just work on one project.
+So, you know, we are, we are hardwired to mug up things,
+but that is not something which will actually help us in the
+real world, right?
+When I get into the real world,
+it was a shock, a shocker for me, right?
+I mean, I'm sure you're all working now
+and if you're not working, uh,
+you will know what I'm trying to say.
+So if you truly wanna crack interviews, not just one,
+but multiple interviews with confidence
+and with every interview you wanna, you know,
+Raise your offer that you receive from the companies,
+then this is a must.
+You cannot skip this part
+because you see, when you're doing this, you'll be able
+to utilize all of the things that you learned in AWS,
+the big data purchase park, the lake house,
+the data warehousing, all of that utilize,
+and then form this project.
+And what I've shared with you now in this video,
+you won't find this being told to you like this easily
+by anybody, anywhere.
+And if you truly have this burning desire to succeed,
+I wanted to commit right now by typing in the video below
+that I will complete this capstone project no matter what.
+I really wanna see if you're committed to really take action
+and as the result, learn so well
+that cracking interviews becomes a
+byproduct of your learning process.
+Now, for the Capstone project, if what I just asked you
+to do is too overwhelming for you, I understand totally
+because you may be having
+no experience at all, too little experience.
+And because I have people from different backgrounds in the
+entire Taiwan membership.
+So I'm gonna give you three options
+right now for the caption project.
+Three options. One is, what you can do is the
+S membership project that you did, right?
+You'll have to modify that.
+You'll have to use airflow instead of step function.
+You'll also have to finish A-C-I-C-D part of it.
+So that's the first option, okay? For the caption project.
+Second option. Now this depends on your how,
+how badly you want things
+to be done, how much time you have.
+Second option is to go to the the N-Y-C-T-L-C portal, okay?
+Now, in the cellular membership,
+you worked on this project which used high volume FH
+with trips data, right?
+There are more data sets here.
+You also have data sets for yellow trips,
+green trips and fh.
+We trips, pick any one of them, pick any one yellow trip,
+green trip or FHV, pick any one of them
+and enhance the similar membership project you did
+by adding one of these as well.
+Added the pipeline for one of these.
+Well, in the same project, in fact, now you, you may want
+to use the step function or airflow, it depends on you.
+I'm totally fine. But you also have to finish the CICD part
+of it because only then you'll be able
+to have the confidence of, you know, saying
+that I really worked on a real world project
+because CSCD is used in almost every company now.
+And the third option, I mean this is for people
+who are really, really motivated, extremely motivated
+and have some time and are not desperate,
+but really patient enough to learn as much
+as possible and and be really be confident
+before going to for them.
+I recommend going to Kaggle
+or going to data dot, go OEV, wherever you wanna go, go
+to complexity and ask for the data set
+and then build an entire project from scratch, right?
+You may want to use airflow or step function.
+Anything is fine and I'll lay out the,
+for all these three projects,
+I'll be laying out some more guidelines in the next
+video, okay?
+You gotta meet those guidelines
+because those guidelines will actually
+help you use the best practices in data engineer projects.
+I hope I was able to make it a little less overwhelming
+than asking you to create a brand new product altogether.
+Okay? Either of these three options are fine with me.
+And if you do either of these
+and submit the capstone project,
+you get professional certificate in applied data
+engineering, which you can proudly
+upload on LinkedIn as well.
+'cause you would've spent the time
+and effort to gain that certificate.
+It is not a ate of completion, it is a certificate
+of achievement, in fact.
+Alright, before you go to the next video,
+I really wanna see your commitment type in the comment box
+below that I am committed
+to finish this capstone project no matter what.

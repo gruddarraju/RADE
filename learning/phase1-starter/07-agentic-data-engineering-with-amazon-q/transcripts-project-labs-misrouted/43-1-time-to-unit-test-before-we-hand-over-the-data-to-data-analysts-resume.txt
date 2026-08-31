@@ -1,0 +1,86 @@
+Course: Agentic Data Engineering with Amazon Q
+Lesson: 1 Time to unit test before we hand over the data to Data analysts RESUME
+============================================================
+
+Alright, the job has run data is right here.
+But how do we know if the data that is loaded here is
+as per our expectations, what we,
+we have set in the web mapping sheet, right?
+Our code is supposed to do what is right here.
+And of course we have used ai,
+but we still have to do our unit testing.
+It's called unit testing.
+What we've been doing so far is development.
+And as a part of development, we also have
+to unit test our code we build, right?
+So the output of the code is of course data in curate layer.
+So we wanna test that whether it has really done its job
+as per expectation or not.
+So we gotta be validate all of this logic that is what
+we should be doing in unit testing.
+And also the data quality rules as well.
+We gotta be validating these as well in unit testing.
+So how can we now validate, okay,
+how can we now do our unit testing?
+So this data here, if you see is in par K format.
+We even if you to download this
+and open that, you cannot really open that.
+And we have so many partitions.
+So how do you then check data in all the files?
+What's the strategy? Yeah, can you just think
+for a moment how we can do that?
+We, you have actually used a step I will be recommending now
+in the past, just pause the video
+and think how you can actually look at the data
+within the parq file.
+Okay? I hope you've already seen that.
+So the next step obviously is to create tables on top
+of this data, right?
+Tables in a glue catalog. So that is what we'll do now.
+But before that, remember you also have
+rejection being done, right?
+There was some data which if you remember,
+did not meet these data quality rules and they got rejected.
+So that information is also getting captured in the
+log by our code.
+Okay? So you're gonna go back to our blue console
+and look at the logs here, click on the output logs,
+it opens this CloudWatch log.
+And if you scroll down towards the end,
+it shows the initial record count for the two years is
+around four 40 million records.
+There were, there was some validation that was done.
+And then we had
+so many valid records, so many rejected records.
+And the final count of records return
+to S3 is four three 5 million records,
+approximately four 35 million records, which,
+and this number matches the wallet records.
+This is what is in the log.
+But we also should be validating that by
+firing the queries on the BlueCat log table, which points to
+this dataset, this entire dataset in curated folder.
+We're gonna copy this, uh, S3 URI we see here.
+And then we'll go back to, uh, glue console
+and then we'll go to the data catalog.
+And within this we'll go to crawler at,
+click open in a new tab.
+So we already have the crawler that we had before.
+We'll just choose this one and go to action
+and duplicate crawler.
+And we can simply edit the path here, right?
+We can simply edit the path, choose S3,
+Add it, and then this time we will
+actually crawl curated folder.
+Okay. And then we'll update the source.
+We'll then go to next here.
+We don't want to over at the previous table,
+so we'll now we'll just, uh, have a prefix as curated.
+That way the previous table, which is pointing
+to the raw table doesn't get updated.
+And then we'll just do a next
+and then we'll just, uh, come down.
+And then finally we'll just create crawler.
+And then we will simply run this
+and wait for this to finish.
+We'll just refresh it here. It's already running.

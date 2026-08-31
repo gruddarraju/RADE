@@ -1,0 +1,157 @@
+WEBVTT
+
+1
+00:00:00.105 --> 00:00:01.765
+All I it's time to get our hands dirty.
+
+2
+00:00:01.835 --> 00:00:04.085
+With AWS the first thing you're gonna do is
+
+3
+00:00:04.185 --> 00:00:05.565
+create an AWS account.
+
+4
+00:00:05.785 --> 00:00:07.645
+If you need to work with AWS, you need an account.
+
+5
+00:00:08.225 --> 00:00:10.285
+So what's an account? An account is just
+
+6
+00:00:10.915 --> 00:00:12.565
+like your credit card account, right?
+
+7
+00:00:12.585 --> 00:00:16.205
+You kind of buy something and you pay to the bank later.
+
+8
+00:00:16.235 --> 00:00:19.445
+Similarly, on AWS you're gonna be creating a lot of stuffs.
+
+9
+00:00:19.705 --> 00:00:22.045
+So AWS needs to bill you for what to create.
+
+10
+00:00:22.385 --> 00:00:23.805
+So you'll get an account now
+
+11
+00:00:24.465 --> 00:00:26.805
+and in the real world when you join a company,
+
+12
+00:00:27.205 --> 00:00:30.365
+accounts are already created only for us to practice.
+
+13
+00:00:31.105 --> 00:00:32.165
+We are getting an account. Now,
+
+14
+00:00:32.305 --> 00:00:34.925
+the next few videos will actually let you do that.
+
+15
+00:00:34.925 --> 00:00:36.565
+It'll demonstrate to you how
+
+16
+00:00:36.565 --> 00:00:38.805
+to create an account and you can do that.
+
+17
+00:00:39.065 --> 00:00:40.725
+The next step is to create an admin user.
+
+18
+00:00:40.785 --> 00:00:43.325
+Now, what's an admin user? This is required for us
+
+19
+00:00:43.385 --> 00:00:45.965
+to practice on AWS account.
+
+20
+00:00:46.475 --> 00:00:48.045
+Okay? Now, again, in the real world,
+
+21
+00:00:48.305 --> 00:00:50.005
+you'll be told how to log in.
+
+22
+00:00:50.005 --> 00:00:51.805
+You will not log in with an admin user.
+
+23
+00:00:52.145 --> 00:00:54.565
+The third step is to download an install
+
+24
+00:00:55.405 --> 00:00:57.885
+A-W-S-C-L-I Command line interface.
+
+25
+00:00:57.885 --> 00:00:59.245
+So what's A-W-S-C-L-I?
+
+26
+00:00:59.995 --> 00:01:03.005
+It's a software that lets you access AWS
+
+27
+00:01:03.285 --> 00:01:05.365
+resources using commands.
+
+28
+00:01:05.655 --> 00:01:07.125
+Again, when you join a company,
+
+29
+00:01:07.465 --> 00:01:08.805
+you are given a laptop, right?
+
+30
+00:01:09.145 --> 00:01:10.885
+So the first thing you'll do is
+
+31
+00:01:11.865 --> 00:01:14.525
+get A-W-S-C-L-I installed on your laptop,
+
+32
+00:01:14.665 --> 00:01:17.645
+and the next step, you'll actually do a, an activity
+
+33
+00:01:17.675 --> 00:01:20.725
+that will use A-W-S-C-L-I command, okay?
+
+34
+00:01:21.095 --> 00:01:24.365
+Which is to configure A-W-S-C-L-I on your system,
+
+35
+00:01:24.365 --> 00:01:26.005
+even in the real world in your companies.
+
+36
+00:01:26.005 --> 00:01:28.925
+You will configure A-W-S-C-L-I on your laptop,
+
+37
+00:01:29.225 --> 00:01:32.445
+and there's a one time activity that you do on your laptop.
+
+38
+00:01:32.745 --> 00:01:35.365
+The next few videos will demonstrate how to actually do all
+
+39
+00:01:35.365 --> 00:01:36.885
+of this, to get that going.

@@ -1,0 +1,29 @@
+Course: Agentic Data Engineering with Amazon Q
+Lesson: 10 Create aggregated tables with the help of Crawler RESUME
+============================================================
+
+So we're gonna go to the crawler now,
+we'll go to the glucan console.
+Uh, scroll down. We go to crawlers.
+And then we already have the crawler, right?
+We already have the crawler, the original one.
+We'll click on that. We'll actually choose that.
+And then action duplicate crawler.
+And this time we're gonna be providing the path of
+the aggregated layer.
+So we'll just edit this. And here's a path aggregated.
+We'll just copy this entire path.
+In fact, we'll go back and, uh, paste it right here.
+We'll scroll down, update the source, and then go to next.
+Um, then next, this time we'll name these as, um,
+aggregated, A GG in fact, underscore.
+That should be good enough. And, uh, we'll do a next,
+we'll come down and create color.
+Okay, it says the copy of the, we just named it.
+We already had a previous one, in fact. Copy.
+We'll add this to IAGG. There you go.
+And then next, next, we'll do a next
+and then finally create crawler.
+The crawler is already, we're gonna just run it now
+and we'll wait for it to finish.
+Okay, you refresh it. It's already running here. In fact.

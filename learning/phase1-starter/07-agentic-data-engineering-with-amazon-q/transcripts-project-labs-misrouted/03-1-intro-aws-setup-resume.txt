@@ -1,0 +1,43 @@
+Course: Agentic Data Engineering with Amazon Q
+Lesson: 1 Intro - AWS Setup RESUME
+============================================================
+
+All I it's time to get our hands dirty.
+With AWS the first thing you're gonna do is
+create an AWS account.
+If you need to work with AWS, you need an account.
+So what's an account? An account is just
+like your credit card account, right?
+You kind of buy something and you pay to the bank later.
+Similarly, on AWS you're gonna be creating a lot of stuffs.
+So AWS needs to bill you for what to create.
+So you'll get an account now
+and in the real world when you join a company,
+accounts are already created only for us to practice.
+We are getting an account. Now,
+the next few videos will actually let you do that.
+It'll demonstrate to you how
+to create an account and you can do that.
+The next step is to create an admin user.
+Now, what's an admin user? This is required for us
+to practice on AWS account.
+Okay? Now, again, in the real world,
+you'll be told how to log in.
+You will not log in with an admin user.
+The third step is to download an install
+A-W-S-C-L-I Command line interface.
+So what's A-W-S-C-L-I?
+It's a software that lets you access AWS
+resources using commands.
+Again, when you join a company,
+you are given a laptop, right?
+So the first thing you'll do is
+get A-W-S-C-L-I installed on your laptop,
+and the next step, you'll actually do a, an activity
+that will use A-W-S-C-L-I command, okay?
+Which is to configure A-W-S-C-L-I on your system,
+even in the real world in your companies.
+You will configure A-W-S-C-L-I on your laptop,
+and there's a one time activity that you do on your laptop.
+The next few videos will demonstrate how to actually do all
+of this, to get that going.

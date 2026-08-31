@@ -1,0 +1,633 @@
+WEBVTT
+
+1
+00:00:00.260 --> 00:00:01.360
+Hey guys, welcome back.
+
+2
+00:00:01.460 --> 00:00:03.960
+Now, I graduated back in 2008 as a
+
+3
+00:00:03.960 --> 00:00:08.520
+computer science engineer and back in 2007 itself,
+
+4
+00:00:08.920 --> 00:00:12.780
+you know, I had an offer from TCS,
+
+5
+00:00:13.280 --> 00:00:14.560
+you know, it had come to my campus
+
+6
+00:00:14.560 --> 00:00:18.680
+as a first company for hiring the freshers
+
+7
+00:00:18.680 --> 00:00:21.740
+and I was lucky I was able to
+
+8
+00:00:21.740 --> 00:00:23.360
+crack the interview and so I had not
+
+9
+00:00:23.360 --> 00:00:25.600
+really faced any struggle getting my first job,
+
+10
+00:00:26.160 --> 00:00:26.260
+okay.
+
+11
+00:00:26.780 --> 00:00:28.780
+You know, life went on, I joined TCS,
+
+12
+00:00:28.780 --> 00:00:31.720
+I had my ups and downs, okay, but
+
+13
+00:00:31.720 --> 00:00:32.980
+after two years, I thought let me just
+
+14
+00:00:32.980 --> 00:00:37.840
+go out and try attending interviews outside and
+
+15
+00:00:37.840 --> 00:00:40.920
+I started giving interviews, one interviews, two interviews,
+
+16
+00:00:41.080 --> 00:00:44.660
+third interview, fourth interview, six, seven, probably around
+
+17
+00:00:44.660 --> 00:00:45.200
+eight, I think.
+
+18
+00:00:46.060 --> 00:00:51.640
+So, within span of a year after hitting
+
+19
+00:00:51.640 --> 00:00:53.780
+two years of experience till I hit my
+
+20
+00:00:53.780 --> 00:00:56.640
+three years of experience, I attended about seven
+
+21
+00:00:56.640 --> 00:00:58.880
+to eight interviews and I was not able
+
+22
+00:00:58.880 --> 00:01:00.680
+to crack an interview, that is when I
+
+23
+00:01:00.680 --> 00:01:02.460
+saw the real struggle, okay.
+
+24
+00:01:02.840 --> 00:01:07.380
+I was dejected, literally, I didn't know what
+
+25
+00:01:07.380 --> 00:01:08.820
+to do, you know, a good friend of
+
+26
+00:01:08.820 --> 00:01:10.360
+mine said, why don't you kind of get
+
+27
+00:01:10.360 --> 00:01:12.200
+trained from somebody else?
+
+28
+00:01:13.120 --> 00:01:15.960
+So, and then, you know, we got in
+
+29
+00:01:15.960 --> 00:01:17.420
+touch with our college senior, he said, hey,
+
+30
+00:01:17.480 --> 00:01:19.660
+go to this guy called Prabhakar, he teaches,
+
+31
+00:01:20.220 --> 00:01:24.000
+you know, Informatica ETL development and I, you
+
+32
+00:01:24.000 --> 00:01:26.620
+know, my friend and I went over there,
+
+33
+00:01:26.920 --> 00:01:30.000
+you know, talked to him and I enrolled
+
+34
+00:01:30.000 --> 00:01:32.640
+in his classes and, you know, within a
+
+35
+00:01:32.640 --> 00:01:34.600
+period of three months, I was able to
+
+36
+00:01:34.600 --> 00:01:35.660
+crack interviews, okay.
+
+37
+00:01:37.000 --> 00:01:40.300
+So, you know, why am I sharing this
+
+38
+00:01:40.300 --> 00:01:40.640
+with you?
+
+39
+00:01:40.760 --> 00:01:44.520
+You know, I had that hunger, you know,
+
+40
+00:01:44.580 --> 00:01:48.100
+the hunger was there to crack interviews and
+
+41
+00:01:48.100 --> 00:01:52.360
+because I was getting rejected time and again,
+
+42
+00:01:52.440 --> 00:01:53.900
+time and again, multiple times I got rejected,
+
+43
+00:01:54.280 --> 00:01:58.620
+okay, and that hunger made me really work
+
+44
+00:01:58.620 --> 00:02:02.780
+hard, okay, very hard and I'm really grateful
+
+45
+00:02:02.780 --> 00:02:06.720
+for my mentor, you know, from whom I
+
+46
+00:02:06.720 --> 00:02:10.660
+learned Informatica ETL development data engineering and back
+
+47
+00:02:10.660 --> 00:02:15.600
+then, I did not know that Informatica field
+
+48
+00:02:15.600 --> 00:02:17.720
+would change my life, you know, learning Informatica
+
+49
+00:02:17.720 --> 00:02:20.440
+would really have such a profound, in fact,
+
+50
+00:02:20.620 --> 00:02:22.680
+profound impact in my life, I didn't know
+
+51
+00:02:22.680 --> 00:02:24.660
+that because I didn't know back then that
+
+52
+00:02:24.660 --> 00:02:27.860
+data is an evergreen field, okay.
+
+53
+00:02:28.520 --> 00:02:30.180
+See, even now in the days of AI,
+
+54
+00:02:31.300 --> 00:02:36.320
+data engineers are always required, okay, it is
+
+55
+00:02:36.320 --> 00:02:42.060
+a field that needs interacting with business stakeholders,
+
+56
+00:02:42.280 --> 00:02:43.800
+interacting with a lot different teams.
+
+57
+00:02:44.100 --> 00:02:48.580
+So, it is a discipline in which there
+
+58
+00:02:48.580 --> 00:02:50.180
+is a lot to learn, a lot to
+
+59
+00:02:50.180 --> 00:02:52.360
+learn and I'll tell you back then I
+
+60
+00:02:52.360 --> 00:02:54.900
+learned Informatica, I did not really have any
+
+61
+00:02:54.900 --> 00:02:58.760
+real-world project to actually work on, you
+
+62
+00:02:58.760 --> 00:03:01.980
+know, I was taught Informatica very, very well
+
+63
+00:03:03.240 --> 00:03:05.640
+and, you know, I learned really well and
+
+64
+00:03:05.640 --> 00:03:08.380
+I remember after I learned, I finished training,
+
+65
+00:03:08.620 --> 00:03:11.340
+I took, I think, a week off from
+
+66
+00:03:11.340 --> 00:03:14.660
+my office just to do the hands-on,
+
+67
+00:03:15.200 --> 00:03:16.880
+I did the hands-on, I took the
+
+68
+00:03:16.880 --> 00:03:21.220
+screenshots of the different mappings I built in
+
+69
+00:03:21.220 --> 00:03:24.140
+Informatica, put them in a word doc, okay,
+
+70
+00:03:24.360 --> 00:03:26.580
+and I think I probably took color printouts
+
+71
+00:03:26.580 --> 00:03:29.800
+and I made my own notes, okay, I
+
+72
+00:03:29.800 --> 00:03:33.800
+still have that 27-page notes I made
+
+73
+00:03:33.800 --> 00:03:38.180
+myself, okay, I had typed in my laptop
+
+74
+00:03:38.180 --> 00:03:41.020
+27-page notes, why am I telling this
+
+75
+00:03:41.020 --> 00:03:43.380
+to you, okay, again back then I did
+
+76
+00:03:43.380 --> 00:03:45.780
+not really have a real world but that
+
+77
+00:03:45.780 --> 00:03:47.760
+hands-on really helped me and my notes
+
+78
+00:03:47.760 --> 00:03:49.920
+really helped me but what you are about
+
+79
+00:03:49.920 --> 00:03:52.840
+to embark upon now in this course is
+
+80
+00:03:52.840 --> 00:03:55.840
+truly game-changing, I believe, because you will
+
+81
+00:03:55.840 --> 00:03:58.100
+actually get to work on a real project
+
+82
+00:03:58.100 --> 00:04:00.020
+with real data, you will see how to
+
+83
+00:04:00.020 --> 00:04:01.900
+pull from the source, how to load data
+
+84
+00:04:01.900 --> 00:04:04.360
+into the data lake, how to transform it,
+
+85
+00:04:04.480 --> 00:04:08.040
+how to unit test it, how to orchestrate
+
+86
+00:04:08.040 --> 00:04:09.400
+the jobs, in the sense how to run
+
+87
+00:04:09.400 --> 00:04:12.100
+the job sequentially as such, okay, one by
+
+88
+00:04:12.100 --> 00:04:15.240
+one and how to schedule the job and
+
+89
+00:04:15.240 --> 00:04:18.040
+in doing so you'll also learn about how
+
+90
+00:04:18.040 --> 00:04:21.360
+to leverage AI for all data engineering tasks,
+
+91
+00:04:21.820 --> 00:04:24.580
+okay, now this whole course is highly fast
+
+92
+00:04:24.580 --> 00:04:28.140
+-paced, it's highly hands-on, this labs course
+
+93
+00:04:28.140 --> 00:04:31.220
+actually simulates working in a real world project
+
+94
+00:04:31.220 --> 00:04:34.040
+environment with real data, you will feel you're
+
+95
+00:04:34.040 --> 00:04:36.000
+working in the real world, we will use
+
+96
+00:04:36.000 --> 00:04:39.260
+real data that gets published every month, okay,
+
+97
+00:04:39.440 --> 00:04:42.160
+every month in fact, real data, I strongly
+
+98
+00:04:42.160 --> 00:04:43.480
+hope by the end of this course you
+
+99
+00:04:43.480 --> 00:04:47.320
+will feel that you finally found a course
+
+100
+00:04:47.320 --> 00:04:50.180
+that shows how data engineering is done end
+
+101
+00:04:50.180 --> 00:04:52.740
+-to-end in the real world, I don't
+
+102
+00:04:52.740 --> 00:04:54.900
+know of any Udemy course, any YouTube course
+
+103
+00:04:54.900 --> 00:04:57.040
+or any other instructor who is doing this,
+
+104
+00:04:57.160 --> 00:04:59.080
+if you do know, let me know, okay,
+
+105
+00:04:59.180 --> 00:05:00.840
+I would love to collaborate with him or
+
+106
+00:05:00.840 --> 00:05:02.820
+her because in that case the vibe would
+
+107
+00:05:02.820 --> 00:05:04.460
+match, now I'll tell you how to learn,
+
+108
+00:05:04.520 --> 00:05:07.140
+how to approach this particular course, okay, you
+
+109
+00:05:07.140 --> 00:05:10.380
+got to be replicating what I'm doing, whatever
+
+110
+00:05:10.380 --> 00:05:13.280
+I do, you should be doing at the
+
+111
+00:05:13.280 --> 00:05:15.920
+same time in your account and that's the
+
+112
+00:05:15.920 --> 00:05:18.620
+only way you'll grasp the depth that is
+
+113
+00:05:18.620 --> 00:05:21.860
+there in this project and this course is
+
+114
+00:05:21.860 --> 00:05:24.820
+truly hands-on and there is one more
+
+115
+00:05:24.820 --> 00:05:28.300
+course which has to be also consumed parallelly
+
+116
+00:05:28.300 --> 00:05:30.480
+which is a deep dive course, so these
+
+117
+00:05:30.480 --> 00:05:34.960
+two course should go parallelly, okay, you may
+
+118
+00:05:34.960 --> 00:05:36.660
+do some hands-on, you may also watch
+
+119
+00:05:36.660 --> 00:05:38.180
+the video from deep dive or you may
+
+120
+00:05:38.180 --> 00:05:40.200
+watch video from deep dive then come here
+
+121
+00:05:40.200 --> 00:05:41.760
+and do hands-on, so back and forth
+
+122
+00:05:41.760 --> 00:05:43.840
+you'll have to go through, even if you
+
+123
+00:05:43.840 --> 00:05:46.580
+have to go through this content once or
+
+124
+00:05:46.580 --> 00:05:49.200
+twice or even thrice, so be it, my
+
+125
+00:05:49.200 --> 00:05:52.160
+teaching style is straightforward, I don't like to
+
+126
+00:05:52.160 --> 00:05:54.260
+beat around the bush, so some videos are
+
+127
+00:05:54.260 --> 00:05:56.800
+really very short and crisp and even if
+
+128
+00:05:56.800 --> 00:05:58.860
+you have to really pause the video, then
+
+129
+00:05:58.860 --> 00:06:01.780
+do hands-on, then resume, so be it,
+
+130
+00:06:01.840 --> 00:06:04.500
+do that, okay, and if you truly get
+
+131
+00:06:04.500 --> 00:06:06.360
+this entire project story and if you can
+
+132
+00:06:06.360 --> 00:06:09.420
+replicate that in the interview, nothing like it,
+
+133
+00:06:09.980 --> 00:06:13.080
+so if you're really excited about this project,
+
+134
+00:06:13.260 --> 00:06:16.980
+this hands-on real world project with real
+
+135
+00:06:16.980 --> 00:06:19.560
+data, let me know in the comment below
+
+136
+00:06:19.560 --> 00:06:23.020
+by typing, I am excited and I will
+
+137
+00:06:23.020 --> 00:06:26.000
+do whatever it takes to complete the course,
+
+138
+00:06:26.220 --> 00:06:28.100
+I will do my hands-on, I really
+
+139
+00:06:28.100 --> 00:06:29.800
+want to see your commitment, so go ahead
+
+140
+00:06:29.800 --> 00:06:32.260
+and type it down below, I really look
+
+141
+00:06:32.260 --> 00:06:33.840
+forward to reading that and what should be
+
+142
+00:06:33.840 --> 00:06:36.200
+your goal always, your goal should always be
+
+143
+00:06:36.200 --> 00:06:40.240
+to crack multiple interviews and induct into the
+
+144
+00:06:40.240 --> 00:06:42.840
+DEH Hall of Fame by getting this award,
+
+145
+00:06:42.940 --> 00:06:46.220
+crack interviews, apply for the HUF award, get
+
+146
+00:06:46.220 --> 00:06:48.860
+interviewed by me and get this award delivered
+
+147
+00:06:48.860 --> 00:06:52.940
+to you, and don't just stop at this
+
+148
+00:06:52.940 --> 00:06:54.760
+award itself, you got to be thinking long
+
+149
+00:06:54.760 --> 00:06:57.700
+term, you got to be always looking at
+
+150
+00:06:57.700 --> 00:07:00.360
+how you can actually grow beyond your current
+
+151
+00:07:00.360 --> 00:07:03.900
+role to reach the architect level roles in
+
+152
+00:07:03.900 --> 00:07:06.140
+data engineering, okay, I'll talk to you in
+
+153
+00:07:06.140 --> 00:07:07.920
+the next video and before that, as I
+
+154
+00:07:07.920 --> 00:07:10.080
+said, type in the comment below, I am
+
+155
+00:07:10.080 --> 00:07:12.480
+really excited and I will do whatever it
+
+156
+00:07:12.480 --> 00:07:15.300
+takes to complete the hands-on in this
+
+157
+00:07:15.300 --> 00:07:17.060
+course, okay, I'll see you in the next
+
+158
+00:07:17.060 --> 00:07:17.280
+video.

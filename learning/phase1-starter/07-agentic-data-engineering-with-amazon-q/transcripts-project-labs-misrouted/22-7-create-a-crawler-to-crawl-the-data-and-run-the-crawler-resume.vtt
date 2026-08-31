@@ -1,0 +1,181 @@
+WEBVTT
+
+1
+00:00:00.070 --> 00:00:01.280
+Next on the glue console,
+
+2
+00:00:02.125 --> 00:00:05.465
+scroll down on the left hand side, click on crawlers,
+
+3
+00:00:05.595 --> 00:00:08.265
+click on create crawler name the crawler S mission
+
+4
+00:00:10.225 --> 00:00:15.225
+D-E-H-H-O-F-N-Y-C-D-L-C-H-V-F-H-V.
+
+5
+00:00:16.805 --> 00:00:19.225
+And then scroll down. Click on next.
+
+6
+00:00:19.565 --> 00:00:22.545
+So now we are creating crawler to crawl the file
+
+7
+00:00:22.685 --> 00:00:25.945
+to crawl this F-H-V-H-V Trip
+
+8
+00:00:26.215 --> 00:00:27.785
+data file.
+
+9
+00:00:27.845 --> 00:00:31.865
+We wanna crawl the file so that the crawler can create
+
+10
+00:00:32.625 --> 00:00:36.745
+a metadata table, a structure on the the Parquet file.
+
+11
+00:00:37.045 --> 00:00:38.225
+The file is in the history bucket.
+
+12
+00:00:38.605 --> 00:00:39.825
+So we're gonna go to glue again.
+
+13
+00:00:40.005 --> 00:00:43.305
+And here you're gonna scroll down, add the data source.
+
+14
+00:00:43.965 --> 00:00:46.665
+And right here we're gonna scroll down
+
+15
+00:00:47.835 --> 00:00:49.695
+and put the S3 path right here.
+
+16
+00:00:49.915 --> 00:00:52.495
+And to get the full path, we're gonna go to S3 again.
+
+17
+00:00:52.675 --> 00:00:55.655
+And the file is here in this folder, H-V-F-H-V.
+
+18
+00:00:56.155 --> 00:00:59.855
+So I'm gonna scroll up and click on the copy. S3 URI button.
+
+19
+00:01:00.025 --> 00:01:04.495
+Click on that. It's copied. I'm gonna go back to blue.
+
+20
+00:01:05.735 --> 00:01:08.485
+Paste it right here. It might show you in red here.
+
+21
+00:01:08.505 --> 00:01:11.005
+Now click on the red itself and then come down.
+
+22
+00:01:11.005 --> 00:01:12.565
+And then click on add data.
+
+23
+00:01:13.465 --> 00:01:14.805
+Add an S3 data source,
+
+24
+00:01:15.145 --> 00:01:18.325
+and you'll see the S3 data source right here.
+
+25
+00:01:18.945 --> 00:01:21.845
+And then scroll down, click on Next.
+
+26
+00:01:22.415 --> 00:01:24.525
+You'd already have an IM role called as Mission.
+
+27
+00:01:24.725 --> 00:01:28.405
+DHH of Glue Service role. Choose that mission. D-H-H-O-F.
+
+28
+00:01:28.435 --> 00:01:31.125
+Glue Service role. This was created when you ran the script
+
+29
+00:01:31.125 --> 00:01:33.525
+before in the cloud Shell in the real world.
+
+30
+00:01:33.865 --> 00:01:35.005
+You would be given to this
+
+31
+00:01:35.005 --> 00:01:36.805
+by your teammate or your team lead.
+
+32
+00:01:36.945 --> 00:01:40.375
+And then you scroll down, click on next here.
+
+33
+00:01:40.395 --> 00:01:42.655
+Choose the database that you created in the previous step,
+
+34
+00:01:42.705 --> 00:01:46.855
+which was Mission, D-H-H-O-F-N-Y-C-T-L-C.
+
+35
+00:01:46.945 --> 00:01:51.785
+Write the table name, prefix as H-E-F-H-V.
+
+36
+00:01:52.005 --> 00:01:53.705
+And then scroll down. Click on next.
+
+37
+00:01:54.205 --> 00:01:55.665
+On the next page, review and create.
+
+38
+00:01:55.665 --> 00:01:57.545
+Scroll down, click on Create Crawler.
+
+39
+00:01:57.645 --> 00:01:59.025
+And then finally, when you see this,
+
+40
+00:01:59.275 --> 00:02:01.225
+click on the run crawler here.
+
+41
+00:02:01.415 --> 00:02:03.945
+This will show you it is successfully starting. Starting.
+
+42
+00:02:04.205 --> 00:02:06.905
+And then scroll down and refresh this here.
+
+43
+00:02:07.365 --> 00:02:08.665
+You'll see it is already running right here.
+
+44
+00:02:08.665 --> 00:02:10.145
+In fact, wait for it to finish.
+
+45
+00:02:12.175 --> 00:02:13.405
+It'll take about a minute or two.

@@ -1,0 +1,261 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:00.820
+Hey guys, we'll come back.
+
+2
+00:00:00.820 --> 00:00:03.685
+Now. You have seen the job running end
+
+3
+00:00:03.685 --> 00:00:05.485
+to end from data ingestion
+
+4
+00:00:05.545 --> 00:00:08.645
+to loading into the different layers in the data lake.
+
+5
+00:00:08.905 --> 00:00:12.845
+Now remember, this job is to be run monthly, right?
+
+6
+00:00:13.225 --> 00:00:17.245
+We get data EV every month, in fact from the
+
+7
+00:00:17.925 --> 00:00:20.965
+N-Y-C-T-L-C portal, which is our source for data.
+
+8
+00:00:21.345 --> 00:00:25.125
+And what we did in the previous step is we went to the step
+
+9
+00:00:25.685 --> 00:00:28.085
+function service and uh, ran the state machine
+
+10
+00:00:29.245 --> 00:00:30.425
+manually, right?
+
+11
+00:00:30.645 --> 00:00:32.225
+So this is good for development.
+
+12
+00:00:32.245 --> 00:00:33.865
+Yes, we're test developing a testing.
+
+13
+00:00:34.885 --> 00:00:37.705
+That's all fine, but when it comes to production, this has
+
+14
+00:00:37.705 --> 00:00:40.385
+to run automatically every month, okay?
+
+15
+00:00:40.605 --> 00:00:41.665
+For that, how do we do it?
+
+16
+00:00:41.755 --> 00:00:44.025
+We've gotta schedule it to run every month, okay?
+
+17
+00:00:44.285 --> 00:00:47.585
+So we have jobs in data engineer that are scheduled
+
+18
+00:00:47.885 --> 00:00:50.105
+and we have other types of jobs as well called
+
+19
+00:00:50.125 --> 00:00:51.305
+as even driven jobs.
+
+20
+00:00:51.715 --> 00:00:52.985
+We'll talk about them later. But
+
+21
+00:00:52.985 --> 00:00:55.825
+for this section is all about schedule jobs.
+
+22
+00:00:56.365 --> 00:00:59.745
+And we know for our use case we gotta be scheduling this.
+
+23
+00:01:00.005 --> 00:01:02.345
+So to schedule, go to Event Bridge,
+
+24
+00:01:02.775 --> 00:01:05.305
+there's a service which we'll use Event Bridge.
+
+25
+00:01:05.515 --> 00:01:08.905
+Click on that on the left, you have schedules here.
+
+26
+00:01:08.905 --> 00:01:10.785
+Click on the schedules, scroll down,
+
+27
+00:01:11.205 --> 00:01:12.985
+create a schedule for now.
+
+28
+00:01:12.985 --> 00:01:16.145
+We'll do a one time test and then we'll schedule it later.
+
+29
+00:01:16.165 --> 00:01:20.425
+For every month we'll just name, uh, it as one time test.
+
+30
+00:01:20.925 --> 00:01:24.625
+And then, uh, we just choose the date and time.
+
+31
+00:01:24.625 --> 00:01:28.465
+In 24 hour format, we'll choose 14 0 0. Alright?
+
+32
+00:01:28.485 --> 00:01:32.345
+And then, uh, we'll do, we'll study as off for now
+
+33
+00:01:32.605 --> 00:01:33.865
+and then we'll do next.
+
+34
+00:01:34.445 --> 00:01:35.785
+Now we have many templates here.
+
+35
+00:01:36.245 --> 00:01:37.785
+Our job is in step function.
+
+36
+00:01:37.795 --> 00:01:40.585
+We've gotta choose the step function, let's choose that
+
+37
+00:01:40.845 --> 00:01:42.585
+and then, uh, choose a state machine,
+
+38
+00:01:42.755 --> 00:01:45.625
+which is Mission DH Pipeline.
+
+39
+00:01:45.875 --> 00:01:47.585
+Let's scroll down and then click next.
+
+40
+00:01:47.925 --> 00:01:51.265
+Enable the schedule, keep it as it is, scroll down
+
+41
+00:01:51.325 --> 00:01:52.625
+and choose an existing role.
+
+42
+00:01:52.625 --> 00:01:54.425
+You already had this role that is given to you
+
+43
+00:01:54.425 --> 00:01:57.785
+by a team member and you already have it in your account.
+
+44
+00:01:57.925 --> 00:02:02.425
+So just search for mission, DEH, even bridge roll,
+
+45
+00:02:02.725 --> 00:02:05.025
+and then do a next, finally review it.
+
+46
+00:02:05.045 --> 00:02:07.225
+You're gonna be running it at your schedule time.
+
+47
+00:02:07.485 --> 00:02:10.425
+Target is our pipeline role is the right one.
+
+48
+00:02:10.425 --> 00:02:13.305
+In fact, even bridge roll will then create schedule.
+
+49
+00:02:13.485 --> 00:02:14.905
+So it is already enabled right now
+
+50
+00:02:15.325 --> 00:02:18.025
+and it shows here that it is set for so
+
+51
+00:02:18.045 --> 00:02:19.785
+and so date and time.
+
+52
+00:02:19.895 --> 00:02:22.625
+Okay? And the target is our state machine.
+
+53
+00:02:22.885 --> 00:02:26.145
+So let's quickly go to our state machine and take a look.
+
+54
+00:02:26.375 --> 00:02:28.385
+Okay? I'm gonna go, uh,
+
+55
+00:02:28.385 --> 00:02:29.705
+to back to the state machine right here.
+
+56
+00:02:29.705 --> 00:02:33.065
+I'll click on this and we'll just refresh it.
+
+57
+00:02:33.275 --> 00:02:35.545
+We'll wait, wait for the time and we'll refresh it.
+
+58
+00:02:35.635 --> 00:02:37.425
+There you go. It's already running now.
+
+59
+00:02:37.445 --> 00:02:39.065
+So essentially your event bridge
+
+60
+00:02:39.735 --> 00:02:43.665
+triggered this step function state machine automatically.
+
+61
+00:02:43.665 --> 00:02:44.865
+You don't do it manually. Okay?
+
+62
+00:02:45.045 --> 00:02:46.105
+We are gonna go back to even bridge
+
+63
+00:02:46.365 --> 00:02:49.905
+and we will delete that in the next video.
+
+64
+00:02:49.955 --> 00:02:52.585
+Let's see how we can schedule this on a monthly cadence.
+
+65
+00:02:52.775 --> 00:02:55.425
+Okay? Do this and then, uh, go to the next video.

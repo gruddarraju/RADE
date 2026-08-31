@@ -1,0 +1,28 @@
+Course: Agentic Data Engineering with Amazon Q
+Lesson: 9 What-s the next step RESUME
+============================================================
+
+Alright, the job finished.
+It took about 11 minutes only this time
+because we used five workers.
+So what's the next step? Now, next step,
+if you remember from the previous steps we did
+for the curated layer, even for the aggregated layer,
+we gotta do a unit testing before we hand over the
+data to data analyst, right?
+So we are gonna go to the log
+and click on third put logs
+that's gonna open the CloudWatch log.
+We'll scroll down finally and then take a look at this.
+Okay. Uh, it shows that, uh, the original curated record for
+so many, which is the right number
+that we saw in Curated as well.
+It has created three tables
+and we have the number of records in these tables as well.
+But again, we've gotta go
+and really query in Athena to really validate this.
+And we've gotta also be unit testing whether the aggregation
+has been done properly or not,
+before we hand over the data to the data.
+So let's do that in this video. So what's the first step?
+First step is to create the crawler.

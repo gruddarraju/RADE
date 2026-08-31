@@ -1,0 +1,56 @@
+Course: Agentic Data Engineering with Amazon Q
+Lesson: What Next? RESUME
+============================================================
+
+Hey guys, welcome back. Now, if you have
+truly finished all the hands-on, and if
+you are here after replicating what I've done so far
+in this project, give yourself a pat on the back, because
+not many do this. So you really deserve the
+appreciation. So I really congratulate you for
+having done the hands-on with me.
+Okay? Now, the project is not done yet.
+We still have to learn about
+concepts such as S3 event-driven
+orchestration, and the more important topics
+such as performance optimization and cost optimizations,
+okay? You'll also have to learn about how do you save money from
+the S3 storage perspective, okay?
+All of these topics are covered in the next course, From
+Average to Highly Paid. Okay, so if you have done
+all of the hands-on so far, and if you've also gone through the deep dive course,
+which was a parallel to this course, right?
+You should have done that course as well to, to get some additional
+knowledge about, you know, what the, the, the hands-on you've been doing in
+this course. And if you have finished these two,
+go straight to the course From Average
+to Highly Paid. And that course not just talks about these additional
+skills I just mentioned, but that course will open up your
+mind towards what is really possible if you gain
+additional skills such as lakehouse engineering, big data engineering using
+Apache Spark, data warehousing, CICD,
+a lot more stuffs. Okay? So don't miss that course.
+That is extremely important. And again, I want to really
+congratulate you for having done the hands-on with
+me. You now have the power to really
+change your life. Trust me when I say this, because
+not easily you get
+a full-fledged, real project given to you on a platter,
+okay? All you got to do
+is really replicate me. Even in the next course, Performance Optimization,
+that is a very, very critical segment, okay?
+You will have to go through that content at least two, one to three times
+to truly grasp the importance and truly
+grasp, you know, um, I would say, the
+depth of what has been covered over there.
+And if you are really able to replicate in the
+interview, you know, what you would be doing by looking
+at my videos,
+then you will do very well in the interviews, and I can
+tell you that confidently. Okay? So I'll see you in the next course,
+and, uh, if you have found this entire course
+really, really beneficial, if it was very, very
+insightful, then let me know in the comment below that
+you really found it useful, and
+you really think that it can truly change your
+life. Okay? I'll talk to you soon.

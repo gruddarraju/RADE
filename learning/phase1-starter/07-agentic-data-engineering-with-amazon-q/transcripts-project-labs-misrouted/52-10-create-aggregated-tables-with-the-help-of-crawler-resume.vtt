@@ -1,0 +1,101 @@
+WEBVTT
+
+1
+00:00:00.425 --> 00:00:01.805
+So we're gonna go to the crawler now,
+
+2
+00:00:01.805 --> 00:00:02.965
+we'll go to the glucan console.
+
+3
+00:00:03.305 --> 00:00:05.805
+Uh, scroll down. We go to crawlers.
+
+4
+00:00:06.065 --> 00:00:07.405
+And then we already have the crawler, right?
+
+5
+00:00:07.465 --> 00:00:09.685
+We already have the crawler, the original one.
+
+6
+00:00:09.895 --> 00:00:12.165
+We'll click on that. We'll actually choose that.
+
+7
+00:00:12.265 --> 00:00:14.645
+And then action duplicate crawler.
+
+8
+00:00:14.865 --> 00:00:17.485
+And this time we're gonna be providing the path of
+
+9
+00:00:18.065 --> 00:00:19.365
+the aggregated layer.
+
+10
+00:00:19.545 --> 00:00:22.285
+So we'll just edit this. And here's a path aggregated.
+
+11
+00:00:22.285 --> 00:00:23.445
+We'll just copy this entire path.
+
+12
+00:00:23.465 --> 00:00:27.205
+In fact, we'll go back and, uh, paste it right here.
+
+13
+00:00:27.855 --> 00:00:31.405
+We'll scroll down, update the source, and then go to next.
+
+14
+00:00:31.785 --> 00:00:35.565
+Um, then next, this time we'll name these as, um,
+
+15
+00:00:36.525 --> 00:00:39.365
+aggregated, A GG in fact, underscore.
+
+16
+00:00:40.035 --> 00:00:43.405
+That should be good enough. And, uh, we'll do a next,
+
+17
+00:00:44.175 --> 00:00:45.605
+we'll come down and create color.
+
+18
+00:00:46.075 --> 00:00:47.925
+Okay, it says the copy of the, we just named it.
+
+19
+00:00:47.945 --> 00:00:50.045
+We already had a previous one, in fact. Copy.
+
+20
+00:00:50.695 --> 00:00:53.485
+We'll add this to IAGG. There you go.
+
+21
+00:00:54.185 --> 00:00:57.405
+And then next, next, we'll do a next
+
+22
+00:00:57.945 --> 00:01:00.205
+and then finally create crawler.
+
+23
+00:01:00.745 --> 00:01:02.845
+The crawler is already, we're gonna just run it now
+
+24
+00:01:03.625 --> 00:01:04.845
+and we'll wait for it to finish.
+
+25
+00:01:05.035 --> 00:01:07.325
+Okay, you refresh it. It's already running here. In fact.

@@ -1,0 +1,158 @@
+Course: Agentic Data Engineering with Amazon Q
+Lesson: 5. *Decide on Technical Requirements & gear up for development* RESUME
+============================================================
+
+Welcome back. Now, after you have analyzed the mapping sheet, you will
+decide on the technical requirements. Now, what do I mean by that?
+Take a look at, this worksheet here.
+It has information about the partitioning strategy.
+You will mention that. And you already know that the partitioning is going to be
+based on,
+the day as such. You will just mention that here, in fact. Okay?
+And then you will decide
+things such as the storage format.
+You want to store data in the curated
+and aggregated, right? So what format?
+Source, of course, is in Parquet. Do you want to continue Parquet or something
+else? So you go with Parquet. Why? Parquet is one of the best
+formats for big data engineering.
+And then you then think about, okay, how do we implement the
+code in what service of AWS? You decide to go with
+AWS Glue, okay? Processing engine mentioned here, in fact.
+And how often will this job run? It's going to run-- Data comes every month, right?
+So obviously data-- the job will run every month, right?
+So you're, you're trying to
+design the pipeline now, okay?
+You're, you're thinking the big picture, okay?
+Storage format, where do I process it?
+Uh, of course, in Spark. If it's in Spark, in which service
+of AWS? I'll choose Glue. And then how often will I run the job?
+It's a monthly batch job, so monthly data comes in, so I'll run the job
+monthly when data comes in. And then very, very important is the processing part
+called as idempotency. This is very important thing, in data engineering.
+So what it means is that,
+let's say data has come in today and, you have run the
+job and loaded data in your curated layer
+and also aggregated, and if you run this job again, then the
+data should again get loaded in curated
+and aggregated without affecting the existing data over
+there, okay? In the sense, first time you load data here, okay?
+There are a hundred records. Second time, again you run it for the same data,
+right? Let me just repeat this. You have file one, hundred
+records. You load data in, let's say,
+target, a hundred records. For whatever reason,
+you had to run the job again. Something failed, you want to rerun it, whatever it
+is.
+The same file is there, not the new file.
+Same file, hundred, with a hundred records.
+When you run the job with the sa-- again, the same file, it should go
+and overwrite this data, a hundred records here.
+It should not add hundred more. It should not become two
+hundred. You're getting it, right?
+Initially, a hundred was there the first run.
+When you ran it again, you shouldn't be adding hundred more.
+That is idempotency. No matter how many times you run it, for the same source data,
+target should not change. For the same source data, when you run again and again,
+target should not change. That is idempotency. Okay?
+And then you decide, of course, you write down the query tool.
+Of course, the
+a-analyst will use Athena for the analysis.
+And
+analysts have also told you that, you know, once the analysis is all done, when you
+have given them the aggregated data, when, when they have fired the queries,
+ultimately, they'll build the reports
+on a tool called as AWS QuickSight.
+It's a reporting tool, reporting service, AWS QuickSight. Okay?
+Just remember this. And then you also have
+the catalog mentioned here. The Glue cat-- Glue Data Catalog is a catalog.
+And of course, you'll be monitoring the data quality as well.
+So if you have records that
+mee-meet these data quality rejection scenario, you will
+simply go ahead and reject them and capture the rejection rates.
+That is what you mention here in the log as I display in the log.
+And for, for performance, you will, obviously, you will
+store data in the partition format by day, and you will
+ask
+the analyst team to filter the data based on these
+partition columns so that, as we discussed in the
+past, when they use the right filters, such as month
+equal to this and day equal to this, that day's data
+alone will be scanned from S3.
+Right? I told you this in the past as well, that if you go to S3 and let's say
+you-- here you have tw-twenty twenty-four and month zero one,
+when you fire a query on this HV FHW table, add these two
+filters, only this file will get scanned,
+okay? That-- Which is, four fifty MB.
+Other data in the raw folder will not get scanned.
+So the-- You will be able to save the cost
+of Athena by not scanning everything,
+and also it'll run a lot faster, in fact. That is for performance tuning as well.
+And then
+you'll also mention about the data retention. Now, data is coming into your raw.
+You want to be processing it, storing it into your curated
+and aggregated, but how, how many days? How many years?
+Now, based on your company's compliance policies, legal compliance
+policies, you know, you will want to store them for seven years.
+Just an example. Depends on every company.
+But I'm just telling you that every company has their own policies for it.
+And you mention here how you're going to implement that.
+I mentioned S3 Lifecycle rule here.
+You will see that shortly when we do the hands-on. So that's it.
+You're now ready for development now.
+So go to step four, and you start your development. Okay?
+So I'll be sharing you the notebook now.
+What I mean by notebook is, this thing right here, in fact.
+We'll do this hands-on in the next few videos. And, the code is right here.
+I'll be sharing the code with you, in fact. Okay?
+And this code actually does the raw to curated
+transformations. So the next few videos are completely hands-on.
+So make sure you just follow them to the T and do your hands-on. Okay?
+And if you really want to know how I build the code, then go to this
+course, a short course called as RAID, Big Da-- Building Data Engineering Code
+with Agentic AI. It's a short course.
+I have explained to you how
+this notebook code is built using Agentic AI feature of Amazon Q, in fact. Okay?
+It's, it's a pretty interesting one.
+And, after you go through that, I thinkYou
+won't really have any fear of coding at all.
+And one last thing is that the transformation logic mentioned here, these are all,
+you know, SQL, things, okay? Which is discussed
+in the SQL Skill Booster course, but the transformation logic can be implemented in
+SQL or PySpark. So
+make sure that you have gone through the SQL Skill Booster and Python and
+PySpark Skill Booster, before you actually
+go to the next video. Because there's no point in just doing what I'm telling you.
+Understand that. And, and the reason why I have split
+the entire
+program into multiple courses is because I want to cater to
+multiple personas here. I have people from different
+backgrounds, from no experience to even twenty, twenty-five experience in my
+community. So I strongly hope you appreciate what I'm doing
+here. And lastly, once we are done with the entire,
+development, right, I'm going to be sharing with you a
+document. So what happens is
+when we are done with the development entirely, okay?
+Now, again, development and testing and production, these are-- this is a
+development life cycle. Now, as the part
+of you handing over the project to your support
+team, you will get a document, you know, like this, where you
+list down
+what project you have implemented and, what is the source, what is
+the target, right? What is the solution?
+All of that is mentioned here. So we'll just walk you through this so that
+you're able to connect all the dots together later.
+And, and before you really go to the next video and do your hands-on, in fact,
+okay, I-I wanna make sure
+you note down
+what you have learned so far in the comment below this video, okay?
+Because I want really to see what you have learned so far.
+It'll help me to help you better. It, it'll help me understand if
+you are understanding, what you're understanding, so that I can improve and I can
+help you better, in fact. Okay, so make sure you actually write down in your
+comments below what you have learned so far, what story you have learned so far in
+your own words. And read what others have also written.
+See what-- how they actually interpret what I've told
+already-- told you, in fact. Everybody has their own interpretation, right?
+You get the point. All right, fasten your seat belts and, get going
+with, the hands-on. Make sure you do them to the
+T.

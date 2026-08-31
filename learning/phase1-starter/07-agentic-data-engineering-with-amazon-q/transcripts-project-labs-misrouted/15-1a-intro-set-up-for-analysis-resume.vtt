@@ -1,0 +1,257 @@
+WEBVTT
+
+1
+00:00:00.175 --> 00:00:02.565
+Let's get really real, real, real now, okay?
+
+2
+00:00:02.565 --> 00:00:04.645
+For example, let's say you have joined a
+
+3
+00:00:04.645 --> 00:00:05.765
+company, you're a data engineer.
+
+4
+00:00:05.865 --> 00:00:08.965
+Now you're in a data engineering team of Lyft Company.
+
+5
+00:00:08.965 --> 00:00:12.645
+Lyft is a ride share company in the us similar to Uber,
+
+6
+00:00:12.985 --> 00:00:14.365
+and you're assigned to this brand new
+
+7
+00:00:14.365 --> 00:00:15.445
+project by your manager.
+
+8
+00:00:15.785 --> 00:00:17.045
+So what's this project all about?
+
+9
+00:00:17.635 --> 00:00:19.525
+Lyft Company's business
+
+10
+00:00:20.355 --> 00:00:24.085
+team data analysts wanna work on optimizing their revenue
+
+11
+00:00:24.385 --> 00:00:28.045
+and driver operations for the New York City rides.
+
+12
+00:00:28.385 --> 00:00:31.165
+So that's the high level goal Now.
+
+13
+00:00:31.265 --> 00:00:33.605
+So what's gonna happen next is you and your manager
+
+14
+00:00:33.825 --> 00:00:37.565
+and the business data analyst team are gonna get together in
+
+15
+00:00:37.725 --> 00:00:40.245
+a meeting and discuss the goals of the project.
+
+16
+00:00:40.585 --> 00:00:44.325
+So the outcome of meeting is gonna be a few things in the
+
+17
+00:00:44.325 --> 00:00:46.045
+meeting the business team says to you
+
+18
+00:00:46.045 --> 00:00:49.125
+and a manager that we really need your help.
+
+19
+00:00:49.265 --> 00:00:50.565
+The data engineering team's help
+
+20
+00:00:51.145 --> 00:00:53.565
+in optimizing the revenue and driver operations.
+
+21
+00:00:53.565 --> 00:00:57.885
+And for that we have identified, we have a real data source,
+
+22
+00:00:58.265 --> 00:01:01.125
+and that is the New York City's Taxi
+
+23
+00:01:01.265 --> 00:01:04.165
+and Limo scene Commission data.
+
+24
+00:01:04.595 --> 00:01:08.085
+They tell you that this data gets published on the
+
+25
+00:01:08.945 --> 00:01:11.045
+NYC dot government site around this portal.
+
+26
+00:01:11.065 --> 00:01:15.755
+If you scroll down below, if you go to download data
+
+27
+00:01:16.055 --> 00:01:17.955
+and then go to the raw data
+
+28
+00:01:18.255 --> 00:01:19.555
+and then trip record data,
+
+29
+00:01:19.815 --> 00:01:22.035
+you'll see there are some data sets here for yellow trips,
+
+30
+00:01:22.035 --> 00:01:25.035
+green trips, FHE, and high volume FHE here.
+
+31
+00:01:25.295 --> 00:01:27.235
+And if we scroll down, you will see you have
+
+32
+00:01:27.315 --> 00:01:28.595
+a ton of data here.
+
+33
+00:01:28.815 --> 00:01:31.235
+And what they ask you is that they all
+
+34
+00:01:31.875 --> 00:01:33.515
+actually start analyzing this data.
+
+35
+00:01:33.775 --> 00:01:35.475
+The high volume fhv data.
+
+36
+00:01:35.475 --> 00:01:39.955
+If you click on this, so here you have data for Uber, Lyft,
+
+37
+00:01:40.175 --> 00:01:42.155
+via and June, four different companies.
+
+38
+00:01:42.495 --> 00:01:44.755
+And Lyft business team is interested in
+
+39
+00:01:44.995 --> 00:01:46.035
+actually analyzing this data.
+
+40
+00:01:46.375 --> 00:01:49.315
+It has information about the pickup, the drop off, daytime,
+
+41
+00:01:49.775 --> 00:01:52.875
+the location IDs, the trip miles, the trip time,
+
+42
+00:01:53.695 --> 00:01:55.635
+the base passenger for a lot more, in fact,
+
+43
+00:01:55.635 --> 00:01:59.795
+which can help the lift companies business team to
+
+44
+00:02:01.075 --> 00:02:02.675
+optimize their revenue and driver operations.
+
+45
+00:02:02.945 --> 00:02:06.035
+When you go back and they tell you that we go
+
+46
+00:02:06.035 --> 00:02:08.595
+to start analyzing with at least one file first,
+
+47
+00:02:08.595 --> 00:02:10.275
+they wanna actually view the data,
+
+48
+00:02:10.305 --> 00:02:11.915
+they wanna see the data, okay?
+
+49
+00:02:12.095 --> 00:02:14.395
+And the data is actually in Parquet format.
+
+50
+00:02:14.775 --> 00:02:17.235
+So the source of the data is identified.
+
+51
+00:02:17.295 --> 00:02:19.635
+Now, the next step that they want help is
+
+52
+00:02:19.635 --> 00:02:23.235
+with getting them access to this data so
+
+53
+00:02:23.235 --> 00:02:25.035
+that they can really do some analysis.
+
+54
+00:02:25.255 --> 00:02:26.555
+But this is a Parquet file.
+
+55
+00:02:26.795 --> 00:02:28.275
+I mean, if you download, if you click on this,
+
+56
+00:02:28.275 --> 00:02:30.275
+you can download the file, but you cannot open that.
+
+57
+00:02:30.275 --> 00:02:31.635
+It's a Parquet, it's a format.
+
+58
+00:02:32.345 --> 00:02:34.355
+It's not as Excel sheet or CSV.
+
+59
+00:02:34.495 --> 00:02:36.235
+So the outcome of the meeting was that
+
+60
+00:02:36.895 --> 00:02:38.435
+the source status is identified,
+
+61
+00:02:38.935 --> 00:02:43.635
+and the next action item for you is to help them get access
+
+62
+00:02:43.635 --> 00:02:45.795
+to that data so that they can analyze
+
+63
+00:02:46.845 --> 00:02:48.745
+and define the requirements
+
+64
+00:02:48.765 --> 00:02:50.025
+for your data engineering project.

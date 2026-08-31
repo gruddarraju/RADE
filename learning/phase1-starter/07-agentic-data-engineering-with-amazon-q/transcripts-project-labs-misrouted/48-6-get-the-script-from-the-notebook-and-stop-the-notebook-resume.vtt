@@ -1,0 +1,221 @@
+WEBVTT
+
+1
+00:00:00.120 --> 00:00:01.405
+Alright, I run my code
+
+2
+00:00:01.585 --> 00:00:05.325
+and, uh, this one creates a table one as we have
+
+3
+00:00:05.955 --> 00:00:07.525
+defined the mapping sheet.
+
+4
+00:00:07.535 --> 00:00:09.485
+Table one is getting created here.
+
+5
+00:00:09.505 --> 00:00:12.685
+We group by, by these dimensions, these fields,
+
+6
+00:00:13.345 --> 00:00:16.765
+and we want to calculate these fields, in fact.
+
+7
+00:00:17.685 --> 00:00:20.065
+And the aggregation functions are defined here.
+
+8
+00:00:20.445 --> 00:00:23.585
+So all of this is coded right here.
+
+9
+00:00:23.585 --> 00:00:26.945
+In fact, you are grouping by the dimensions, the fields,
+
+10
+00:00:27.125 --> 00:00:30.585
+and you are aggregating as per the mapping sheet.
+
+11
+00:00:30.845 --> 00:00:34.185
+And then, uh, that's table one. We also have table two.
+
+12
+00:00:34.185 --> 00:00:37.265
+Likewise, what you see here is table two.
+
+13
+00:00:37.605 --> 00:00:40.225
+We are grouping by, uh, the different fields we see here.
+
+14
+00:00:40.765 --> 00:00:42.865
+And then, uh, getting the
+
+15
+00:00:43.665 --> 00:00:46.225
+aggregated values using these functions.
+
+16
+00:00:46.645 --> 00:00:49.745
+And that is what you see here in this particular code.
+
+17
+00:00:50.605 --> 00:00:52.705
+And if you scroll down, we also have
+
+18
+00:00:53.645 --> 00:00:56.105
+the table three getting created, um,
+
+19
+00:00:56.915 --> 00:00:58.825
+based on the mapping sheet again.
+
+20
+00:00:58.895 --> 00:01:01.065
+Okay? And finally, when we are all done,
+
+21
+00:01:01.205 --> 00:01:04.105
+we will be loading the data back into Data Lake.
+
+22
+00:01:04.575 --> 00:01:06.105
+That is what is done here, in fact.
+
+23
+00:01:06.125 --> 00:01:07.905
+So for Jan 2024,
+
+24
+00:01:08.485 --> 00:01:11.265
+the data is loaded back into data lake, okay?
+
+25
+00:01:11.485 --> 00:01:15.545
+The information, uh, as to where it is loaded is right here.
+
+26
+00:01:15.645 --> 00:01:19.345
+And these different S3 parts, okay?
+
+27
+00:01:19.485 --> 00:01:22.425
+Within aggregated and within daily borrow daily zone,
+
+28
+00:01:22.725 --> 00:01:24.385
+and daily service, we go back
+
+29
+00:01:24.385 --> 00:01:25.905
+and take a look at the S3 bucket.
+
+30
+00:01:26.315 --> 00:01:28.225
+We'll have, if you're gonna go back to S3,
+
+31
+00:01:28.225 --> 00:01:29.545
+you'll see the aggregated folder here.
+
+32
+00:01:29.605 --> 00:01:33.465
+Go into that. You'll have the data within the
+
+33
+00:01:34.095 --> 00:01:35.505
+corresponding folders.
+
+34
+00:01:35.805 --> 00:01:37.345
+So can you tell me what the next step is?
+
+35
+00:01:37.575 --> 00:01:38.865
+What do you think should be the next step?
+
+36
+00:01:38.925 --> 00:01:41.265
+So we have load data for Jan 2094.
+
+37
+00:01:41.265 --> 00:01:44.345
+Obviously we have to load data for the two years,
+
+38
+00:01:44.345 --> 00:01:45.625
+2094 and 1 95.
+
+39
+00:01:46.245 --> 00:01:47.505
+But before that, what's the next step?
+
+40
+00:01:47.605 --> 00:01:50.665
+We gotta convert this notebook code to a script, right?
+
+41
+00:01:50.725 --> 00:01:53.665
+As you did in the previous, uh, part of the pipeline
+
+42
+00:01:53.665 --> 00:01:55.905
+where you load data from raw to curate it.
+
+43
+00:01:55.905 --> 00:01:58.145
+Right before that, you gotta stop the notebook,
+
+44
+00:01:58.145 --> 00:01:59.665
+otherwise you'll incur the cost.
+
+45
+00:02:00.365 --> 00:02:03.155
+You gotta just, um, first of all,
+
+46
+00:02:03.155 --> 00:02:04.315
+save this because it's all good.
+
+47
+00:02:04.385 --> 00:02:05.835
+Save the notebook and then
+
+48
+00:02:06.305 --> 00:02:08.275
+what you gonna do is you're gonna go to script.
+
+49
+00:02:08.585 --> 00:02:12.715
+Okay? Go to script and get the entire copy.
+
+50
+00:02:13.015 --> 00:02:15.235
+Go back to notebook and then finally stop.
+
+51
+00:02:15.235 --> 00:02:16.635
+So you copied the script, okay?
+
+52
+00:02:16.905 --> 00:02:21.675
+That script you'll use to create the glue, spark a TL job.
+
+53
+00:02:22.065 --> 00:02:24.675
+Just stop this for now. It is stop. Make sure you stop it.
+
+54
+00:02:24.775 --> 00:02:27.635
+And then the next step we'll create the glue,
+
+55
+00:02:27.635 --> 00:02:28.435
+spark et TL job.

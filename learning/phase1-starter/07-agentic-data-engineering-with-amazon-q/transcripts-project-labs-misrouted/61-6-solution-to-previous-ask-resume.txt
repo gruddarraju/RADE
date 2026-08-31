@@ -1,0 +1,41 @@
+Course: Agentic Data Engineering with Amazon Q
+Lesson: 6 Solution to previous ask RESUME
+============================================================
+
+Okay, for those who need some more additional handholding,
+this is how you'll actually update the
+curated two aggregated jobs.
+You already have it here, right?
+The script one, the curated aggregated script.
+Click on this and uh, get the code from, uh, the video below
+or the previous video and, uh, open it in your VS code.
+Copy the whole code, go back and paste it,
+and then finally save it.
+And let's go to job details
+and make sure you do enable the job bookmark.
+Then save it. And then
+before you run, just take a look at the script.
+The script has all the checks
+for making sure the bookmark runs fine.
+So we have job in it here
+and we have all the code under that
+and between essentially job dot commit as well.
+Okay, before that as well, in fact.
+And then we are creating the dynamic frame from the catalog.
+And this time the table name is curated H-V-F-H-V.
+Remember, we got this created
+for the data analyst to look at.
+And of course we also have the transformation.
+This is required for the job book part to work fine.
+And then finally, you simply just run the job.
+That's pretty much it. And, um, this will run fine
+and it'll load the data to aggregate layer
+and then give a try by running yourself again.
+That part I will not show.
+So let this run once and go to your S3 bucket.
+And you should see an aggregate folder here when,
+when it's all done, and this would've already succeeded.
+Run it again and look at the CloudWatch
+log by clicking on this.
+And you should see that there was no new data to load.
+Okay, get that done. Talk to you soon.

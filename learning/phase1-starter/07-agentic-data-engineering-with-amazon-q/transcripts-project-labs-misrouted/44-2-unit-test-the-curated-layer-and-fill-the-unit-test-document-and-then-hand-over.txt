@@ -1,0 +1,64 @@
+Course: Agentic Data Engineering with Amazon Q
+Lesson: 2 Unit test the curated layer and fill the unit test document and then hand over to the data anaysts RESUME
+============================================================
+
+Alright, our crawler is run
+and Phase C, we shows one table change here we go back
+to databases here, and then go to our mission dh,
+H-F-C-D-L-C.
+We should see our curated, uh, table right here
+and go to actions here and click on view data.
+It'll take us to Athena,
+which will fire the query automatically for us.
+And that query is in fact now getting run here.
+And it is run here, by the way.
+And our job is now to do some spot checks.
+Whether this data you see here in the curated table is
+as per the expectation mentioned in the mapping sheet,
+or no, here we have the logic info, right?
+So we gotta be looking at the different, uh,
+transformation logic, which each and every file, each
+and every column here, right?
+These columns and validating whether
+these transformations have been properly as, uh,
+applied or not.
+Okay? For example, look at these ones here.
+You have shared request flags.
+You have case and y equal to this.
+You should be seeing true or false.
+If you go back to our query editor
+and take a look at those fields here, in fact, these, uh,
+you should see true and false.
+False, false, false. So it does mean that yes,
+transformation is finished.
+And so we could,
+we typically do a spot check of the different records.
+And here as well, day of the week,
+let's take a look at them.
+And, um, it shows Sunday, Sunday, Sunday, right?
+So we gotta be doing our unit testing as data engineers.
+Our job as a part of development is also to unit test.
+Uh, all the logic that we have applied,
+whether it has successfully implemented by in our code
+and the output is as per the expectation
+or not, is what we need to be checking.
+And we then fill a unit testing template, which is sort
+of approved for us to, uh, conclude
+that unit testing has been successful.
+And if we, if we find any issues, uh, by
+during unit testing, we go back and look at the code
+and fix the code and, you know, uh, run the job again
+and then do unit testing till we are satisfied.
+That data is per the mapping sheet.
+Only when our unit testing is finished,
+that is when we actually hand over the data
+to the data analysts.
+Okay? So now let's say assume that data, uh,
+the unit testing is all good.
+We have validated by firing a lot of different queries here,
+uh, looking at different fields in this, uh, data set.
+And, uh, it is absolutely per the transformation logic.
+Then we inform the data analysts, Hey,
+we have lowered the two years of data in the curated layer.
+Now you go and you can take a look at the data
+and do your analysis.

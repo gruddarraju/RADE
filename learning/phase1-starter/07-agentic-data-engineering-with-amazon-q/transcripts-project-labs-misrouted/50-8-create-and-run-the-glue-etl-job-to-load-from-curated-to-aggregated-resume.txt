@@ -1,0 +1,47 @@
+Course: Agentic Data Engineering with Amazon Q
+Lesson: 8 Create and Run the Glue ETL job to load from curated to Aggregated RESUME
+============================================================
+
+Just copy this code as about the next step
+and go back to our glue console
+and we click on jobs.
+We'll now click on the script editor and start fresh.
+Create script here.
+We're gonna paste the script we just copied
+and we wanna name this.
+We're gonna go back to the VS. Code.
+Copy the name, copy this right here.
+Enter Now you gotta provide job details.
+We'll go here, provide the role.
+Now if you remember the previous job, it took about one hour
+to load two years of data from raw to curated.
+And now we're doing aggregations.
+And aggregations are costly, they're expensive.
+So for two years of data,
+what I'm gonna do is I'm gonna choose more number
+of workers to start with.
+Okay, I wanna see how long it takes
+and then later I can reduce the number of workers
+as required, as defined by ESLE, right?
+I mean, if the job takes about four hours
+and if it is fine for me, if the business can wait
+for four hours, it's absolutely fine.
+So for now, we'll just start at five, take a look at
+how long it takes, and to add some more context,
+let's say the job is supposed to start at 10:00 PM
+and even if it takes six hours by 4:00 AM in the morning,
+it finishes and the report really
+runs at 6:00 AM in the morning.
+You, you're still able to meet the SLA right SLA is
+to finish a job by 6:00 AM Your job is finishing
+by 4:00 AM in the morning.
+You get the point. The runtime is always
+governed by the SLA.
+You shouldn't unnecessarily tune it
+because you aren't in it.
+You have to spend more on by adding more number of workers
+and doing other stuff.
+As such. We'll just now come down and then just save it
+and then simply run it and then go to runs here.
+It shows running to get this run,
+and uh, we'll see you in the next video.

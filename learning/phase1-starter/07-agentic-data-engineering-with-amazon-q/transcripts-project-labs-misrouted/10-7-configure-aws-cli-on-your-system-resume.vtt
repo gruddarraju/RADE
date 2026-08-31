@@ -1,0 +1,93 @@
+WEBVTT
+
+1
+00:00:00.085 --> 00:00:01.365
+On your Windows Open command prompt.
+
+2
+00:00:01.905 --> 00:00:03.125
+I'm on Mac. I'll open the terminal.
+
+3
+00:00:03.545 --> 00:00:05.605
+If you have installed A-W-S-C-L-S successfully,
+
+4
+00:00:05.745 --> 00:00:07.245
+you should see this window.
+
+5
+00:00:07.245 --> 00:00:10.045
+Type a W SEN version on Windows.
+
+6
+00:00:10.105 --> 00:00:12.125
+It may show different on Mac. It shows this.
+
+7
+00:00:12.435 --> 00:00:15.165
+Next, you'll type AWS configure.
+
+8
+00:00:15.545 --> 00:00:16.765
+Now open the access key file
+
+9
+00:00:16.765 --> 00:00:18.085
+that you have on your downloads folder.
+
+10
+00:00:18.825 --> 00:00:20.955
+So I have my own open here.
+
+11
+00:00:21.095 --> 00:00:23.235
+I'm gonna copy the access key Id. Select this.
+
+12
+00:00:23.365 --> 00:00:27.835
+Right click copy. Right click paste. Here, enter. Next.
+
+13
+00:00:27.935 --> 00:00:30.115
+I'm gonna paste the access key.
+
+14
+00:00:31.425 --> 00:00:32.875
+I'll grab the access key from the file.
+
+15
+00:00:32.875 --> 00:00:37.035
+Again, select this right click.
+
+16
+00:00:37.705 --> 00:00:41.605
+Copy right here. Paste it. Enter.
+
+17
+00:00:42.115 --> 00:00:45.365
+Very important. Choose US East one.
+
+18
+00:00:45.365 --> 00:00:48.405
+No matter where you're in the world, choose US East one.
+
+19
+00:00:48.405 --> 00:00:50.325
+This is critical for our hands-on.
+
+20
+00:00:50.325 --> 00:00:53.685
+To go smoothly, choose US east one only always
+
+21
+00:00:54.225 --> 00:00:57.325
+for our hands-on, and then click on enter again.
+
+22
+00:00:57.455 --> 00:01:01.085
+Click enter. We have now configured A-W-S-C-L-I on our
+
+23
+00:01:01.085 --> 00:01:01.325
+system.

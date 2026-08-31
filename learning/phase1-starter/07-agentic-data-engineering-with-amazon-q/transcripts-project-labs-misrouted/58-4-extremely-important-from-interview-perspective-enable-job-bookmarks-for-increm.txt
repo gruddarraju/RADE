@@ -1,0 +1,185 @@
+Course: Agentic Data Engineering with Amazon Q
+Lesson: 4 Extremely Important from Interview Perspective - Enable Job bookmarks for incremental processing RESUME
+============================================================
+
+All right, let's implement the incremental processing in job number two now,
+first, and then look at job number three.
+Job number two simply pulls the data from raw to curated.
+So let's go to our Glue console and look at the raw to
+curated. I feel it's right here. In fact, I'll click on this.
+The simple solution is to actually go to Job details and scroll
+down, and you see the Job bookmark here?
+You go to enable this, okay? It says it can remember previously
+processed data. Enable it, okay? And if you
+keep it disabled, it'll ignore said information, okay?
+So enable it now, and, uh, save it. And one more thing is if you just
+enable it, it will not work. There is one more
+critical thing, okay, which you have to
+really take care of, and that is you go to Script. Okay?
+I'll provide the script to you. It's an updated script.
+It's not the one that you used before, okay?
+Below this video or above this video, you will see the script.
+Go to your VS Code, get the
+script, go back to Script here, delete, and
+right-click and paste again, and then save it.
+Okay? I'll tell you what the difference is. The difference here is this, okay?
+In the previous script, if you have it, take...
+open it and take a look, okay? Now, we discussed about this in deep dive also, that
+when you're reading a file, you can re-read it as a Spark data frame, but
+here
+we are reading as a dynamic frame. The dynamic frame is a
+concept of AWS Glue, okay? It is
+specific to AWS Glue alone. Now, what is dynamic frame?
+It is discussed in deep dive. For the Glu- the Glue
+bookmark, job bookmark to work, you have to be reading the
+data through the dynamic frame. And
+dynamic frame is created from the catalog, and you mention the
+database name, which is our mission database, and table name is, which
+holds the raw data, is hvfhv, hvfhv.
+If I go to the databases and con-- I want to confirm that.
+So here we have the raw data in this table, curated
+in this table, and we have three tables for aggregated.
+I want to reiterate, for the job bookmark to work,
+first thing is you got to enable it, enable it, and then second thing
+is you got to be reading the data not
+directly as Spark data frame, but as a dynamic
+frame from the catalog. And the critical thing here is
+that you have to have this transformation context.
+You can name this whatever you want, but this is, it doesn't matter, but this thing
+has to be there. And just to add some more theoretical concept here,
+um, this also works because the code is within job init
+and job commit, okay? These are the critical things you got to know,
+understand from theoretical perspective as well as from interview perspective
+also. So three things. One is you got to enable it, enable job
+bookmarks in the script. By default, the job init is added anyway.
+Job init and, uh, job commit is added anyway, so all your code, transmission code,
+all the code you write is within the job init and job commit
+anyway. So that is taken care of by default, but that is a
+theoretical thing. You got to understand that.
+The critical thing is when you read the data, you got to read from the
+catalog to create the dynamic frame using Glue
+context. And you got to provide the database name and table name and
+provide a transformation context, any name here, in fact.
+And then you convert the dynamic frame to a Spark data
+frame and do your regular Spark coding as such.
+So when you do this, when you do this, what will happen is the Glue job will be
+able to understand what partitions of the data it
+has really read from the S3 bucket, and then
+process the new partitions alone,
+okay? So to save the code and close this...
+And lastly, before we run the code, you have to, um, make sure that the Glue
+catalog table actually has information about the par- new partition,
+right? Now, you are actually going to be reading from the Glue catalog
+table, and we have got the new
+partition, which is the November twenty
+twenty-six in our case, okay? Which was not there
+before. We got to update that thing in the Glue catalog
+table right here. So if you go to the database here and deliver table, go to our
+database and look at the table. If you
+scroll down, look at the partitions we have here.
+What do we have in the partitions? We have twenty twenty-four and twenty
+twenty-five, but we have deleted all the
+data, right? And we have just loaded twenty
+twenty-five November alone, which we do not have here.
+November is not here. So we need to get this
+updated. So one way is to simply just go to the crawler and, uh, you
+know, run the crawler again. It'll go to the S3 bucket and scan it.
+But why run the crawler? We have an alternate method here, okay?
+In the script itself, we can add a command called as
+MSCK repair table. This will actually
+update the partitions in the Glue catalog table, okay?
+Again, a very, very important interview question.
+If at all the partitions get updated in the S3
+and your catalog table is not updated with
+the, with the latest partitions, you should be running
+MSCK repair so that new partitions are discovered
+and updated in the catalog table. And finally, and
+run it. It's running right now, and it should create the curated folder
+for us with just November twenty twenty-five's
+data. It's all done. Took about six minutes.
+Let's go and take a look at our S3 bucket.
+We curate it here, and we go back inside.
+We see the November twenty twenty-five right here for all the days, in
+fact. If you go to Output logs and click
+here, it'll take you to CloudWatch, and if you look at the log,
+you'll find that the MSCK repair has finished.
+Initially, it loaded all the data, running MSCK repair to discover new
+partitions. It has finished, and if you go to the Glue catalog
+table, you will now see twenty twenty-five eleven
+as well in the next page right here.... right.
+So with this, it will be able to load the data because it now knows
+that we have a new partition in the S3 bucket.
+Now, because we have enabled
+the bookmark, okay, it should not really pull the
+process data. So let's run it again.
+Job details already has the bookmark enabled, which is right here, in
+fact. Right here, we'll just run it now. And it finished.
+If I go to the output logs, it, uh, is going to show
+me that it has run the MSK repair and, uh,
+it's trying to load the data with job bookmarks, and it
+shows here initial record count is zero. No new data processed.
+Job bookmarks filtered all the data. Get the point?
+If you go back to S3, S3 has the data.
+It, it has the November twenty twenty-five data,
+okay? The data is there, but the job bookmark
+was enabled, and the code was within the job.init
+and within the job.commit,
+and the data was being read through
+the dynamic frame from the catalog, and
+this catalog table was also updated
+with the latest partition through MSK repair.
+So when all these conditions are met, it is able to skip
+the r- the data, which has already been processed.
+Very, very important from the interview
+perspective. Now, other interview question could be: How do you really
+process that data again, now that the joo- b-bookmark is
+enabled? What if you want to really process that data again, this
+data again, for whatever reason, okay? Whatever reason, it could...
+There could be that, uh, ah, there was some need for which you wanted to
+process it. Whatever may be the reason, how could you process this
+file? Job bookmark is enabled. Now, if you run it again, it will not
+read this file because it will say, "Yes, I've read the file again, uh, in the
+past," okay? "I will not read it again," it will say.
+So the solution for that is you got to go here, choose this, and
+then action,
+reset bookmark. When you do a reset bookmark, it says, "You are about to
+reset the bookmark. Save information about the job.
+Tracking of the previously processed data is lost
+on reset. Do you want to reset?" And when you run it
+again, it will read the data. So give a
+try yourself. It will do that, all right?
+Even if you just know this much, you should be in a very, very
+good position from the interview perspective.
+And lastly, how does the job bookmark even track
+the already processed files? How does it even know that,
+okay, I had processed this file before, I should not be processing it again?
+It is based on the last modified timestamp of the file.
+This file, particular file, has a timestamp of, uh, Jan five,
+uh, nineteen twenty-five, right? This came in at that particular time. Okay?
+So I've put the information here, that this is the file and this is the timestamp.
+So let's say the job actually, uh, runs at,
+um... Let's say twenty thirty-five, twenty-five, okay,
+one hour later. So it is going to be running one
+hour later.
+So this file had come before the job run,
+when the job ran, and so it will be able to process it. And imagine the next month.
+What will happen the next month is you'll get new file here, right?
+You'll get, uh, let's say, December data, and this one will be in, let's
+say, February, and, uh, maybe, let's
+say, six-- eighteen twenty-five, okay, in the evening or so.
+So the-- Let's say the job now runs on Feb
+five, at, let's say, again, twenty
+twenty-five, okay? This is a scheduled job.
+It, it is a scheduled job, and probably, um, it runs every one
+the same time, so it starts running at twenty
+twenty-five. And now, when the job runs at this particular
+time, it finds that, okay, we have,
+uh, an, a fi- a file here
+with this timestamp, but the previous runtime was this,
+okay? It was Jan five. So any file before
+that, it's not, not going to read that.
+So any data after this, it's going to read and process it.
+So basically, it uses the, the file's timestamp to
+understand what needs to be processed.
+This you need to understand, at least.
+This, this theoretical understanding you need to have. Okay?

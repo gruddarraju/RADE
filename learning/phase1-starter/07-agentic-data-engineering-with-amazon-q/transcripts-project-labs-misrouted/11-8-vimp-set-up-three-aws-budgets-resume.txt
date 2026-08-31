@@ -1,0 +1,20 @@
+Course: Agentic Data Engineering with Amazon Q
+Lesson: 8 VIMP - Set up three AWS Budgets RESUME
+============================================================
+
+Next step is to create a AWS budget.
+Very, very important. So let's say if you spin up a database
+on AWS later in the program
+and you forgot to turn off, you might get a huge bill.
+And to avoid that, go to YouTube, look at any of the videos,
+and create three budgets.
+Budget, one for $10 budget, two for 20 budget,
+three for $30.
+This will help you get email alerts when your expense on AWS
+is going to be hitting that amount,
+or it's crossing that amount.
+So when you get an email, you can then go
+and look at if you have any resource
+that is actually still there on AWS,
+which is actually getting you this high amount of bill.
+So make sure you do that. Do not skip this step.

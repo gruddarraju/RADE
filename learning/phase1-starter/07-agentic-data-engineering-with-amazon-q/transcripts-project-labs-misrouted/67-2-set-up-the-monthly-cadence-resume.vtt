@@ -1,0 +1,189 @@
+WEBVTT
+
+1
+00:00:00.260 --> 00:00:00.990
+Welcome back.
+
+2
+00:00:01.005 --> 00:00:03.585
+Now, what's the next step to schedule this monthly, right?
+
+3
+00:00:03.845 --> 00:00:05.385
+So I'm on even schedules right now.
+
+4
+00:00:05.385 --> 00:00:06.465
+If you're not there on the
+
+5
+00:00:06.465 --> 00:00:07.585
+left, right hand, you have schedules here.
+
+6
+00:00:07.585 --> 00:00:10.745
+Click on that and then, uh, click on the create schedule.
+
+7
+00:00:11.375 --> 00:00:13.785
+This time choose recurring schedule. Okay?
+
+8
+00:00:14.205 --> 00:00:15.785
+And, uh, name it as mission.
+
+9
+00:00:16.705 --> 00:00:21.185
+D-E-H-H-O-F-N-Y-C-T-L-C,
+
+10
+00:00:21.215 --> 00:00:23.025
+monthly cadence.
+
+11
+00:00:23.435 --> 00:00:26.305
+It'll come down. Now here you gotta
+
+12
+00:00:26.515 --> 00:00:28.145
+write a crown expression.
+
+13
+00:00:28.205 --> 00:00:31.305
+And to find a crown expression, we'll ask amazing q
+
+14
+00:00:31.685 --> 00:00:33.985
+and it has given us the information here.
+
+15
+00:00:34.045 --> 00:00:36.425
+It says there should be the crown expression.
+
+16
+00:00:36.815 --> 00:00:40.145
+Zero means zero minutes, 22 hours, which is 10:00 PM
+
+17
+00:00:41.045 --> 00:00:42.225
+Day of the month is fast.
+
+18
+00:00:43.055 --> 00:00:44.585
+Star means every month.
+
+19
+00:00:44.845 --> 00:00:46.985
+And caution mark for day of the week
+
+20
+00:00:46.985 --> 00:00:49.065
+because you want to this to be ignored
+
+21
+00:00:49.065 --> 00:00:51.025
+because day of month is specified already.
+
+22
+00:00:51.245 --> 00:00:54.465
+And then year, every year, we'll just copy this
+
+23
+00:00:54.845 --> 00:00:57.265
+and we'll go back to the Ian bridge
+
+24
+00:00:57.405 --> 00:00:59.785
+and paste that Corona expression right here.
+
+25
+00:01:00.525 --> 00:01:04.665
+It does show the next trend, 10 trigger dates as well. Okay?
+
+26
+00:01:04.875 --> 00:01:08.185
+Every month at 10:00 PM and scroll down, choose off.
+
+27
+00:01:08.485 --> 00:01:09.665
+And then finally do a next.
+
+28
+00:01:10.045 --> 00:01:14.025
+And then again, choose start execution for step function,
+
+29
+00:01:14.165 --> 00:01:17.545
+choose your step function, scroll down and do a next.
+
+30
+00:01:17.815 --> 00:01:20.065
+Then finally, use an existing rule,
+
+31
+00:01:20.085 --> 00:01:21.985
+the one you already have, even bridge
+
+32
+00:01:22.055 --> 00:01:23.465
+role, even bridge role.
+
+33
+00:01:24.085 --> 00:01:27.365
+And then do a next, finally review.
+
+34
+00:01:27.665 --> 00:01:31.205
+And that's pretty much it. So your schedule is now set.
+
+35
+00:01:32.105 --> 00:01:36.125
+If you're doing this, make sure to just let it run only once
+
+36
+00:01:36.125 --> 00:01:37.765
+and keep an alarm in your phone.
+
+37
+00:01:38.565 --> 00:01:39.485
+Actually keep multiple alarms,
+
+38
+00:01:39.485 --> 00:01:40.525
+otherwise it'll run every month.
+
+39
+00:01:40.595 --> 00:01:43.885
+Okay? And then you'll get some charges. That's it.
+
+40
+00:01:43.885 --> 00:01:45.005
+And then finally, when you're done,
+
+41
+00:01:45.065 --> 00:01:47.805
+you can just delete your schedule from here.
+
+42
+00:01:47.805 --> 00:01:49.445
+In fact, okay, delete that.
+
+43
+00:01:49.615 --> 00:01:50.645
+Don't forget this part because
+
+44
+00:01:50.645 --> 00:01:51.925
+otherwise it'll run every month.
+
+45
+00:01:52.425 --> 00:01:55.645
+And then, uh, you will get your bill
+
+46
+00:01:55.645 --> 00:01:56.845
+with some charges on it.
+
+47
+00:01:57.065 --> 00:02:01.685
+So this is how we actually schedule our jobs in AWS.

@@ -1,0 +1,65 @@
+WEBVTT
+
+1
+00:00:00.315 --> 00:00:02.285
+Next step is to create a AWS budget.
+
+2
+00:00:02.435 --> 00:00:05.325
+Very, very important. So let's say if you spin up a database
+
+3
+00:00:05.325 --> 00:00:06.885
+on AWS later in the program
+
+4
+00:00:07.545 --> 00:00:10.885
+and you forgot to turn off, you might get a huge bill.
+
+5
+00:00:11.225 --> 00:00:15.245
+And to avoid that, go to YouTube, look at any of the videos,
+
+6
+00:00:15.665 --> 00:00:17.925
+and create three budgets.
+
+7
+00:00:18.185 --> 00:00:21.485
+Budget, one for $10 budget, two for 20 budget,
+
+8
+00:00:21.485 --> 00:00:22.605
+three for $30.
+
+9
+00:00:23.155 --> 00:00:27.085
+This will help you get email alerts when your expense on AWS
+
+10
+00:00:27.225 --> 00:00:29.005
+is going to be hitting that amount,
+
+11
+00:00:29.305 --> 00:00:30.885
+or it's crossing that amount.
+
+12
+00:00:31.065 --> 00:00:32.845
+So when you get an email, you can then go
+
+13
+00:00:32.845 --> 00:00:35.125
+and look at if you have any resource
+
+14
+00:00:35.125 --> 00:00:37.765
+that is actually still there on AWS,
+
+15
+00:00:37.845 --> 00:00:40.365
+which is actually getting you this high amount of bill.
+
+16
+00:00:40.625 --> 00:00:43.685
+So make sure you do that. Do not skip this step.

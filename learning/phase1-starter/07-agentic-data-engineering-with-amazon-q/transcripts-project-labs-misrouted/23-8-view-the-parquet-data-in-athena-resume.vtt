@@ -1,0 +1,209 @@
+WEBVTT
+
+1
+00:00:00.160 --> 00:00:02.805
+After the caller is finished crawling, you should see
+
+2
+00:00:03.775 --> 00:00:05.955
+the status has completed and table change.
+
+3
+00:00:06.015 --> 00:00:07.515
+The one table change, click on that.
+
+4
+00:00:07.735 --> 00:00:10.715
+You'll see the tables added as H-V-F-H-V-H-V-F-H-V.
+
+5
+00:00:10.985 --> 00:00:14.255
+Next, go to the database here under the data catalog.
+
+6
+00:00:14.795 --> 00:00:17.695
+Go to your database mission, D-H-H-O-F-N-Y-C-T-L-C.
+
+7
+00:00:18.665 --> 00:00:21.535
+Click on that and then refresh it.
+
+8
+00:00:21.725 --> 00:00:23.055
+Refresh this display thing here.
+
+9
+00:00:23.055 --> 00:00:24.095
+You should see the table right here.
+
+10
+00:00:24.095 --> 00:00:25.575
+In fact, this show the table name.
+
+11
+00:00:25.705 --> 00:00:27.015
+Click on the table name right here.
+
+12
+00:00:27.315 --> 00:00:30.455
+You can see that the crawler properly classified the
+
+13
+00:00:31.165 --> 00:00:32.295
+file as Parquet.
+
+14
+00:00:32.395 --> 00:00:36.135
+And the table is in our database. Data is in this location.
+
+15
+00:00:36.755 --> 00:00:40.875
+The table points to two, this location.
+
+16
+00:00:41.135 --> 00:00:43.395
+And if you scroll down, you can see the schema
+
+17
+00:00:43.425 --> 00:00:46.835
+that the crawler created, has the column names here
+
+18
+00:00:46.855 --> 00:00:48.315
+and the data types as well,
+
+19
+00:00:48.315 --> 00:00:50.995
+which has been accurately captured by the crawler.
+
+20
+00:00:50.995 --> 00:00:53.675
+There's about 20 fields in the file.
+
+21
+00:00:53.975 --> 00:00:55.915
+We can then scroll up, scroll up,
+
+22
+00:00:56.255 --> 00:00:58.875
+and then go to actions right here.
+
+23
+00:01:00.055 --> 00:01:03.595
+And then click on view data. You'll get a popup like this.
+
+24
+00:01:04.545 --> 00:01:05.725
+You'll be taken to Athena.
+
+25
+00:01:05.725 --> 00:01:07.165
+So click on Proceed
+
+26
+00:01:07.465 --> 00:01:09.925
+and you'll come to this particular Athena console here.
+
+27
+00:01:10.105 --> 00:01:11.845
+And you're gonna go to query settings
+
+28
+00:01:12.385 --> 00:01:14.245
+and click on manage right here.
+
+29
+00:01:14.545 --> 00:01:16.325
+You'll get this particular popup window.
+
+30
+00:01:16.655 --> 00:01:18.045
+Click on browse three.
+
+31
+00:01:18.345 --> 00:01:20.885
+You'll see a bucket called as Mission, D-E-H-H-O-F,
+
+32
+00:01:20.985 --> 00:01:22.005
+Athena Query Results.
+
+33
+00:01:22.065 --> 00:01:26.445
+Choose your bucket with this name, mission, D-H-H-O-F,
+
+34
+00:01:26.625 --> 00:01:27.845
+Athena Query Results.
+
+35
+00:01:28.585 --> 00:01:31.525
+Choose that and then scroll down and save.
+
+36
+00:01:31.755 --> 00:01:33.805
+This will show up like this right here.
+
+37
+00:01:34.945 --> 00:01:37.745
+And then scroll up, go back to the editor.
+
+38
+00:01:38.165 --> 00:01:42.165
+You already have the query here that is auto-populated.
+
+39
+00:01:42.305 --> 00:01:44.965
+You are gonna come down and click on a run.
+
+40
+00:01:45.265 --> 00:01:46.765
+So this will show you the data
+
+41
+00:01:48.255 --> 00:01:52.345
+from the file in the S3 bucket on your query editors
+
+42
+00:01:53.215 --> 00:01:55.455
+results view.
+
+43
+00:01:55.515 --> 00:01:57.215
+As such, all the 20 columns
+
+44
+00:01:57.485 --> 00:02:00.695
+that is saw in the table in blue catalog log, you're able
+
+45
+00:02:00.695 --> 00:02:02.695
+to view the data in them right here.
+
+46
+00:02:02.955 --> 00:02:05.855
+So this is how you actually look at the data,
+
+47
+00:02:06.265 --> 00:02:08.415
+understand the data for your analysis,
+
+48
+00:02:08.675 --> 00:02:11.255
+and right here it choose data database
+
+49
+00:02:11.255 --> 00:02:14.575
+that you have called Mission, D-E-H-H-O-F-N-O-C-T-L-C.
+
+50
+00:02:14.995 --> 00:02:16.615
+And you shoot the table here as well,
+
+51
+00:02:16.635 --> 00:02:18.095
+and you expand on this.
+
+52
+00:02:19.075 --> 00:02:22.695
+You should see the columns and the data types here as well.

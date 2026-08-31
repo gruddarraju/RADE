@@ -1,0 +1,277 @@
+WEBVTT
+
+1
+00:00:00.170 --> 00:00:01.650
+Alright, the project starts then.
+
+2
+00:00:01.650 --> 00:00:03.215
+Okay? Obviously the first thing
+
+3
+00:00:03.215 --> 00:00:04.375
+you'll do is download the data.
+
+4
+00:00:04.515 --> 00:00:05.575
+You'll go to the location
+
+5
+00:00:05.685 --> 00:00:07.575
+that the business name has given you,
+
+6
+00:00:07.635 --> 00:00:09.335
+and you'll download the data on your laptop.
+
+7
+00:00:09.725 --> 00:00:12.335
+Next, you'll have to upload this Parquet file
+
+8
+00:00:12.795 --> 00:00:13.895
+to a data lake.
+
+9
+00:00:14.235 --> 00:00:16.615
+Now, what's a data lake? Data lake is something
+
+10
+00:00:16.615 --> 00:00:21.255
+where you can store any amount of data, any kind of data
+
+11
+00:00:21.675 --> 00:00:23.095
+for a very, very cheap price.
+
+12
+00:00:23.395 --> 00:00:25.735
+You wanna store Excel sheet, you wanna store parquet,
+
+13
+00:00:25.735 --> 00:00:28.935
+you wanna store log files, you wanna store media files,
+
+14
+00:00:28.935 --> 00:00:30.095
+you wanna store video files.
+
+15
+00:00:30.395 --> 00:00:32.775
+You can serve all of that in a data lake
+
+16
+00:00:33.355 --> 00:00:34.455
+at a very, very cheap price.
+
+17
+00:00:34.755 --> 00:00:37.255
+And on AWS data lake is built on
+
+18
+00:00:37.815 --> 00:00:39.575
+a service called as s threes.
+
+19
+00:00:39.935 --> 00:00:42.535
+I can search S3 here and click on S3.
+
+20
+00:00:42.935 --> 00:00:44.255
+I have many, many buckets here.
+
+21
+00:00:44.255 --> 00:00:46.295
+These are the buckets I'll tell you about them shortly.
+
+22
+00:00:47.065 --> 00:00:48.935
+These are many buckets that you have here.
+
+23
+00:00:49.575 --> 00:00:52.455
+A combination of this, all of this becomes your data lake.
+
+24
+00:00:52.675 --> 00:00:54.695
+Now what are these different things you see here?
+
+25
+00:00:54.695 --> 00:00:57.935
+These are called as buckets, okay? General purpose buckets.
+
+26
+00:00:57.935 --> 00:01:02.215
+These are, and you will create something called as mission,
+
+27
+00:01:02.415 --> 00:01:05.615
+D-H-H-O-F-N-Y-C-T-L-C, bucket in your account.
+
+28
+00:01:06.035 --> 00:01:07.975
+So when I click on this, I have a folder
+
+29
+00:01:07.975 --> 00:01:09.015
+here called A raw, okay?
+
+30
+00:01:09.095 --> 00:01:10.215
+I can create folders here
+
+31
+00:01:10.715 --> 00:01:12.775
+and I can organize the data by folders.
+
+32
+00:01:12.955 --> 00:01:17.575
+And within this, as called as hv, FHV, why HV FHV?
+
+33
+00:01:17.575 --> 00:01:21.655
+Because I am downloading the high volume FHV data.
+
+34
+00:01:22.035 --> 00:01:24.455
+And here I have uploaded the Parque file,
+
+35
+00:01:24.455 --> 00:01:25.495
+which you'll do shortly.
+
+36
+00:01:25.755 --> 00:01:29.815
+So the first step for you would be to get a bucket created.
+
+37
+00:01:30.645 --> 00:01:33.615
+Okay? Now, who's gonna get the bucket?
+
+38
+00:01:34.635 --> 00:01:37.015
+You will not do that in every company.
+
+39
+00:01:37.195 --> 00:01:40.055
+We have cloud engineers, you may call them cloud engineers,
+
+40
+00:01:40.055 --> 00:01:41.935
+we call them cloud infrastructure engineers.
+
+41
+00:01:42.005 --> 00:01:44.775
+There's a cloud engineering team, which is responsible
+
+42
+00:01:44.775 --> 00:01:45.855
+for creating these buckets.
+
+43
+00:01:46.075 --> 00:01:47.375
+So you'll email them, Hey,
+
+44
+00:01:47.375 --> 00:01:49.095
+I want a bucket for my new project.
+
+45
+00:01:49.365 --> 00:01:52.215
+They will create it for you in the hands-on video
+
+46
+00:01:52.685 --> 00:01:55.215
+that you'll now watch in a few minutes.
+
+47
+00:01:55.405 --> 00:01:56.895
+I've given you a script.
+
+48
+00:01:57.395 --> 00:01:58.535
+Now you'll run the script
+
+49
+00:01:58.635 --> 00:02:01.895
+and it'll automatically create the bucket for you.
+
+50
+00:02:02.235 --> 00:02:04.255
+You imagine that that script is being run
+
+51
+00:02:04.315 --> 00:02:06.855
+by the cloud engineering team to create the bucket for you,
+
+52
+00:02:06.855 --> 00:02:08.295
+but here you are running it yourself.
+
+53
+00:02:08.435 --> 00:02:09.695
+So once you have the bucket ready,
+
+54
+00:02:10.115 --> 00:02:13.485
+you wanna create the folders and upload the file here.
+
+55
+00:02:13.825 --> 00:02:15.725
+All of this is shown to you in the next few videos.
+
+56
+00:02:16.065 --> 00:02:17.405
+So that is the first step, right?
+
+57
+00:02:17.545 --> 00:02:18.805
+You, you have downloaded the data.
+
+58
+00:02:19.105 --> 00:02:21.845
+Now you have uploaded that into the data lake.
+
+59
+00:02:22.185 --> 00:02:23.525
+Now this is still a park data.
+
+60
+00:02:23.545 --> 00:02:24.845
+It is, this is this folder,
+
+61
+00:02:24.985 --> 00:02:26.765
+and this bucket is like a container, right?
+
+62
+00:02:27.735 --> 00:02:29.235
+It is like your hard desk.
+
+63
+00:02:29.255 --> 00:02:31.155
+You are able to store whatever you wanna store,
+
+64
+00:02:31.455 --> 00:02:32.915
+except on Windows or Mac.
+
+65
+00:02:32.915 --> 00:02:35.275
+You can open a a video file and view it.
+
+66
+00:02:35.535 --> 00:02:37.995
+But here, you can't open the que file for that matter.
+
+67
+00:02:37.995 --> 00:02:40.675
+Even you, even on your laptop, you can't open a que file.
+
+68
+00:02:40.855 --> 00:02:43.875
+So how can you give access to the analyst to this data?
+
+69
+00:02:44.215 --> 00:02:47.035
+So that's the next step, right? Talk to you soon.

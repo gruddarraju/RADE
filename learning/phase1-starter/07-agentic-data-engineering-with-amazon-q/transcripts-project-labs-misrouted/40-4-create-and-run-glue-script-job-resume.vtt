@@ -1,0 +1,245 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:00.320
+Right.
+
+2
+00:00:00.320 --> 00:00:02.165
+So this code is already, I will be providing this
+
+3
+00:00:02.165 --> 00:00:03.285
+to you in about the video.
+
+4
+00:00:04.525 --> 00:00:07.205
+Download that and uh, put that in the folder.
+
+5
+00:00:07.355 --> 00:00:08.685
+Mission D-H-H-O-F.
+
+6
+00:00:09.305 --> 00:00:11.045
+Now we'll go back to a WS console
+
+7
+00:00:11.585 --> 00:00:14.525
+and this time, see the notebook was
+
+8
+00:00:14.545 --> 00:00:16.765
+for iterative code development.
+
+9
+00:00:17.035 --> 00:00:20.085
+Okay? When it comes to really running the code
+
+10
+00:00:20.505 --> 00:00:24.405
+as a data pipeline job, you need to use this script data.
+
+11
+00:00:24.665 --> 00:00:27.925
+So we'll click on that and it's a Pi Spark job.
+
+12
+00:00:28.465 --> 00:00:30.485
+So we'll leave the engine as Spark itself
+
+13
+00:00:30.665 --> 00:00:32.285
+and click on Create Script.
+
+14
+00:00:32.625 --> 00:00:33.885
+We have a boilerplate code here.
+
+15
+00:00:34.095 --> 00:00:36.965
+We'll delete this code and we'll go
+
+16
+00:00:36.965 --> 00:00:38.325
+to our visual studio code.
+
+17
+00:00:38.635 --> 00:00:43.045
+Control a copy, right click copy, go back to glue,
+
+18
+00:00:43.215 --> 00:00:44.645
+right click paste.
+
+19
+00:00:45.475 --> 00:00:46.525
+It's all pasted here.
+
+20
+00:00:47.545 --> 00:00:50.365
+Now the next thing, give the job a name.
+
+21
+00:00:50.665 --> 00:00:53.365
+So we'll go down to our VS code,
+
+22
+00:00:53.695 --> 00:00:56.525
+right click on the file name rename.
+
+23
+00:00:57.435 --> 00:00:59.575
+We can now copy do control C,
+
+24
+00:01:00.385 --> 00:01:02.205
+or you can also come here and do copy here.
+
+25
+00:01:02.665 --> 00:01:04.925
+Go back to the glue, click here,
+
+26
+00:01:05.465 --> 00:01:08.405
+remove the untitled Job characters.
+
+27
+00:01:08.655 --> 00:01:11.285
+Right Click and paste. There you go.
+
+28
+00:01:11.425 --> 00:01:14.325
+The, and then finally enter on your keyboard.
+
+29
+00:01:14.795 --> 00:01:17.605
+This will show the job details here.
+
+30
+00:01:17.865 --> 00:01:19.125
+Now you're gonna go and click on this.
+
+31
+00:01:19.625 --> 00:01:22.885
+Now, now we need to provide the role name, okay?
+
+32
+00:01:22.885 --> 00:01:25.405
+There's a role name that your team would've
+
+33
+00:01:25.565 --> 00:01:28.125
+provided, which is Mission, D-H-H-O-F, inclusive role.
+
+34
+00:01:28.425 --> 00:01:29.485
+And then we'll scroll down.
+
+35
+00:01:29.865 --> 00:01:31.725
+Now we don't need 10 workers, right?
+
+36
+00:01:32.185 --> 00:01:35.565
+We just need minimum of two workers. That's enough for us.
+
+37
+00:01:35.655 --> 00:01:36.845
+We'll change this to two.
+
+38
+00:01:37.145 --> 00:01:40.045
+Scroll down, everything else looks good.
+
+39
+00:01:40.305 --> 00:01:42.165
+So we'll go to this button called a save,
+
+40
+00:01:42.345 --> 00:01:44.445
+and then click on save.
+
+41
+00:01:44.555 --> 00:01:47.685
+That will create the job. So it's all done.
+
+42
+00:01:48.025 --> 00:01:51.685
+We can now run the job by clicking on the run button.
+
+43
+00:01:52.385 --> 00:01:55.805
+That's pretty much, so it has successfully started the job.
+
+44
+00:01:55.945 --> 00:01:57.845
+And it says to navigate run details.
+
+45
+00:01:58.505 --> 00:02:00.165
+We can click on the run details now,
+
+46
+00:02:00.785 --> 00:02:02.645
+and it takes us to this particular menu here.
+
+47
+00:02:02.905 --> 00:02:03.925
+Let we zoom out a bit.
+
+48
+00:02:04.465 --> 00:02:07.165
+It is running right now, and we can refresh it right here.
+
+49
+00:02:07.585 --> 00:02:11.125
+We just refresh it still running. We scroll down a bit.
+
+50
+00:02:11.585 --> 00:02:13.925
+We can click on the output log site here,
+
+51
+00:02:14.225 --> 00:02:17.445
+and, uh, it'll take us to the CloudWatch service
+
+52
+00:02:17.825 --> 00:02:20.525
+and we can just scroll down and click on this log stream.
+
+53
+00:02:20.995 --> 00:02:23.925
+This will show us that the job is running here, in fact,
+
+54
+00:02:23.985 --> 00:02:26.565
+but this'll take a few minutes and, uh, then you should see
+
+55
+00:02:27.345 --> 00:02:30.965
+the run status has finished, and you can go back to your S3
+
+56
+00:02:30.965 --> 00:02:32.565
+and then you can take a look there.
+
+57
+00:02:32.905 --> 00:02:35.245
+You should see the data for 2094
+
+58
+00:02:35.265 --> 00:02:38.245
+and 2025 for all the months and all the days.
+
+59
+00:02:38.545 --> 00:02:39.805
+So that's it for this job.
+
+60
+00:02:40.905 --> 00:02:43.685
+And, uh, we'll see what we need to do
+
+61
+00:02:44.385 --> 00:02:48.385
+to load the data from the curated to aggregated layer asset.

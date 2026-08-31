@@ -1,0 +1,156 @@
+Course: Agentic Data Engineering with Amazon Q
+Lesson: 4. Build the sequential pipeline using Step Function and run it RESUME
+============================================================
+
+Next, go to the search bar, look for step function
+and click on the step function I icon here.
+You'll then click on create state machine.
+Step function is a service name
+and we create something called a state machine cluster.
+And then name this as,
+and then name this as mission,
+D-H-H-O-F-N-Y-C-T-L-C, data pipeline.
+And then uh, click on continue. So what you see is this.
+Okay, there's a, a blank canvas you see here in fact.
+So next, choose JSON path and then go to code.
+Here you have the blank
+or the boilerplate code you see here.
+Go back to VS code, get the JSON,
+the Amazon Streets language code.
+I'll be attaching this to the video.
+Go back to step function straight machine
+and replace this with what you just copied.
+Now see what happened here. As soon
+as you pasted it on the right hand side, you're seeing
+that it is creating the job for you automatically.
+So this code, you see here, this code,
+entire code in fact creates the job on the right hand side.
+This is the definition of the co of the job.
+In fact, now you gotta be replacing certain things here.
+You gotta be, uh, replacing the
+account ID with your account id.
+So otherwise it'll not really work.
+So make sure you get the account.
+Id copy that and look for account id.
+So we have four of them in fact.
+So we'll replace this part including the dollar,
+all the four replaced, we'll just drag it to the left.
+I'll zoom out here and this is how the code looks like.
+Okay, the first job data ingestion
+that pulls from the N-Y-C-L-C to the raw folder.
+Next one, route to curated.
+The next one is curated to aggregate it.
+If any of the job fails, the error is caught
+and a message is sent to your email via SNS.
+And if it does succeed, it is still sent to your email.
+So if you click on this job here, it'll take it
+to the exact section You see here,
+the show is highlighted in the blue here,
+which has the code for this job.
+Likewise for this, it'll take it to the appropriate section.
+Like for, for this, it'll take the appropriate section.
+So you get the point that
+what you create here gets reflected on the right hand side.
+Next, go to config right here. Config, uh, scroll up.
+Your teammate would've already given the role.
+So choose the role that you already have,
+which is mission, D-E-H-H-O-F, step function, role.
+And then finally go to the right hand side.
+Top click on create, you got the job created.
+Now when I say job, it is a state machine. So that's it.
+Now you can simply execute this job. Let's go and do that.
+Click on execute right here and it opens another page.
+And here it asks you to start execution.
+We can then simply start execution right here
+with the orange button and you can scroll down
+and it's already showing the pipeline running.
+It is in blue right now,
+which means it's in progress you see here.
+And if you scroll down a bit,
+you will see the different events that are getting executed
+as a part of the state machine.
+Right now, this task is submitted. This glue job is running.
+In fact, you can click here, it will
+take you to the glue job run.
+So we are in the glue studio now
+and this job is currently, uh, running.
+It's already finished by the way,
+and then it shows succeeded here as well.
+And then the next, uh, one is now in fact running.
+So likewise, you will see, um, things running step by step.
+And you see this one is showing green here.
+It means that it succeeded.
+If it all something fails, you will see it, uh, as red.
+And then one of these branches would, uh, then get called or
+or traverse.
+I would say that's the right word.
+And appropriate, uh, state
+or the tasks would then get executed.
+Okay? Now this is a happy path.
+It's gonna actually succeed
+because we know the jobs are running fine.
+What I would suggest is, uh, that go back to your glue job
+and uh, make some changes.
+So click on this and uh, just try to kind
+of add some weird error here.
+So let's say change this to just add a space here.
+It's syntax, right? And save it
+and uh, then go back to your, uh, state machine
+and then click on execute here.
+It'll create one more execution
+and then you will see it is failing.
+This will the first one will fail
+and this will get caught here, right here in fact.
+And um, also see whether you're getting an email or not.
+Okay? Now, when this finishes,
+you should be getting an email.
+Okay? So give this a try a simple thing, right?
+It's not difficult at all. And I will tell you one thing
+before I end this video, that creating the state machine
+with the help of this code is not an easy thing at all.
+Okay? Before the days of AI understanding this
+was not easy, okay?
+Because it's about learning one
+more language, research language.
+So you have really have no excuse at all.
+Now to not learn
+and the deep dive course, I'll talk about some more things
+about step functions and state machines.
+So make sure you go through that as well
+and make sure this HandsOn is finished.
+And if you have loved what we've done so far right now,
+you are actually seeing the pipeline getting created.
+Now we had built things in isolation
+before one job, second job, third job.
+Now we are running them sequentially, okay?
+We are also catching errors.
+We are also catching your success events as well. Also.
+So if you are loving this so far
+and if you found a lot of value, a lot of in the programs
+of far, and if have was able to instantly in the confidence
+that you can also do it, then please go to my Google page
+and gimme a five star review.
+Don't just, just put the five star review there,
+but really take some time, two or three minutes
+and put down what you've felt so far,
+what you've accomplished so far.
+Look at the reviews here, read them
+and do make sure that your review is really detailed.
+I would love to read that review.
+Like this one here, in fact
+has given me a good, good review.
+In fact, these reviews motivate me to do a lot better.
+And look at this one. In fact, you know, Mo
+Sma a detailed review in fact, okay?
+So whatever you felt so far the way I teach,
+the way the course is structured,
+the way the hands on is structured, what you've been able
+to accomplish, if you've been able
+to get the confidence, you're able to do it.
+And, and please put that down here.
+I'll be giving the link, direct link here.
+You won't even have to go to the Google and search it.
+I'll give the direct link right below the video.
+Please go there and, uh, spend about two, three minutes
+and gimme a five star detailed paragraph, revel review of
+what you felt so far.

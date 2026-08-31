@@ -1,0 +1,145 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:00.740
+You guys, welcome back.
+
+2
+00:00:00.740 --> 00:00:03.445
+Welcome back. I hope you have done the hands-on.
+
+3
+00:00:03.705 --> 00:00:04.925
+You have followed all the steps.
+
+4
+00:00:05.145 --> 00:00:08.765
+You, you are understanding of the development lifecycle,
+
+5
+00:00:08.905 --> 00:00:11.325
+the development process, the testing, the communication,
+
+6
+00:00:11.805 --> 00:00:15.125
+communication with data analysts, communication
+
+7
+00:00:15.125 --> 00:00:16.485
+with cloud engineers, and all of
+
+8
+00:00:16.485 --> 00:00:18.525
+that is getting into your system here,
+
+9
+00:00:18.705 --> 00:00:23.325
+and you're able to make sense of how a typical project
+
+10
+00:00:24.035 --> 00:00:25.125
+goes through different steps.
+
+11
+00:00:25.435 --> 00:00:29.125
+Okay? Now, when we ran the job from curated
+
+12
+00:00:29.125 --> 00:00:30.485
+to the aggregated, you know, we,
+
+13
+00:00:30.485 --> 00:00:32.605
+we used five workers over there.
+
+14
+00:00:32.605 --> 00:00:33.885
+It took about 11 minutes only, right?
+
+15
+00:00:34.425 --> 00:00:36.045
+Do we need so many workers?
+
+16
+00:00:36.385 --> 00:00:38.205
+Do we need to finish in 11 minutes?
+
+17
+00:00:38.345 --> 00:00:39.605
+That's the question you gotta ask,
+
+18
+00:00:39.605 --> 00:00:43.045
+because whatever you, you use in the cloud,
+
+19
+00:00:43.225 --> 00:00:44.485
+you'll be charged for that.
+
+20
+00:00:44.485 --> 00:00:46.885
+Even in the real world. You gotta be thinking from the
+
+21
+00:00:46.885 --> 00:00:50.565
+company's financial health perspective as well, in the sense
+
+22
+00:00:51.185 --> 00:00:52.845
+you don't wanna necessarily spend money.
+
+23
+00:00:53.225 --> 00:00:54.405
+It just really no real need.
+
+24
+00:00:54.625 --> 00:00:56.125
+If it is OnPrem, you don't,
+
+25
+00:00:56.125 --> 00:00:57.565
+you wouldn't really worry about all of these things,
+
+26
+00:00:57.565 --> 00:00:58.885
+but when it comes to cloud,
+
+27
+00:00:58.885 --> 00:01:00.885
+you gotta think about the cost as well.
+
+28
+00:01:00.985 --> 00:01:02.645
+So we will talk about
+
+29
+00:01:03.225 --> 00:01:06.805
+the cost optimization part about this job later.
+
+30
+00:01:06.955 --> 00:01:09.005
+Okay, we'll get to that part later.
+
+31
+00:01:09.345 --> 00:01:11.925
+But before we go to the next video, I want to write down
+
+32
+00:01:12.585 --> 00:01:13.645
+in your own words,
+
+33
+00:01:13.665 --> 00:01:15.965
+before you see others comments in your own words,
+
+34
+00:01:15.965 --> 00:01:17.005
+what you've learned so far.
+
+35
+00:01:17.395 --> 00:01:19.325
+Okay? Lemme just read that.
+
+36
+00:01:19.325 --> 00:01:23.045
+Alright, do that now before we go to the next video.

@@ -1,0 +1,8 @@
+Course: Agentic Data Engineering with Amazon Q
+Lesson: 3 Login to AWS using Root User and go to IAM RESUME
+============================================================
+
+Sign into AWS console.
+Go to this link here. Click on send to console.
+Log in using a your Route user.
+After you log in, search, I am Go to iam.

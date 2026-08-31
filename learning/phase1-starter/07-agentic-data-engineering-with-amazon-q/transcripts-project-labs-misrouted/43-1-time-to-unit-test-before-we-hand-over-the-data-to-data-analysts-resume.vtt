@@ -1,0 +1,329 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:02.405
+Alright, the job has run data is right here.
+
+2
+00:00:02.865 --> 00:00:06.365
+But how do we know if the data that is loaded here is
+
+3
+00:00:06.625 --> 00:00:08.365
+as per our expectations, what we,
+
+4
+00:00:08.465 --> 00:00:11.765
+we have set in the web mapping sheet, right?
+
+5
+00:00:12.425 --> 00:00:14.725
+Our code is supposed to do what is right here.
+
+6
+00:00:14.865 --> 00:00:16.165
+And of course we have used ai,
+
+7
+00:00:16.165 --> 00:00:18.045
+but we still have to do our unit testing.
+
+8
+00:00:18.045 --> 00:00:19.205
+It's called unit testing.
+
+9
+00:00:19.995 --> 00:00:21.885
+What we've been doing so far is development.
+
+10
+00:00:21.905 --> 00:00:23.605
+And as a part of development, we also have
+
+11
+00:00:23.605 --> 00:00:26.805
+to unit test our code we build, right?
+
+12
+00:00:26.905 --> 00:00:30.605
+So the output of the code is of course data in curate layer.
+
+13
+00:00:30.625 --> 00:00:34.165
+So we wanna test that whether it has really done its job
+
+14
+00:00:34.225 --> 00:00:35.405
+as per expectation or not.
+
+15
+00:00:35.405 --> 00:00:38.645
+So we gotta be validate all of this logic that is what
+
+16
+00:00:39.505 --> 00:00:40.845
+we should be doing in unit testing.
+
+17
+00:00:40.865 --> 00:00:43.925
+And also the data quality rules as well.
+
+18
+00:00:43.925 --> 00:00:46.205
+We gotta be validating these as well in unit testing.
+
+19
+00:00:46.345 --> 00:00:49.325
+So how can we now validate, okay,
+
+20
+00:00:50.185 --> 00:00:51.725
+how can we now do our unit testing?
+
+21
+00:00:51.985 --> 00:00:55.645
+So this data here, if you see is in par K format.
+
+22
+00:00:55.745 --> 00:00:57.605
+We even if you to download this
+
+23
+00:00:57.605 --> 00:00:59.165
+and open that, you cannot really open that.
+
+24
+00:00:59.305 --> 00:01:01.005
+And we have so many partitions.
+
+25
+00:01:01.005 --> 00:01:03.365
+So how do you then check data in all the files?
+
+26
+00:01:03.585 --> 00:01:05.725
+What's the strategy? Yeah, can you just think
+
+27
+00:01:05.725 --> 00:01:06.805
+for a moment how we can do that?
+
+28
+00:01:06.905 --> 00:01:10.605
+We, you have actually used a step I will be recommending now
+
+29
+00:01:10.605 --> 00:01:12.765
+in the past, just pause the video
+
+30
+00:01:12.785 --> 00:01:15.965
+and think how you can actually look at the data
+
+31
+00:01:16.505 --> 00:01:17.645
+within the parq file.
+
+32
+00:01:17.715 --> 00:01:18.925
+Okay? I hope you've already seen that.
+
+33
+00:01:19.265 --> 00:01:23.125
+So the next step obviously is to create tables on top
+
+34
+00:01:23.125 --> 00:01:24.165
+of this data, right?
+
+35
+00:01:24.545 --> 00:01:29.205
+Tables in a glue catalog. So that is what we'll do now.
+
+36
+00:01:29.345 --> 00:01:32.285
+But before that, remember you also have
+
+37
+00:01:32.795 --> 00:01:34.245
+rejection being done, right?
+
+38
+00:01:34.415 --> 00:01:36.485
+There was some data which if you remember,
+
+39
+00:01:36.985 --> 00:01:40.645
+did not meet these data quality rules and they got rejected.
+
+40
+00:01:40.825 --> 00:01:43.405
+So that information is also getting captured in the
+
+41
+00:01:43.425 --> 00:01:44.605
+log by our code.
+
+42
+00:01:45.075 --> 00:01:47.845
+Okay? So you're gonna go back to our blue console
+
+43
+00:01:48.585 --> 00:01:51.565
+and look at the logs here, click on the output logs,
+
+44
+00:01:51.945 --> 00:01:53.365
+it opens this CloudWatch log.
+
+45
+00:01:53.365 --> 00:01:55.045
+And if you scroll down towards the end,
+
+46
+00:01:55.425 --> 00:01:58.285
+it shows the initial record count for the two years is
+
+47
+00:01:59.125 --> 00:02:00.705
+around four 40 million records.
+
+48
+00:02:01.355 --> 00:02:03.585
+There were, there was some validation that was done.
+
+49
+00:02:03.605 --> 00:02:04.865
+And then we had
+
+50
+00:02:04.865 --> 00:02:07.105
+so many valid records, so many rejected records.
+
+51
+00:02:08.245 --> 00:02:10.825
+And the final count of records return
+
+52
+00:02:11.005 --> 00:02:13.505
+to S3 is four three 5 million records,
+
+53
+00:02:13.505 --> 00:02:16.185
+approximately four 35 million records, which,
+
+54
+00:02:16.245 --> 00:02:18.905
+and this number matches the wallet records.
+
+55
+00:02:19.175 --> 00:02:20.425
+This is what is in the log.
+
+56
+00:02:20.885 --> 00:02:23.465
+But we also should be validating that by
+
+57
+00:02:24.275 --> 00:02:28.015
+firing the queries on the BlueCat log table, which points to
+
+58
+00:02:29.045 --> 00:02:32.975
+this dataset, this entire dataset in curated folder.
+
+59
+00:02:33.185 --> 00:02:35.815
+We're gonna copy this, uh, S3 URI we see here.
+
+60
+00:02:35.995 --> 00:02:38.375
+And then we'll go back to, uh, glue console
+
+61
+00:02:38.755 --> 00:02:41.375
+and then we'll go to the data catalog.
+
+62
+00:02:41.955 --> 00:02:43.855
+And within this we'll go to crawler at,
+
+63
+00:02:43.855 --> 00:02:45.335
+click open in a new tab.
+
+64
+00:02:45.795 --> 00:02:48.975
+So we already have the crawler that we had before.
+
+65
+00:02:48.985 --> 00:02:51.575
+We'll just choose this one and go to action
+
+66
+00:02:52.275 --> 00:02:54.455
+and duplicate crawler.
+
+67
+00:02:54.595 --> 00:02:56.375
+And we can simply edit the path here, right?
+
+68
+00:02:56.435 --> 00:02:58.815
+We can simply edit the path, choose S3,
+
+69
+00:02:59.235 --> 00:03:02.375
+Add it, and then this time we will
+
+70
+00:03:02.895 --> 00:03:05.135
+actually crawl curated folder.
+
+71
+00:03:05.645 --> 00:03:07.815
+Okay. And then we'll update the source.
+
+72
+00:03:08.225 --> 00:03:10.055
+We'll then go to next here.
+
+73
+00:03:10.355 --> 00:03:12.015
+We don't want to over at the previous table,
+
+74
+00:03:12.115 --> 00:03:15.815
+so we'll now we'll just, uh, have a prefix as curated.
+
+75
+00:03:16.765 --> 00:03:19.175
+That way the previous table, which is pointing
+
+76
+00:03:19.175 --> 00:03:22.935
+to the raw table doesn't get updated.
+
+77
+00:03:23.395 --> 00:03:24.775
+And then we'll just do a next
+
+78
+00:03:25.195 --> 00:03:26.935
+and then we'll just, uh, come down.
+
+79
+00:03:26.995 --> 00:03:29.055
+And then finally we'll just create crawler.
+
+80
+00:03:29.755 --> 00:03:32.335
+And then we will simply run this
+
+81
+00:03:32.835 --> 00:03:34.175
+and wait for this to finish.
+
+82
+00:03:34.545 --> 00:03:37.015
+We'll just refresh it here. It's already running.

@@ -1,0 +1,134 @@
+Course: Agentic Data Engineering with Amazon Q
+Lesson: 4 Create Glue Notebook , load the curated data and enrich with Zone information RESUME
+============================================================
+
+Alright, go to search bar type glue.
+Click on AWS glue, go
+to ETL Jobs right on the left hand side.
+Click on notebook, start fresh.
+Choose the role you already have in the real world.
+This will be going to you by the team members.
+Create notebook. Next, open your VS code.
+Go to the notebook app provided.
+Put that in the folder
+that we code is referencing currently.
+So if you look here, I have put the
+notebook right here in this folder, which is
+what is open here in yes code.
+So can I get the file name?
+You're gonna write, click and copy.
+Go back to glue, click here. Remove what you have.
+What do you see there? Right click, paste that and enter.
+And then you see the red thing going on here.
+Go there, scroll down. It's already removed by the way.
+And you can go back to notebook.
+And then let's go back to the VS code.
+Scroll down, we're gonna copy this entire cell.
+I'm gonna copy, click on the cell and right click here.
+Copy cell, right click on this cell here.
+Control a delete and right click.
+And after delete you control V or there.
+So you were able to copy the code from your
+via code and then you will run this cell.
+So we'll go here on top, click here, run this.
+It is now gonna create the session spark session.
+Meanwhile, we'll delete the next cells that we don't need.
+We'll just go here, click on this knife symbol,
+we'll click on deleting all of them one by one.
+It's gone. We are waiting for the session
+to get created right now.
+Meanwhile, we'll go back to the V code, go
+to the next cell, click here.
+And again, three dots here.
+Copy cell, go back to notebook.
+So what did the first cell do?
+We are trying to get this park code run with the help
+of G one X worker type.
+And we need three workers
+and we are initializing this spark session.
+It's all done. Now we see the
+spark session has been created.
+So we are gonna go to this plus symbol
+here on this notebook.
+We have a new cell and now we're gonna
+just uh, do control V.
+So what does this code do?
+Okay, this code
+initially just assign the variables, their values.
+Okay, the bucket, the curated path
+where the curated data is, where the zone path is, right?
+Where the zone data look up, look up file is
+and then the aggregated path
+where we wanna store the aggregated data.
+And then we wanna just test this code only for
+the February, 2024.
+Only for now. So this essentially is
+to just set the variables.
+So we'll just run it now to run this we,
+we have anyway chosen this.
+It's shows blue here, we'll just run this
+cell and this shows busy.
+Yeah, it's all good. Now we have the output here as well.
+We'll go back to the via code. Scroll down.
+Now what is the first step?
+Step is to load the January, 2024 data,
+which is curated and through
+The zone lookup file.
+So we'll just click on this particular cell
+and then copy the cell here.
+Go back to notebook here we're gonna paste it.
+Okay, if you look at the code,
+we are simply loading the curated data for Jan 2024.
+We are also reading the zone lookup file. Okay?
+And then we're taking a look at the schemas
+and the sample data as well.
+We'll run this. Alright, so this is all loaded.
+We see we have 90 million records for Jan 2025.
+We also have loaded the zone lookup table.
+So the information is right here, the sample data.
+Now we loaded the zone lookup table
+because as mentioned here, the zone names the pickup,
+borrow, pick up zone, drop of borrow, drop
+of zone are de normalized in aggregated layer
+by joining the zone table during EDL.
+So we need zone table now.
+So the next step will actually enrich the data we have
+with the appropriate the pickup and drop locations.
+We'll go back to the VS code and go to step two.
+Now create enrich dataset with Azure information.
+So we'll just copy this and go back to our notebook,
+create one more cell here.
+We already have a cell. We'll just paste that
+and we'll run it.
+And if we take a look at the code here,
+we are now joining the curated data set with the zone table.
+Okay, we have a zone table here.
+We have Allst data pickup zone and drop of zone.
+And we are joining to the same table
+through two data frames.
+Okay? We essentially,
+we have only asked it when we join them, we'll be able
+to get the exact locations
+and we join them based on the location id.
+Okay, now this pickup location ID
+and drop off location id, these two r and d curated ones
+and we join them with the location ID fields
+in the pickup zone table.
+Okay? Again, join is a pretty popular function, uh,
+in data engineering and I hope, uh, you have gone
+through my SQL skill booster
+and PI box skill booster
+where these things are already covered.
+So if you see after joining them,
+you are selecting the columns from the curated field,
+the data frame, and then you also enrich by
+selecting the fields from the zone lookup table.
+This way. So we have the data ready now,
+so it does show the sample and this data, right?
+You get the exact location manager
+and Bronx, all of that instead of just the
+location IDs, in fact.
+So the next step will be to create the aggregation tables
+as we already saw and discussed before.
+So we'll create this table one, two,
+and three in the next step.

@@ -1,0 +1,159 @@
+Course: Agentic Data Engineering with Amazon Q
+Lesson: 2 *Code for both historical and current - run the job* RESUME
+============================================================
+
+Guys, we'll come back.
+Now we need to think about how to pull data incrementally
+as well as, uh, to pull the data historically for all
+of these three jobs, right?
+It's not just one job alone. Now we look at them one by one.
+So first we look at the first job,
+which actually downloads the data from the New York, uh,
+city TLC portal to our raw layer in S3 bucket.
+So I have the code open here, in fact, okay?
+The entire code that download the data from N-Y-T-L-C
+to the raw folder.
+And if we look at the main function here,
+so I talked about in the previous video about
+two parameters, right?
+So what I meant is that be using two parameter values.
+So look at this core piece of code here, okay?
+The two parameter values are historical and current.
+So what the code does is that it's gonna look
+for the parameter that is passed to the job, okay?
+The parameter value has historical, it's gonna download
+the historical data for the last two years.
+If it doesn't have any value at all, it'll still
+set the job type of historical
+and download the last two data.
+But if we do send the job type as current, it's going
+to download only the latest available month
+of the current year only.
+So again, don't worry about the code here, okay?
+The, the important thing is not code coding.
+Anybody can do okay?
+With the help of, you know, Amazon queue,
+you can, anybody can code.
+That is one important thing. You
+understand the concept here?
+Concept is more important because when the interview,
+they look for the concepts, okay?
+Because now everybody knows that anybody can code.
+So if you wanna just again,
+get a more detailed analysis about this
+and take a look at the, uh, amazing Q'S response here.
+It says, yes, I have, uh, the script here.
+It has two operating modes, historical mode,
+current mode, right?
+It has everything. You can go through this, okay?
+Don't worry about the code at all.
+What is more important is your thought process about how
+you wanna be implementing historical versus incremental
+pull of the data.
+So I said that if you don't provide any job type,
+it'll default to historical.
+It'll pull two years later. That's why when you have the job
+before without the job parameter, which you can see here,
+in fact, okay, I'm in the glue job right now, console,
+and if we scroll down on in the job details part,
+scroll down, there's a section for job parameters.
+We had not provided any parameter here.
+So we had simply run it and
+because we didn't put any parameters, it defaulted
+to historical and pulled the historical data.
+Okay? So that takes care of pulling the historical data.
+Now, if you wanna pull the current month's data alone,
+and I say current month, the latest available month
+of the latest year, why not current?
+Because as I said before, that N-Y-C-L-C publishes data,
+which one or two month lag as such?
+So the code is designed such that it'll
+get the latest available month only.
+Okay? These are all important concepts.
+This is our design system.
+In fact, now before I actually add the job, but I wanna
+Just, uh, delete the data here, okay?
+I'm gonna delete all of this data that we have here
+and even draw, I'm gonna delete the data
+and then run the step one again.
+So we just go and get this turned right here
+and the data charts a few seconds.
+So there we golet the data.
+See, look at the amount of data we had. 23.8 gb.
+I mean, if you talk about this much value,
+you're gonna interview people would easily believe that yes,
+you really have worked in industry, okay?
+We're not playing with toy data sets here, okay?
+We're playing with real data set
+that gets published every month, in fact,
+okay, data's all gone now.
+Okay? We'll, uh, go back to our blue console
+and we will add the parameter,
+which is how do you add the parameter?
+Well, you need to add the parameter with hyen hyen
+and what's the parameter name?
+Look at this here. The parameter name is job type. Okay?
+Job type is what is sent. Okay? So job type.
+Again, if you don't know why I'm using job type, ask Chad,
+GBT No, no.
+I mean ask amazing q as to
+which is the right argument, okay?
+Code even or a debug a code
+that somebody else has editor, you get the point, right?
+It, it, things are so simple.
+Now just copy this job, type right here, job type,
+and then enter the value as current, okay?
+And then we'll just save it. We'll just run it now, okay?
+There's now being run, it's running right now.
+Well, the job got over
+and it just took 29 seconds only compared to five minutes
+and 59 seconds before Iran.
+And at that time it had pulled two years worth of data,
+but now in 29 seconds it just pulled one month of data.
+That's why we have so much of less runtime
+for this particular run here, in fact.
+So we'll go back to our three data lake and take a look.
+We'll refresh it, and we should see the raw folder here.
+Within that we'll see H-V-F-H-V folder,
+and you'll see the data only for 2095
+and November month alone,
+because we just have data till
+November month alone of 2095.
+As of now, as this recording, in fact, if you go down here,
+it just shows that you have it for now, Amber alone,
+there is no data for December here.
+That, so it was able to pull
+the latest available months data, it was able
+to pull data incrementally,
+that is the right word, incrementally.
+So we just saw how we were able to convert our, uh,
+implement the incremental versus historical for
+this job alone.
+Now, let's see how the incremental versus historical applies
+to these two jobs as well.
+Okay? Now you see that
+job number two will process whatever data you have in raw
+correct and load to curate.
+And job number three will process whatever it has included
+and load to aggregate it.
+So keep this in mind. And, uh,
+in the next video we'll talk about the reason why we
+Need to, to actually think about historical versus
+incremental for these two jobs also.
+Now, these are very, very important things.
+What I'm teaching now is practical things.
+You know, you go to any Udemy, go to any YouTube, you, you,
+these things you will not be able to find easily anywhere.
+These, this come with some practical experience
+of being in the field for so many years, okay?
+And I'm gonna share all my knowledge by putting a lot
+of thought behind how I should be creating a course so that
+anybody with no experience to even 20 years of experience
+or even more in fact, is able to
+appreciate this and understand it.
+Okay? So I hope you're loving it and, uh, making rough notes
+and if you are making notes, I, I, which I wanted to do,
+in fact, okay, if you have made a notes
+so far on this particular video, jot down in your own words
+what I've learned so far, okay?
+In the video below, let me read that.

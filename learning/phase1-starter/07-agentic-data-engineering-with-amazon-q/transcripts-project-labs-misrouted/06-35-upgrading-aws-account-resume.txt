@@ -1,0 +1,25 @@
+Course: Agentic Data Engineering with Amazon Q
+Lesson: 3.5 Upgrading AWS Account RESUME
+============================================================
+
+Hi there. So first you need to
+be on the Amazon AWS console. Once you're there,
+sign in with your
+root user.
+You can sign in from here.
+And you need to do a root user sign in. Okay?
+This is a root user sign in that you're doing.
+Here, it should be chosen as root user.
+Then you can add your email and password,
+and sign in.
+Once you've signed in, you can see this at the
+right top side. You can click on your profile, and
+here you will be able to see Upgrading your plan. Okay?
+This option you need to
+click.
+You'll be able to see this page to upgrade. You can click on Upgrade plan.
+Your account is now upgraded successfully. You can click on Continue.
+And here's your account has been successfully upgraded.
+You can see this when you click again on this profile.
+This is how you will be able to see.
+Just okay?

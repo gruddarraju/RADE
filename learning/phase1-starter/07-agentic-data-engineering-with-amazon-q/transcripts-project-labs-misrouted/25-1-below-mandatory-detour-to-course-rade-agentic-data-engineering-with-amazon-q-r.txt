@@ -1,0 +1,133 @@
+Course: Agentic Data Engineering with Amazon Q
+Lesson: 1. *Below - Mandatory detour to Course RADE™ Agentic Data Engineering with Amazon Q* RESUME
+============================================================
+
+Awesome, awesome.
+Welcome back. Now what have you done so far? So far?
+You went to the portal of N-Y-C-T-L-C
+and then you downloaded one Parquet file from 1 95, right?
+And then you upload that file to the data
+lake bucket you created.
+Let me just show that to you. What you have done so far.
+Initially when you ran the script, right,
+you asked the cloud engineer team to create a bucket
+for you in it lake and that they did that for you, alright?
+And then you download the Parquet file
+and uploaded that here from your laptop.
+So this has three bucket, and then you made use
+of a service called as glue.
+And specifically you used glue catalog, create a database.
+Okay? So assume that upper one is your glue catalog
+and is your database.
+And within that you're able to create a crawl.
+Um, the table, basically you used a glue crawler.
+Okay, lemme just write it down here.
+And this glue crawler, you pointed that
+to the file here in S3 bucket Data lake.
+And it crawled over this file.
+And, and you asked it to actually create
+the table in this database.
+And it created a table here.
+And as I said, this table and database don't hold data.
+Data is in S3 bucket.
+So this is an external table which is pointing to this file.
+And to view this data in the S3 bucket,
+you used a service called Athena.
+And in the Athena service you filed a query called us
+Select stuff from this, this table from, so Athena went
+to the glue catalog, to the glue catalog database
+and the table, and then went to the Parquet first data
+and showed it in the UI for,
+and then you asked the cloud union team
+to give access on this database
+and this table here to the data analysts as well.
+Now, before we proceed, I wanna just, uh,
+talk about one thing here.
+Now, you may not know about sql, which is absolutely fine.
+Okay? We actually, uh, fired, this is Athena console.
+We fired Athena Query here, the SQL query.
+And we are able to first data here, okay?
+Now, if we don't know sql, go
+to my SQL skill booster course.
+It's a quick course that will actually bring you up
+to speed on what SQL is.
+So I would highly recommend that.
+And also we saw some commands in the cloud shell, right?
+We saw ls, we saw,
+and we saw sh So these, this terminal is like,
+is actually Unix terminal, okay?
+Now, you, you may not know about Unix is absolutely fine.
+If you don't know about that, go
+to the Unix skill booster course.
+We'll quickly cover what, uh, UNIX is, what the,
+what UNIX commands are typically used by data engineers.
+Now let's get back to the discussion.
+Now, cloud engineer team has given access
+to the analyst, okay?
+So you have a data analyst here, business team,
+data analyst, and they're able
+to acquire a query on Athena, okay?
+Now they file a query and they do their
+Analysis, they run all sort of queries,
+and, um, they feel, yes, there is value in this data,
+we need to look at more data.
+What they have given us is just one file.
+Uh, but on this portal we have data for so many years,
+we would at least need data for 2024
+and 2025, all the years.
+Okay? All these two years we want data.
+So that's the next ask from the data analyst into you.
+What they also say is that, okay,
+in the data we have something called a pickup location id
+drop of location id, there are all some IDs.
+I wanna know exactly what is a pickup
+location, what is the drop location.
+And for that, they will ask you to also create a table for
+a lookup file.
+If you click on this, it'll create a,
+it'll download a file on your laptop.
+And the contains are right here, location ID
+and the borrowers and everything.
+So they will want to actually join, join
+that data with this data.
+Again, I'm talking about join now. Okay?
+So this is why you need know sql.
+If you wanna sql, so go back to skill booster course on SQL
+and come back and then continue.
+So using this, when they join to this table,
+they can find out the zone, the borrow, all of
+that exact pickup, location, pickup drop, all of that.
+So the ask is now to also get this file in the data lake
+and have a table for that so that they can join this table
+with the zone lookup table.
+And the second ask here that they want data
+for 2025, whatever is available.
+If you look at this, we have Datatel November only,
+but whatever is available for that year
+and for 2024 as well.
+So that's your next step. Okay?
+And, and before we actually continue,
+before you continue the next to the next video, you have
+to finish the, the Raid agent Data engineering
+with Amazing Q course.
+Okay? That course is a prerequisite before we continue.
+Okay? That course will teach you how
+to actually use agent ai, which we need, in fact,
+for our development now.
+And I'm sure you have a lot of questions about, you know,
+what is agent AI and whether companies allow this.
+All of that is covered in that course, the short course.
+So make sure you, before you start watching the next video,
+you go to that course and only finish that course
+and only then come here and continue
+because that course already talks about how
+to fetch data from this portal to a data lake.
+Okay? That course already covers that.
+So watch it and then come here.
+Now before you go to the next video,
+write down in the comment below what is it you have learned.
+You know, what story you have learned
+because then you write on your own words, the story.
+It'll get reinforced in your system, in your system,
+and you'll be able to produce that during the interview.
+Talk to you soon.

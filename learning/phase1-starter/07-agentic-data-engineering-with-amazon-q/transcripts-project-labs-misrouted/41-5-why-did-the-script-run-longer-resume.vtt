@@ -1,0 +1,85 @@
+WEBVTT
+
+1
+00:00:00.105 --> 00:00:01.605
+So our job has got finished Monday.
+
+2
+00:00:01.605 --> 00:00:03.965
+It took actually almost an hour, you see,
+
+3
+00:00:03.965 --> 00:00:07.165
+and if you go to the S3 data lake, we see the data
+
+4
+00:00:07.385 --> 00:00:10.845
+for even year 2095 and for the different months.
+
+5
+00:00:10.905 --> 00:00:12.445
+And within the months, we have data
+
+6
+00:00:12.545 --> 00:00:14.485
+for different days as well.
+
+7
+00:00:15.265 --> 00:00:17.285
+So we gotta be tuning this, okay?
+
+8
+00:00:17.585 --> 00:00:19.845
+The question is whether 59 minutes
+
+9
+00:00:19.865 --> 00:00:21.045
+is acceptable to us or not.
+
+10
+00:00:21.095 --> 00:00:22.405
+We'll discuss about that later.
+
+11
+00:00:22.785 --> 00:00:24.245
+The tuning part, we'll talk about that later.
+
+12
+00:00:24.985 --> 00:00:28.005
+But we'll now proceed to creating the next job,
+
+13
+00:00:28.005 --> 00:00:31.925
+which loads the data into the aggregated layer
+
+14
+00:00:32.025 --> 00:00:35.065
+by reading from curated layer. But
+
+15
+00:00:35.065 --> 00:00:38.345
+Before we go to the next part, can you think about why
+
+16
+00:00:38.345 --> 00:00:42.745
+this job ran longer When we ran a script, when we ran it
+
+17
+00:00:42.745 --> 00:00:45.065
+as a notebook, it hardly took a few minutes.
+
+18
+00:00:45.715 --> 00:00:47.145
+Think about that. And
+
+19
+00:00:47.145 --> 00:00:50.105
+before you look at what others have said below, I want you
+
+20
+00:00:50.105 --> 00:00:54.065
+to think about that and comment in the comment section about
+
+21
+00:00:54.325 --> 00:00:58.225
+why you think about why you think the script ran longer.

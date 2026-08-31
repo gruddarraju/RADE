@@ -1,0 +1,617 @@
+WEBVTT
+
+1
+00:00:00.120 --> 00:00:03.840
+Welcome back. Now, after you have analyzed the mapping sheet, you will
+
+2
+00:00:03.920 --> 00:00:07.220
+decide on the technical requirements. Now, what do I mean by that?
+
+3
+00:00:07.240 --> 00:00:09.700
+Take a look at, this worksheet here.
+
+4
+00:00:09.800 --> 00:00:12.460
+It has information about the partitioning strategy.
+
+5
+00:00:12.480 --> 00:00:16.380
+You will mention that. And you already know that the partitioning is going to be
+
+6
+00:00:16.420 --> 00:00:17.130
+based on,
+
+7
+00:00:18.920 --> 00:00:22.200
+the day as such. You will just mention that here, in fact. Okay?
+
+8
+00:00:22.240 --> 00:00:23.370
+And then you will decide
+
+9
+00:00:25.120 --> 00:00:27.320
+things such as the storage format.
+
+10
+00:00:27.340 --> 00:00:31.100
+You want to store data in the curated
+
+11
+00:00:31.180 --> 00:00:33.660
+and aggregated, right? So what format?
+
+12
+00:00:33.860 --> 00:00:36.960
+Source, of course, is in Parquet. Do you want to continue Parquet or something
+
+13
+00:00:37.020 --> 00:00:40.380
+else? So you go with Parquet. Why? Parquet is one of the best
+
+14
+00:00:40.540 --> 00:00:42.840
+formats for big data engineering.
+
+15
+00:00:42.880 --> 00:00:46.690
+And then you then think about, okay, how do we implement the
+
+16
+00:00:46.880 --> 00:00:50.160
+code in what service of AWS? You decide to go with
+
+17
+00:00:50.500 --> 00:00:53.480
+AWS Glue, okay? Processing engine mentioned here, in fact.
+
+18
+00:00:53.560 --> 00:00:57.400
+And how often will this job run? It's going to run-- Data comes every month, right?
+
+19
+00:00:57.440 --> 00:01:00.120
+So obviously data-- the job will run every month, right?
+
+20
+00:01:00.140 --> 00:01:01.080
+So you're, you're trying to
+
+21
+00:01:02.140 --> 00:01:05.220
+design the pipeline now, okay?
+
+22
+00:01:05.280 --> 00:01:08.140
+You're, you're thinking the big picture, okay?
+
+23
+00:01:08.180 --> 00:01:11.380
+Storage format, where do I process it?
+
+24
+00:01:11.460 --> 00:01:15.420
+Uh, of course, in Spark. If it's in Spark, in which service
+
+25
+00:01:15.440 --> 00:01:19.320
+of AWS? I'll choose Glue. And then how often will I run the job?
+
+26
+00:01:19.360 --> 00:01:23.080
+It's a monthly batch job, so monthly data comes in, so I'll run the job
+
+27
+00:01:23.140 --> 00:01:26.740
+monthly when data comes in. And then very, very important is the processing part
+
+28
+00:01:26.800 --> 00:01:29.860
+called as idempotency. This is very important thing, in data engineering.
+
+29
+00:01:29.900 --> 00:01:31.240
+So what it means is that,
+
+30
+00:01:32.760 --> 00:01:36.280
+let's say data has come in today and, you have run the
+
+31
+00:01:36.340 --> 00:01:40.000
+job and loaded data in your curated layer
+
+32
+00:01:40.360 --> 00:01:44.160
+and also aggregated, and if you run this job again, then the
+
+33
+00:01:44.800 --> 00:01:47.000
+data should again get loaded in curated
+
+34
+00:01:48.120 --> 00:01:51.900
+and aggregated without affecting the existing data over
+
+35
+00:01:51.960 --> 00:01:54.670
+there, okay? In the sense, first time you load data here, okay?
+
+36
+00:01:54.700 --> 00:01:58.560
+There are a hundred records. Second time, again you run it for the same data,
+
+37
+00:01:58.600 --> 00:02:02.140
+right? Let me just repeat this. You have file one, hundred
+
+38
+00:02:02.220 --> 00:02:06.190
+records. You load data in, let's say,
+
+39
+00:02:06.220 --> 00:02:10.200
+target, a hundred records. For whatever reason,
+
+40
+00:02:10.241 --> 00:02:13.800
+you had to run the job again. Something failed, you want to rerun it, whatever it
+
+41
+00:02:13.860 --> 00:02:14.260
+is.
+
+42
+00:02:15.240 --> 00:02:16.780
+The same file is there, not the new file.
+
+43
+00:02:16.840 --> 00:02:19.340
+Same file, hundred, with a hundred records.
+
+44
+00:02:19.360 --> 00:02:23.040
+When you run the job with the sa-- again, the same file, it should go
+
+45
+00:02:23.160 --> 00:02:25.720
+and overwrite this data, a hundred records here.
+
+46
+00:02:25.800 --> 00:02:28.760
+It should not add hundred more. It should not become two
+
+47
+00:02:28.820 --> 00:02:31.240
+hundred. You're getting it, right?
+
+48
+00:02:31.260 --> 00:02:33.640
+Initially, a hundred was there the first run.
+
+49
+00:02:33.660 --> 00:02:37.440
+When you ran it again, you shouldn't be adding hundred more.
+
+50
+00:02:37.480 --> 00:02:41.400
+That is idempotency. No matter how many times you run it, for the same source data,
+
+51
+00:02:41.420 --> 00:02:44.920
+target should not change. For the same source data, when you run again and again,
+
+52
+00:02:44.980 --> 00:02:48.280
+target should not change. That is idempotency. Okay?
+
+53
+00:02:48.300 --> 00:02:50.780
+And then you decide, of course, you write down the query tool.
+
+54
+00:02:50.800 --> 00:02:51.600
+Of course, the
+
+55
+00:02:53.080 --> 00:02:56.440
+a-analyst will use Athena for the analysis.
+
+56
+00:02:56.560 --> 00:02:56.930
+And
+
+57
+00:02:58.420 --> 00:03:01.980
+analysts have also told you that, you know, once the analysis is all done, when you
+
+58
+00:03:02.000 --> 00:03:05.900
+have given them the aggregated data, when, when they have fired the queries,
+
+59
+00:03:06.000 --> 00:03:07.720
+ultimately, they'll build the reports
+
+60
+00:03:09.540 --> 00:03:11.520
+on a tool called as AWS QuickSight.
+
+61
+00:03:11.580 --> 00:03:15.480
+It's a reporting tool, reporting service, AWS QuickSight. Okay?
+
+62
+00:03:15.520 --> 00:03:17.660
+Just remember this. And then you also have
+
+63
+00:03:18.540 --> 00:03:22.440
+the catalog mentioned here. The Glue cat-- Glue Data Catalog is a catalog.
+
+64
+00:03:22.540 --> 00:03:25.060
+And of course, you'll be monitoring the data quality as well.
+
+65
+00:03:25.100 --> 00:03:28.750
+So if you have records that
+
+66
+00:03:28.800 --> 00:03:32.380
+mee-meet these data quality rejection scenario, you will
+
+67
+00:03:32.460 --> 00:03:35.780
+simply go ahead and reject them and capture the rejection rates.
+
+68
+00:03:35.820 --> 00:03:38.640
+That is what you mention here in the log as I display in the log.
+
+69
+00:03:38.720 --> 00:03:41.500
+And for, for performance, you will, obviously, you will
+
+70
+00:03:43.280 --> 00:03:46.440
+store data in the partition format by day, and you will
+
+71
+00:03:47.240 --> 00:03:47.640
+ask
+
+72
+00:03:49.300 --> 00:03:52.900
+the analyst team to filter the data based on these
+
+73
+00:03:52.920 --> 00:03:56.290
+partition columns so that, as we discussed in the
+
+74
+00:03:56.360 --> 00:04:00.220
+past, when they use the right filters, such as month
+
+75
+00:04:00.260 --> 00:04:04.200
+equal to this and day equal to this, that day's data
+
+76
+00:04:04.260 --> 00:04:07.600
+alone will be scanned from S3.
+
+77
+00:04:07.660 --> 00:04:11.620
+Right? I told you this in the past as well, that if you go to S3 and let's say
+
+78
+00:04:11.660 --> 00:04:15.500
+you-- here you have tw-twenty twenty-four and month zero one,
+
+79
+00:04:16.120 --> 00:04:20.079
+when you fire a query on this HV FHW table, add these two
+
+80
+00:04:20.180 --> 00:04:23.010
+filters, only this file will get scanned,
+
+81
+00:04:23.040 --> 00:04:26.440
+okay? That-- Which is, four fifty MB.
+
+82
+00:04:26.540 --> 00:04:29.340
+Other data in the raw folder will not get scanned.
+
+83
+00:04:29.350 --> 00:04:31.740
+So the-- You will be able to save the cost
+
+84
+00:04:33.740 --> 00:04:37.640
+of Athena by not scanning everything,
+
+85
+00:04:37.680 --> 00:04:41.310
+and also it'll run a lot faster, in fact. That is for performance tuning as well.
+
+86
+00:04:41.360 --> 00:04:41.790
+And then
+
+87
+00:04:43.300 --> 00:04:46.680
+you'll also mention about the data retention. Now, data is coming into your raw.
+
+88
+00:04:46.720 --> 00:04:50.680
+You want to be processing it, storing it into your curated
+
+89
+00:04:50.700 --> 00:04:54.020
+and aggregated, but how, how many days? How many years?
+
+90
+00:04:54.040 --> 00:04:57.480
+Now, based on your company's compliance policies, legal compliance
+
+91
+00:04:57.520 --> 00:05:01.440
+policies, you know, you will want to store them for seven years.
+
+92
+00:05:01.480 --> 00:05:03.340
+Just an example. Depends on every company.
+
+93
+00:05:03.360 --> 00:05:07.040
+But I'm just telling you that every company has their own policies for it.
+
+94
+00:05:07.060 --> 00:05:08.920
+And you mention here how you're going to implement that.
+
+95
+00:05:08.980 --> 00:05:11.100
+I mentioned S3 Lifecycle rule here.
+
+96
+00:05:11.140 --> 00:05:13.960
+You will see that shortly when we do the hands-on. So that's it.
+
+97
+00:05:13.980 --> 00:05:15.420
+You're now ready for development now.
+
+98
+00:05:15.460 --> 00:05:19.060
+So go to step four, and you start your development. Okay?
+
+99
+00:05:19.100 --> 00:05:21.100
+So I'll be sharing you the notebook now.
+
+100
+00:05:21.140 --> 00:05:24.060
+What I mean by notebook is, this thing right here, in fact.
+
+101
+00:05:24.080 --> 00:05:27.240
+We'll do this hands-on in the next few videos. And, the code is right here.
+
+102
+00:05:27.260 --> 00:05:29.340
+I'll be sharing the code with you, in fact. Okay?
+
+103
+00:05:29.360 --> 00:05:32.700
+And this code actually does the raw to curated
+
+104
+00:05:32.780 --> 00:05:36.340
+transformations. So the next few videos are completely hands-on.
+
+105
+00:05:36.360 --> 00:05:39.660
+So make sure you just follow them to the T and do your hands-on. Okay?
+
+106
+00:05:39.680 --> 00:05:43.460
+And if you really want to know how I build the code, then go to this
+
+107
+00:05:43.540 --> 00:05:47.320
+course, a short course called as RAID, Big Da-- Building Data Engineering Code
+
+108
+00:05:47.360 --> 00:05:48.660
+with Agentic AI. It's a short course.
+
+109
+00:05:48.760 --> 00:05:50.380
+I have explained to you how
+
+110
+00:05:52.160 --> 00:05:56.150
+this notebook code is built using Agentic AI feature of Amazon Q, in fact. Okay?
+
+111
+00:05:56.180 --> 00:05:57.700
+It's, it's a pretty interesting one.
+
+112
+00:05:57.760 --> 00:06:01.656
+And, after you go through that, I thinkYou
+
+113
+00:06:01.676 --> 00:06:03.456
+won't really have any fear of coding at all.
+
+114
+00:06:03.476 --> 00:06:06.816
+And one last thing is that the transformation logic mentioned here, these are all,
+
+115
+00:06:06.836 --> 00:06:10.716
+you know, SQL, things, okay? Which is discussed
+
+116
+00:06:10.756 --> 00:06:14.096
+in the SQL Skill Booster course, but the transformation logic can be implemented in
+
+117
+00:06:14.136 --> 00:06:15.456
+SQL or PySpark. So
+
+118
+00:06:16.276 --> 00:06:20.046
+make sure that you have gone through the SQL Skill Booster and Python and
+
+119
+00:06:20.136 --> 00:06:24.076
+PySpark Skill Booster, before you actually
+
+120
+00:06:24.116 --> 00:06:28.086
+go to the next video. Because there's no point in just doing what I'm telling you.
+
+121
+00:06:28.086 --> 00:06:30.936
+Understand that. And, and the reason why I have split
+
+122
+00:06:32.716 --> 00:06:33.396
+the entire
+
+123
+00:06:34.676 --> 00:06:37.116
+program into multiple courses is because I want to cater to
+
+124
+00:06:37.176 --> 00:06:41.016
+multiple personas here. I have people from different
+
+125
+00:06:41.026 --> 00:06:44.516
+backgrounds, from no experience to even twenty, twenty-five experience in my
+
+126
+00:06:45.156 --> 00:06:48.996
+community. So I strongly hope you appreciate what I'm doing
+
+127
+00:06:49.016 --> 00:06:52.516
+here. And lastly, once we are done with the entire,
+
+128
+00:06:53.196 --> 00:06:54.736
+development, right, I'm going to be sharing with you a
+
+129
+00:06:54.836 --> 00:06:58.596
+document. So what happens is
+
+130
+00:06:58.676 --> 00:07:00.836
+when we are done with the development entirely, okay?
+
+131
+00:07:02.076 --> 00:07:05.716
+Now, again, development and testing and production, these are-- this is a
+
+132
+00:07:05.756 --> 00:07:09.236
+development life cycle. Now, as the part
+
+133
+00:07:09.336 --> 00:07:13.196
+of you handing over the project to your support
+
+134
+00:07:13.276 --> 00:07:17.196
+team, you will get a document, you know, like this, where you
+
+135
+00:07:17.276 --> 00:07:18.006
+list down
+
+136
+00:07:19.056 --> 00:07:22.976
+what project you have implemented and, what is the source, what is
+
+137
+00:07:23.016 --> 00:07:25.796
+the target, right? What is the solution?
+
+138
+00:07:25.816 --> 00:07:28.576
+All of that is mentioned here. So we'll just walk you through this so that
+
+139
+00:07:30.096 --> 00:07:32.246
+you're able to connect all the dots together later.
+
+140
+00:07:32.296 --> 00:07:34.876
+And, and before you really go to the next video and do your hands-on, in fact,
+
+141
+00:07:34.896 --> 00:07:36.616
+okay, I-I wanna make sure
+
+142
+00:07:37.776 --> 00:07:38.646
+you note down
+
+143
+00:07:39.716 --> 00:07:42.836
+what you have learned so far in the comment below this video, okay?
+
+144
+00:07:42.856 --> 00:07:46.336
+Because I want really to see what you have learned so far.
+
+145
+00:07:46.396 --> 00:07:50.356
+It'll help me to help you better. It, it'll help me understand if
+
+146
+00:07:50.916 --> 00:07:54.796
+you are understanding, what you're understanding, so that I can improve and I can
+
+147
+00:07:54.816 --> 00:07:58.436
+help you better, in fact. Okay, so make sure you actually write down in your
+
+148
+00:07:58.456 --> 00:08:01.616
+comments below what you have learned so far, what story you have learned so far in
+
+149
+00:08:01.656 --> 00:08:03.626
+your own words. And read what others have also written.
+
+150
+00:08:03.676 --> 00:08:07.056
+See what-- how they actually interpret what I've told
+
+151
+00:08:07.096 --> 00:08:09.946
+already-- told you, in fact. Everybody has their own interpretation, right?
+
+152
+00:08:09.976 --> 00:08:13.526
+You get the point. All right, fasten your seat belts and, get going
+
+153
+00:08:13.556 --> 00:08:16.956
+with, the hands-on. Make sure you do them to the
+
+154
+00:08:17.016 --> 00:08:18.996
+T.
