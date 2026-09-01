@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+
+# AWS packaging and deployment
+.aws-sam/
+packaged-template.yaml
+build/
+dist/
+*.zip
+
+# Runtime evidence may contain account-specific metadata
+docs/evidence/runs/*
+!docs/evidence/runs/.gitkeep
+
+# Local environment and editor files
+.env
+.env.*
+!.env.example
+.vscode/
+.idea/
+
+# Generated data
+*.parquet
+*.snappy
+.DS_Store
+Thumbs.db

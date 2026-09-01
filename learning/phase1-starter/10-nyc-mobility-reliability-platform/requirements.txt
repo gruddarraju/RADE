@@ -1,0 +1,6 @@
+# The deployable jobs use libraries supplied by their managed AWS runtimes:
+# - Lambda: boto3
+# - AWS Glue Python Shell: boto3, awsglue
+# - AWS Glue 5.0: boto3, awsglue, pyspark
+#
+# Local validation intentionally uses only the Python standard library.

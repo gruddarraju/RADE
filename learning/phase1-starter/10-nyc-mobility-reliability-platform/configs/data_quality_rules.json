@@ -1,0 +1,15 @@
+{
+  "rule_version": "1.0.0",
+  "reject_rate_threshold": 0.05,
+  "rules": [
+    {"id": "DQ001", "description": "Pickup timestamp is required", "action": "REJECT"},
+    {"id": "DQ002", "description": "Drop-off timestamp is required", "action": "REJECT"},
+    {"id": "DQ003", "description": "Drop-off must occur after pickup", "action": "REJECT"},
+    {"id": "DQ004", "description": "Trip miles must be between 0 and 500", "action": "REJECT"},
+    {"id": "DQ005", "description": "Base passenger fare must be from 0 through 9999.99", "action": "REJECT"},
+    {"id": "DQ006", "description": "Pickup and drop-off location IDs must be positive", "action": "REJECT"},
+    {"id": "DQ007", "description": "HVFHS license number is required", "action": "REJECT"}
+  ],
+  "reconciliation": "source_count = valid_count + rejected_count",
+  "publication_gate": "Stop before aggregate publication when reject_rate exceeds the configured threshold."
+}

@@ -1,0 +1,19 @@
+{
+  "project_name": "nyc-mobility-reliability",
+  "environment": "dev",
+  "aws_region": "us-east-1",
+  "dataset": "hvfhv",
+  "schedule_enabled": false,
+  "schedule_expression": "cron(0 10 10 * ? *)",
+  "athena_scan_cutoff_bytes": 1073741824,
+  "cloudwatch_log_retention_days": 14,
+  "raw_retention_days": 365,
+  "quarantine_retention_days": 90,
+  "default_reject_rate_threshold": 0.05,
+  "tags": {
+    "Project": "nyc-mobility-reliability",
+    "Environment": "dev",
+    "ManagedBy": "cloudformation",
+    "DataClassification": "public"
+  }
+}

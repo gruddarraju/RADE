@@ -1,0 +1,33 @@
+{
+  "contract_version": "1.0.0",
+  "dataset": "NYC TLC High Volume For-Hire Vehicle Trip Records",
+  "format": "parquet",
+  "columns": [
+    {"name": "hvfhs_license_num", "type": "string", "nullable": false},
+    {"name": "dispatching_base_num", "type": "string", "nullable": true},
+    {"name": "originating_base_num", "type": "string", "nullable": true},
+    {"name": "request_datetime", "type": "timestamp", "nullable": true},
+    {"name": "on_scene_datetime", "type": "timestamp", "nullable": true},
+    {"name": "pickup_datetime", "type": "timestamp", "nullable": false},
+    {"name": "dropoff_datetime", "type": "timestamp", "nullable": false},
+    {"name": "PULocationID", "type": "integer", "nullable": false},
+    {"name": "DOLocationID", "type": "integer", "nullable": false},
+    {"name": "trip_miles", "type": "double", "nullable": false},
+    {"name": "trip_time", "type": "long", "nullable": true},
+    {"name": "base_passenger_fare", "type": "double", "nullable": false},
+    {"name": "tolls", "type": "double", "nullable": true},
+    {"name": "bcf", "type": "double", "nullable": true},
+    {"name": "sales_tax", "type": "double", "nullable": true},
+    {"name": "congestion_surcharge", "type": "double", "nullable": true},
+    {"name": "airport_fee", "type": "double", "nullable": true},
+    {"name": "tips", "type": "double", "nullable": true},
+    {"name": "driver_pay", "type": "double", "nullable": true},
+    {"name": "shared_request_flag", "type": "string", "nullable": true},
+    {"name": "shared_match_flag", "type": "string", "nullable": true},
+    {"name": "access_a_ride_flag", "type": "string", "nullable": true},
+    {"name": "wav_request_flag", "type": "string", "nullable": true},
+    {"name": "wav_match_flag", "type": "string", "nullable": true},
+    {"name": "cbd_congestion_fee", "type": "double", "nullable": true}
+  ],
+  "compatibility": "Additive nullable columns are accepted; missing required columns fail the curated job."
+}

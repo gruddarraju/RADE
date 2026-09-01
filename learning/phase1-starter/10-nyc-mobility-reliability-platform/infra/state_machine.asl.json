@@ -1,0 +1,188 @@
+{
+  "Comment": "Run the bounded NYC mobility pipeline and publish stage-aware notifications.",
+  "StartAt": "RunIngestion",
+  "States": {
+    "RunIngestion": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::glue:startJobRun.sync",
+      "Parameters": {
+        "JobName": "${IngestionJobName}",
+        "Arguments": {
+          "--DATA_BUCKET": "${DataBucketName}",
+          "--YEAR.$": "$.year",
+          "--MONTH.$": "$.month",
+          "--RUN_ID.$": "$.run_id",
+          "--FORCE.$": "$.force"
+        }
+      },
+      "ResultPath": "$.stages.ingestion",
+      "Retry": [
+        {
+          "ErrorEquals": [
+            "Glue.ConcurrentRunsExceededException",
+            "Glue.InternalServiceException",
+            "Glue.OperationTimeoutException",
+            "States.Timeout"
+          ],
+          "IntervalSeconds": 30,
+          "BackoffRate": 2.0,
+          "MaxAttempts": 3
+        }
+      ],
+      "Catch": [
+        {
+          "ErrorEquals": ["States.ALL"],
+          "ResultPath": "$.failure",
+          "Next": "MarkIngestionFailure"
+        }
+      ],
+      "Next": "RunRawToCurated"
+    },
+    "RunRawToCurated": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::glue:startJobRun.sync",
+      "Parameters": {
+        "JobName": "${RawToCuratedJobName}",
+        "Arguments": {
+          "--DATA_BUCKET": "${DataBucketName}",
+          "--YEAR.$": "$.year",
+          "--MONTH.$": "$.month",
+          "--RUN_ID.$": "$.run_id",
+          "--REJECT_RATE_THRESHOLD": "${RejectRateThreshold}"
+        }
+      },
+      "ResultPath": "$.stages.raw_to_curated",
+      "Retry": [
+        {
+          "ErrorEquals": [
+            "Glue.ConcurrentRunsExceededException",
+            "Glue.InternalServiceException",
+            "Glue.OperationTimeoutException",
+            "States.Timeout"
+          ],
+          "IntervalSeconds": 30,
+          "BackoffRate": 2.0,
+          "MaxAttempts": 3
+        }
+      ],
+      "Catch": [
+        {
+          "ErrorEquals": ["States.ALL"],
+          "ResultPath": "$.failure",
+          "Next": "MarkRawToCuratedFailure"
+        }
+      ],
+      "Next": "RunCuratedToAggregate"
+    },
+    "RunCuratedToAggregate": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::glue:startJobRun.sync",
+      "Parameters": {
+        "JobName": "${CuratedToAggregateJobName}",
+        "Arguments": {
+          "--DATA_BUCKET": "${DataBucketName}",
+          "--YEAR.$": "$.year",
+          "--MONTH.$": "$.month",
+          "--RUN_ID.$": "$.run_id"
+        }
+      },
+      "ResultPath": "$.stages.curated_to_aggregate",
+      "Retry": [
+        {
+          "ErrorEquals": [
+            "Glue.ConcurrentRunsExceededException",
+            "Glue.InternalServiceException",
+            "Glue.OperationTimeoutException",
+            "States.Timeout"
+          ],
+          "IntervalSeconds": 30,
+          "BackoffRate": 2.0,
+          "MaxAttempts": 3
+        }
+      ],
+      "Catch": [
+        {
+          "ErrorEquals": ["States.ALL"],
+          "ResultPath": "$.failure",
+          "Next": "MarkCuratedToAggregateFailure"
+        }
+      ],
+      "Next": "PublishSuccess"
+    },
+    "MarkIngestionFailure": {
+      "Type": "Pass",
+      "Parameters": {
+        "status": "FAILED",
+        "stage": "ingestion",
+        "mode.$": "$.mode",
+        "run_id.$": "$.run_id",
+        "year.$": "$.year",
+        "month.$": "$.month",
+        "error.$": "$.failure.Error",
+        "cause.$": "$.failure.Cause"
+      },
+      "ResultPath": "$.notification",
+      "Next": "PublishFailure"
+    },
+    "MarkRawToCuratedFailure": {
+      "Type": "Pass",
+      "Parameters": {
+        "status": "FAILED",
+        "stage": "raw_to_curated",
+        "mode.$": "$.mode",
+        "run_id.$": "$.run_id",
+        "year.$": "$.year",
+        "month.$": "$.month",
+        "error.$": "$.failure.Error",
+        "cause.$": "$.failure.Cause"
+      },
+      "ResultPath": "$.notification",
+      "Next": "PublishFailure"
+    },
+    "MarkCuratedToAggregateFailure": {
+      "Type": "Pass",
+      "Parameters": {
+        "status": "FAILED",
+        "stage": "curated_to_aggregate",
+        "mode.$": "$.mode",
+        "run_id.$": "$.run_id",
+        "year.$": "$.year",
+        "month.$": "$.month",
+        "error.$": "$.failure.Error",
+        "cause.$": "$.failure.Cause"
+      },
+      "ResultPath": "$.notification",
+      "Next": "PublishFailure"
+    },
+    "PublishFailure": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::sns:publish",
+      "Parameters": {
+        "TopicArn": "${NotificationTopicArn}",
+        "Subject": "NYC mobility pipeline failed",
+        "Message.$": "States.JsonToString($.notification)"
+      },
+      "ResultPath": "$.notification_result",
+      "Next": "PipelineFailed"
+    },
+    "PublishSuccess": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::sns:publish",
+      "Parameters": {
+        "TopicArn": "${NotificationTopicArn}",
+        "Subject": "NYC mobility pipeline succeeded",
+        "Message.$": "States.Format('Pipeline run {} completed successfully for source period {}-{} in {} mode.', $.run_id, $.year, $.month, $.mode)"
+      },
+      "ResultPath": "$.notification_result",
+      "Next": "PipelineSucceeded"
+    },
+    "PipelineSucceeded": {
+      "Type": "Succeed"
+    },
+    "PipelineFailed": {
+      "Type": "Fail",
+      "Error": "PipelineStageFailed",
+      "Cause": "A Glue stage failed; the stage-specific details were published to SNS."
+    }
+  }
+}
